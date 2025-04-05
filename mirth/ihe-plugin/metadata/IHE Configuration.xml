@@ -1,0 +1,22 @@
+<pluginMetaData>
+  <name>IHE Configuration</name>
+  <author>WebReach, Inc.</author>
+  <pluginVersion>@mirthversion</pluginVersion>
+  <mirthVersion>1.7.0</mirthVersion>
+  <updateUrl><![CDATA[http://extensions.mirthproject.org/updates/?mirthversion=${mirthVersion}&version=${version}&name=${name}&serverid=${serverid}]]></updateUrl>
+  <url>http://extensions.mirthproject.org</url>
+  <description>This plugin provides way to set your IHE configuration and see the loaded actors</description>
+  <enabled>true</enabled>
+  <extensionPoint>
+  	<name>IHE Configuration</name>
+    <type>CLIENT_PANEL</type>
+    <className>com.webreach.mirth.plugins.ihe.IheConfigurationClient</className>
+    <mode>CLIENT</mode>
+  </extensionPoint>
+  <extensionPoint>
+  	<name>IHE Configuration</name>
+    <type>SERVER_PLUGIN</type>
+    <className>com.webreach.mirth.plugins.ihe.IheConfigurationLoader</className>
+    <mode>SERVER</mode>
+  </extensionPoint>
+</pluginMetaData>

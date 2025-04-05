@@ -1,0 +1,79 @@
+CTX: MESA Version 12.3.0  created 2008.11.25 
+CTX: current date/time 20090114 1735
+CTX: Log level 4
+
+CTX: XDS-SD 14110 
+CTX: Evaluation of Wrapper Format - HL7 CDA R2 using Schematron
+CTX: java -cp C:\projects\mesa2009/lib/xalan.jar org.apache.xalan.xslt.Process -IN 14110/14110_schematron.xml -XSL schematron/schematron-basic.xsl -OUT 14110/14110.xsl -PARAM diagnose yes
+CTX: java -cp C:\projects\mesa2009/lib/xalan.jar org.apache.xalan.xslt.Process -IN c:\temp\pcctest\EHR_ALLSCRIPTS_CONNECT_14101_pdf.xml -XSL 14110/14110.xsl -OUT 14110/schematron_14110.log
+
+
+Result from schematron validation:
+CTX: 14110: XDS-SD Wrapper Format - HL7 CDA R2 (Schematron)
+CTX: In pattern cda:id:
+   CTX: ClinicalDocument/id exists (PASS)
+CTX: In pattern cda:id[@extension]:
+   CTX: ClinicalDocument/id@extension is empty (PASS)
+CTX: In pattern cda:effectiveTime[@value]:
+   CTX: ClinicalDocument/effectiveTime exists (PASS)
+CTX: In pattern cda:confidentialityCode[@code]:
+   CTX: ClinicalDocument/confidentialityCode@code exists (PASS)
+CTX: In pattern cda:confidentialityCode[@codeSystem]:
+   CTX: ClinicalDocument/confidentialityCode@codeSystem exists (PASS)
+CTX: In pattern cda:languageCode[@code]:
+   CTX: ClinicalDocument/languageCode@code exists (PASS)
+CTX: In pattern cda:recordTarget[cda:patientRole[cda:id[@root]]]:
+   CTX: ClinicalDocument/recordTarget/patientRole/id@root exists (PASS)
+CTX: In pattern cda:recordTarget[cda:patientRole[cda:id[@extension]]]:
+   CTX: ClinicalDocument/recordTarget/patientRole/id@extension exists (PASS)
+CTX: In pattern cda:recordTarget[cda:patientRole[cda:addr[cda:country]]]:
+   CTX: ClinicalDocument/recordTarget/patientRole/addr/country exists (PASS)
+CTX: In pattern cda:recordTarget[cda:patientRole[cda:patient[cda:name[cda:given]]]]:
+   CTX: ClinicalDocument/recordTarget/patientRole/patient/name/given exists (PASS)
+CTX: In pattern cda:recordTarget[cda:patientRole[cda:patient[cda:name[cda:family]]]]:
+   CTX: ClinicalDocument/recordTarget/patientRole/patient/name/family exists (PASS)
+CTX: In pattern cda:recordTarget[cda:patientRole[cda:patient[cda:administrativeGenderCode]]]:
+   CTX: ClinicalDocument/recordTarget/patient/administrativeGenderCode exists (PASS)
+CTX: In pattern cda:recordTarget[cda:patientRole[cda:patient[cda:birthTime[@value]]]]:
+   CTX: ClinicalDocument/recordTarget/patient/birthTime exists (PASS)
+CTX: In pattern cda:author:
+   CTX: ClinicalDocument/author exists (PASS)
+CTX: In pattern cda:author[cda:time]:
+   CTX: ClinicalDocument/author/time exists (PASS)
+CTX: In pattern cda:author[cda:assignedAuthor[cda:id[@root]]]:
+   CTX: ClinicalDocument/author/assignedAuthor/id@root exists (PASS)
+CTX: In pattern cda:author[cda:assignedAuthor[cda:assignedAuthoringDevice[cda:code]]]:
+   CTX: ClinicalDocument/author/assignedAuthor/assignedAuthoringDevice/code exists (PASS)
+CTX: In pattern cda:author[cda:assignedAuthor[cda:assignedAuthoringDevice[cda:code[@codeSystem='1.2.840.10008.2.16.4']]]]:
+   CTX: ClinicalDocument/author/assignedAuthor/assignedAuthoringDevice/code@codeSystem correct (PASS)
+CTX: In pattern cda:author[cda:assignedAuthor[cda:assignedAuthoringDevice[cda:code[@code='CAPTURE']]]] or cda:author[cda:assignedAuthor[cda:assignedAuthoringDevice[cda:code[@code='WST']]]]:
+   CTX: ClinicalDocument/author/assignedAuthor/assignedAuthoringDevice/code@code correct (PASS)
+CTX: In pattern cda:author[cda:assignedAuthor[cda:assignedAuthoringDevice[cda:manufacturerModelName]]]:
+   CTX: ClinicalDocument/author/assignedAuthor/assignedAuthoringDevice/manufacturerModelName exists (PASS)
+CTX: In pattern cda:author[cda:assignedAuthor[cda:assignedAuthoringDevice[cda:softwareName]]]:
+   CTX: ClinicalDocument/author/assignedAuthor/assignedAuthoringDevice/softwareModelName exists (PASS)
+CTX: In pattern cda:author[cda:assignedAuthor[cda:representedOrganization[cda:id[@root]]]]:
+   CTX: ClinicalDocument/author/assignedAuthor/representedOrganization@root exists (PASS)
+CTX: In pattern cda:dataEnterer:
+   CTX: ClinicalDocument/dataEnterer exists (PASS)
+CTX: In pattern cda:dataEnterer[cda:time]:
+   CTX: ClinicalDocument/dataEnterer/time exists (PASS)
+CTX: In pattern cda:dataEnterer[cda:assignedEntity[cda:id[@root]]]:
+   CTX: ClinicalDocument/dataEnterer/assignedEntity/id@root exists (PASS)
+CTX: In pattern cda:dataEnterer[cda:assignedEntity[cda:id[@extension]]]:
+   CTX: ClinicalDocument/dataEnterer/assignedEntity/id@extension exists (PASS)
+CTX: In pattern cda:custodian:
+   CTX: ClinicalDocument/custodian exists (PASS)
+CTX: In pattern cda:custodian[cda:assignedCustodian[cda:representedCustodianOrganization[cda:name]]]:
+   CTX: ClinicalDocument/custodian/assignedCustodian/representedCustodianOrganization/name exists (PASS)
+CTX: In pattern cda:custodian[cda:assignedCustodian[cda:representedCustodianOrganization[cda:addr]]]:
+   CTX: ClinicalDocument/custodian/assignedCustodian/representedCustodianOrganization/addr exists (PASS)
+CTX: In pattern cda:custodian[cda:assignedCustodian[cda:representedCustodianOrganization[cda:addr[cda:country]]]]:
+   CTX: ClinicalDocument/custodian/assignedCustodian/representedCustodianOrganization/addr/country exists (PASS)
+CTX: In pattern cda:component[cda:nonXMLBody]:
+   CTX: ClinicalDocument/component/nonXMLBody exists (PASS)
+CTX: In pattern cda:component[cda:nonXMLBody[cda:text[@mediaType='application/pdf']]] or cda:component[cda:nonXMLBody[cda:text[@mediaType='text/plain']]]:
+   CTX: ClinicalDocument/component/nonXMLBody/text@mediaType correct (PASS)
+CTX: In pattern cda:component[cda:nonXMLBody[cda:text[@representation='B64']]]:
+   CTX: ClinicalDocument/component/nonXMLBody/text@representation correct (PASS)
+

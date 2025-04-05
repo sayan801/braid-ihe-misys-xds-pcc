@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Some actors for testing purposes -->
+
+<Configuration>
+
+	<actor name="NIST_Registry" type="XdsDocumentConsumer">
+		<description>NIST Registry (Query)</description>
+		<connection source="nist_query" />
+	</actor>
+	
+	<actor name="Secure_NIST_Registry" type="XdsDocumentConsumer">
+		<description>Secure NIST Registry (Query)</description>
+		<connection source="secure_nist_query" />
+	</actor>
+	
+	<actor name="NIST_Repository" type="XdsDocumentSource">
+		<description>NIST Repository (Submit)</description>
+		<connection source="nist_query" consumer="nist_submit" />
+	</actor>
+	
+	<actor name="NIST_Repository 2" type="XdsDocumentSource">
+		<description>NIST Repository (Submit Two Documents)</description>
+		<connection source="nist_query" consumer="nist_submit_two" />
+	</actor>
+	
+	<actor name="ATNA_Log4j" type="SecureNode">
+		<description>ATNA Log4j Audit Trail</description>
+		<AuditTrail consumer="log4j_audittrail" />
+	</actor>
+	
+	<actor name="MESA_PDQ_Server" type="PdqConsumer">
+		<description>MESA Test PDQ Server (Query)</description>
+		<connection source="mesa_pdq_query" />
+	</actor>
+
+	<actor name="MESA_PDQ_Patient_Feed" type="PatientIdentitySource">
+		<description>MESA Test PDQ Server (Patient Feed)</description>
+		<connection source="mesa_pdq_feed" />
+	</actor>
+
+	<standardconnection name="nist_query">
+		<hostname>hcxw2k1.nist.gov</hostname>
+		<port>8080</port>
+		<urlPath>/xdsServices2/registry/soap/portals/query</urlPath>
+		
+		<property name="TestPatientId" value="b8721bf0e3a342b^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO" />
+			
+		<includefile name="testCodes.xml" />
+		
+		<Identifier name="AssigningAuthority">
+			<NamespaceId></NamespaceId>
+			<UniversalId>1.3.6.1.4.1.21367.2005.3.7</UniversalId>
+			<UniversalIdType>ISO</UniversalIdType>
+		</Identifier>
+
+		<Identifier name="LocalAssigningAuthority">
+			<NamespaceId>Misys</NamespaceId>
+			<UniversalId>2.16.840.1.113883.3.28.1</UniversalId>
+			<UniversalIdType>ISO</UniversalIdType>
+		</Identifier>
+	
+		<enumMap class="XdsClassCode">
+			<entry enum="DISCHARGE_SUMMARY" code="Discharge summarization"/>
+			<entry enum="REFERRAL_SUMMARY" code="Transfer of care referral"/>
+		</enumMap>
+		<enumMap class="XdsFormatCode">
+			<entry enum="HL7_LAB_25" code="HL7/Lab 2.5"/>
+			<entry enum="IHE_PDF_10" code="PDF/IHE 1.x"/>
+			<entry enum="IHE_CDA_10" code="CDA/IHE 1.0"/>
+			<entry enum="IHE_CDAR2_10" code="CDAR2/IHE 1.0"/>
+			<entry enum="IHE_CCR_09" code="CCR/IHE 0.9"/>
+			<entry enum="IHE_PCC_MS_10" code="IHE/PCC/MS/1.0"/>
+		</enumMap>
+		<enumMap class="XdsTypeCode">
+			<entry enum="DISCHARGE_SUMMARY" code="18842-5"/>
+			<entry enum="REFERRAL_SUMMARY" code="11510-5"/>
+		</enumMap>
+		<enumMap class="XdsContentCode">
+			<entry enum="DISCHARGE_SUMMARY" code="Discharge summarization"/>
+			<entry enum="REFERRAL_SUMMARY" code="Transfer of care referral"/>
+		</enumMap>
+	
+		<stringMap name="facilityCode">
+			<entry string="EMR" code="Outpatient"/>
+			<entry string="CPR" code="Hospital Setting"/>
+		</stringMap>
+		<!-- stringMap name="practiceCode" -->
+	
+		<stringMap name="sourceId">
+			<entry string="EMR-MISYSCONNECT" code="1.3.6.1.4.1.21367.2006.1.2.122" />
+		</stringMap>
+
+		<stringMap name="confidentialityCode">
+			<entry string="true" code="S"/>
+			<entry string="false" code="N"/>
+		</stringMap>
+	</standardconnection>
+	
+	<secureconnection name="secure_nist_query">
+		<hostname>hcxw2k1.nist.gov</hostname>
+		<port>8443</port>
+		<urlPath>/xdsServices2/registry/soap/portals/query</urlPath>
+		
+        <KEYSTORE>certs/NISY_KEY.key</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>certs/NISY_TRUST.key</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+		
+		<property name="TestPatientId" value="b8721bf0e3a342b^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO" />
+			
+		<includefile name="testCodes.xml" />
+		
+		<Identifier name="AssigningAuthority">
+			<NamespaceId></NamespaceId>
+			<UniversalId>1.3.6.1.4.1.21367.2005.3.7</UniversalId>
+			<UniversalIdType>ISO</UniversalIdType>
+		</Identifier>
+
+		<Identifier name="LocalAssigningAuthority">
+			<NamespaceId>Misys</NamespaceId>
+			<UniversalId>2.16.840.1.113883.3.28.1</UniversalId>
+			<UniversalIdType>ISO</UniversalIdType>
+		</Identifier>
+	
+		<enumMap class="XdsClassCode">
+			<entry enum="DISCHARGE_SUMMARY" code="Discharge summarization"/>
+			<entry enum="REFERRAL_SUMMARY" code="Transfer of care referral"/>
+		</enumMap>
+		<enumMap class="XdsFormatCode">
+			<entry enum="HL7_LAB_25" code="HL7/Lab 2.5"/>
+			<entry enum="IHE_PDF_10" code="PDF/IHE 1.x"/>
+			<entry enum="IHE_CDA_10" code="CDA/IHE 1.0"/>
+			<entry enum="IHE_CDAR2_10" code="CDAR2/IHE 1.0"/>
+			<entry enum="IHE_CCR_09" code="CCR/IHE 0.9"/>
+			<entry enum="IHE_PCC_MS_10" code="IHE/PCC/MS/1.0"/>
+		</enumMap>
+		<enumMap class="XdsTypeCode">
+			<entry enum="DISCHARGE_SUMMARY" code="18842-5"/>
+			<entry enum="REFERRAL_SUMMARY" code="11510-5"/>
+		</enumMap>
+		<enumMap class="XdsContentCode">
+			<entry enum="DISCHARGE_SUMMARY" code="Discharge summarization"/>
+			<entry enum="REFERRAL_SUMMARY" code="Transfer of care referral"/>
+		</enumMap>
+	
+		<stringMap name="facilityCode">
+			<entry string="EMR" code="Outpatient"/>
+			<entry string="CPR" code="Hospital Setting"/>
+		</stringMap>
+		<!-- stringMap name="practiceCode" -->
+	
+		<stringMap name="sourceId">
+			<entry string="EMR-MISYSCONNECT" code="1.3.6.1.4.1.21367.2006.1.2.122" />
+		</stringMap>
+
+		<stringMap name="confidentialityCode">
+			<entry string="true" code="S"/>
+			<entry string="false" code="N"/>
+		</stringMap>
+	</secureconnection>
+	
+	<standardconnection name="log4j_audittrail">
+		<hostname>pc.josh.misys</hostname>
+		<port>1234</port>
+		<Property name="TYPE" value="LOG4J LOGGER" />
+		<PropertySet name="localhost">
+			<entry name="MACHINENAME" value="MISYS" />
+			<entry name="HOSTNAME" value="hosp.misyshealthcare.com" />
+			<entry name="IP" value="10.0.1.101" />
+			<entry name="SITE" value="Big Hospital" />
+			<entry name="SOURCE" value="Sun Room" />
+			<entry value="Misys Connect" name="APPNAME"/>
+			<!--entry value="AENAME=ER_MISYS" name="AENAME"/-->
+		</PropertySet>
+		<propertyset name="ParticipantObject">
+			<entry name="PatientNameEncoding" value="HL7" />
+			<entry name="PatientIdEncoding" value="HL7" />
+			<entry name="DocumentIdType" value="DocumentId" />
+		</propertyset>
+		<IDENTIFIER name="AssigningAuthority">
+			<NamespaceId>Test</NamespaceId>
+			<UniversalId>1.2.3.4.5</UniversalId>
+			<UniversalIdType>ISO</UniversalIdType>
+		</IDENTIFIER>
+	</standardconnection>
+
+	<standardconnection name="nist_submit">
+		<hostname>hcxw2k1.nist.gov</hostname>
+		<port>8080</port>
+		<urlPath>/xdsServices2/registry/soap/test?testid=11746</urlPath>
+		
+		<property name="TestPatientId" value="b8721bf0e3a342b^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO" />
+		<!-- property name="DoNotSubmit" value="true" / -->
+				
+		<includefile name="testCodes.xml" />
+		
+		<Identifier name="AssigningAuthority">
+			<NamespaceId></NamespaceId>
+			<UniversalId>1.3.6.1.4.1.21367.2005.3.7</UniversalId>
+			<UniversalIdType>ISO</UniversalIdType>
+		</Identifier>
+
+		<Identifier name="LocalAssigningAuthority">
+			<NamespaceId>Misys</NamespaceId>
+			<UniversalId>2.16.840.1.113883.3.28.1</UniversalId>
+			<UniversalIdType>ISO</UniversalIdType>
+		</Identifier>
+	
+		<enumMap class="XdsClassCode">
+			<entry enum="DISCHARGE_SUMMARY" code="Discharge summarization"/>
+			<entry enum="REFERRAL_SUMMARY" code="Transfer of care referral"/>
+		</enumMap>
+		<enumMap class="XdsFormatCode">
+			<entry enum="HL7_LAB_25" code="HL7/Lab 2.5"/>
+			<entry enum="IHE_PDF_10" code="PDF/IHE 1.x"/>
+			<entry enum="IHE_CDA_10" code="CDA/IHE 1.0"/>
+			<entry enum="IHE_CDAR2_10" code="CDAR2/IHE 1.0"/>
+			<entry enum="IHE_CCR_09" code="CCR/IHE 0.9"/>
+			<entry enum="IHE_PCC_MS_10" code="IHE/PCC/MS/1.0"/>
+		</enumMap>
+		<enumMap class="XdsTypeCode">
+			<entry enum="DISCHARGE_SUMMARY" code="18842-5"/>
+			<entry enum="REFERRAL_SUMMARY" code="11510-5"/>
+		</enumMap>
+		<enumMap class="XdsContentCode">
+			<entry enum="DISCHARGE_SUMMARY" code="Discharge summarization"/>
+			<entry enum="REFERRAL_SUMMARY" code="Transfer of care referral"/>
+		</enumMap>
+	
+		<stringMap name="facilityCode">
+			<entry string="EMR" code="Outpatient"/>
+			<entry string="CPR" code="Hospital Setting"/>
+		</stringMap>
+		<!-- stringMap name="practiceCode" -->
+	
+		<stringMap name="sourceId">
+			<entry string="EMR-MISYSCONNECT" code="1.3.6.1.4.1.21367.2006.1.2.122" />
+		</stringMap>
+
+		<stringMap name="confidentialityCode">
+			<entry string="true" code="S"/>
+			<entry string="false" code="N"/>
+		</stringMap>
+	</standardconnection>
+	
+	<standardconnection name="nist_submit_two">
+		<hostname>hcxw2k1.nist.gov</hostname>
+		<port>8080</port>
+		<urlPath>/xdsServices2/registry/soap/test?testid=11747</urlPath>
+		
+		<property name="TestPatientId" value="b8721bf0e3a342b^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO" />
+		<!-- property name="DoNotSubmit" value="true" / -->
+				
+		<includefile name="testCodes.xml" />
+		
+		<Identifier name="AssigningAuthority">
+			<NamespaceId></NamespaceId>
+			<UniversalId>1.3.6.1.4.1.21367.2005.3.7</UniversalId>
+			<UniversalIdType>ISO</UniversalIdType>
+		</Identifier>
+
+		<Identifier name="LocalAssigningAuthority">
+			<NamespaceId>Misys</NamespaceId>
+			<UniversalId>2.16.840.1.113883.3.28.1</UniversalId>
+			<UniversalIdType>ISO</UniversalIdType>
+		</Identifier>
+	
+		<enumMap class="XdsClassCode">
+			<entry enum="DISCHARGE_SUMMARY" code="Discharge summarization"/>
+			<entry enum="REFERRAL_SUMMARY" code="Transfer of care referral"/>
+		</enumMap>
+		<enumMap class="XdsFormatCode">
+			<entry enum="HL7_LAB_25" code="HL7/Lab 2.5"/>
+			<entry enum="IHE_PDF_10" code="PDF/IHE 1.x"/>
+			<entry enum="IHE_CDA_10" code="CDA/IHE 1.0"/>
+			<entry enum="IHE_CDAR2_10" code="CDAR2/IHE 1.0"/>
+			<entry enum="IHE_CCR_09" code="CCR/IHE 0.9"/>
+			<entry enum="IHE_PCC_MS_10" code="IHE/PCC/MS/1.0"/>
+		</enumMap>
+		<enumMap class="XdsTypeCode">
+			<entry enum="DISCHARGE_SUMMARY" code="18842-5"/>
+			<entry enum="REFERRAL_SUMMARY" code="11510-5"/>
+		</enumMap>
+		<enumMap class="XdsContentCode">
+			<entry enum="DISCHARGE_SUMMARY" code="Discharge summarization"/>
+			<entry enum="REFERRAL_SUMMARY" code="Transfer of care referral"/>
+		</enumMap>
+	
+		<stringMap name="facilityCode">
+			<entry string="EMR" code="Outpatient"/>
+			<entry string="CPR" code="Hospital Setting"/>
+		</stringMap>
+		<!-- stringMap name="practiceCode" -->
+	
+		<stringMap name="sourceId">
+			<entry string="EMR-MISYSCONNECT" code="1.3.6.1.4.1.21367.2006.1.2.122" />
+		</stringMap>
+
+		<stringMap name="confidentialityCode">
+			<entry string="true" code="S"/>
+			<entry string="false" code="N"/>
+		</stringMap>
+	</standardconnection>
+
+	<standardconnection name="mesa_pdq_query">
+		<hostname>10.100.40.112</hostname>
+		<port>3700</port>
+	
+		<Identifier name="SendingApplication">
+			<NamespaceId>Mysis</NamespaceId>
+			<UniversalId></UniversalId>
+			<UniversalIdType></UniversalIdType>
+		</Identifier>
+	
+		<Identifier name="SendingFacility">
+			<NamespaceId>Misys</NamespaceId>
+			<UniversalId></UniversalId>
+			<UniversalIdType></UniversalIdType>
+		</Identifier>
+		
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>MesaServer</NamespaceId>
+			<UniversalId></UniversalId>
+			<UniversalIdType></UniversalIdType>
+		</Identifier>
+	
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>Misys_MesaServer</NamespaceId>
+			<UniversalId></UniversalId>
+			<UniversalIdType></UniversalIdType>
+		</Identifier>
+		
+		<PropertySet name="PdqQueryName">
+			<Entry name="identifier" value="QRY_PDQ_1001"/>
+			<Entry name="text" value="Query By Name"/>
+			<Entry name="codingSystem" value="IHEDEMO"/>
+		</PropertySet>
+		
+		<PropertySet name="QueryFields">
+			<Entry name="PID.3.1" value="true"/>
+		</PropertySet>
+		
+		<PropertySet name="QueryProperties">
+			<Entry name="Uppercase" value="true"/>
+			<Entry name="WildcardAfter" value="*"/>
+		</PropertySet>
+		
+		<!-- Turn off Misys wildcard defaulting for these values -->
+		<PropertySet name="QueryFieldMisysNames">
+			<Entry name="PID.5.1" value=""/>
+			<Entry name="PID.5.2" value=""/>
+		</PropertySet>
+		
+	</standardconnection>
+	
+	<standardconnection name="mesa_pdq_feed">
+		<hostname>10.100.40.112</hostname>
+		<port>3700</port>
+	
+		<Identifier name="SendingApplication">
+			<NamespaceId>Mysis</NamespaceId>
+			<UniversalId></UniversalId>
+			<UniversalIdType></UniversalIdType>
+		</Identifier>
+	
+		<Identifier name="SendingFacility">
+			<NamespaceId>Misys</NamespaceId>
+			<UniversalId></UniversalId>
+			<UniversalIdType></UniversalIdType>
+		</Identifier>
+		
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>MesaServer</NamespaceId>
+			<UniversalId></UniversalId>
+			<UniversalIdType></UniversalIdType>
+		</Identifier>
+	
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>Misys_MesaServer</NamespaceId>
+			<UniversalId></UniversalId>
+			<UniversalIdType></UniversalIdType>
+		</Identifier>
+		
+		<EnumMap class="IPatientConsumer$CreationReason">
+			<Entry enum="OUTPATIENT_REGISTER" code="O"/>
+		</EnumMap>
+		
+		<!-- Property name="DefaultRace" value="WH" -->
+		
+		<PropertySet name="DateTimeFormats">
+			<Entry name="VisitStartTime" value="yyyyMMddHHmm"/>
+		</PropertySet>
+		
+		<Identifier name="LocalAssigningAuthority">
+			<NamespaceId></NamespaceId>
+			<UniversalId>1.3.6.1.4.1.21367.2005.1.1</UniversalId>
+			<UniversalIdType>ISO</UniversalIdType>
+		</Identifier>
+		
+	</standardconnection>
+
+</Configuration>

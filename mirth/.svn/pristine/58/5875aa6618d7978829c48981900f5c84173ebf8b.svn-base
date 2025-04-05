@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+<style >
+a:link {text-decoration: none; color: blue}
+a:visited {text-decoration: none; color: darkcoral}
+a:hover {color: orchid}
+body,p,b,i,em,dt,dd,dl,sl,caption,th,td,tr,u,blink,select,option,form,div,li,a { font-family: Arial, sans-serif; font-size: 12px; }
+</style>
+
+</HEAD>
+<BODY bgcolor="#FFFFFF">
+<table class="right-nav" cellpadding="0" cellspacing="0" frame="void" bgcolor="E7E7E7" id="TABLE1" >
+       <tr style="height: 25px" bgcolor="696969" >
+           <td align="center" style="height: 25px; width: 200px;" >
+             <strong><font color="FFFFFF"> News</font></strong>
+           </td>
+       </tr>
+       <tr>
+       <td style="width: 200px; height: 1px;">
+       &nbsp;
+       <table class= "marquee" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="E7E7E7">
+          <tr> 
+            <td  class="News">
+            <marquee class="News" id="marqueeNews" style="PADDING-RIGHT: 6px; PADDING-LEFT:6px; PADDING-BOTTOM: 6px; PADDING-TOP: 6px; HEIGHT: 368px" direction="up"   scrollamount="1" scrolldelay="20" onmouseover="this.stop();" onmouseout="this.start();">
+            <FONT face="verdana" color="black" size="1">
+            <P><B>TOP NEWS OF BRAID</B></P></FONT>
+		</marquee>
+             </td>
+          </tr>
+                
+        </table>
+		</td>
+		</tr>
+</table>
+
+</BODY>
+</HTML>
+

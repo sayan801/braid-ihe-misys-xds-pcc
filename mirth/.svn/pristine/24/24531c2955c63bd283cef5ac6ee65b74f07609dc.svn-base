@@ -1,0 +1,80 @@
+<HTML>
+<TITLE>IHE-ATNA-Audit Message</TITLE>
+<BODY>
+<table border="1">
+<TR>
+<TH>Field</TH><TH>Code</TH><TH>Code System Name</TH><TH>Display Name</TH>
+</TR>
+<tr>
+<td>EventID</td><td>110113</td><td><em>DCM</em></td><td>Security Alert</td>
+</tr>
+<tr>
+<td>EventTypeCode</td><td>110126</td><td><em>DCM</em></td><td>Node Authentication</td>
+</tr>
+</table>
+<table border="1">
+<tr>
+<td>EventID</td><td>110113:
+	DCM:
+       Security Alert</td>
+</tr>
+<tr>
+<td>EventTypeCode</td><td>110126:
+       <em>DCM</em>:
+       Node Authentication</td>
+</tr>
+</table>
+    
+        
+<P>Event Type Code indicates: Security Alert</P>
+        
+    
+    
+        
+    
+    
+        
+    
+    
+        
+        
+    
+
+    
+        
+        
+    
+    
+        
+    
+    
+        
+    
+    
+        
+        
+    
+
+<H3>Audit Message / Active Participants</H3>
+<table border="1">
+<TR>
+<TH>User ID</TH><TH>User Name</TH><TH>Alternative User ID</TH><TH>User is Requestor</TH>
+</TR>
+<TR>
+<TD>localhost:4102</TD><TD></TD><TD></TD><TD>false</TD>
+</TR>
+<TR>
+<TD>AllscriptsConnect@allscripts</TD><TD></TD><TD>SecureNode</TD><TD>true</TD>
+</TR>
+</table>
+<H3>Audit Message / Audit Source Identification</H3>
+<table border="1">
+<TR>
+<TH>Enterprise Site ID</TH><TH>Audit Source ID</TH>
+</TR>
+<TR>
+<TD>ALLSCRIPTS</TD><TD>ALLSCRIPTS</TD>
+</TR>
+</table>
+</BODY>
+</HTML>

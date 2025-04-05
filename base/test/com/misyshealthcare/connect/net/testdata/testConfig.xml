@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NETWORKCONFIGURATION xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- xsi:noNamespaceSchemaLocation="NetConfig.xsd" -->
+    <SECURECONNECTION>
+        <KEYSTORE>certs/keystore.jks</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>certs/truststore.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+        <HOSTNAME>127.0.0.1</HOSTNAME>
+        <PORT>5001</PORT>
+        <URLPATH>/index.html</URLPATH>
+        <NAME>Secure</NAME>
+    </SECURECONNECTION>
+	<STANDARDCONNECTION name="AuditTrail">
+		<HOSTNAME>fake.mc.fakey</HOSTNAME>
+		<PORT>1234</PORT>
+		<Property name="TYPE" value="LOG4J LOGGER" />
+		<PropertySet name="localhost">
+			<entry name="MACHINENAME" value="MISYS" />
+			<entry name="HOSTNAME" value="hosp.misyshealthcare.com" />
+			<entry name="IP" value="10.0.1.101" />
+			<entry name="SITE" value="Big Hospital" />
+			<entry name="SOURCE" value="Sun Room" />
+			<entry value="Misys Connect" name="APPNAME"/>
+			<!--entry value="AENAME=ER_MISYS" name="AENAME"/-->
+		</PropertySet>
+		<propertyset name="ParticipantObject">
+			<entry name="PatientNameEncoding" value="HL7" />
+			<entry name="PatientIdEncoding" value="HL7" />
+			<entry name="DocumentIdType" value="DocumentId" />
+		</propertyset>
+		<IDENTIFIER name="AssigningAuthority">
+			<NamespaceId>Test</NamespaceId>
+			<UniversalId>1.2.3.4.5</UniversalId>
+			<UniversalIdType>ISO</UniversalIdType>
+		</IDENTIFIER>
+	</STANDARDCONNECTION>
+    <STANDARDCONNECTION name="Standard"> 
+        <HOSTNAME>127.0.0.1</HOSTNAME>
+        <PORT>5000</PORT>
+        <URLPATH>/index.html</URLPATH>
+				<CodeType name="testCodes.Size">
+					<Code code="1" display="Big" codingScheme="Test size codes" />
+					<Code code="2" display="Small" codingScheme="Test size codes" />
+				</CodeType>
+				<CodeType name="testCodes.Color">
+					<Code code="1" display="Red" codingScheme="Test color codes" />
+					<Code code="2" display="Green" codingScheme="Test color codes" />
+					<Code code="3" display="Blue" codingScheme="Test color codes" />
+				</CodeType>
+				<EnumMap class="XdsContentCode">
+					<Entry enum="Discharge_Summarization" code="d.s"/>
+					<Entry enum="Transfer_Summarization" code="r.s"/>
+				</EnumMap>
+				<StringMap name="sourceId">
+					<Entry string="Misys" code="123.456"/>
+				</StringMap>
+				<Identifier name="AssigningAuthority">
+					<NamespaceId>MISYS</NamespaceId>
+					<UniversalId>1.2.3.4.5</UniversalId>
+					<UniversalIdType>ISO</UniversalIdType>
+				</Identifier>
+				<IncludeFile name="testCodes.xml" />
+	    </STANDARDCONNECTION>
+</NETWORKCONFIGURATION>

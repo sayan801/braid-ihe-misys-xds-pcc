@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	
+	<Identifier name="LocalAssigningAuthority">
+		<NamespaceId></NamespaceId>
+        <UniversalId>1.3.6.1.4.1.21367.2008.1.2.309</UniversalId>
+		<UniversalIdType>ISO</UniversalIdType>
+    </Identifier>
+	
+	<Identifier name="SendingApplication">
+		<NamespaceId>EHR_MISYS</NamespaceId>
+	</Identifier>
+
+	<Identifier name="SendingFacility">
+		<NamespaceId>MISYS</NamespaceId>
+	</Identifier>
+	
+	<PropertySet name="PdqQueryName">
+		<Entry name="identifier" value="QRY_PDQ_1001"/>
+		<Entry name="text" value="Query By Name"/>
+		<Entry name="codingSystem" value="IHEDEMO"/>
+        <!--<Entry name="codingSystem" value="HIMSS2005&amp;1.3.6.1.4.1.21367.2005.1.1&amp;ISO"/>-->
+    </PropertySet>
+	
+	<PropertySet name="QueryFields">
+		<Entry name="PID.3.1" value="true"/>
+	</PropertySet>
+	
+	<PropertySet name="QueryProperties">
+		<Entry name="Uppercase" value="true"/>
+		<Entry name="WildcardAfter" value="*"/>
+	</PropertySet>
+	
+	<!-- Turn off Misys wildcard defaulting for these values -->
+	<PropertySet name="QueryFieldMisysNames">
+		<Entry name="PID.5.1" value=""/>
+		<Entry name="PID.5.2" value=""/>
+		<Entry name="PID.5.3" value=""/>
+	</PropertySet>
+
+</Configuration>

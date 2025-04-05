@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration>
+
+    <!--The Configuration for building a Referral Summary -->
+    <StandardConnection name="ReferralSummary">
+        <!--Specify Referral Reason-->
+        <Object name="ReferralReason" enabled="true">
+            <Field name="referralReason" type="String" value="Patient is otherwise healthy and is exhibiting chest pain."/>
+        </Object>
+        <!--Specify History of Present Illness-->
+        <Object name="HistoryOfPresentIllness" enabled="true">
+            <Field name="historyOfPresentIllness" type="String" value="Patient has no history of cardiac illnes."/>
+        </Object>
+
+        <ObjectList name="ActiveProblem" enabled="true">
+            <Object>
+                <Field name="name" type="String" value="Stress fracture, right foot"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="472.0^^2.16.840.1.113883.6.2^ICD9^" />
+                <Field name="startDate" type="Date" value="08/01/2006" format="MM/dd/yyyy" />
+                <Field name="endDate" type="Date" value="" format="" />
+                <Field name="status" type="String" value="healed" />
+                <Field name="source" type="String" value=""/>
+            </Object>
+            <Object>
+                <Field name="name" type="String" value="Ear infection"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="^^^^" />
+                <Field name="startDate" type="Date" value="10/01/2006" format="MM/dd/yyyy" />
+                <Field name="endDate" type="Date" value="" format="" />
+                <Field name="status" type="String" value="active" />
+                <Field name="source" type="String" value=""/>
+            </Object>
+        </ObjectList>
+
+        <ObjectList name="Medication" enabled="true">
+            <Object>
+                <Field name="productName" type="String" value="Amoxicillin (250 mg tabs)"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="^^^^" />
+                <Field name="sig" type="String" value="3 times per day  oral"/>
+                <Field name="orderDate" type="Date" value="10/01/2006" format="MM/dd/yyyy" />
+                <Field name="duration" type="String" value="10 days"/>
+            </Object>
+        </ObjectList>
+
+        <ObjectList name="Allergy" enabled="true">
+            <Object>
+                <Field name="agent" type="String" value="Iodinated contrast"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="^^^^" />
+                <Field name="reaction" type="String" value="laryngeal oedema"/>
+                <Field name="reportDate" type="Date" value="" format="" />
+                <Field name="comment" type="String" value="Reaction occurs within 10 minutes" />
+            </Object>
+        </ObjectList>
+
+    </StandardConnection>
+</Configuration>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+    <!--Optional: The MisysAssigningAuthority specifies Misys Patient Identity Domain name.
+        It is used to pull out the Misys Unique ID from the returned patient IDs.  If it is not supplied, no
+          Misys ID is pulled out of the returned identifier list.  (It is not a good idea to
+          leave this value unspecified). -->
+    <Identifier name="MisysAssigningAuthority">
+		<NamespaceId>MIEH</NamespaceId>
+        <UniversalId>1.3.6.1.4.1.21367.2007.1.2.127</UniversalId>
+        <UniversalIdType>ISO</UniversalIdType>
+    </Identifier>
+
+    <!--AssigningAuthority (Identifier) optional:
+        Specifies that this actor only return patient IDs from this assigning authority (and
+        the Misys authority if it is defined).  If this parameter is not specified then the
+        actor will ask for all known IDs from the PDQ server. -->
+    <!--Identifier name="AssigningAuthority">
+		<NamespaceId></NamespaceId>
+	</Identifier-->
+
+    <!--Required: The SendingApplication specifies the ID in (MSH-3) for PDQ Query -->
+	<Identifier name="SendingApplication">
+		<NamespaceId>EHR_MISYS</NamespaceId>
+	</Identifier>
+
+    <!--Required: The SendingFacility specifies the ID in (MSH-4) for PDQ Query -->
+    <Identifier name="SendingFacility">
+		<NamespaceId>MISYS</NamespaceId>
+	</Identifier>
+
+    <!-- PdqQueryName - (PropertySet) required:
+         This parameter specifies the query name information to be included in the HL7
+         message (QPD-1).  The required parts are:
+            identifier - (String) required: A symbolic identifier for the query
+            text - (String) required: A text string given the query name
+            codingsystem - (String) required: The name of the coding system for this identifier -->
+    <PropertySet name="PdqQueryName">
+		<Entry name="identifier" value="QRY_PDQ_1001"/>
+		<Entry name="text" value="Query By Name"/>
+		<Entry name="codingSystem" value="IHEDEMO"/>
+        <!--<Entry name="codingSystem" value="HIMSS2005&amp;1.3.6.1.4.1.21367.2005.1.1&amp;ISO"/>-->
+    </PropertySet>
+
+    <!--MaximumChunkSize - (Property int) optional:
+       Specifies the maximum number of patients that should be returned by a single
+       query.  The actor will keep making continuation queries off this size until
+       the desired number of patients are retrieved.  By default the chunk size (-1) is
+       unlimited. -->
+    <!--Property name="MaximumChunkSize" value="-1"/-->
+
+    <!-- KeepContinuationAlive - (Property boolean) optional:
+         If multiple contiuations are required they will all be made over a single
+         socket if this property is "true".  If "false", multiple socket connections
+         will be made.  By default this parameter is "true". -->
+    <!--Property name="KeepContinuationAlive" value="true"/-->
+
+    <!-- QueryFields - (PropertySet) optional:
+         This property set specifies which HL7 parameters should be excluded from a
+         query even if a value is supplied.  Some PDQ servers may not properly handle
+         some fields and they should simply not be sent.  Each entry name specifies a
+         field id like "PID.3.1" or "PID.5.2" and the entry value is "false" to exclude
+         the value and "true" to include it (if it has a value in the query).  The
+         default for all fields is "true".  -->
+    <PropertySet name="QueryFields">
+		<Entry name="PID.3.1" value="true"/>  <!--Enable search by Patient ID-->
+	</PropertySet>
+
+    <!--QueryProperties - (PropertySet) optional:
+         This set of properties specifies global characteristics for queries to the PDQ
+         server over this connection.  The allowed parts are:
+             Uppercase - (boolean) optional: If this value is "true" all values sent are
+         converted to uppercase.  The default is false (meaning no conversion).
+             Lowercase - (boolean) optional: If this value is "true" all values sent are
+         converted to lowercase.  The default is false (meaning no conversion).  If both Uppercase
+         and Lowercase are supplied, uppercase will be used.
+             WildcardAfter - (String) optional: Specifies the wildcard value this connection
+         expects at the end of a value.  If this value is not supplied no wildcard will be used
+         at the end of a value, no matter what the user or Misys Connect expects.
+             WildcardBefore - (String) optional: Specifies the wildcard value this connection
+         expects at the end of a value.  If this value is not supplied no wildcard will be used
+         at the beginning of a value, no matter what the user or Misys Connect expects.  -->
+    <PropertySet name="QueryProperties">
+		<Entry name="Uppercase" value="true"/>
+        <Entry name="WildcardBefore" value="*"/>
+        <Entry name="WildcardAfter" value="*"/>
+    </PropertySet>
+	
+	<!--QueryFieldMisysNames - (PropertySet) optional:
+         This property set maps field ids (ie. PID.3,1 and PID.5.2) to the field names for these values
+         used in the Misys Connect Query Design Properties file.  Each field has a built-in default but
+         these can be overridden using this property set.  This is used to look up default wildcard
+         usage in Misys Connect. -->
+    <!--PropertySet name="QueryFieldMisysNames">
+		<Entry name="PID.5.1" value=""/>
+		<Entry name="PID.5.2" value=""/>
+		<Entry name="PID.5.3" value=""/>
+	</PropertySet-->
+
+</Configuration>

@@ -1,0 +1,140 @@
+<project name="braid" default="braid-zip-tar" basedir=".">
+
+  <description>build file for the Braid IHE client libraries</description>
+  <!-- set global properties for this build -->
+  <property name="project" value="braid" />
+  <property name="version" value="1.2.3-SNAPSHOT" />	
+  <property name="final.name" value="${project}-${version}" />	
+  <property name="zipfilename" value="braid-${version}.zip"/>
+  <property name="tarfilename" value="braid-${version}.tar.gz"/>
+  <property name="basejarname" value="braid-base-${version}.jar"/>
+  <property name="ihejarname" value="braid-ihe-${version}.jar"/>
+  <property name="src" value="src"/>
+  <property name="test" value="test"/>	
+  <property name="ihe.dir" value="ihe"/>
+  <property name="base.dir" value="base" /> 
+  <property name="common.dir" value="common"/>	
+  <property name="conf.dir" value="conf" />
+  <property name="build" location="build"/> 	
+	
+  <!-- load the common library -->	
+  <path id="build.lib">
+  	<fileset dir="${common.dir}/lib">
+  	        <include name="**/*.jar"/>
+  	</fileset>  	
+  </path>
+ 
+  <!-- set base classes classpath -->	
+  <path id="build.lib.withbase">
+  	<path refid="build.lib" />
+  	<pathelement location="${build}/classes/base"/>	
+  </path>  	
+
+ <!-- compile the base and ihe classes & loaded into base directory -->	
+ <target name="build" description="build the software">
+  	<mkdir dir="${build}"/>
+  	<mkdir dir="${build}/classes/base" />
+  	<mkdir dir="${build}/classes/ihe" />  	
+  	
+  	<javac destdir="${build}/classes/base"
+  	       classpathref="build.lib"
+  	       debug="on" nowarn="on">
+	    <src path="${base.dir}/${src}"/>
+ 		<include name="**/*.java"/>
+	</javac>
+  	
+  	<copy todir="${build}/classes/base">
+  		<fileset dir="${base.dir}/${src}">
+  			<include name="**/*.xml"/>
+  		    <include name="**/*.properties"/>
+  		</fileset>
+  	</copy>
+  	
+  	<javac destdir="${build}/classes/ihe"
+  	       classpathref="build.lib.withbase"
+  	       debug="on" nowarn="on">
+  	    <src path="${ihe.dir}/${src}"/>
+  		<include name="**/*.java"/>
+	</javac>
+  	
+  	<copy todir="${build}/classes/ihe">
+  		<fileset dir="${ihe.dir}/${src}">
+  			<include name="**/*.properties"/>
+  			<include name="**/*.xsd" />
+  			<include name="**/*.xsl" />
+  			<include name="**/*.xls" />
+  			<include name="**/*.ser" />
+  			<include name="**/xdm/**" />
+  			<exclude name="config/**" />
+  		</fileset>  	
+  	</copy>
+  	
+  </target> 
+	
+ <!-- create target for base & ihe jar -->   
+  <target name="dist" depends="build" description="Put all of the code into the appropriate jars">
+  	<mkdir dir="${build}/${final.name}/lib"/>
+  	<mkdir dir="${build}/${final.name}/licenses"/>
+	<mkdir dir="${build}/${final.name}/conf"/>
+   	<jar destfile="${build}/${final.name}/${basejarname}" basedir="${build}/classes/base" />  		
+  	<jar destfile="${build}/${final.name}/${ihejarname}" basedir="${build}/classes/ihe" />  	
+  	<copy todir="${build}/${final.name}/lib">
+  		<fileset dir="${common.dir}/lib">
+  		</fileset>
+  	</copy>	
+  	<copy todir="${build}/${final.name}/licenses">
+  		<fileset dir="${common.dir}/licenses">
+  		</fileset>	
+  	</copy>	  	
+  	<copy todir="${build}/${final.name}/conf">
+  		<fileset dir="${ihe.dir}/src/config">
+  		</fileset>
+  	</copy>
+  	<copy file="LICENSE" todir="${build}/${final.name}"/>
+  	<copy file="NOTICE" todir="${build}/${final.name}"/>
+  	<copy file="Readme.txt" todir="${build}/${final.name}"/>	
+  	<delete dir="${build}/classes"/>
+  </target>
+	
+	
+<!-- Packages the braid project in zip format -->
+  <target name="package-braid-zip" depends="dist">
+	    <zip zipfile="${zipfilename}" >
+	     	<zipfileset dir="${build}/${final.name}" prefix="${final.name}">
+	     	<include name="lib/**"/>
+	     	<include name="licenses/**"/>
+	     	<include name="conf/**"/>	
+	     	<include name="**/*.jar"/>
+	     	<include name="LICENSE"/>
+	     	<include name="NOTICE"/>
+	     	<include name="Readme.txt"/>	
+	    	</zipfileset>
+	    </zip>
+ </target>
+	
+<!-- Packages the braid project in tar format -->
+ <target name="package-braid-tgz">
+	    <tar longfile="gnu" compression="gzip" tarfile="${tarfilename}">
+	      <tarfileset dir="${build}/${final.name}" prefix="${final.name}">
+	      	<include name="lib/**"/>
+	      	<include name="licenses/**"/>
+	      		<include name="conf/**"/>	      		
+	      		<include name="**/*.jar"/>
+	      		<include name="LICENSE"/>
+	      		<include name="NOTICE"/>
+	      	    <include name="Readme.txt"/>	
+	 		</tarfileset>
+	    </tar>
+</target>	
+
+<!-- clean up the build folder -->	
+ <target name="clean" description="clean up" >
+      <delete dir="${build}"/>
+  </target>
+
+<target name="braid-zip-tar">
+    <antcall target="package-braid-zip"></antcall>
+	<antcall target="package-braid-tgz"></antcall>
+	<antcall target="clean"></antcall> 
+</target>	
+</project>

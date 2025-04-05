@@ -1,0 +1,12 @@
+ADT_PHREESIA                Sample Missing
+EHR_ALLSCRIPTS_ENTERPRISE   Tested, no issue
+EHR_ALLSCRIPTS_PROFESSIONAL Tested, no issue 
+EHR_BLUEWARE                Tested, no issue
+EHR_GREENWAY                Sample Missing
+EHR_MCKESSON                Tested, no issue   
+EHR_MIE                     Sample Missing
+EHR_SAGE                    Tested, no issue
+OTHER_GE_HIE_SERVICES       Sample Missing
+PHR_CAPMED                  Tested, no issue
+PHR_EPIC                    Tested, no issue
+PHR_NMC                     Sample Missing

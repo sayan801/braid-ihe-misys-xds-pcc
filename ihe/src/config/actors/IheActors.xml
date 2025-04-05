@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!--Note: This file is the starting point of All the Actor configuration;
+     all other config files should be linked from here. -->
+
+<!--Each configuration file has a root Configuration tag-->
+<Configuration>
+
+    <!--A connectfile contains standardconnection and/or secureconnection configuration-->
+    <!--Defines the configuration of XDS Registry for Document Consumer Actor-->
+    <connectionfile file="XdsRegistryQueryConnections.xml" />
+    <!--Defines the configuration of XDS Repository for Document Source Actor -->
+    <connectionfile file="XdsRepositorySubmitConnections.xml" />
+    <!--Defines the configuration of PDQ Supplier(PDQ Server) for PDQ Consumer Actor-->
+    <connectionfile file="PdqServerConnections.xml" />
+    <!--Defines the configuration of PIX Xreference Manager for PIX Consumer Actor-->
+    <connectionfile file="PixManagerConnections.xml" />
+    <!--Defines the configuration of Audit Repository Server for Audit Client-->
+    <connectionfile file="AuditRepositoryConnections.xml" />
+    <!--Defines the configuration of PIX Xreference Manager for PIX Global Source -->
+    <connectionfile file="GlobalFeedConnections.xml" />
+    <!--Defines the configuration of PIX Xreference Manager for PIX Local Source-->
+    <connectionfile file="LocalFeedConnections.xml" />
+    <!--Defines the configuration of Misys Connect as PIX Manager-->
+    <connectionfile file="PixClientConnections.xml" />
+    <!--Defines the configuration of Misys Connect as PDQ Supplier-->
+    <connectionfile file="PdqClientConnections.xml" />
+
+
+    <!-- An actorfile specifies actor configuration-->
+    <!-- The IBM Non-Secure Actors -->
+    <actorfile file="IBMActors.xml" />
+
+    <!-- The IBM Secure Actors -->
+    <!--actorfile file="IBMSecureActors.xml" /-->
+
+    <!-- The Initiate Non-Secure Actors -->
+    <actorfile file="InitiateActors.xml" />
+
+    <!--The actor for Misys Connect to be a PIX Manager-->
+    <!--actor name="misys-connect-pix-manager" type="PixManager">
+      <description>Misys Connect Pix Manager</description>
+      <connection source="misys-connect-pix-manager" />
+    </actor-->
+
+    <!--The actor for Misys Connect to be a PD Supplier-->
+    <!--actor name="misys-connect-pd-supplier" type="PdSupplier">
+      <description>Misys Connect Pd Supplier</description>
+      <connection source="misys-connect-pd-supplier" />
+    </actor-->
+
+ </Configuration>

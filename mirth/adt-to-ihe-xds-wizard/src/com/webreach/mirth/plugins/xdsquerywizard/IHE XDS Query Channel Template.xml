@@ -1,0 +1,185 @@
+<com.webreach.mirth.model.Channel>
+  <id>794c9be8-bfb4-4a1c-92d3-2d84c2d66247</id>
+  <name>IHE XDS Query Channel</name>
+  <description></description>
+  <enabled>true</enabled>
+  <version>1.7.0</version>
+  <lastModified>
+    <time>1202347699081</time>
+    <timezone>America/Los_Angeles</timezone>
+  </lastModified>
+  <revision>1</revision>
+  <sourceConnector>
+    <name>sourceConnector</name>
+    <properties>
+      <property name="messageEnd">0x1C</property>
+      <property name="ackCodeError">AE</property>
+      <property name="messageStart">0x0B</property>
+      <property name="ackMsgRejected">Message Rejected.</property>
+      <property name="ackCodeRejected">AR</property>
+      <property name="receiveTimeout">0</property>
+      <property name="charEncoding">hex</property>
+      <property name="bufferSize">65536</property>
+      <property name="useStrictLLP">1</property>
+      <property name="reconnectInterval">5000</property>
+      <property name="waitForEndOfMessageCharacter">0</property>
+      <property name="sendACK">1</property>
+      <property name="port">@port</property>
+      <property name="ackOnNewConnection">0</property>
+      <property name="checkMSH15">0</property>
+      <property name="ackMsgSuccessful"></property>
+      <property name="tcpProtocolClassName">org.mule.providers.tcp.protocols.TcpProtocol</property>
+      <property name="responseFromTransformer">0</property>
+      <property name="segmentEnd">0x0D</property>
+      <property name="ackPort"></property>
+      <property name="charsetEncoding">DEFAULT_ENCODING</property>
+      <property name="host">127.0.0.1</property>
+      <property name="responseValue">None</property>
+      <property name="DataType">LLP Listener</property>
+      <property name="processBatchFiles">0</property>
+      <property name="ackMsgError">An Error Occured Processing Message.</property>
+      <property name="serverMode">1</property>
+      <property name="ackCodeSuccessful">AA</property>
+      <property name="ackIP"></property>
+      <property name="recordSeparator">0x0D</property>
+    </properties>
+    <transformer>
+      <steps>
+        <com.webreach.mirth.model.Step>
+          <sequenceNumber>0</sequenceNumber>
+          <name>patientId</name>
+          <script>channelMap.put(&apos;patientId&apos;, validate(@mapping, &apos;&apos;, new Array()));</script>
+          <type>Mapper</type>
+          <data class="map">
+            <entry>
+              <string>Mapping</string>
+              <string>@mapping</string>
+            </entry>
+            <entry>
+              <string>Variable</string>
+              <string>patientId</string>
+            </entry>
+            <entry>
+              <string>RegularExpressions</string>
+              <list/>
+            </entry>
+            <entry>
+              <string>DefaultValue</string>
+              <string></string>
+            </entry>
+            <entry>
+              <string>isGlobal</string>
+              <string>channel</string>
+            </entry>
+          </data>
+        </com.webreach.mirth.model.Step>
+      </steps>
+      <inboundTemplate></inboundTemplate>
+      <outboundTemplate></outboundTemplate>
+      <inboundProtocol>HL7V2</inboundProtocol>
+      <outboundProtocol>HL7V2</outboundProtocol>
+      <outboundProperties/>
+    </transformer>
+    <filter>
+      <rules/>
+    </filter>
+    <transportName>LLP Listener</transportName>
+    <mode>SOURCE</mode>
+    <enabled>true</enabled>
+  </sourceConnector>
+  <destinationConnectors>
+    <com.webreach.mirth.model.Connector>
+      <name>Return list of documents from XDS</name>
+      <properties>
+        <property name="script">importPackage(Packages.com.misyshealthcare.connect.base);
+importPackage(Packages.com.misyshealthcare.connect.base.demographicdata);
+importPackage(Packages.com.misyshealthcare.connect.base.clinicaldata);
+
+importPackage(Packages.java.lang);
+importPackage(Packages.java.text);
+importPackage(Packages.java.util);
+importPackage(Packages.mesatests);
+
+var log = new MesaTestLogger(System.out);
+
+var actors = new ArrayList();
+actors.add(&quot;@actor&quot;);
+
+configuration.resetConfiguration(actors);
+
+var query = new DocumentQuery();
+var startDate = new DateQuery(@start_year, @start_month, @start_day);
+query.setStartTime(startDate);
+query.setEndTime(new DateQuery(@end_year, @end_month, @end_day));
+query.setPatientId(new PatientID($(&apos;patientId&apos;)));
+logger.error(&quot;Searching for documents for patient ID: &quot; + $(&apos;patientId&apos;));
+docs = DocumentBroker.getInstance().findDocuments(query);
+
+if (docs.size() == 0) {
+    logger.error(&quot; No document is found.&quot;);
+} else {
+    logger.error(docs.size() + &quot; documents are available:&quot;);
+}
+
+var response = &quot;&lt;Documents&gt;&quot;;
+for (i = 0; i &lt; docs.size(); i++) {
+	var doc = docs.get(i);
+	var creationTime = doc.getCreationTime();
+	formatter = new SimpleDateFormat(&quot;MM/d/y h:ma&quot;);
+	var formattedCreationTime = formatter.format(creationTime);
+
+	var authors = doc.getAuthorDescriptors(); 
+	var author = authors.get(0); 
+	var provider = author.getAuthorPerson(); 
+	var authorName = provider.getProvNameTitle() + &quot; &quot; + provider.getProvNameFirst() + &quot; &quot; + provider.getAuthorPerson().getProvNameLast(); 
+	var institution = authorDescriptor.getAuthorIntitutions().get(0); 
+
+	response += &quot;&lt;Document&gt;&lt;Title&gt;&quot; + doc.getTitle() + &quot;&lt;/Title&gt;&lt;Identifier&gt;&quot; + doc.getUniqueId() + &quot;&lt;/Identifier&gt;&lt;URI&gt;&quot; + doc.getUri() + &quot;&lt;/URI&gt;&lt;CreationTime&gt;&quot; + formattedCreationTime + &quot;&lt;/CreationTime&gt;&lt;TypeCode&gt;&quot; + doc.getTypeCode().getValue() + &quot;&lt;/TypeCode&gt;&lt;Author&gt;&quot; + authorName + &quot;&lt;/Author&gt;&lt;Institution&gt;&quot; + institution + &quot;&lt;/Institution&gt;&lt;/Document&gt;&quot;;
+}
+response += &quot;&lt;/Documents&gt;&quot;;
+
+logger.error(response);
+channelMap.put(&quot;response&quot;, response);</property>
+        <property name="DataType">IHE Sender</property>
+        <property name="host">sink</property>
+      </properties>
+      <transformer>
+        <steps/>
+        <inboundTemplate></inboundTemplate>
+        <outboundTemplate></outboundTemplate>
+        <inboundProtocol>HL7V2</inboundProtocol>
+        <outboundProtocol>HL7V2</outboundProtocol>
+        <inboundProperties/>
+        <outboundProperties/>
+      </transformer>
+      <filter>
+        <rules/>
+      </filter>
+      <transportName>IHE Sender</transportName>
+      <mode>DESTINATION</mode>
+      <enabled>true</enabled>
+    </com.webreach.mirth.model.Connector>
+  </destinationConnectors>
+  <properties>
+    <property name="synchronous">true</property>
+    <property name="removeNamespace">true</property>
+    <property name="transactional">false</property>
+    <property name="initialState">started</property>
+    <property name="dont_store_filtered">false</property>
+    <property name="error_messages_only">false</property>
+    <property name="max_message_age">-1</property>
+    <property name="store_messages">true</property>
+    <property name="encryptData">false</property>
+  </properties>
+  <preprocessingScript>// Modify the message variable below to pre process data
+return message;</preprocessingScript>
+  <postprocessingScript>// This script executes once after a message has been processed
+responseMap.put(&quot;Destination 1&quot;, ResponseFactory.getSuccessResponse(channelMap.get(&quot;response&quot;)));
+return;</postprocessingScript>
+  <deployScript>// This script executes once when the mule engine is started
+// You only have access to the globalMap here to persist data
+return;</deployScript>
+  <shutdownScript>// This script executes once when the mule engine is stopped
+// You only have access to the globalMap here to persist data
+return;</shutdownScript>
+</com.webreach.mirth.model.Channel>

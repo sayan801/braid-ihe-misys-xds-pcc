@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeMapping>
+	<Mapping fromSystem="test" toSystem="ihe">
+		<!--  Category values must be valid values from CategoryEnum -->
+		<Category value="Gender">
+			<Value from="Male" to="M"/>
+			<Value from="Female" to="F"/>
+		</Category>
+	</Mapping>
+</CodeMapping>

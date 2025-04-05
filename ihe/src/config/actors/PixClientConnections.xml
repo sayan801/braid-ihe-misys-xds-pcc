@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The PIX Manager Actor Connections -->
+
+<Configuration>
+    <standardconnection name="misys-connect-pix-manager">
+        <!--The host name of the PIX Manager Server-->
+        <hostname>localhost</hostname>
+        <!--The port for PIX Query transaction-->
+        <port>3600</port>
+        <Identifier name="ReceivingApplication">
+            <NamespaceId>EHR_MISYS</NamespaceId>
+        </Identifier>
+        <Identifier name="ReceivingFacility">
+            <NamespaceId>MISYS</NamespaceId>
+        </Identifier>
+
+        <!-- PixDataSourceClass - required :
+            The java class that provides the patient data source for this Pix Manager (required) -->
+        <Property name="PixDataSourceClass" value="com.misyshealthcare.connect.hiber.mpi.ConnectPVRegistry" />
+            
+        <!--To configure each PIX client, always use name prefix "Domain_" -->
+        <Identifier name="Domain_CPR">
+            <NamespaceId>CPR</NamespaceId>
+            <UniversalId></UniversalId>
+            <UniversalIdType></UniversalIdType>
+        </Identifier>
+
+        <Identifier name="Domain_EMR">
+            <NamespaceId>EMR-MISYSCONNECT</NamespaceId>
+            <UniversalId></UniversalId>
+            <UniversalIdType></UniversalIdType>
+        </Identifier>
+        
+        <Identifier name="Domain_HOMECARE">
+            <NamespaceId>HomeCare</NamespaceId>
+            <UniversalId></UniversalId>
+            <UniversalIdType></UniversalIdType>
+        </Identifier>
+
+    </standardconnection>
+
+
+</Configuration>

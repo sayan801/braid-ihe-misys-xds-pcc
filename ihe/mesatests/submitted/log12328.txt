@@ -1,0 +1,1 @@
+<XdsEvsResult><Test>SQ.a</Test><Date>2009-01-16 20:31:31.574</Date><Source>69.134.133.252</Source><Target>129.6.24.109</Target><Endpoint>http://ihexds.nist.gov:9080/tf5/services/xdsregistrya</Endpoint><Result>Pass</Result><LogEvent>123215589157469.134.133.252</LogEvent></XdsEvsResult>

@@ -1,0 +1,51 @@
+22/12/07-17:35:00 MESA 2007 Test 11949 begin ...
+22/12/07-17:35:00 ++ Misys Healthcare (IP 10.110.0.189, 10.100.52.164)
+22/12/07-17:35:00 ++ Saturday December 22, 2007 5:35:00PM EST
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <query:AdhocQueryResponse xmlns:query="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" status="urn:oasis:names:tc:ebxml-regrep:ResponseStatusType:Success">
+      <rim:RegistryObjectList xmlns:rim="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0">
+        <rim:ObjectRef home="" id="urn:uuid:130c537e-41b1-44dc-80cb-99e5cc845a88"/>
+        <rim:ObjectRef home="" id="urn:uuid:02e3b46f-aa5b-4bf6-b03e-92191f9737ed"/>
+        <rim:ObjectRef home="" id="urn:uuid:8ff63ace-b9ac-4d79-af20-d5b61ef0e549"/>
+        <rim:ObjectRef home="" id="urn:uuid:c6a24910-e939-402c-be60-83bd5f76db51"/>
+        <rim:ObjectRef home="" id="urn:uuid:7364e6a2-9cf2-4c99-b354-eddfd8bcaf4d"/>
+        <rim:ObjectRef home="" id="urn:uuid:c7bc4a2f-50be-48b3-a10c-f8c00842b694"/>
+        <rim:ObjectRef home="" id="urn:uuid:cad84a5e-5cb7-4683-b937-b5f8bda3f469"/>
+        <rim:ObjectRef home="" id="urn:uuid:616cade4-1ace-4167-87ef-85381ece8db7"/>
+        <rim:ObjectRef home="" id="urn:uuid:17ce6a17-4f41-4781-8e3d-c93708f5839f"/>
+        <rim:ObjectRef home="" id="urn:uuid:2c3fe442-d05a-4977-b515-cd0436183845"/>
+        <rim:ObjectRef home="" id="urn:uuid:f2259ff3-3761-41c6-b516-f0e9ba48c300"/>
+        <rim:ObjectRef home="" id="urn:uuid:0f1891c6-62c2-471d-8a92-b195aaa261bb"/>
+        <rim:ObjectRef home="" id="urn:uuid:15ea6665-02d1-42d7-901f-a4dee05d9ea4"/>
+        <rim:ObjectRef home="" id="urn:uuid:29def2eb-5fb5-43cc-89fd-e92481e0220e"/>
+        <rim:ObjectRef home="" id="urn:uuid:4816e0bd-0fa6-4227-af81-fa0a676dffb2"/>
+        <rim:ObjectRef home="" id="urn:uuid:e331a9d7-7a76-447b-91c5-97a7eb0513b8"/>
+        <rim:ObjectRef home="" id="urn:uuid:9eb63f20-ec7d-4261-90d6-daee0a2a22c5"/>
+        <rim:ObjectRef home="" id="urn:uuid:ec044e78-f2d5-4d43-8950-935fb96bc9c0"/>
+        <rim:ObjectRef home="" id="urn:uuid:c445d476-ad7d-4b9e-a86e-949b589a0197"/>
+        <rim:ObjectRef home="" id="urn:uuid:923a7cf1-711a-4ed9-8f97-9ed1701876ee"/>
+        <rim:ObjectRef home="" id="urn:uuid:800cf62c-0571-44ae-83f7-9efc582f72a9"/>
+        <rim:ObjectRef home="" id="urn:uuid:13a80da1-7c5e-4cb6-9f5e-a4701cc1aaa6"/>
+        <rim:ObjectRef home="" id="urn:uuid:d3afe561-ecc9-421e-9630-88f17c328a0c"/>
+        <rim:ObjectRef home="" id="urn:uuid:48c174f8-2e62-4b36-a744-a2b6aa1b5015"/>
+        <rim:ObjectRef home="" id="urn:uuid:392bf5c0-e473-4fc5-9ed9-c00bc2dcc9b0"/>
+        <rim:ObjectRef home="" id="urn:uuid:75740899-552e-402a-9a94-b51ca81bbf79"/>
+        <rim:ObjectRef home="" id="urn:uuid:8fdccbf9-c531-4fe2-b59f-beab84588081"/>
+        <rim:ObjectRef home="" id="urn:uuid:a9c1425e-0485-43b1-ab65-8a99801516ed"/>
+        <rim:ObjectRef home="" id="urn:uuid:27c98b24-07c4-97fe-07e0-000c29a47886"/>
+        <rim:ObjectRef home="" id="urn:uuid:28d1051a-08c8-9808-db3d-000c29a47886"/>
+        <rim:ObjectRef home="" id="urn:uuid:7ca0ae84-fc9c-98f8-76d7-000c29a47886"/>
+        <rim:ObjectRef home="" id="urn:uuid:7cf0d7c4-fcec-98f8-07e0-000c29a47886"/>
+        <rim:ObjectRef home="" id="urn:uuid:8af6a0b0-0af2-4402-ea3e-02004c4f4f50"/>
+        <rim:ObjectRef home="" id="urn:uuid:8d1f559e-0d18-440c-98e9-02004c4f4f50"/>
+        <rim:ObjectRef home="" id="urn:uuid:8d7c5942-0d7c-440c-3973-02004c4f4f50"/>
+        <rim:ObjectRef home="" id="urn:uuid:8e9dfc9a-0e94-440c-97a9-000c29a47886"/>
+        <rim:ObjectRef home="" id="urn:uuid:1a83d5a0-3a7c-4434-e08e-000c29a47886"/>
+        <rim:ObjectRef home="" id="urn:uuid:1a5f4dd4-3a5e-4434-0ef0-000c29a47886"/>
+      </rim:RegistryObjectList>
+    </query:AdhocQueryResponse>
+  </soapenv:Body>
+</soapenv:Envelope>
+22/12/07-17:35:06 MESA 2007 Test 11949 end.

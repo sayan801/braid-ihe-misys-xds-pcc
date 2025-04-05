@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The XDS Registry Query Actor Connections -->
+<!-- For Connectathon 2008 COMPLETE-->
+
+<Configuration>
+	
+	<standardconnection name="nist-xds-query">
+		<hostname>ihexds.nist.gov</hostname>
+		<port>9080</port>
+		<urlPath>/tf5/services/xdsregistrya</urlPath>
+        <property name="TestPatientId" value="9206d2eb3caa48b^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+		<includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>	
+    <secureconnection name="nist-xds-query-secure">
+		<hostname>ihexds.nist.gov</hostname>
+        <port>9085</port>
+		<urlPath>/tf5/services/xdsregistrya</urlPath>
+                 
+        <includefile name="XdsCodes.xml" />
+        <includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+    </secureconnection>
+	
+	<standardconnection name="tianispirit-xds-query">
+		<hostname>tiani-spirit1</hostname>
+		<port>8080</port>
+		<urlPath>/XDS/registry</urlPath>
+        <property name="TestPatientId" value="NA5080^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+		
+		<includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>	
+    <secureconnection name="tianispirit-xds-query-secure">
+		<hostname>tiani-spirit1</hostname>
+        <port>8443</port>
+        <urlPath>/XDS/registry</urlPath>
+        <property name="TestPatientId" value="NA5080^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <includefile name="XdsCodes.xml" />
+        <includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+    </secureconnection>
+	
+	<standardconnection name="sectra-xds-query">
+		<hostname>sectra1</hostname>
+		<port>8080</port>
+		<urlPath>/xds/services/query</urlPath>
+		<includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>	
+    <secureconnection name="sectra-xds-query-secure">
+		<hostname>sectra1</hostname>
+        <port>8443</port>
+        <urlPath>/xds/services/query</urlPath>
+        <property name="TestPatientId" value="NA5080^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <includefile name="XdsCodes.xml" />
+        <includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+    </secureconnection>
+		
+	<standardconnection name="ibm-xds-query">
+		<hostname>lswin10.dfw.ibm.com</hostname>
+		<port>9081</port>
+		<urlPath>/IBMXDSRegistry/XDSa/Registry</urlPath>
+		<includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>
+	<secureconnection name="ibm-xds-query-secure">
+		<hostname>lswin10.dfw.ibm.com</hostname>
+		<port>9444</port>
+		<urlPath>/IBMXDSRegistry/XDSa/Registry</urlPath>
+		<includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+    </secureconnection>
+
+	<standardconnection name="ge-xds-query">
+		<hostname>208.51.30.248</hostname>
+		<port>8180</port>
+		<urlPath>/xdsstoredquery-1.0/queryRegistry</urlPath>
+		<includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>
+	<secureconnection name="ge-xds-query-secure">
+		<hostname>208.51.30.248</hostname>
+		<port>8543</port>
+		<urlPath>/xdsstoredquery-1.0/queryRegistry</urlPath>
+		<includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+    </secureconnection>
+
+	<standardconnection name="hxti-xds-query">
+		<hostname>hxti1</hostname>
+		<port>8080</port>
+		<urlPath>/ihe/registry/xdsa</urlPath>
+        <property name="TestPatientId" value="09874^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+		
+		<includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>
+	<secureconnection name="hxti-xds-query-secure">
+		<hostname>hxti1</hostname>
+		<port>8443</port>
+		<urlPath>/ihe/registry/xdsa</urlPath>
+		<includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+    </secureconnection>
+    
+<!-- ******************************************************--> 	
+	<!-- XDS.b -->
+	<standardconnection name="nist-xdsb-query">
+		<hostname>ihexds.nist.gov</hostname>
+		<port>9080</port>
+		<urlPath>/tf5/services/xdsregistryb</urlPath>
+        <property name="TestPatientId" value="ad479512dd91412^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+		<includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>	
+    <secureconnection name="nist-xdsb-query-secure">
+		<hostname>ihexds.nist.gov</hostname>
+        <port>9085</port>
+		<urlPath>/tf5/services/xdsregistryb</urlPath>
+                 
+        <includefile name="XdsCodes.xml" />
+        <includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+    </secureconnection>
+
+	<standardconnection name="hxti-xdsb-query">
+		<hostname>hxti1</hostname>
+		<port>8080</port>
+		<urlPath>/ihe/registry/xdsb</urlPath>
+		<includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>
+	<secureconnection name="hxti-xdsb-query-secure">
+		<hostname>hxti1</hostname>
+		<port>8443</port>
+		<urlPath>/ihe/registry/xdsb</urlPath>
+        <property name="TestPatientId" value="041685041685^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+		<includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+    </secureconnection>
+    
+	<standardconnection name="infinitt-xds-query">
+		<hostname>infinitt1</hostname>
+		<port>80</port>
+		<urlPath>/registry</urlPath>
+		<includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>
+	<secureconnection name="infinitt-xds-query-secure">
+		<hostname>infinitt1</hostname>
+		<port>443</port>
+		<urlPath>/registry</urlPath>
+		<includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+    </secureconnection>    
+	
+	<standardconnection name="msft-xds-query">
+		<hostname>msft-ihe1</hostname>
+		<port>8080</port>
+		<urlPath>/XdsService/XdsRegistry</urlPath>
+		<includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>
+	<secureconnection name="msft-xds-query-secure">
+		<hostname>msft-ihe1</hostname>
+		<port>8081</port>
+		<urlPath>/XdsService/XdsRegistry</urlPath>
+        <property name="TestPatientId" value="NA5072^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+		
+		<includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+    </secureconnection>   
+    
+	<standardconnection name="intersystems-xds-query">
+		<hostname>intersystems1</hostname>
+		<port>80</port>
+		<urlPath></urlPath>
+		<includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>     	
+	
+	<standardconnection name="ibm-xdsb-query">
+		<hostname>ibm6</hostname>
+		<port>9080</port>
+		<urlPath>/IBMXDSRegistry/XDSb/SOAP11/Registry</urlPath>
+        <!-- property name="TestPatientId" value="NA5108^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/--> 
+		<includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>
+	<secureconnection name="ibm-xdsb-query-secure">
+		<hostname>ibm6</hostname>
+		<port>9443</port>
+		<urlPath>/IBMXDSRegistry/XDSb/SOAP11/Registry</urlPath>
+        <!-- property name="TestPatientId" value="XCA5004B^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/--> 
+        <property name="TestPatientId" value="NA5072^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+		<includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+    </secureconnection> 
+
+
+</Configuration>

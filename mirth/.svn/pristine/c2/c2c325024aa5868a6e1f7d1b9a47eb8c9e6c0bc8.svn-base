@@ -1,0 +1,82 @@
+<project name="adt-to-ihe-xds-wizard" basedir="." default="help">
+	<target name="help">
+		<echo>ADT to IHE XDS Document Query Wizard</echo>
+	</target>
+
+	<target name="init">
+		<property file="build.properties" />
+
+		<path id="classpath">
+			<fileset dir="${lib}" includes="*.jar" />
+			<fileset dir="${mirth.server.setup}" includes="mirth-server.jar" />
+			<fileset dir="${mirth.server.setup}/lib" includes="**/*.jar" />
+			<fileset dir="${mirth.server.setup}/client-lib" includes="**/*.jar" />
+			<fileset dir="${mirth.server}/extensions" includes="**/*.jar" />
+			<fileset dir="${basedir}/../../../connectors/ihe/trunk/dist" includes="**/*.jar" />
+		</path>
+	</target>
+
+	<target name="clean" depends="init">
+		<delete dir="${classes}" />
+		<delete dir="${dist}" />
+	</target>
+
+	<target name="compile" depends="clean">
+		<!-- compile the source -->
+		<mkdir dir="${classes}" />
+
+		<javac srcdir="${src}" destdir="${classes}">
+			<classpath refid="classpath" />
+		</javac>
+
+		<!-- create version.properties file -->
+		<propertyfile file="${metadata}/version.properties">
+			<entry key="extension.version" value="${version}" />
+			<entry key="build.date" type="date" value="today" pattern="MMMM d, yyyy" />
+		</propertyfile>
+	</target>
+
+	<target name="dist" depends="compile">
+		<mkdir dir="${dist}" />
+
+		<copy todir="${dist}">
+			<fileset dir="${metadata}">
+				<include name="*.xml" />
+			</fileset>
+		</copy>
+		
+		<copy todir="${dist}">
+			<fileset dir="${metadata}">
+				<include name="*.xml" />
+			</fileset>
+		</copy>
+
+		<replace dir="${dist}" token="@mirthversion" value="${version}">
+			<include name="*.xml" />
+		</replace>
+
+		<jar destfile="${dist}/${name}-client.jar">
+			<fileset dir="${classes}">
+				<include name="com/webreach/mirth/plugins/xdsquerywizard/*.class" />
+			</fileset>
+			<fileset dir="${src}">
+				<include name="com/webreach/mirth/plugins/xdsquerywizard/*.xml" />
+			</fileset>
+		</jar>
+
+		<copy todir="${dist}">
+			<fileset dir="${lib}">
+				<include name="*.jar" />
+			</fileset>
+		</copy>
+		
+		<!-- sign jars for webstart -->
+		<signjar alias="mirth" keystore="${mirth.keystore}" storepass="${mirth.keystore.storepass}" keypass="${mirth.keystore.keypass}">
+			<fileset dir="${dist}">
+				<include name="${name}-client.jar" />
+			</fileset>
+		</signjar>
+
+		<zip basedir="${dist}" destfile="${dist}/${name}-${version}.zip" />
+	</target>
+</project>

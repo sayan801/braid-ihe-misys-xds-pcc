@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The PIX Manager Actor Connections -->
+<!-- For Connectathon 2007 COMPLETE -->
+
+<Configuration>
+	<standardconnection name="mesa-pix-query">
+		<hostname>localhost</hostname>
+		<port>3600</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>MESA_SOFTWARE</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>MESA</NamespaceId>
+		</Identifier>
+		<includefile name="PixMisys.xml" />
+		<Identifier name="Authority1">
+			<NamespaceId>HIMSS2005</NamespaceId>
+			<UniversalId>1.3.6.1.4.1.21367.2005.1.1</UniversalId>
+			<UniversalIdType>ISO</UniversalIdType>
+		</Identifier>
+		<Identifier name="Authority2">
+			<NamespaceId>XREF2005</NamespaceId>
+			<UniversalId>1.3.6.1.4.1.21367.2005.1.2</UniversalId>
+			<UniversalIdType>ISO</UniversalIdType>
+		</Identifier>
+		<Identifier name="Authority3">
+			<NamespaceId>XXXX</NamespaceId>
+			<UniversalId></UniversalId>
+			<UniversalIdType></UniversalIdType>
+		</Identifier>		
+	</standardconnection>
+	
+	<standardconnection name="icw-pix-query">
+		<hostname>icw1</hostname>
+		<port>3610</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>ICW_MPI</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>ICW</NamespaceId>
+		</Identifier>
+		<includefile name="PixMisys.xml" />
+	</standardconnection>	
+	
+	<standardconnection name="careev-pix-query">
+		<hostname>careev1</hostname>
+		<port>3600</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>OTHER_CAREEV</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>CAREEV</NamespaceId>
+		</Identifier>
+		<includefile name="PixMisys.xml" />
+	</standardconnection>		
+	<secureconnection name="careev-pix-query-secure">
+		<hostname>careev1</hostname>
+		<port>3610</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>OTHER_CAREEV_TLS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>CAREEV</NamespaceId>
+		</Identifier>
+		<includefile name="PixMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>
+	
+	<standardconnection name="spirit-pix-query">
+		<hostname>tiani-spirit1c</hostname>
+		<port>2399</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>EHR_TIANI-SPIRIT</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>TIANI-SPIRIT</NamespaceId>
+		</Identifier>
+		<includefile name="PixMisys.xml" />
+	</standardconnection>		
+	<secureconnection name="spirit-pix-query-secure">
+		<hostname>tiani-spirit1c</hostname>
+		<port>2499</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>EHR_TIANI-SPIRIT_TLS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>TIANI-SPIRIT</NamespaceId>
+		</Identifier>
+		<includefile name="PixMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>
+	
+	<standardconnection name="accenx-pix-query">
+		<hostname>accenx1</hostname>
+		<port>3600</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>OTHER_ACCENX</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>ACCENX</NamespaceId>
+		</Identifier>
+		<includefile name="PixMisys.xml" />
+	</standardconnection>		
+	<secureconnection name="accenx-pix-query-secure">
+		<hostname>accenx1</hostname>
+		<port>3610</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>OTHER_ACCENX_TLS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>ACCENX</NamespaceId>
+		</Identifier>
+		<includefile name="PixMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>	
+
+	<standardconnection name="ndorange-pix-query">
+		<hostname>196.12.36.117</hostname>
+		<port>3601</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>cOS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>NET_ORANGE</NamespaceId>
+		</Identifier>
+		<includefile name="PixMisys.xml" />
+	</standardconnection>
+	
+	<standardconnection name="alert-pix-query">
+		<hostname>alert7</hostname>
+		<port>3600</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>PAT_IDENTITY_X_REF_MGR_ALERT</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>ALERT</NamespaceId>
+		</Identifier>
+		<includefile name="PixMisys.xml" />
+	</standardconnection>
+	
+	<standardconnection name="ge-pix-query">
+		<hostname>gehealthcare19</hostname>
+		<port>3600</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>XDS_REP_GE</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>GEHEALTHCARE</NamespaceId>
+		</Identifier>
+		<includefile name="PixMisys.xml" />
+	</standardconnection>		
+	<secureconnection name="ge-pix-query-secure">
+		<hostname>gehealthcare19</hostname>
+		<port>3610</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>XDS_REP_GE_TLS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>GEHEALTHCARE</NamespaceId>
+		</Identifier>
+		<includefile name="PixMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>	
+	
+	<standardconnection name="emds-pix-query">
+		<hostname>emds1</hostname>
+		<port>3600</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>EHR_EMDS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>EMDS</NamespaceId>
+		</Identifier>
+		<includefile name="PixMisys.xml" />
+	</standardconnection>		
+	<secureconnection name="emds-pix-query-secure">
+		<hostname>emds1</hostname>
+		<port>3610</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>EHR_EMDS_TLS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>EMDS</NamespaceId>
+		</Identifier>
+		<includefile name="PixMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>		
+	
+	<standardconnection name="axolotl-pix-query">
+		<hostname>ihe.axolotl.com</hostname>
+		<port>4201</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>PAT_IDENTITY_X_REF_MGR_AXOLOTL</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>AXOLOTL</NamespaceId>
+		</Identifier>
+		<includefile name="PixMisys.xml" />
+	</standardconnection>		
+	<secureconnection name="axolotl-pix-query-secure">
+		<hostname>ihe.axolotl.com</hostname>
+		<port>4200</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>PAT_IDENTITY_X_REF_MGR_AXOLOTL_TLS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>AXOLOTL</NamespaceId>
+		</Identifier>
+		<includefile name="PixMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>		
+	
+	<standardconnection name="initiate-pix-query">
+		<hostname>initiate1</hostname>
+		<port>3600</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>PAT_IDENTITY_X_REF_MGR_INITIATE</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>INITIATE</NamespaceId>
+		</Identifier>
+		<includefile name="PixMisys.xml" />
+	</standardconnection>	
+	<secureconnection name="initiate-pix-query-secure">
+		<hostname>initiate1</hostname>
+		<port>3620</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>PAT_IDENTITY_X_REF_MGR_INITIATE</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>INITIATE</NamespaceId>
+		</Identifier>
+		<includefile name="PixMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>	
+		
+	<standardconnection name="swpartners-pix-query">
+		<hostname>ctn2008.swpartners.com</hostname>
+		<port>3600</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>WS_SWPARTNERS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>SWPARTNERS</NamespaceId>
+		</Identifier>
+		<includefile name="PixMisys.xml" />
+	</standardconnection>		
+	<secureconnection name="swpartners-pix-query-secure">
+		<hostname>ctn2008.swpartners.com</hostname>
+		<port>3610</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>WS_SWPARTNERS_TLS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>SWPARTNERS</NamespaceId>
+		</Identifier>
+		<includefile name="PixMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>		
+	
+</Configuration>

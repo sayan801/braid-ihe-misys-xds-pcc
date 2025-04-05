@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+    <!--The configuration of CDA document-->
+    <StandardConnection name="CDA">
+        <!--The codeSystemName and  HL7 codeSystem mapping. See codeSystems.xls or HL7 OID Registration for reference-->
+        <!--Most of the list can be found in the PCC TF profile, section Namespaces for vocabularies used-->
+        <StringMap name="CodeSystems">
+            <Entry string="IHE PCC Template Identifiers" code="1.3.6.1.4.1.19376.1.5.3.1"/>
+            <Entry string="IHEActCode"                   code="1.3.6.1.4.1.19376.1.5.3.2"/>
+            <Entry string="AdministrativeGender"         code="2.16.840.1.113883.5.1"/>
+            <Entry string="PersonalRelationshipRoleType" code="2.16.840.1.113883.5.111"/>
+            <Entry string="RouteOfAdministration"        code="2.16.840.1.113883.5.112"/>  <!--See the HL7 RouteOfAdministration Vocabulary-->
+            <Entry string="SeverityObservation"          code="2.16.840.1.113883.5.1063"/> <!--See the HL7 SeverityObservation Vocabulary-->
+            <Entry string="PolicyHolderRole"             code="2.16.840.1.113883.5.1095"/>
+            <Entry string="LOINC"                        code="2.16.840.1.113883.6.1"/>
+            <Entry string="ICD9"                         code="2.16.840.1.113883.6.2"/>
+            <Entry string="ICD-9"                        code="2.16.840.1.113883.6.2"/>
+            <Entry string="ICD-9 CM"                      code="2.16.840.1.113883.6.2"/>
+            <Entry string="CPT 4"                        code="2.16.840.1.113883.6.12"/> <!--Current Procedure Terminology 4 (CPT-4) codes.-->
+            <Entry string="C4"                           code="2.16.840.1.113883.6.12"/> <!--Current Procedure Terminology 4 (CPT-4) codes.-->
+            <Entry string="CPT"                          code="2.16.840.1.113883.6.12"/> <!--Current Procedure Terminology 4 (CPT-4) codes.-->
+            <Entry string="MEDCIN"                       code="2.16.840.1.113883.6.26"/> <!--A classification system from MEDICOMP Systems-->
+            <Entry string="CVX"                          code="2.16.840.1.113883.6.59"/> <!-- CVX vaccine code -->
+            <Entry string="MVX"                          code="2.16.840.1.113883.6.60"/> <!-- CVX vaccine code -->
+            <Entry string="FDDC"                         code="2.16.840.1.113883.6.63"/> <!--First DataBank Drug Codes-->
+            <Entry string="NDC"                          code="2.16.840.1.113883.6.69"/>           
+            <Entry string="RxNorm"                       code="2.16.840.1.113883.6.88"/>
+            <Entry string="SNOMED CT"                    code="2.16.840.1.113883.6.96"/>
+            <Entry string="SNOMED"                       code="2.16.840.1.113883.6.96"/>
+            <Entry string="SNOMED-CT"                    code="2.16.840.1.113883.6.96"/> <!--SNOMED COntrolled Terminology-->
+            <Entry string="ICD-9CM (diagnosis codes)"    code="2.16.840.1.113883.6.103"/>  <!--International Classification of Diseases, Clinical Modifiers, Version 9-->
+            <Entry string="ICD-9CM (procedure codes)"    code="2.16.840.1.113883.6.104"/>  <!--International Classification of Diseases, Clinical Modifiers, Version 9-->
+        </StringMap>
+
+        <!--Specify the software which is used as an author of each CDA document created by Misys Connect-->
+        <Object name="AuthorDevice" enabled="true">
+            <Field name="softwareName" type="String" value="Misys Connect 2.0"/>
+            <Field name="addressLine1" type="String" value="8529 Six Forks Road"/>
+            <Field name="addressCity" type="String" value="Raleigh"/>
+            <Field name="addressState" type="String" value="NC"/>
+            <Field name="addressCountry" type="String" value="USA"/>
+            <Field name="addressZip" type="String" value="27615"/>
+            <Field name="telephone" type="String" value="(800)-8775678"/>
+        </Object>
+
+        <!--Specify the Custodian of each CDA document created by Misys Connect-->
+        <Object name="Custodian" enabled="true">
+            <Field name="name" type="String" value="Gateway Hospital"/>
+            <Field name="addressLine1" type="String" value="600 Euclid Ave"/>
+            <Field name="addressCity" type="String" value="St. Louis"/>
+            <Field name="addressState" type="String" value="MO"/>
+            <Field name="addressCountry" type="String" value="USA"/>
+            <Field name="addressZip" type="String" value="63110"/>
+            <Field name="telephone" type="String" value=""/>
+        </Object>
+
+    </StandardConnection>
+</Configuration>

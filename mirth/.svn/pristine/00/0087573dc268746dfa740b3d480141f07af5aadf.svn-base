@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The Audit Record Repository Actor Connections -->
+<!-- For IHE Actor Test -->
+
+<Configuration>
+
+    <standardconnection name="ibm-arr-bsd">
+        <!--The hostname for the audit repository sever -->
+        <hostname>lswin10.dfw.ibm.com</hostname>
+        <!--The port for BSD log-->
+        <port>515</port>
+        <!--Specifies the type of the log. Three types are possible:
+              1. BSD SYSLOG - Send Audit Trail using RFC 3164;
+              2. RELIABLE SYSLOG - Send Audit Trail using RFC 3195;
+              3. LOG4J LOGGER - Send Audit Trail to local host for debug purpose. -->
+        <Property name="TYPE" value="BSD SYSLOG" />
+        <!--Specifies the properties of the local host.-->
+        <PropertySet name="localhost">
+            <!--The machine name-->
+            <entry name="MACHINENAME" value="misys1" />
+            <!--The host name-->
+            <entry name="HOSTNAME" value="misys1" />
+            <!--The ip address of the local machine -->
+            <entry name="IP" value="10.242.0.44" />
+            <!--The web site of the application-->
+            <entry name="SITE" value="MISYS" />
+            <!--The source of the application-->
+            <entry name="SOURCE" value="EHR_MISYS" />
+            <!--The application name-->
+            <entry name="APPNAME" value="EHR_MISYS" />
+		</PropertySet>
+        <!--Specifies the properties of ParticipantObject used in the log message.-->
+        <propertyset name="ParticipantObject">
+            <!--Optional: Defines the format patient name. Default is standard, HL7 is a good option.-->
+            <entry name="PatientNameEncoding" value="HL7" />
+            <!--Optional: Defines the format patient id. Default is standard, HL7 is a good option.-->
+			<entry name="PatientIdEncoding" value="HL7" />
+            <!--OPtional: The encoding to use for the document.  Default is to not use the document id.
+               Add "DocumentId" or something to enable it. -->
+            <entry name="DocumentIdType" value="DocumentId" />
+		</propertyset>
+        <!--Optional: If LocalAssigningAuthority is specified, local patient id
+            is used if AssigningAuthority is not specified. -->
+        <Identifier name="LocalAssigningAuthority">
+            <NamespaceId>MIEH</NamespaceId>
+            <UniversalId>1.3.6.1.4.1.21367.2007.1.2.127</UniversalId>
+            <UniversalIdType>ISO</UniversalIdType>
+        </Identifier>
+        <!--OPtional: If AssigningAuthority is specified, the patient id in
+            this AssigningAuthority is used. AssigningAuthority overrides LocalAssigningAuthority. -->
+        <Identifier name="AssigningAuthority">
+            <NamespaceId></NamespaceId>
+            <UniversalId>1.3.6.1.4.1.21367.2007.1.2.400</UniversalId>
+            <UniversalIdType>ISO</UniversalIdType>
+        </Identifier>
+    </standardconnection>
+
+	<standardconnection name="log4j_audittrail">
+		<Property name="TYPE" value="LOG4J LOGGER" />
+		<PropertySet name="localhost">
+            <entry name="MACHINENAME" value="misys1" />
+            <entry name="HOSTNAME" value="misys1" />
+            <entry name="IP" value="10.242.0.51" />
+            <entry name="SITE" value="MISYS" />
+            <entry name="SOURCE" value="EHR_MISYS" />
+            <entry name="APPNAME" value="EHR_MISYS" />
+		</PropertySet>
+		<propertyset name="ParticipantObject">
+			<entry name="PatientNameEncoding" value="HL7" />
+			<entry name="PatientIdEncoding" value="HL7" />
+			<entry name="DocumentIdType" value="DocumentId" />
+		</propertyset>
+        <Identifier name="LocalAssigningAuthority">
+            <NamespaceId>MIEH</NamespaceId>
+            <UniversalId>1.3.6.1.4.1.21367.2007.1.2.127</UniversalId>
+            <UniversalIdType>ISO</UniversalIdType>
+        </Identifier>
+        <Identifier name="AssigningAuthority">
+            <NamespaceId></NamespaceId>
+            <UniversalId>1.3.6.1.4.1.21367.2007.1.2.400</UniversalId>
+            <UniversalIdType>ISO</UniversalIdType>
+        </Identifier>
+	</standardconnection>
+
+</Configuration>

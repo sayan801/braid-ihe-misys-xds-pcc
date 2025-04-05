@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The Patient Feed with Local ID Actor Connections -->
+<!-- For IHE Actor  Test -->
+<Configuration>
+
+    <!--standardconnection configures a non-secure connection. The value of the name
+        attribute, if referenced by an actor, needs to be the same as the one used in
+        the actor connect consumer or source. -->
+    <standardconnection name="ibm-local-feed">
+        <!--The host name of the PIX Manager Server-->
+        <hostname>lsaix26.dfw.ibm.com</hostname>
+        <!--The port for PIX Feed transaction-->
+        <port>3600</port>
+        <!--The ReceivingApplication specifies the ID in (MSH-5) for PIX Feed and PIX Query -->
+        <Identifier name="ReceivingApplication">
+            <!--There are two ways to specify an ID: One way is to use NamespaceId; the other
+                is to use the combination of UniversalId and UniversalIdType. -->
+            <NamespaceId>PIXMgr</NamespaceId>
+		</Identifier>
+        <!--The ReceivingFacility specifies the ID in (MSH-6) for PIX Feed and PIX Query -->
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>IBM</NamespaceId>
+		</Identifier>
+
+        <!--The includefile tag specifies an in-line configuration file (i.e. The content in the
+            LocalMisys.xml can be put here to replace this tag). The main purpose of the
+            includefile is to reuse some common configuration. -->
+        <includefile name="LocalMisys.xml" />
+    </standardconnection>
+
+     <!--secureconnection configures a secure connection. -->
+     <secureconnection name="ibm-local-feed-secure">
+         <hostname>lsaix26.dfw.ibm.com</hostname>
+         <port>3700</port>
+         <Identifier name="ReceivingApplication">
+             <NamespaceId>PIXMgr</NamespaceId>
+         </Identifier>
+         <Identifier name="ReceivingFacility">
+             <NamespaceId>IBM</NamespaceId>
+         </Identifier>
+
+         <includefile name="LocalMisys.xml" />
+
+         <!--The KEYSTORE tag specifies the location of private key store.-->
+         <KEYSTORE>/certs/EHR_MISYS_07_KEY.p12</KEYSTORE>
+         <!--The KEYPASS tag specifies the password of private key.-->
+         <KEYPASS>password</KEYPASS>
+         <!--The TRUSTSTORE tag specifies the location of trust store.-->
+         <TRUSTSTORE>/certs/EHR_MISYS_07_TRUST.key</TRUSTSTORE>
+         <!--The TRUSTPASS tag specifies the password of trust store.-->
+         <TRUSTPASS>password</TRUSTPASS>
+     </secureconnection>
+
+     <standardconnection name="initiate-local-feed">
+         <hostname>67.155.0.245</hostname>
+         <port>2200</port>
+         <Identifier name="ReceivingApplication">
+			<NamespaceId>PAT_IDENTITY_X_REF_MGR_INITIATE</NamespaceId>
+         </Identifier>
+         <Identifier name="ReceivingFacility">
+			<NamespaceId>INITIATE</NamespaceId>
+         </Identifier>
+         
+         <includefile name="LocalMisys.xml" />
+         
+        </standardconnection>
+</Configuration>

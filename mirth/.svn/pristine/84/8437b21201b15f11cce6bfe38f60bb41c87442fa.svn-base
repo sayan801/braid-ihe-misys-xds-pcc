@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+    <!-- Initiate Non-Secure Actors -->
+    <!-- To enable/disable these actors, comment/uncomment the corresponding actorfile in IheActors.xml -->
+
+    <!-- Local Patient Feed Consumer Actor -->
+    <actor name="lpfinitiate" type="PatientIdentitySource">
+        <description>Local Patient Feed Initiate</description>
+        <connection consumer="initiate-local-feed" />
+    </actor>
+
+    <!-- Global Patient Feed Consumer Actor -->
+    <actor name="gpfinitiate" type="PatientIdentitySource">
+        <description>Global Patient Feed Initiate</description>
+        <connection consumer="initiate-global-feed" />
+    </actor>
+
+    <!-- PIX Manager Actor -->
+    <actor name="pixqueryinitiate" type="PixConsumer">
+        <description>Patient ID Query Initiate</description>
+        <connection consumer="initiate-pix-manager" />
+    </actor>
+
+    <!-- PDQ Server Actor -->
+    <actor name="pdqinitiate" type="PdqConsumer">
+        <description>Patient PDQ Query Initiate</description>
+        <connection consumer="initiate-pdq-server" />
+    </actor>
+
+ </Configuration>

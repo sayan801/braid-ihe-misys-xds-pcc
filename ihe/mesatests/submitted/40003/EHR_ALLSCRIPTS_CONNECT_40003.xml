@@ -1,0 +1,698 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type='text/xsl' href='CCDPreview.xsl'?>
+<ClinicalDocument xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd" xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <realmCode code="US"/>
+  <typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+  <templateId extension="IMPL_CDAR2_LEVEL1" root="2.16.840.1.113883.10"/>
+  <templateId extension="IMPL_CDAR2_LEVEL2" root="2.16.840.1.113883.10"/>
+  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.1"/>
+  <templateId root="2.16.840.1.113883.10.20.3"/>
+  <templateId root="2.16.840.1.113883.10.20.1"/>
+  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.2"/>
+  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.3"/>
+  <id root="2.16.840.1.113883.3.65.2.1231971232650.1"/>
+  <code code="34133-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="SUMMARIZATION OF EPISODE NOTE"/>
+  <title>My Test Referral Summary Document</title>
+  <effectiveTime value="20090114171352-0500"/>
+  <confidentialityCode code="1.3.6.1.4.1.21367.2006.7.109" codeSystem="2.16.840.1.113883.5.25" codeSystemName="Confidentiality" displayName="restricted"/>
+  <languageCode code="en-US"/>
+  <setId root="2.16.840.1.113883.3.65.2" extension="1231971232775.3"/>
+  <versionNumber value="1"/>
+  <recordTarget>
+    <patientRole>
+      <id extension="40003" root="1.3.6.1.4.1.21367.2005.1.1"/>
+      <addr>
+        <streetAddressLine>700 Euclid Ave</streetAddressLine>
+        <city>St. Louis</city>
+        <state>MO</state>
+        <postalCode>63110</postalCode>
+        <country>USA</country>
+      </addr>
+      <telecom use="WP" value="tel:+1(716)-358-7421"/>
+      <patient>
+        <name>
+          <given>Frederick</given>
+          <family>Randolph</family>
+          <prefix>Mr.</prefix>
+          <suffix>II</suffix>
+        </name>
+        <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="AdministrativeGender" displayName="Male"/>
+        <birthTime value="19590203"/>
+        <maritalStatusCode code="M" codeSystem="2.16.840.1.113883.5.2" codeSystemName="MaritalStatus" displayName="Married"/>
+      </patient>
+      <providerOrganization>
+        <id extension="1231971233041.5" root="2.16.840.1.113883.3.65.2"/>
+        <name nullFlavor="UNK"/>
+        <telecom nullFlavor="UNK"/>
+        <addr nullFlavor="UNK"/>
+      </providerOrganization>
+    </patientRole>
+  </recordTarget>
+  <author>
+    <time value="20090114171353-0500"/>
+    <assignedAuthor>
+      <id extension="12345" root="2.3.515.3"/>
+      <addr>
+        <streetAddressLine>700 Euclid Ave</streetAddressLine>
+        <city>St. Louis</city>
+        <state>MO</state>
+        <postalCode>63110</postalCode>
+        <country>USA</country>
+      </addr>
+      <telecom use="WP" value="tel:+1(716)-358-7421"/>
+      <assignedPerson>
+        <name>
+          <given>John</given>
+          <given>M</given>
+          <family>DePinto</family>
+          <prefix>Mr.</prefix>
+          <suffix>II</suffix>
+        </name>
+      </assignedPerson>
+      <representedOrganization>
+        <id extension="12345" root="2.8.233.3"/>
+        <name>Great NC RHIO</name>
+        <telecom use="WP" value="tel:+1(716)-358-7421"/>
+        <addr>
+          <streetAddressLine>700 Euclid Ave</streetAddressLine>
+          <city>St. Louis</city>
+          <state>MO</state>
+          <postalCode>63110</postalCode>
+          <country>USA</country>
+        </addr>
+      </representedOrganization>
+    </assignedAuthor>
+  </author>
+  <author>
+    <time value="20090114171353-0500"/>
+    <assignedAuthor>
+      <id extension="1231971231525.5" root="2.16.840.1.113883.3.65.2"/>
+      <addr>
+        <streetAddressLine>8529 Six Forks Road</streetAddressLine>
+        <city>Raleigh</city>
+        <state>NC</state>
+        <postalCode>27615</postalCode>
+        <country>USA</country>
+      </addr>
+      <telecom use="WP" value="tel:(800)-8775678"/>
+      <assignedAuthoringDevice>
+        <manufacturerModelName/>
+        <softwareName>Misys Connect 2.0</softwareName>
+      </assignedAuthoringDevice>
+    </assignedAuthor>
+  </author>
+  <custodian>
+    <assignedCustodian>
+      <representedCustodianOrganization>
+        <id extension="12345" root="2.8.233.3"/>
+        <name>Great NC RHIO</name>
+        <telecom use="WP" value="tel:+1(716)-358-7421"/>
+        <addr>
+          <streetAddressLine>700 Euclid Ave</streetAddressLine>
+          <city>St. Louis</city>
+          <state>MO</state>
+          <postalCode>63110</postalCode>
+          <country>USA</country>
+        </addr>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <legalAuthenticator>
+    <time value="20090114171353-0500"/>
+    <signatureCode code="S"/>
+    <assignedEntity>
+      <id extension="12345" root="2.3.515.3"/>
+      <addr>
+        <streetAddressLine>700 Euclid Ave</streetAddressLine>
+        <city>St. Louis</city>
+        <state>MO</state>
+        <postalCode>63110</postalCode>
+        <country>USA</country>
+      </addr>
+      <telecom use="WP" value="tel:+1(716)-358-7421"/>
+      <assignedPerson>
+        <name>
+          <given>John</given>
+          <given>M</given>
+          <family>DePinto</family>
+          <prefix>Mr.</prefix>
+          <suffix>II</suffix>
+        </name>
+      </assignedPerson>
+    </assignedEntity>
+  </legalAuthenticator>
+  <participant typeCode="IND">
+    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.4"/>
+    <time value="20090114"/>
+    <associatedEntity classCode="ECON">
+      <id extension="12345" root="2.3.515.3"/>
+      <code nullFlavor="UNK"/>
+      <addr>
+        <streetAddressLine>700 Euclid Ave</streetAddressLine>
+        <city>St. Louis</city>
+        <state>MO</state>
+        <postalCode>63110</postalCode>
+        <country>USA</country>
+      </addr>
+      <telecom use="WP" value="tel:+1(716)-358-7421"/>
+      <associatedPerson>
+        <name>
+          <given>John</given>
+          <given>M</given>
+          <family>DePinto</family>
+          <prefix>Mr.</prefix>
+          <suffix>II</suffix>
+        </name>
+      </associatedPerson>
+    </associatedEntity>
+  </participant>
+  <documentationOf>
+    <serviceEvent classCode="PCPR">
+      <id root="2.16.840.1.113883.3.65.2.1231971233916.11"/>
+      <effectiveTime>
+        <low value="20090114171351-0500"/>
+        <high value="20090114171351-0500"/>
+      </effectiveTime>
+      <performer typeCode="PRF">
+        <templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.3"/>
+        <functionCode code="PCP" codeSystem="2.16.840.1.113883.5.88" codeSystemName="ParticipatingFunction" displayName="primary care physician"/>
+        <time>
+          <low value="20090114171351-0500"/>
+        </time>
+        <assignedEntity>
+          <id extension="1231971233963.4" root="2.16.840.1.113883.3.65.2"/>
+          <code code="59058001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="General Physician"/>
+          <addr>
+            <streetAddressLine>700 Euclid Ave</streetAddressLine>
+            <city>St. Louis</city>
+            <state>MO</state>
+            <postalCode>63110</postalCode>
+            <country>USA</country>
+          </addr>
+          <telecom use="WP" value="tel:+1(716)-358-7421"/>
+          <assignedPerson>
+            <name>
+              <given>Joe</given>
+              <given/>
+              <family>Atkinson</family>
+              <prefix/>
+              <suffix/>
+            </name>
+          </assignedPerson>
+        </assignedEntity>
+      </performer>
+    </serviceEvent>
+  </documentationOf>
+  <component>
+    <structuredBody>
+      <templateId extension="IMPL_CDAR2_LEVEL1-2REF_US_I2_2005SEP" root="2.16.840.1.113883.10"/>
+      <component>
+        <section>
+          <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.1"/>
+          <code code="42349-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Reason for Referral"/>
+          <title>Reason for Referral</title>
+          <text>Patient fell while skating and complains of a sore wrist.</text>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.4"/>
+          <code code="10164-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Present Illness"/>
+          <title>History of Present Illness</title>
+          <text>
+            <list>
+              <item>Patient fell while skating. Suspect fractured radius.</item>
+            </list>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.1.11"/>
+          <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.6"/>
+          <id extension="1231971234103.13" root="2.16.840.1.113883.3.65.2"/>
+          <code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem List"/>
+          <title>Problems</title>
+          <text>
+            <table border="1">
+              <thead>
+                <tr>
+                  <th>Problem</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Comment</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ID="problem-0">
+                  <td ID="problem-Problem-0">Stress fracture, right foot</td>
+                  <td ID="problem-Date-0">08/01/2006</td>
+                  <td ID="problem-Status-0">active</td>
+                  <td ID="problem-Comment-0"></td>
+                </tr>
+                <tr ID="problem-1">
+                  <td ID="problem-Problem-1">Ear infection</td>
+                  <td ID="problem-Date-1">10/01/2006</td>
+                  <td ID="problem-Status-1">active</td>
+                  <td ID="problem-Comment-1"></td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.27"/>
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1"/>
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2"/>
+              <id extension="1231971234353.10" root="2.16.840.1.113883.3.65.2"/>
+              <code nullFlavor="NA"/>
+              <statusCode code="active"/>
+              <effectiveTime>
+                <low value="20060801000000-0500"/>
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ" inversionInd="false">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.1.28"/>
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5"/>
+                  <id extension="1231971234494.7" root="2.16.840.1.113883.3.65.2"/>
+                  <code code="55607006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Problem"/>
+                  <text>
+                    <reference value="#problem-0"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime>
+                    <low value="20060801000000-0500"/>
+                  </effectiveTime>
+                  <value xsi:type="CD" code="813.42" displayName="closed dupuytrens fracture radius" codeSystem="2.16.840.1.113883.6.2" codeSystemName="ICD9">
+                    <originalText>
+                      <reference value="#problem-Problem-0"/>
+                    </originalText>
+                  </value>
+                  <entryRelationship typeCode="REFR" inversionInd="false">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.1.57"/>
+                      <templateId root="2.16.840.1.113883.10.20.1.50"/>
+                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.1.1"/>
+                      <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status"/>
+                      <text>
+                        <reference value="#problem-Status-0"/>
+                      </text>
+                      <statusCode code="completed"/>
+                      <value xsi:type="CE" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode="SUBJ" inversionInd="true">
+                    <act classCode="ACT" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.1.40"/>
+                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+                      <code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation Comment"/>
+                      <text>
+                        <reference value="#problem-Comment-0"/>
+                      </text>
+                      <statusCode code="completed"/>
+                    </act>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.27"/>
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1"/>
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.2"/>
+              <id extension="1231971234510.10" root="2.16.840.1.113883.3.65.2"/>
+              <code nullFlavor="NA"/>
+              <statusCode code="active"/>
+              <effectiveTime>
+                <low value="20061001000000-0500"/>
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ" inversionInd="false">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.1.28"/>
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5"/>
+                  <id extension="1231971234510.7" root="2.16.840.1.113883.3.65.2"/>
+                  <code code="55607006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Problem"/>
+                  <text>
+                    <reference value="#problem-1"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime>
+                    <low value="20061001000000-0500"/>
+                  </effectiveTime>
+                  <value xsi:type="CD">
+                    <originalText>
+                      <reference value="#problem-Problem-1"/>
+                    </originalText>
+                  </value>
+                  <entryRelationship typeCode="REFR" inversionInd="false">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.1.57"/>
+                      <templateId root="2.16.840.1.113883.10.20.1.50"/>
+                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.1.1"/>
+                      <code code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status"/>
+                      <text>
+                        <reference value="#problem-Status-1"/>
+                      </text>
+                      <statusCode code="completed"/>
+                      <value xsi:type="CE" code="55561003" displayName="active" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode="SUBJ" inversionInd="true">
+                    <act classCode="ACT" moodCode="EVN">
+                      <templateId root="2.16.840.1.113883.10.20.1.40"/>
+                      <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.2"/>
+                      <code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Annotation Comment"/>
+                      <text>
+                        <reference value="#problem-Comment-1"/>
+                      </text>
+                      <statusCode code="completed"/>
+                    </act>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.1.8"/>
+          <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.19"/>
+          <id extension="1231971234525.13" root="2.16.840.1.113883.3.65.2"/>
+          <code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Medication Use"/>
+          <title>Medications</title>
+          <text>
+            <table border="1">
+              <thead>
+                <tr>
+                  <th>Medication</th>
+                  <th>Sig</th>
+                  <th>OrderDate</th>
+                  <th>Duration</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ID="order-0">
+                  <td ID="medication-Medication-0">Augmentin 125-31.25 MG CHEW</td>
+                  <td ID="medication-Sig-0">3 once a week</td>
+                  <td ID="medication-OrderDate-0">01/14/2008</td>
+                  <td ID="medication-Duration-0"></td>
+                </tr>
+                <tr ID="order-1">
+                  <td ID="medication-Medication-1">Albuterol Sulfate 108 MCG/ACT AERS</td>
+                  <td ID="medication-Sig-1">2 Puffs q6hrs prn</td>
+                  <td ID="medication-OrderDate-1">01/14/2008</td>
+                  <td ID="medication-Duration-1"></td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="INT">
+              <templateId root="2.16.840.1.113883.10.20.1.24"/>
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7"/>
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/>
+              <id extension="1231971234635.8" root="2.16.840.1.113883.3.65.2"/>
+              <text>
+                <reference value="#order-0"/>
+              </text>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20080114000000-0500"/>
+                <high nullFlavor="UNK"/>
+              </effectiveTime>
+              <routeCode code="CHEW" codeSystem="2.16.840.1.113883.5.112" codeSystemName="RouteOfAdministration" displayName="Oral"/>
+              <doseQuantity>
+                <low value="3"/>
+                <high value="3"/>
+              </doseQuantity>
+              <consumable typeCode="CSM">
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.1.53"/>
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
+                  <manufacturedMaterial>
+                    <code code="472.0" codeSystem="2.16.840.1.113883.6.2" codeSystemName="ICD9">
+                      <originalText>
+                        <reference value="#medication-Medication-0"/>
+                      </originalText>
+                    </code>
+                    <name>Augmentin 125-31.25 MG CHEW</name>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="INT">
+              <templateId root="2.16.840.1.113883.10.20.1.24"/>
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7"/>
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/>
+              <id extension="1231971234791.8" root="2.16.840.1.113883.3.65.2"/>
+              <text>
+                <reference value="#order-1"/>
+              </text>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20080114000000-0500"/>
+                <high nullFlavor="UNK"/>
+              </effectiveTime>
+              <routeCode code="IPINHL" codeSystem="2.16.840.1.113883.5.112" codeSystemName="RouteOfAdministration" displayName="Inhalation"/>
+              <doseQuantity>
+                <low value="2" unit="Puffs"/>
+                <high value="2" unit="Puffs"/>
+              </doseQuantity>
+              <consumable typeCode="CSM">
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.1.53"/>
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
+                  <manufacturedMaterial>
+                    <code code="472.0" codeSystem="2.16.840.1.113883.6.2" codeSystemName="ICD9">
+                      <originalText>
+                        <reference value="#medication-Medication-1"/>
+                      </originalText>
+                    </code>
+                    <name>Albuterol Sulfate 108 MCG/ACT AERS</name>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.1.2"/>
+          <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.13"/>
+          <id extension="1231971234791.13" root="2.16.840.1.113883.3.65.2"/>
+          <code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Allergies, Adverse Reactions, Alerts"/>
+          <title>Allergies and Adverse Reactions</title>
+          <text>
+            <table border="1">
+              <thead>
+                <tr>
+                  <th>Allergen</th>
+                  <th>Reaction</th>
+                  <th>Date</th>
+                  <th/>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td ID="allergy-Allergen-0">penicillin</td>
+                  <td ID="allergy-Reaction-0">positive</td>
+                  <td ID="allergy-Date-0">01/14/2009</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.27"/>
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.1"/>
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5.3"/>
+              <id extension="1231971234806.10" root="2.16.840.1.113883.3.65.2"/>
+              <code nullFlavor="NA"/>
+              <statusCode code="active"/>
+              <effectiveTime>
+                <low value="20090114171351-0500"/>
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ" inversionInd="false">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.1.28"/>
+                  <templateId root="2.16.840.1.113883.10.20.1.18"/>
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.5"/>
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.6"/>
+                  <id extension="1231971234806.7" root="2.16.840.1.113883.3.65.2"/>
+                  <code code="ALG" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ObservationIntoleranceType" displayName="Allergy"/>
+                  <statusCode code="completed"/>
+                  <effectiveTime>
+                    <low value="20090114171351-0500"/>
+                  </effectiveTime>
+                  <value xsi:type="CD"/>
+                  <participant typeCode="CSM">
+                    <participantRole classCode="MANU">
+                      <addr nullFlavor="UNK"/>
+                      <telecom nullFlavor="UNK"/>
+                      <playingEntity classCode="MMAT">
+                        <code nullFlavor="UNK">
+                          <originalText>
+                            <reference value="#allergy-Allergen-0"/>
+                          </originalText>
+                        </code>
+                      </playingEntity>
+                    </participantRole>
+                  </participant>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.1.12"/>
+          <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.11"/>
+          <id extension="1231971235025.13" root="2.16.840.1.113883.3.65.2"/>
+          <code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Procedures"/>
+          <title>History of Procedures</title>
+          <text>
+            <list>
+              <item>Right knee arthroscopy by Right knee arthroscopy in St Lukes Hospital on 4/3/1995.</item>
+              <item>Left knee arthroscopy by Right knee arthroscopy in West County Orthopedic Center on 5/15/1997.</item>
+            </list>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.1.6"/>
+          <templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.23"/>
+          <id extension="1231971235041.13" root="2.16.840.1.113883.3.65.2"/>
+          <code code="11369-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Immunizations"/>
+          <title>History of Immunizations</title>
+          <text>
+            <table border="1">
+              <thead>
+                <tr>
+                  <th>Immunization Type</th>
+                  <th>Immunization Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td ID="immunization-ImmunizationType-0">Influenza</td>
+                  <td ID="immunization-ImmunizationDate-0">11/10/2007</td>
+                </tr>
+                <tr>
+                  <td ID="immunization-ImmunizationType-1">Tetanus</td>
+                  <td ID="immunization-ImmunizationDate-1">08/10/2005</td>
+                </tr>
+                <tr>
+                  <td ID="immunization-ImmunizationType-2">DTaP (Diphtheria, Tetanus &amp; Acellular Pertussis Vaccine)</td>
+                  <td ID="immunization-ImmunizationDate-2">01/15/1980</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
+              <templateId root="2.16.840.1.113883.10.20.1.24"/>
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12"/>
+              <id extension="1231971235041.8" root="2.16.840.1.113883.3.65.2"/>
+              <code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+              <text>
+                <reference value="#immunization-ImmunizationType-0"/>
+              </text>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS" value="20071110000000-0500"/>
+              <routeCode code="IAINJP" codeSystem="2.16.840.1.113883.5.112" codeSystemName="RouteOfAdministration" displayName="Injection"/>
+              <doseQuantity>
+                <low value="1"/>
+                <high value="1"/>
+              </doseQuantity>
+              <consumable typeCode="CSM">
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.1.53"/>
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
+                  <manufacturedMaterial>
+                    <code code="88" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+                      <originalText>
+                        <reference value="#immunization-ImmunizationType-0"/>
+                      </originalText>
+                    </code>
+                    <name>Influenza</name>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
+              <templateId root="2.16.840.1.113883.10.20.1.24"/>
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12"/>
+              <id extension="1231971235056.8" root="2.16.840.1.113883.3.65.2"/>
+              <code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+              <text>
+                <reference value="#immunization-ImmunizationType-1"/>
+              </text>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS" value="20050810000000-0500"/>
+              <routeCode code="IAINJP" codeSystem="2.16.840.1.113883.5.112" codeSystemName="RouteOfAdministration" displayName="Injection"/>
+              <doseQuantity>
+                <low value="1"/>
+                <high value="1"/>
+              </doseQuantity>
+              <consumable typeCode="CSM">
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.1.53"/>
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
+                  <manufacturedMaterial>
+                    <code code="88" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+                      <originalText>
+                        <reference value="#immunization-ImmunizationType-1"/>
+                      </originalText>
+                    </code>
+                    <name>Tetanus</name>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
+              <templateId root="2.16.840.1.113883.10.20.1.24"/>
+              <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.12"/>
+              <id extension="1231971235072.8" root="2.16.840.1.113883.3.65.2"/>
+              <code code="IMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+              <text>
+                <reference value="#immunization-ImmunizationType-2"/>
+              </text>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS" value="19800115000000-0500"/>
+              <routeCode code="IAINJP" codeSystem="2.16.840.1.113883.5.112" codeSystemName="RouteOfAdministration" displayName="Injection"/>
+              <doseQuantity>
+                <low value="1"/>
+                <high value="1"/>
+              </doseQuantity>
+              <consumable typeCode="CSM">
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.1.53"/>
+                  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.2"/>
+                  <manufacturedMaterial>
+                    <code code="88" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">
+                      <originalText>
+                        <reference value="#immunization-ImmunizationType-2"/>
+                      </originalText>
+                    </code>
+                    <name>DTaP (Diphtheria, Tetanus &amp; Acellular Pertussis Vaccine)</name>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>

@@ -1,0 +1,30 @@
+CTX: MESA Version 12.3.0  created 2008.11.25 
+CTX: current date/time 20090107 1757
+CTX: Log level 4
+
+CTX: PMI 11195.1
+CTX: Evaluation using ATNA Log Message-Actor Patient Record Schematron
+CTX: File C:\projects\mesa2009/logs/syslog/last_log.xml
+CTX: java -cp C:\projects\mesa2009/lib/xalan.jar org.apache.xalan.xslt.Process -IN 11195/11195_schematron.xml -XSL schematron/schematron-basic.xsl -OUT 11195/11195.xsl -PARAM diagnose yes
+CTX: java -cp C:\projects\mesa2009/lib/xalan.jar org.apache.xalan.xslt.Process -IN C:\projects\mesa2009/logs/syslog/last_log.xml -XSL 11195/11195.xsl -OUT 11195/schematron_11195.log
+
+
+Result from schematron validation:
+CTX: 11195: Schematron - ATNA PATIENT RECORD
+CTX: In pattern count(EventIdentification) = 1:
+   CTX: Found ONE EventIdentification in AuditMessage (PASS)
+CTX: In pattern @EventActionCode='C' or @EventActionCode='R' or @EventActionCode='U' or @EventActionCode='D':
+   CTX: Found EventActionCode=C/R/U/D in EventIdentification (PASS)
+CTX: In pattern @EventOutcomeIndicator='0':
+   CTX: Found EventOutcomeIndicator=0 in EventIdentification (PASS)
+CTX: In pattern @EventDateTime:
+   CTX: Found EventDateTime (PASS)
+CTX: In pattern count(EventID) = 1:
+   CTX: Found ONLY ONE EventID (PASS)
+CTX: In pattern EventID[@code='110110']:
+   CTX: Found code=110110 in EventID (PASS)
+CTX: In pattern EventID[@codeSystemName='DCM']:
+   CTX: Found codeSystemName=DCM in EventID (PASS)
+CTX: In pattern EventID[@displayName='Patient Record']:
+   CTX: Found displayName="Patient Record" in EventID (PASS)
+

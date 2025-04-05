@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	
+	<connectionfile file="XdsRegistryQueryConnections.xml" />
+	<connectionfile file="XdsRepositorySubmitConnections.xml" />
+	<connectionfile file="XdsRepositoryRetrieveConnections.xml" />
+	<!-- <connectionfile file="PdqServerConnections.xml" /> -->
+	<connectionfile file="PixManagerConnections.xml" />
+	<connectionfile file="AuditRepositoryConnections.xml" />
+	<connectionfile file="GlobalFeedConnections.xml" />
+	<connectionfile file="LocalFeedConnections.xml" />
+	<!-- connectionfile file="XdrConnections.xml" /-->
+	
+	<!-- **************************************************** -->
+	<!-- XDS Registry Query Actors COMPLETE-->
+	<actor name="xds_q_nist" type="XdsDocumentConsumer">
+		<description>XDS.a Registry NIST</description>
+		<connection source="nist-xds-query" />
+	</actor>	
+	<actor name="xds_sq_nist" type="XdsDocumentConsumer">
+		<description>XDS.a Registry NIST</description>
+		<connection source="nist-xds-query-secure" />
+	</actor>
+
+	<actor name="xds_q_tianispirit" type="XdsDocumentConsumer">
+		<description>XDS.a Registry Tiani-Spirit</description>
+		<connection source="tianispirit-xds-query" />
+	</actor>	
+	<actor name="xds_sq_tianispirit" type="XdsDocumentConsumer">
+		<description>XDS.a Registry Tiani-Spirit</description>
+		<connection source="tianispirit-xds-query-secure" />
+	</actor>
+	
+	<actor name="xds_q_sectra" type="XdsDocumentConsumer">
+		<description>XDS.a Registry Sectra</description>
+		<connection source="sectra-xds-query" />
+	</actor>	
+	<actor name="xds_sq_sectra" type="XdsDocumentConsumer">
+		<description>XDS.a Registry Sectra</description>
+		<connection source="sectra-xds-query-secure" />
+	</actor>
+
+	<actor name="xds_q_ibm" type="XdsDocumentConsumer">
+		<description>XDS.a Registry IBM</description>
+		<connection source="ibm-xds-query" />
+	</actor>	
+	<actor name="xds_sq_ibm" type="XdsDocumentConsumer">
+		<description>XDS.a Registry IBM</description>
+		<connection source="ibm-xds-query-secure" />
+	</actor>
+	
+	<actor name="xds_q_ge" type="XdsDocumentConsumer">
+		<description>XDS.a Registry GE</description>
+		<connection source="ge-xds-query" />
+	</actor>	
+	<actor name="xds_sq_ge" type="XdsDocumentConsumer">
+		<description>XDS.a Registry GE</description>
+		<connection source="ge-xds-query-secure" />
+	</actor>
+
+	<actor name="xds_q_hxti" type="XdsDocumentConsumer">
+		<description>XDS.a Registry HXTI</description>
+		<connection source="hxti-xds-query" />
+	</actor>	
+	<actor name="xds_sq_hxti" type="XdsDocumentConsumer">
+		<description>XDS.a Registry HXTI</description>
+		<connection source="hxti-xds-query-secure" />
+	</actor>
+
+    <!-- **************************************************** -->
+	<!-- XDS.b Registry Query Actors COMPLETE -->
+	<actor name="xdsb_q_nist" type="XdsDocumentConsumer">
+		<description>XDS.b Registry NIST</description>
+		<connection source="nist-xdsb-query" />
+	</actor>	
+	<actor name="xdsb_sq_nist" type="XdsDocumentConsumer">
+		<description>XDS.b Registry NIST</description>
+		<connection source="nist-xdsb-query-secure" />
+	</actor>
+
+	<actor name="xdsb_q_hxti" type="XdsDocumentConsumer">
+		<description>XDS.b Registry HXTI</description>
+		<connection source="hxti-xdsb-query" />
+	</actor>	
+	<actor name="xdsb_sq_hxti" type="XdsDocumentConsumer">
+		<description>XDS.b Registry HXTI</description>
+		<connection source="hxti-xdsb-query-secure" />
+	</actor>
+	
+	<actor name="xdsb_q_infinitt" type="XdsDocumentConsumer">
+		<description>XDS.b Registry Infinitt</description>
+		<connection source="infinitt-xds-query" />
+	</actor>	
+	<actor name="xdsb_sq_infinitt" type="XdsDocumentConsumer">
+		<description>XDS.b Registry Infinitt</description>
+		<connection source="infinitt-xds-query-secure" />
+	</actor>
+		
+	<actor name="xdsb_q_msft" type="XdsDocumentConsumer">
+		<description>XDS.b Registry MicroSoft</description>
+		<connection source="msft-xds-query" />
+	</actor>	
+	<actor name="xdsb_sq_msft" type="XdsDocumentConsumer">
+		<description>XDS.b Registry MicroSoft</description>
+		<connection source="msft-xds-query-secure" />
+	</actor>
+			
+	<actor name="xdsb_q_intersystems" type="XdsDocumentConsumer">
+		<description>XDS.b Registry Intersystems</description>
+		<connection source="intersystems-xds-query" />
+	</actor>
+	
+	<actor name="xdsb_q_ibm" type="XdsDocumentConsumer">
+		<description>XDS.b Registry IBM</description>
+		<connection source="ibm-xdsb-query" />
+	</actor>	
+	<actor name="xdsb_sq_ibm" type="XdsDocumentConsumer">
+		<description>XDS.b Registry IBM</description>
+		<connection source="ibm-xdsb-query-secure" />
+	</actor>
+	
+						
+    <!-- **************************************************** -->
+	<!-- XDS.a Repository Actors for Submission -->
+    <actor name="xds_rep_nist" type="XdsDocumentSource">
+		<description>XDS.a Submit NIST</description>
+		<connection consumer="nist-xds-submit"/>
+	</actor>
+    <actor name="xds_srep_nist" type="XdsDocumentSource">
+		<description>XDS.a Submit NIST</description>
+		<connection consumer="nist-xds-submit-secure" />
+	</actor>
+ 
+    <actor name="xds_rep_spirit" type="XdsDocumentSource">
+		<description>XDS.a Submit Tiani-Spirit</description>
+		<connection consumer="spirit-xds-submit" />
+	</actor>
+    <actor name="xds_srep_spirit" type="XdsDocumentSource">
+		<description>XDS.a Submit Tiani-Spirit</description>
+		<connection consumer="spirit-xds-submit-secure" />
+	</actor>	
+
+    <actor name="xds_rep_carestream" type="XdsDocumentSource">
+		<description>XDS.a Submit XDSa_REP_CareStream</description>
+		<connection consumer="carestream-xds-submit" />
+	</actor>
+    <actor name="xds_srep_carestream" type="XdsDocumentSource">
+		<description>XDS.a Submit XDSa_REP_CareStream</description>
+		<connection consumer="carestream-xds-submit-secure" />
+	</actor>
+	
+    <actor name="xds_rep_ibm" type="XdsDocumentSource">
+		<description>XDS.a Submit IBM</description>
+		<connection consumer="ibm-xds-submit" />
+	</actor>
+    <actor name="xds_srep_ibm" type="XdsDocumentSource">
+		<description>XDS.a Submit IBM</description>
+		<connection consumer="ibm-xds-submit-secure" />
+	</actor>	
+	
+    <actor name="xds_rep_carestream4" type="XdsDocumentSource">
+		<description>XDS.a Submit PACS_CareStream</description>
+		<connection consumer="carestream4-xds-submit" />
+	</actor>
+    <actor name="xds_srep_carestream4" type="XdsDocumentSource">
+		<description>XDS.a Submit PACS_CareStream</description>
+		<connection consumer="carestream4-xds-submit-secure" />
+	</actor>
+	
+    <actor name="xds_rep_sectra" type="XdsDocumentSource">
+		<description>XDS.a Submit PACS_Sectra</description>
+		<connection consumer="sectra-xds-submit" />
+	</actor>
+    <actor name="xds_srep_sectra" type="XdsDocumentSource">
+		<description>XDS.a Submit PACS_Sectra</description>
+		<connection consumer="sectra-xds-submit-secure" />
+	</actor>
+
+    <actor name="xds_rep_agfa" type="XdsDocumentSource">
+		<description>XDS.a Submit PACS_AGFA</description>
+		<connection consumer="agfa-xds-submit" />
+	</actor>
+    <actor name="xds_srep_agfa" type="XdsDocumentSource">
+		<description>XDS.a Submit PACS_AGFA</description>
+		<connection consumer="agfa-xds-submit-secure" />
+	</actor>	
+
+    <actor name="xds_rep_fujifilm" type="XdsDocumentSource">
+		<description>XDS.a Submit PACS_FUJIFILM</description>
+		<connection consumer="fujifilm-xds-submit" />
+	</actor>
+    <actor name="xds_srep_fujifilm" type="XdsDocumentSource">
+		<description>XDS.a Submit PACS_FUJIFILM</description>
+		<connection consumer="fujifilm-xds-submit-secure" />
+	</actor>	
+	
+    <actor name="xds_rep_ge" type="XdsDocumentSource">
+		<description>XDS.a Submit GE</description>
+		<connection consumer="ge-xds-submit" />
+	</actor>
+    <actor name="xds_srep_ge" type="XdsDocumentSource">
+		<description>XDS.a Submit GE</description>
+		<connection consumer="ge-xds-submit-secure" />
+	</actor>	
+			
+    <actor name="xds_rep_oracle" type="XdsDocumentSource">
+		<description>XDS.a Submit Oracle</description>
+		<connection consumer="oracle-xds-submit" />
+	</actor>
+    <actor name="xds_srep_oracle" type="XdsDocumentSource">
+		<description>XDS.a Submit Oracle</description>
+		<connection consumer="oracle-xds-submit-secure" />
+	</actor>	
+			
+    <actor name="xds_rep_dejarnette" type="XdsDocumentSource">
+		<description>XDS.a Submit dejarnette</description>
+		<connection consumer="dejarnette-xdsb-submit" />
+	</actor>
+    <actor name="xds_srep_dejarnette" type="XdsDocumentSource">
+		<description>XDS.a Submit dejarnette</description>
+		<connection consumer="dejarnette-xdsb-submit-secure" />
+	</actor>		
+	 
+			
+    <!-- **************************************************** -->
+	<!-- XDS.b Repository Actors for Submission -->
+    <actor name="xdsb_rep_openxds" type="XdsDocumentSource">
+		<description>XDS.b Submit OpenXDS</description>
+		<connection consumer="openxds-xdsb-submit"/>
+	</actor>
+    <actor name="xdsb_rep_nist" type="XdsDocumentSource">
+		<description>XDS.b Submit NIST</description>
+		<connection consumer="nist-xdsb-submit"/>
+	</actor>
+    <actor name="xdsb_srep_nist" type="XdsDocumentSource">
+		<description>XDS.b Submit NIST</description>
+		<connection consumer="nist-xdsb-submit-secure" />
+	</actor>
+ 
+    <actor name="xdsb_rep_hxti" type="XdsDocumentSource">
+		<description>XDS.b Submit HXTI</description>
+		<connection consumer="hxti-xdsb-submit" />
+	</actor>
+    <actor name="xdsb_srep_hxti" type="XdsDocumentSource">
+		<description>XDS.b Submit HXTI</description>
+		<connection consumer="hxti-xdsb-submit-secure" />
+	</actor>
+	
+    <actor name="xdsb_rep_infinitt" type="XdsDocumentSource">
+		<description>XDS.b Submit Infinitt</description>
+		<connection consumer="infinitt-xdsb-submit" />
+	</actor>
+    <actor name="xdsb_srep_infinitt" type="XdsDocumentSource">
+		<description>XDS.b Submit Infinitt</description>
+		<connection consumer="infinitt-xdsb-submit-secure" />
+	</actor>
+	
+    <actor name="xdsb_rep_ibm" type="XdsDocumentSource">
+		<description>XDS.b Submit IBM</description>
+		<connection consumer="ibm-xdsb-submit" />
+	</actor>
+    <actor name="xdsb_srep_ibm" type="XdsDocumentSource">
+		<description>XDS.b Submit IBM</description>
+		<connection consumer="ibm-xdsb-submit-secure" />
+	</actor>
+	
+    <actor name="xdsb_rep_spirit" type="XdsDocumentSource">
+		<description>XDS.b Submit Tiani-Spirit</description>
+		<connection consumer="spirit-xdsb-submit" />
+	</actor>
+    <actor name="xdsb_srep_spirit" type="XdsDocumentSource">
+		<description>XDS.b Submit Tiani-Spirit</description>
+		<connection consumer="spirit-xdsb-submit-secure" />
+	</actor>
+	
+    <actor name="xdsb_rep_intersystems" type="XdsDocumentSource">
+		<description>XDS.b Submit Intersystems</description>
+		<connection consumer="intersystems-xdsb-submit" />
+	</actor>	
+			
+    <actor name="xdsb_rep_msft" type="XdsDocumentSource">
+		<description>XDS.b Submit MicroSoft</description>
+		<connection consumer="msft-xdsb-submit" />
+	</actor>
+    <actor name="xdsb_srep_msft" type="XdsDocumentSource">
+		<description>XDS.b Submit MicroSoft</description>
+		<connection consumer="msft-xdsb-submit-secure" />
+	</actor>	
+
+    <!-- **************************************************** -->
+	<!-- XDS.b Repository or Init Gateway Actors for Retrieving Docs -->
+    <actor name="xdsb_retr_nist" type="XdsDocumentRetrieve">
+		<description>XDS.b Retrieve NIST Repository</description>
+		<connection source="nist-xdsb-retrieve" />
+	</actor>
+    <actor name="xdsb_sretr_nist" type="XdsDocumentRetrieve">
+		<description>XDS.b Retrieve NIST Repository</description>
+		<connection source="nist-xdsb-retrieve-secure" />
+	</actor>
+	
+
+    <actor name="xdsb_retr_hxti" type="XdsDocumentRetrieve">
+		<description>XDS.b Retrieve HXTI Init Gateway</description>
+		<connection source="hxti-xdsb-retrieve" />
+	</actor>
+    <actor name="xdsb_sretr_hxti" type="XdsDocumentRetrieve">
+		<description>XDS.b Retrieve HXTI Init Gateway</description>
+		<connection source="hxti-xdsb-retrieve-secure" />
+	</actor>
+	
+    <actor name="xdsb_retr_ibm" type="XdsDocumentRetrieve">
+		<description>XDS.b Retrieve IBM Repository</description>
+		<connection source="ibm-xdsb-retrieve" />
+	</actor>
+    <actor name="xdsb_sretr_ibm" type="XdsDocumentRetrieve">
+		<description>XDS.b Retrieve IBM Repository</description>
+		<connection source="ibm-xdsb-retrieve-secure" />
+	</actor>	
+
+    <actor name="xdsb_retr_spirit" type="XdsDocumentRetrieve">
+		<description>XDS.b Retrieve Tiani-Spirit</description>
+		<connection source="spirit-xdsb-retrieve" />
+	</actor>
+    <actor name="xdsb_sretr_spirit" type="XdsDocumentRetrieve">
+		<description>XDS.b Retrieve Tiani-Spirit</description>
+		<connection source="spirit-xdsb-retrieve-secure" />
+	</actor>
+	
+	
+    <actor name="xdsb_retr_intersystems" type="XdsDocumentRetrieve">
+		<description>XDS.b Retrieve Intersystems Init Gateway</description>
+		<connection source="intersystems-xdsb-retrieve" />
+	</actor>
+	
+    <actor name="xdsb_retr_msft" type="XdsDocumentRetrieve">
+		<description>XDS.b Retrieve MicroSoft Repository</description>
+		<connection source="msft-xdsb-retrieve" />
+	</actor>
+    <actor name="xdsb_sretr_msft" type="XdsDocumentRetrieve">
+		<description>XDS.b Retrieve MicroSoft Repository</description>
+		<connection source="msft-xdsb-retrieve-secure" />
+	</actor>		
+			
+    <!-- **************************************************** -->
+	<!-- PDQ Server Actors 
+	
+	<actor name="pdqinf1" type="PdqConsumer">
+		<description>OF_INFINITT</description>
+		<connection consumer="infinitt-pdq-server" />
+	</actor>
+	
+
+	<actor name="pdqibm1" type="PdqConsumer">
+		<description>PAT_IDENTITY_X_REF_MGR_IBM</description>
+		<connection consumer="ibm1-pdq-server" />
+	</actor>
+
+    <actor name="pdqibm1Secure" type="PdqConsumer">
+		<description>SECURE_PAT_IDENTITY_X_REF_MGR_IBM</description>
+		<connection consumer="ibm1-pdq-server-secure" />
+	</actor>
+
+    <actor name="pdqibm2" type="PdqConsumer">
+		<description>PAT_IDENTITY_X_REF_MGR_IBM_COPY</description>
+		<connection consumer="ibm4-pdq-server" />
+	</actor>
+
+    <actor name="pdqibm1secure" type="PdqConsumer">
+		<description>PAT_IDENTITY_X_REF_MGR_IBM_COPY_SECURE</description>
+		<connection consumer="ibm1-pdq-server-secure" />
+	</actor>
+
+    <actor name="pdqini1" type="PdqConsumer">
+		<description>PAT_IDENTITY_X_REF_MGR_INITIATE1</description>
+		<connection consumer="initiate-pdq-server" />
+	</actor>
+
+    <actor name="pdqlocal" type="PdqConsumer">
+		<description>LOCAL_PDQ_TEST</description>
+		<connection consumer="local-pdq-server" />
+	</actor>
+    <!- **************************************************** -->
+	<!-- PIX Manager Actors for PIX Query-->
+	
+	<actor name="pix_q_mesa" type="PixConsumer">
+		<description>MESA Software</description>
+		<connection consumer="mesa-pix-query" />
+	</actor>
+	
+	<actor name="pix_q_icw" type="PixConsumer">
+		<description>PIX Query ICW</description>
+		<connection consumer="icw-pix-query" />
+	</actor>
+	
+	<actor name="pix_q_careev" type="PixConsumer">
+		<description>PIX Query Careev</description>
+		<connection consumer="careev-pix-query" />
+	</actor>	
+	<actor name="pix_sq_careev" type="PixConsumer">
+		<description>PIX Query Careev</description>
+		<connection consumer="careev-pix-query-secure" />
+	</actor>
+	
+ 	<actor name="pix_q_spirit" type="PixConsumer">
+		<description>PIX Query Spirit</description>
+		<connection consumer="spirit-pix-query" />
+	</actor>	
+	<actor name="pix_sq_spirit" type="PixConsumer">
+		<description>PIX Query Spirit</description>
+		<connection consumer="spirit-pix-query-secure" />
+	</actor>
+	
+ 	<actor name="pix_q_accenx" type="PixConsumer">
+		<description>PIX Query Accenx</description>
+		<connection consumer="accenx-pix-query" />
+	</actor>	
+	<actor name="pix_sq_accenx" type="PixConsumer">
+		<description>PIX Query Accenx</description>
+		<connection consumer="accenx-pix-query-secure" />
+	</actor>
+	
+ 	<actor name="pix_q_ndorange" type="PixConsumer">
+		<description>PIX Query NDOrange</description>
+		<connection consumer="ndorange-pix-query" />
+	</actor>	
+	
+ 	<actor name="pix_q_alert" type="PixConsumer">
+		<description>PIX Query Alert</description>
+		<connection consumer="alert-pix-query" />
+	</actor>	
+
+ 	<actor name="pix_q_ge" type="PixConsumer">
+		<description>PIX Query GE</description>
+		<connection consumer="ge-pix-query" />
+	</actor>	
+	<actor name="pix_sq_ge" type="PixConsumer">
+		<description>PIX Query GE</description>
+		<connection consumer="ge-pix-query-secure" />
+	</actor>
+				
+ 	<actor name="pix_q_emds" type="PixConsumer">
+		<description>PIX Query EMDS</description>
+		<connection consumer="emds-pix-query" />
+	</actor>	
+	<actor name="pix_sq_emds" type="PixConsumer">
+		<description>PIX Query EMDS</description>
+		<connection consumer="emds-pix-query-secure" />
+	</actor>				
+		
+ 	<actor name="pix_q_axolotl" type="PixConsumer">
+		<description>PIX Query Axolotl</description>
+		<connection consumer="axolotl-pix-query" />
+	</actor>	
+	<actor name="pix_sq_axolotl" type="PixConsumer">
+		<description>PIX Query Axolotl</description>
+		<connection consumer="axolotl-pix-query-secure" />
+	</actor>				
+		
+ 	<actor name="pix_q_initiate" type="PixConsumer">
+		<description>PIX Query Initiate</description>
+		<connection consumer="initiate-pix-query" />
+	</actor>
+	<actor name="pix_sq_initiate" type="PixConsumer">
+		<description>PIX Query Initiate</description>
+		<connection consumer="initiate-pix-query-secure" />
+	</actor>	
+	
+ 	<actor name="pix_q_swpartners" type="PixConsumer">
+		<description>PIX Query SWPartners</description>
+		<connection consumer="swpartners-pix-query" />
+	</actor>	
+	<actor name="pix_sq_swpartners" type="PixConsumer">
+		<description>PIX Query SWPartners</description>
+		<connection consumer="swpartners-pix-query-secure" />
+	</actor>				
+						
+    <!-- **************************************************** -->
+	<!-- Audit Repository Actors COMPLETE -->
+	
+	<actor name="audit_all" type="SecureNode">
+		<description>ALL AUDIT TRAILS</description>
+		<audittrail consumer="log4j_audittrail" />
+		<audittrail consumer="intersystems-arr-bsd" />
+		<audittrail consumer="spirit-arr-bsd" />
+		<audittrail consumer="agfa-arr-bsd" />
+		<audittrail consumer="mednet-arr-bsd" />
+		<audittrail consumer="ibm-arr-bsd" />
+	</actor>
+
+    <actor name="arr_mesa" type="SecureNode">
+		<description>ARR MESA</description>
+		<audittrail consumer="mesa_arr_bsd" />
+	</actor>
+
+    <actor name="arr_nist" type="SecureNode">
+		<description>ARR NIST</description>
+		<audittrail consumer="nist-arr-bsd" />
+	</actor>
+
+	<actor name="local_audit" type="SecureNode">
+		<description>LOCAL AUDIT</description>
+		<audittrail consumer="log4j_audittrail" />
+	</actor>
+	
+    <actor name="arr_intersystems" type="SecureNode">
+		<description>ARR Intersystems</description>
+		<audittrail consumer="intersystems-arr-bsd" />
+	</actor>
+
+    <actor name="arr_spirit" type="SecureNode">
+		<description>ARR Spirit</description>
+		<audittrail consumer="spirit-arr-bsd" />
+	</actor>
+
+   <actor name="arr_agfa" type="SecureNode">
+		<description>ARR AGFA</description>
+		<audittrail consumer="agfa-arr-bsd" />
+	</actor>
+
+    <actor name="arr_mednet" type="SecureNode">
+		<description>ARR Mednet</description>
+		<audittrail consumer="mednet-arr-bsd" />
+	</actor>
+	
+    <actor name="arr_ibm" type="SecureNode">
+		<description>ARR IBM</description>
+		<audittrail consumer="ibm-arr-bsd" />
+	</actor>
+
+    <!-- **************************************************** -->
+	<!-- Global Patient Feed Consumer Actors   NOTE:  I think these are all the same as the pix consumer this year?  No? 
+	
+	<actor name="gpfaccenx" type="PatientIdentitySource">
+		<description>ACCENX</description>
+		<connection consumer="accenx-global-feed" />
+	</actor>
+	
+	<actor name="gpfhxti" type="PatientIdentitySource">
+		<description>XDS_REG_HXTI</description>
+		<connection consumer="hxti-global-feed" />
+	</actor>
+	
+	<actor name="gpfhxtis" type="PatientIdentitySource">
+		<description>XDS_REG_HXTI_</description>
+		<connection consumer="hxti-global-feed-secure" />
+	</actor>
+	
+	<actor name="gpfspir" type="PatientIdentitySource">
+		<description>EHR_SPIRIT</description>
+		<connection consumer="spirit-global-feed" />
+	</actor>
+
+    <actor name="gpfspirs" type="PatientIdentitySource">
+		<description>EHR_SPIRIT_</description>
+		<connection consumer="spirit-global-feed-secure" />
+	</actor>
+
+    <actor name="gpfaxol" type="PatientIdentitySource">
+		<description>PAT_IDENTITY_X_REF_MGR_AXOLOTL</description>
+		<connection consumer="axolotl-global-feed" />
+	</actor>
+	
+	<actor name="gpfaxols" type="PatientIdentitySource">
+		<description>PAT_IDENTITY_X_REF_MGR_AXOLOTL_</description>
+		<connection consumer="axolotl-global-feed-secure" />
+	</actor>
+	
+	<actor name="gpfibm1" type="PatientIdentitySource">
+		<description>PAT_IDENTITY_X_REF_MGR_IBM</description>
+		<connection consumer="ibm-global-feed" />
+	</actor>
+
+	<actor name="gpfibm1secure" type="PatientIdentitySource">
+		<description>PAT_IDENTITY_X_REF_MGR_IBM_SECURE</description>
+		<connection consumer="ibm-global-feed-secure"/>
+	</actor>
+
+	<actor name="gpfinit" type="PatientIdentitySource">
+		<description>PAT_IDENTITY_X_REF_MGR_INITIATESYSTEMS</description>
+		<connection consumer="initiate-global-feed" />
+	</actor>
+
+	<actor name="gpfinitsecure" type="PatientIdentitySource">
+		<description>PAT_IDENTITY_X_REF_MGR_INITIATESYSTEMS_</description>
+		<connection consumer="initiate-global-feed-secure" />
+	</actor>
+
+	<actor name="gpfquad" type="PatientIdentitySource">
+		<description>PAT_IDENTITY_X_REF_MGR_QUADRAMED</description>
+		<connection consumer="quadramed-global-feed" />
+	</actor>
+	
+ 	<actor name="gpfquadsecure" type="PatientIdentitySource">
+		<description>PAT_IDENTITY_X_REF_MGR_QUADRAMED_</description>
+		<connection consumer="quadramed-global-feed-secure" />
+	</actor>
+     **************************************************** -->
+	<!-- Local Patient Feed Consumer Actors -->
+	
+	<actor name="lpfmesa" type="PatientIdentitySource">
+		<description>MESA SOFTWARE</description>
+		<connection consumer="mesa-local-feed" />
+	</actor>
+
+	<actor name="lpf_icw" type="PatientIdentitySource">
+		<description>PIX Feed ICW</description>
+		<connection consumer="icw-local-feed" />
+	</actor>
+		
+	<actor name="lpf_careev" type="PatientIdentitySource">
+		<description>PIX Feed Careev</description>
+		<connection consumer="careev-local-feed" />
+	</actor>
+	<actor name="lpfs_careev" type="PatientIdentitySource">
+		<description>PIX Feed Careev</description>
+		<connection consumer="careev-local-feed-secure" />
+	</actor>
+	
+	<actor name="lpf_spirit" type="PatientIdentitySource">
+		<description>PIX Feed Tiani-Spirit</description>
+		<connection consumer="spirit-local-feed" />
+	</actor>
+	<actor name="lpfs_spirit" type="PatientIdentitySource">
+		<description>PIX Feed Tiani-Spirit</description>
+		<connection consumer="spirit-local-feed-secure" />
+	</actor>	
+	
+	<actor name="lpf_accenx" type="PatientIdentitySource">
+		<description>PIX Feed Accenx</description>
+		<connection consumer="accenx-local-feed" />
+	</actor>
+	<actor name="lpfs_accenx" type="PatientIdentitySource">
+		<description>PIX Feed Accenx</description>
+		<connection consumer="accenx-local-feed-secure" />
+	</actor>
+	
+	<actor name="lpf_ndorange" type="PatientIdentitySource">
+		<description>PIX Feed NDORANGE</description>
+		<connection consumer="ndorange-local-feed" />
+	</actor>	
+	
+	<actor name="lpf_alert" type="PatientIdentitySource">
+		<description>PIX Feed Alert</description>
+		<connection consumer="alert-local-feed" />
+	</actor>	
+		
+	<actor name="lpf_ge" type="PatientIdentitySource">
+		<description>PIX Feed GE</description>
+		<connection consumer="ge-local-feed" />
+	</actor>
+	<actor name="lpfs_ge" type="PatientIdentitySource">
+		<description>PIX Feed GE</description>
+		<connection consumer="ge-local-feed-secure" />
+	</actor>
+			
+	<actor name="lpf_emds" type="PatientIdentitySource">
+		<description>PIX Feed EMDS</description>
+		<connection consumer="emds-local-feed" />
+	</actor>
+	<actor name="lpfs_emds" type="PatientIdentitySource">
+		<description>PIX Feed EMDS</description>
+		<connection consumer="emds-local-feed-secure" />
+	</actor>
+	
+	<actor name="lpf_axolotl" type="PatientIdentitySource">
+		<description>PIX Feed Axolotl</description>
+		<connection consumer="axolotl-local-feed" />
+	</actor>
+	<actor name="lpfs_axolotl" type="PatientIdentitySource">
+		<description>PIX Feed Axolotl</description>
+		<connection consumer="axolotl-local-feed-secure" />
+	</actor>
+	
+	<actor name="lpf_initiate" type="PatientIdentitySource">
+		<description>PIX Feed Initiate</description>
+		<connection consumer="initiate-local-feed" />
+	</actor>	
+	<actor name="lpfs_initiate" type="PatientIdentitySource">
+		<description>PIX Feed Initiate</description>
+		<connection consumer="initiate-local-feed-secure" />
+	</actor>				
+					
+	<actor name="lpf_swpartners1" type="PatientIdentitySource">
+		<description>PIX Feed SWPartners</description>
+		<connection consumer="swpartners-local-feed" />
+	</actor>
+	<actor name="lpfs_swpartners1" type="PatientIdentitySource">
+		<description>PIX Feed SWPartners ()</description>
+		<connection consumer="swpartners-local-feed-secure" />
+	</actor>
+						
+					
+	<!-- **************************************************** -->
+	<!-- XDR Document Source  COMPLETE-->
+	<!-- actor name="xdrs" type="XdrDocumentSource">
+		<description>Misys_Test_XDR</description>
+		<connection source="test-xdr-connection" />
+	</actor>
+	
+	<actor name="xdrsall" type="XdrDocumentSource">
+		<description>EHR_ALLSCRIPTS</description>
+		<connection source="allscripts-xdr-connection" />
+	</actor>
+	
+	<actor name="xdrscap" type="XdrDocumentSource">
+		<description>PHR_CAPMED</description>
+		<connection source="capmed-xdr-connection" />
+	</actor-->
+	
+	<!-- **************************************************** -->
+	<!-- XDR Document Recipient  COMPLETE-->
+	<!--actor name="xdrr" type="XdrDocumentConsumer">
+		<description>Misys_Test_XDR_Recip</description>
+		<connection consumer="test-xdr-connection" />
+	</actor>
+	
+	<actor name="xdrrge" type="XdrDocumentConsumer">
+		<description>EHR_GEHEALTHCARE_ENTERPRISE</description>
+		<connection consumer="ge-xdr-connection" />
+	</actor>
+	
+	<actor name="xdrrall" type="XdrDocumentConsumer">
+		<description>EHR_ALLSCRIPTS</description>
+		<connection consumer="allscripts-xdr-connection" />
+	</actor>
+	
+	<actor name="xdrrcap" type="XdrDocumentConsumer">
+		<description>PHR_CAPMED</description>
+		<connection consumer="capmed-xdr-connection" />
+	</actor-->
+	
+	<!-- **************************************************** -->
+	<!-- XDM Document Source  COMPLETE-->
+	<!-- actor name="xdms" type="XdmDocumentSource">
+		<description>Misys_Test_XDM</description>
+		<connection source="spirit-xds-submit" />
+	</actor-->	
+</Configuration>

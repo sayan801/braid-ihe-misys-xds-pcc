@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was auto-generated from WSDL -->
+<!-- by the Apache Axis2 version: 1.3  Built on : Aug 10, 2007 (04:45:47 LKT) -->
+<serviceGroup>
+    <service name="IheService">
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-out" class="com.misyshealthcare.connect.doc.ccd.IheServiceMessageReceiverInOut"/>
+        </messageReceivers>
+        <parameter name="ServiceClass">com.misyshealthcare.connect.doc.ccd.IheServiceSkeleton</parameter>
+        <parameter name="useOriginalwsdl">true</parameter>
+        <parameter name="modifyUserWSDLPortAddress">true</parameter>
+        <parameter name="enableMTOM" locked="false" >true</parameter>
+        <operation name="buildConsentDocument" mep="http://www.w3.org/ns/wsdl/in-out">
+            <actionMapping>urn:buildConsentDocument</actionMapping>
+            <outputActionMapping>urn:buildConsentDocumentResponse</outputActionMapping>
+        </operation>
+        <operation name="buildScannedDocument" mep="http://www.w3.org/ns/wsdl/in-out">
+            <actionMapping>urn:buildScannedDocument</actionMapping>
+            <outputActionMapping>urn:buildScannedDocumentResponse</outputActionMapping>
+        </operation>
+        <operation name="submitDocuments" mep="http://www.w3.org/ns/wsdl/in-out">
+            <actionMapping>urn:submitDocuments</actionMapping>
+            <outputActionMapping>urn:submitDocumentsResponse</outputActionMapping>
+        </operation>
+        <operation name="buildEDReferral" mep="http://www.w3.org/ns/wsdl/in-out">
+            <actionMapping>urn:buildEDReferral</actionMapping>
+            <outputActionMapping>urn:buildEDReferralResponse</outputActionMapping>
+        </operation>
+        <operation name="buildReferralSummary" mep="http://www.w3.org/ns/wsdl/in-out">
+            <actionMapping>urn:buildReferralSummary</actionMapping>
+            <outputActionMapping>urn:buildReferralSummaryResponse</outputActionMapping>
+        </operation>
+        <operation name="buildDischargeSummary" mep="http://www.w3.org/ns/wsdl/in-out">
+            <actionMapping>urn:buildDischargeSummary</actionMapping>
+            <outputActionMapping>urn:buildDischargeSummaryResponse</outputActionMapping>
+        </operation>
+    </service>
+</serviceGroup>

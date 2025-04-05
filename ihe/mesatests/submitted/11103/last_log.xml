@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AuditMessage>
+    <EventIdentification EventActionCode="R" EventDateTime="2009-01-05T15:41:16.342-05:00" EventOutcomeIndicator="0">
+        <EventID codeSystemName="DCM" code="110110" displayName="Patient Record"/>
+    </EventIdentification>
+    <ActiveParticipant AlternativeUserID="testSystem" NetworkAccessPointID="10.0.0.1" NetworkAccessPointTypeCode="2" UserID="12345" UserIsRequestor="true">
+        <RoleIDCode codeSystemName="DCM" code="110153" displayName="Source"/>
+    </ActiveParticipant>
+    <ActiveParticipant AlternativeUserID="XdsDocumentConsumer" NetworkAccessPointID="10.242.0.51" NetworkAccessPointTypeCode="2" UserID="AllscriptsConnect@allscripts" UserIsRequestor="false">
+        <RoleIDCode codeSystemName="DCM" code="110150" displayName="Application"/>
+    </ActiveParticipant>
+    <AuditSourceIdentification AuditEnterpriseSiteID="ALLSCRIPTS" AuditSourceID="ALLSCRIPTS">
+        <AuditSourceTypeCode code="1"/>
+        <AuditSourceTypeCode code="3"/>
+    </AuditSourceIdentification>
+    <ParticipantObjectIdentification ParticipantObjectID="misys-id-02344321183^^^Test&amp;1.2.3.4.5&amp;ISO" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1">
+        <ParticipantObjectIDTypeCode code="2"/>
+        <ParticipantObjectName>Formaldehyde^Susan</ParticipantObjectName>
+    </ParticipantObjectIdentification>
+</AuditMessage>

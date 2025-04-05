@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="${componentname}" default="baseJar" basedir=".">
+
+	<!-- Load infrastructure build's property file -->
+	<property file="build.properties" />
+
+	
+	<!-- Creates temporary directory -->
+	<target name="outputClassDir">
+		<mkdir dir="${tempDir}" />
+		<echo message="Build dir created [${tempDir}]"/>
+	</target>
+
+	<!-- Set classpath prior to compiling code -->
+	<target name="setClasspath">
+		<property environment="env" />
+		<path id="build.classpath">
+			<fileset dir="${jarDir}/lib">
+				<include name="**/*.jar" />
+			</fileset>
+		</path>
+		<property name="classpath" refid="build.classpath" />
+		<echo message="Classpath Settings done: ${classpath}" />
+	</target>
+
+	<!-- Compile infrastructure source code "-->
+	<target name="compile" >
+		<javac failonerror="true" target="1.5" debug="true" srcdir="${srcDir}" destdir="${tempDir}" classpath="${classpath}" />
+	</target>
+
+	<!-- Create the jar. Depends on the following properties:
+	   distDirUtil - the location to put the util jar
+	   utilJarName - the name to embed in the jar file name
+	   to_exclude - the file types to be excluded from the jar (e.g., "*.java")
+     -->
+	<target name="baseJar" depends="test" description="generate Util jar file">
+		
+		<!-- Create destination directory for jar file -->
+		<mkdir dir="${distDirUtil}" />
+		<jar jarfile="${distDirUtil}/${utilJarName}" basedir="${tempDir}" excludes="${to_exclude}"/>
+		<echo message="Jar Created [${distDirUtil}/${utilJarName}]"/>
+		
+		<!-- Delete Temp Directory -->
+		<delete dir="${tempDir}" />
+		<echo message="Build dir deleted [${tempDir}]"/>
+		
+		
+	</target>
+	
+	<!-- Compile and run junit Testcases. Depends on the following properties:
+	 	srcDir - the location of java files to compile
+	   	tempDir - the location of the class files
+	-->
+	<target name="test" depends="outputClassDir,setClasspath">
+		
+		<!-- Copy source code into temporary directory -->
+		<copy todir="${tempDir}">
+			<fileset dir="${srcJavaDirUtil1}"/>
+			<fileset dir="${srcJavaDirUtil2}"/>
+		</copy>
+
+		<!-- Compile source code -->
+		<antcall target="compile">
+			<param name="srcDir" value="${tempDir}" />
+		</antcall>
+		
+		<!-- Create reports directory -->
+	    <mkdir dir="${reports}" />
+		<echo message="reports dir created [${reports}]"/>
+		<!-- Run junit Tests -->
+	    <junit printsummary="yes" haltonfailure="false">  
+	      <classpath>
+		      <pathelement path="${classpath}" />
+		      <pathelement path="${tempDir}"/>
+	      </classpath>
+	      <formatter type="plain"/>
+    
+	      <batchtest fork="yes" todir="${reports}">
+		      <fileset dir="${tempDir}">
+			      <include name="**/*Test.java"/>
+			      <!-- need to exclude a generated file named Test.java -->
+			      <exclude name="**/Test.java"/>
+				  <!-- This must get fixed.  The problem is the unit test hasn't been kept up to date with the
+				  code.  Fix ASAP.  -->
+				  <exclude name="StandardConnectionDescriptionTest.java"/>
+  	        </fileset>
+     	      </batchtest>
+	    </junit>
+    </target>	    
+</project>

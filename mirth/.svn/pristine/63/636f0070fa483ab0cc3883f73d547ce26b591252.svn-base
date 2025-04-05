@@ -1,0 +1,30 @@
+CTX: MESA Version 12.3.0  created 2008.11.25 
+CTX: current date/time 20090107 1759
+CTX: Log level 4
+
+CTX: PMI 11196.1
+CTX: Evaluation using ATNA Log Message-Actor PHI Export Schematron
+CTX: File C:\projects\mesa2009/logs/syslog/last_log.xml
+CTX: java -cp C:\projects\mesa2009/lib/xalan.jar org.apache.xalan.xslt.Process -IN 11196/11196_schematron.xml -XSL schematron/schematron-basic.xsl -OUT 11196/11196.xsl -PARAM diagnose yes
+CTX: java -cp C:\projects\mesa2009/lib/xalan.jar org.apache.xalan.xslt.Process -IN C:\projects\mesa2009/logs/syslog/last_log.xml -XSL 11196/11196.xsl -OUT 11196/schematron_11196.log
+
+
+Result from schematron validation:
+CTX: 11196: Schematron - ATNA PHI EXPORT
+CTX: In pattern count(EventIdentification) = 1:
+   CTX: Found ONE EventIdentification in AuditMessage (PASS)
+CTX: In pattern @EventActionCode='R':
+   CTX: Found EventActionCode=R in EventIdentification (PASS)
+CTX: In pattern @EventOutcomeIndicator='0':
+   CTX: Found EventOutcomeIndicator=0 in EventIdentification (PASS)
+CTX: In pattern @EventDateTime:
+   CTX: Found EventDateTime (PASS)
+CTX: In pattern count(EventID) = 1:
+   CTX: Found ONLY ONE EventID (PASS)
+CTX: In pattern EventID[@code='110106']:
+   CTX: Found code=110106 in EventID (PASS)
+CTX: In pattern EventID[@codeSystemName='DCM']:
+   CTX: Found codeSystemName=DCM in EventID (PASS)
+CTX: In pattern EventID[@displayName='Export']:
+   CTX: Found displayName=Export in EventID (PASS)
+

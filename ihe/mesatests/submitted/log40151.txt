@@ -1,0 +1,9 @@
+EHR_ALLSCRIPTS_ENTERPRISE   Tested, no issue  
+EHR_ALLSCRIPTS_PROFESSIONAL Tested, no issue
+EHR_BLUEWARE                Tested, no issue
+EHR_EPIC                    Tested, no issue
+EHR_GREENWAY                Sample Missing
+EHR_MCKESSON                Tested, no issue
+EHR_MIE                     Sample Missing
+EHR_NEXTGEN                 Tested, no issue                 
+EHR_SAGE                    Tested, no issue

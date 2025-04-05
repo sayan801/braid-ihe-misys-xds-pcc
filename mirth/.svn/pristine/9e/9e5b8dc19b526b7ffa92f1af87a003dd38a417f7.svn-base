@@ -1,0 +1,35 @@
+20071218 151642 localhost:main:757
+ C: Just accepted a new TCP connection from: localhost
+20071218 151642 localhost:doHandshake:416
+ C: In doHandshake, cipher list entry =  NULL-SHA
+20071218 151642 localhost:doHandshake:431
+ C: About to call SSL_accept
+20071218 151642 :verify_callback:255
+ W: verify return:1
+
+20071218 151642 localhost:doHandshake:485
+ C: Shared ciphers: NULL-SHA
+20071218 151642 :doHandshake:492
+ W: CIPHER is NULL-SHA
+
+20071218 151642 localhost:doHandshake:507
+ C: doHandshake is complete
+20071218 151642 :doLoop:538
+ C: ready to read on socket
+20071218 151642 :doLoop:545
+ C: String from peer
+20071218 151642 :doLoop:547
+ C: Hello world
+20071218 151642 :doLoop:538
+ C: ready to read on socket
+20071218 151642 :doLoop:545
+ C: String from peer
+20071218 151642 :doLoop:547
+ C: 
+
+20071218 151642 :doLoop:538
+ C: ready to read on socket
+20071218 151642 :doLoop:577
+ C: DONE: ZERO RETURN
+20071218 151642 :doLoop:595
+ C: Exiting from doLoop

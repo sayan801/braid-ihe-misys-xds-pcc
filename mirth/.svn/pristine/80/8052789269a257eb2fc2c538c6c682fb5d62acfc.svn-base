@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+    <!--LocalAssigningAuthority (Identifier) optional:
+         Specifies the Local Assigning Authority used by this actor. It is used to identify the
+         Local Assigning Authority to the PIX manager and to
+         pull out the Local unique ID from the returned patient IDs.  If it is not supplied, no
+         Local ID is pulled out of the returned identifier list.  (It is not a good idea to
+         leave this value unspecified). Either this parameter or the AssigningAuthority
+         must be supplied. -->
+	<Identifier name="LocalAssigningAuthority">
+		<NamespaceId>MIE1</NamespaceId>
+        <UniversalId>1.3.6.1.4.1.21367.2008.1.2.323</UniversalId>
+		<UniversalIdType>ISO</UniversalIdType>
+    </Identifier>
+    
+	<Identifier name="ReturnAssigningAuthority">
+		<NamespaceId>IHENA</NamespaceId>
+		<UniversalId>1.3.6.1.4.1.21367.2005.3.7</UniversalId>
+		<UniversalIdType>ISO</UniversalIdType>
+    </Identifier>
+                               
+    <!--AssigningAuthority (Identifier) optional:
+         Specifies the preferred ID to send to this PIX manager when trying to cross reference
+         a patient. If this parameter is not specified then the actor cannot cross reference a
+         patient that has no local unique ID.  Either this parameter or the LocalAssigningAuthority
+         must be supplied. -->
+    <!--Identifier name="AssigningAuthority">
+		<NamespaceId></NamespaceId>
+    </Identifier-->
+
+    <!--Required: The SendingApplication specifies the ID in (MSH-3) for PIX Feed and PIX Query -->
+    <Identifier name="SendingApplication">
+		<NamespaceId>EHR_MISYS</NamespaceId>
+	</Identifier>
+
+    <!--Required: The SendingFacility specifies the ID in (MSH-4) for PIX Feed and PIX Query -->
+	<Identifier name="SendingFacility">
+		<NamespaceId>MISYS</NamespaceId>
+	</Identifier>
+	
+	<!--PixQueryName - (PropertySet) required:
+         This parameter specifies the query name information to be included in the HL7
+         message(QPD-1).  The required parts are:
+             identifier - (String) required: A symbolic identifier for the query
+             text - (String) required: A text string given the query name
+             codingsystem - (String) required: The name of the coding system for this identifier -->
+    <PropertySet name="PixQueryName">
+		<Entry name="identifier" value="QRY_1001"/>
+		<Entry name="text" value="Query for Corresponding Identifiers"/>
+		<Entry name="codingSystem" value="99IHE"/>
+	</PropertySet>
+	
+</Configuration>

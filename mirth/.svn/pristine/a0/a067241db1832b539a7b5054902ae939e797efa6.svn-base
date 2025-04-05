@@ -1,0 +1,2667 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List
+href="IHE%20transaction%20Message%20Samples_files/filelist.xml">
+<title>1</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceType"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceName"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="Street"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="address"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="City"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Pragallapati</o:Author>
+  <o:LastAuthor>Li, Wenzhi</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>5</o:TotalTime>
+  <o:Created>2008-10-20T20:13:00Z</o:Created>
+  <o:LastSaved>2008-10-20T20:13:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>4750</o:Words>
+  <o:Characters>27078</o:Characters>
+  <o:Company>Misys Software Solutions Pvt Ltd.,</o:Company>
+  <o:Lines>225</o:Lines>
+  <o:Paragraphs>63</o:Paragraphs>
+  <o:CharactersWithSpaces>31765</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-top:1.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.3in;
+	text-indent:-.3in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	mso-list:l0 level1 lfo1;
+	tab-stops:list .3in;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.4in;
+	text-indent:-.4in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	mso-list:l0 level2 lfo1;
+	tab-stops:list .4in left .85in;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-.5in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	mso-list:l0 level3 lfo1;
+	tab-stops:list 1.0in left 1.25in;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	font-weight:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.6in;
+	text-indent:-.6in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	mso-list:l0 level4 lfo1;
+	mso-hyphenate:none;
+	tab-stops:list .6in left .75in;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h5
+	{mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.7in;
+	text-indent:-.7in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	mso-list:l0 level5 lfo1;
+	tab-stops:list .7in;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	font-weight:normal;}
+h6
+	{mso-style-next:Normal;
+	margin-top:1.0pt;
+	margin-right:0in;
+	margin-bottom:1.0pt;
+	margin-left:.8in;
+	text-indent:-.8in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	mso-list:l0 level6 lfo1;
+	tab-stops:list .8in;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:Normal;
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:2.0pt;
+	margin-left:.9in;
+	text-indent:-.9in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:7;
+	mso-list:l0 level7 lfo1;
+	tab-stops:list .9in;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-next:Normal;
+	margin-top:1.0pt;
+	margin-right:0in;
+	margin-bottom:1.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:8;
+	mso-list:l0 level8 lfo1;
+	tab-stops:list 1.0in;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-next:Normal;
+	margin-top:1.0pt;
+	margin-right:0in;
+	margin-bottom:1.0pt;
+	margin-left:1.1in;
+	text-indent:-1.1in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:9;
+	mso-list:l0 level9 lfo1;
+	tab-stops:list 1.1in;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:1.0pt;
+	margin-right:0in;
+	margin-bottom:1.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	tab-stops:right dotted 6.8in;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	text-transform:uppercase;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:1.0pt;
+	margin-left:.25in;
+	mso-pagination:widow-orphan;
+	tab-stops:.5in right dotted 6.5in;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-variant:small-caps;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	mso-no-proof:yes;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:1.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin-top:1.0pt;
+	margin-right:.7pt;
+	margin-bottom:1.0pt;
+	margin-left:.7pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.5in left 5.3in;
+	font-size:8.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
+span.MsoPageNumber
+	{mso-ansi-font-size:8.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("IHE%20transaction%20Message%20Samples_files/header.html") fs;
+	mso-footnote-continuation-separator:url("IHE%20transaction%20Message%20Samples_files/header.html") fcs;
+	mso-endnote-separator:url("IHE%20transaction%20Message%20Samples_files/header.html") es;
+	mso-endnote-continuation-separator:url("IHE%20transaction%20Message%20Samples_files/header.html") ecs;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in .5in 1.25in .75in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-footer:url("IHE%20transaction%20Message%20Samples_files/header.html") f1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1456559252;
+	mso-list-template-ids:1945663240;}
+@list l0:level1
+	{mso-level-style-link:"Heading 1";
+	mso-level-text:%1;
+	mso-level-tab-stop:.3in;
+	mso-level-number-position:left;
+	margin-left:.3in;
+	text-indent:-.3in;
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level2
+	{mso-level-style-link:"Heading 2";
+	mso-level-text:"%1\.%2";
+	mso-level-tab-stop:.4in;
+	mso-level-number-position:left;
+	margin-left:.4in;
+	text-indent:-.4in;
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level3
+	{mso-level-style-link:"Heading 3";
+	mso-level-text:"%1\.%2\.%3";
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-.5in;
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level4
+	{mso-level-style-link:"Heading 4";
+	mso-level-text:"%1\.%2\.%3\.%4";
+	mso-level-tab-stop:.6in;
+	mso-level-number-position:left;
+	margin-left:.6in;
+	text-indent:-.6in;
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level5
+	{mso-level-style-link:"Heading 5";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5";
+	mso-level-tab-stop:.7in;
+	mso-level-number-position:left;
+	margin-left:.7in;
+	text-indent:-.7in;
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level6
+	{mso-level-style-link:"Heading 6";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:.8in;
+	mso-level-number-position:left;
+	margin-left:.8in;
+	text-indent:-.8in;
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level7
+	{mso-level-style-link:"Heading 7";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:.9in;
+	mso-level-number-position:left;
+	margin-left:.9in;
+	text-indent:-.9in;
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level8
+	{mso-level-style-link:"Heading 8";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level9
+	{mso-level-style-link:"Heading 9";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:1.1in;
+	mso-level-number-position:left;
+	margin-left:1.1in;
+	text-indent:-1.1in;
+	mso-bidi-font-family:"Times New Roman";}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-GB link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoToc1 style='tab-stops:.25in right dotted 6.8in'><!--[if supportFields]><span
+lang=EN-US style='font-family:Verdana'><span style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>TOC \o &quot;1-3&quot; \h \z \u <span
+style='mso-element:field-separator'></span></span><![endif]--><span
+class=MsoHyperlink><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";mso-no-proof:yes'><a href="#_Toc212101675">1<span
+style='font-size:12.0pt;font-family:"Times New Roman";color:windowtext;
+text-transform:none;font-weight:normal;text-decoration:none;text-underline:
+none'><span style='mso-tab-count:1'>    </span></span>IHE transaction Message
+Samples<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc212101675 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F006300320031003200310030003100360037003500000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";text-transform:
+none;font-weight:normal;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US style='font-family:
+Arial;mso-bidi-font-family:"Times New Roman";font-variant:normal !important;
+text-transform:uppercase'><a href="#_Toc212101676">1.1<span style='font-size:
+12.0pt;font-family:"Times New Roman";color:windowtext;text-transform:none;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1'> </span></span>Local
+PIX Feed:<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc212101676 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F006300320031003200310030003100360037003600000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";font-variant:
+normal !important'><o:p></o:p></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US style='font-family:
+Arial;mso-bidi-font-family:"Times New Roman";font-variant:normal !important;
+text-transform:uppercase'><a href="#_Toc212101677"><span style='mso-bidi-font-weight:
+bold'>1.2</span><span style='font-size:12.0pt;font-family:"Times New Roman";
+color:windowtext;text-transform:none;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'> </span></span><span style='mso-bidi-font-weight:bold'>Global
+PIX Feed:</span><span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc212101677 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F006300320031003200310030003100360037003700000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";font-variant:
+normal !important'><o:p></o:p></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US style='font-family:
+Arial;mso-bidi-font-family:"Times New Roman";font-variant:normal !important;
+text-transform:uppercase'><a href="#_Toc212101678">1.3<span style='font-size:
+12.0pt;font-family:"Times New Roman";color:windowtext;text-transform:none;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1'> </span></span>PIX
+Update:<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc212101678 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F006300320031003200310030003100360037003800000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";font-variant:
+normal !important'><o:p></o:p></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US style='font-family:
+Arial;mso-bidi-font-family:"Times New Roman";font-variant:normal !important;
+text-transform:uppercase'><a href="#_Toc212101679">1.4<span style='font-size:
+12.0pt;font-family:"Times New Roman";color:windowtext;text-transform:none;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1'> </span></span>PIX
+Merge:<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc212101679 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F006300320031003200310030003100360037003900000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";font-variant:
+normal !important'><o:p></o:p></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US style='font-family:
+Arial;mso-bidi-font-family:"Times New Roman";font-variant:normal !important;
+text-transform:uppercase'><a href="#_Toc212101680">1.5<span style='font-size:
+12.0pt;font-family:"Times New Roman";color:windowtext;text-transform:none;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1'> </span></span>PIX
+Query:<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc212101680 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F006300320031003200310030003100360038003000000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";font-variant:
+normal !important'><o:p></o:p></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US style='font-family:
+Arial;mso-bidi-font-family:"Times New Roman";font-variant:normal !important;
+text-transform:uppercase'><a href="#_Toc212101681">1.6<span style='font-size:
+12.0pt;font-family:"Times New Roman";color:windowtext;text-transform:none;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1'> </span></span>PDQ
+Query:<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc212101681 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F006300320031003200310030003100360038003100000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";font-variant:
+normal !important'><o:p></o:p></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US style='font-family:
+Arial;mso-bidi-font-family:"Times New Roman";font-variant:normal !important;
+text-transform:uppercase'><a href="#_Toc212101682">1.7<span style='font-size:
+12.0pt;font-family:"Times New Roman";color:windowtext;text-transform:none;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1'> </span></span>PDQ
+Continuation:<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc212101682 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F006300320031003200310030003100360038003200000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";font-variant:
+normal !important'><o:p></o:p></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US style='font-family:
+Arial;mso-bidi-font-family:"Times New Roman";font-variant:normal !important;
+text-transform:uppercase'><a href="#_Toc212101683">1.8<span style='font-size:
+12.0pt;font-family:"Times New Roman";color:windowtext;text-transform:none;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1'> </span></span>XDS
+Submit a Document:<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc212101683 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>5</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F006300320031003200310030003100360038003300000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";font-variant:
+normal !important'><o:p></o:p></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US style='font-family:
+Arial;mso-bidi-font-family:"Times New Roman";font-variant:normal !important;
+text-transform:uppercase'><a href="#_Toc212101684">1.9<span style='font-size:
+12.0pt;font-family:"Times New Roman";color:windowtext;text-transform:none;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1'> </span></span>XDS
+Query (Find Documents):<span style='color:windowtext;display:none;mso-hide:
+screen;text-decoration:none;text-underline:none'><span style='mso-tab-count:
+1 dotted'> </span></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-begin'></span></span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'> PAGEREF
+_Toc212101684 \h </span><span style='color:windowtext;display:none;mso-hide:
+screen;text-decoration:none;text-underline:none'><span style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>10</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F006300320031003200310030003100360038003400000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";font-variant:
+normal !important'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:.5in 60.0pt right dotted 6.5in'><span
+class=MsoHyperlink><span lang=EN-US style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman";font-variant:normal !important;text-transform:uppercase'><a
+href="#_Toc212101685">1.10<span style='font-size:12.0pt;font-family:"Times New Roman";
+color:windowtext;text-transform:none;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>        </span></span>Audit Trail Log:<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc212101685 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>14</span><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F006300320031003200310030003100360038003500000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";font-variant:
+normal !important'><o:p></o:p></span></p>
+
+<h1 style='margin-left:0in;text-indent:0in;mso-list:none;tab-stops:.5in'><!--[if supportFields]><span
+lang=EN-US style='font-family:Verdana'><span style='mso-element:field-end'></span></span><![endif]--><span
+lang=EN-US style='font-family:Verdana'><o:p>&nbsp;</o:p></span></h1>
+
+<b style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:14.0pt;
+mso-bidi-font-size:10.0pt;font-family:Verdana;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:"Times New Roman";mso-font-kerning:14.0pt;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA'><br clear=all
+style='page-break-before:always'>
+</span></b>
+
+<h1><a name="_Toc212101675"><![if !supportLists]><span lang=EN-US
+style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+style='mso-list:Ignore'>1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US>IHE transaction Message Samples</span></a></h1>
+
+<h2><a name="_Toc212101676"></a><a name="_Toc212038104"><span style='mso-bookmark:
+_Toc212101676'><![if !supportLists]><span lang=EN-US style='mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>1.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US>Local PIX Feed:</span></span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>[outbound] </span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSH|^~\&amp;|EHR_MISYS|MISYS|PAT_IDENTITY_X_REF_MGR_IBM1|IBM|20060815225602-0400||ADT^A04|PIF_0|P|2.3.1</span></p>
+
+<p class=MsoNormal><span lang=EN-US>EVN|A04|20060815225602||||20060815225600</span></p>
+
+<p class=MsoNormal><span lang=EN-US>PID|||12345678^^^MIEH^PI||DePinto^Joe^V^Jr^Dr.|Wang|19580325|M|||||(716)385-6235^PRN^PH^^^716^3856235</span></p>
+
+<p class=MsoNormal><span lang=EN-US>PV1||O</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>[inbound] </span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSH|^~\&amp;|PAT_IDENTITY_X_REF_MGR_IBM1|IBM|EHR_MISYS|MISYS|20060815215205-0500||ACK^A04|1155696725828243ibmo|P|2.3.1|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSA|AA|PIF_0|</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<h2 style='margin-left:0in;text-indent:0in'><a name="_Toc212101677"></a><a
+name="_Toc212038105"><span style='mso-bookmark:_Toc212101677'><![if !supportLists]><span
+lang=EN-US style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial;
+mso-bidi-font-weight:bold'><span style='mso-list:Ignore'>1.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='mso-bidi-font-weight:bold'>Global PIX Feed:</span></span></a><span
+lang=EN-US style='mso-bidi-font-weight:bold'><o:p></o:p></span></h2>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>[outbound]
+MSH|^~\&amp;|OTHER_KIOSK|HIMSSSANDIEGO|PAT_IDENTITY_X_REF_MGR_IBM1|IBM|20060818143045-0400||ADT^A04|PIF_0|P|2.3.1</span></p>
+
+<p class=MsoNormal><span lang=EN-US>EVN|A04|20060818143045||||20060818143045</span></p>
+
+<p class=MsoNormal><span lang=EN-US>PID|||12345678^^^HIMSS2005&amp;1.3.6.1.4.1.21367.2005.1.1&amp;ISO^PI||DePinto^Joe^V^Jr^Dr.|Wang|19580325|M|||||(716)385-6235^PRN^PH^^^716^3856235</span></p>
+
+<p class=MsoNormal><span lang=EN-US>PV1||O</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>[inbound]
+MSH|^~\&amp;|PAT_IDENTITY_X_REF_MGR_IBM1|IBM|OTHER_KIOSK|HIMSSSANDIEGO|20060818132650-0500||ACK^A04|115592561025012ibmod|P|2.3.1|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSA|AA|PIF_0|</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<h2><a name="_Toc212101678"></a><a name="_Toc212038106"><span style='mso-bookmark:
+_Toc212101678'><![if !supportLists]><span lang=EN-US style='mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>1.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US>PIX Update:</span></span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>[outbound] </span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSH|^~\&amp;|EHR_MISYS|MISYS|PAT_IDENTITY_X_REF_MGR_IBM1|IBM|20060918153358-0400||ADT^A08|PIF_0|P|2.3.1</span></p>
+
+<p class=MsoNormal><span lang=EN-US>EVN|A08|20060918153358||||20060918153357</span></p>
+
+<p class=MsoNormal><span lang=EN-US>PID|||536253^^^MIEH^PI||Tusona^Luis^N^Jr^Dr.|Wang|19660325|M|||||(716)385-6666^PRN^PH^^^716^3856666</span></p>
+
+<p class=MsoNormal><span lang=EN-US>PV1||I</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>[inbound]
+MSH|^~\&amp;|PAT_IDENTITY_X_REF_MGR_IBM1|IBM|EHR_MISYS|MISYS|20060918143449-0500||ACK^A08|1158608089086207ibmo|P|2.3.1|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSA|AA|PIF_0|</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<h2><a name="_Toc212101679"></a><a name="_Toc212038107"><span style='mso-bookmark:
+_Toc212101679'><![if !supportLists]><span lang=EN-US style='mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>1.4<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US>PIX Merge:</span></span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>[outbound]</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>MSH|^~\&amp;|EHR_MISYS|MISYS|PAT_IDENTITY_X_REF_MGR_IBM1|IBM|20060919004624-0400||ADT^A40|PIF_3|P|2.3.1</span></p>
+
+<p class=MsoNormal><span lang=EN-US>EVN|A40|20060919004624||||20060919004340</span></p>
+
+<p class=MsoNormal><span lang=EN-US>PID|||newId123456^^^MIEH^PI||Tusona^Luis^N^II^Dr.|Wang|19660325|M|||||(716)385-6666^PRN^PH^^^716^3856666</span></p>
+
+<p class=MsoNormal><span lang=EN-US>MRG|536253^^^MIEH^PI||||||Tusona^Luis^N^Sr^Dr.</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>[inbound] </span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSH|^~\&amp;|PAT_IDENTITY_X_REF_MGR_IBM1|IBM|EHR_MISYS|MISYS|20060918234646-0500||ACK^A40|1158641206161352ibmo|P|2.3.1|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSA|AA|PIF_3|</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Verdana'><span
+style='mso-spacerun:yes'> </span></span><b><span lang=EN-US><o:p></o:p></span></b></p>
+
+<h2><a name="_Toc212101680"></a><a name="_Toc212038108"><span style='mso-bookmark:
+_Toc212101680'><![if !supportLists]><span lang=EN-US style='mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>1.5<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US>PIX Query:</span></span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>[outbound] </span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSH|^~\&amp;|EHR_MISYS|MISYS|PAT_IDENTITY_X_REF_MGR_IBM1|IBM|20060810164655-0400||QBP^Q23|PIX_0|P|2.5</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QPD|QRY_1001^Query for Corresponding
+Identifiers^HIMSS2005\T\1.3.6.1.4.1.21367.2005.1.1\T\ISO|QRY_PIX_0|12345678^^^MIEH^PI</span></p>
+
+<p class=MsoNormal><span lang=EN-US>RCP|I</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>[inbound] : Not patient found</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>MSH|^~\&amp;|PAT_IDENTITY_X_REF_MGR_IBM1|IBM|EHR_MISYS|MISYS|20060810154913-0500||RSP^K23|115524295351613ibmod|P|2.5|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSA|AA|PIX_0|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QAK|QRY_PIX_0|NF|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QPD|QRY_1001^Query for Corresponding
+Identifiers^HIMSS2005\T\1.3.6.1.4.1.21367.2005.1.1\T\ISO|QRY_PIX_0|12345678^^^MIEH^PI</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>[inbound] : Error response</span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSH|^~\&amp;|PAT_IDENTITY_X_REF_MGR_IBM1|IBM|EHR_MISYS|MISYS|20060810160617-0500||RSP^K23|115524397785914ibmod|P|2.5|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSA|AE|PIX_0|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>ERR||QPD^1^3^1^1|204|W|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QAK|QRY_PIX_0|AE|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QPD|QRY_1001^Query for Corresponding
+Identifiers^HIMSS2005\T\1.3.6.1.4.1.21367.2005.1.1\T\ISO|QRY_PIX_0|22245678^^^MIEH^PI</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>[inbound] : Found a patient</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>MSH|^~\&amp;|PAT_IDENTITY_X_REF_MGR_IBM1|IBM|EHR_MISYS|MISYS|20060815221353-0500||RSP^K23|1155698033672245ibmo|P|2.5|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSA|AA|PIX_0|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QAK|QRY_PIX_0|NF|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QPD|QRY_1001^Query for Corresponding
+Identifiers^IHEDEMO|QRY_PIX_0|12345678^^^MIEH^PI</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Verdana'><o:p>&nbsp;</o:p></span></p>
+
+<h2><a name="_Toc212101681"></a><a name="_Toc212038109"><span style='mso-bookmark:
+_Toc212101681'><![if !supportLists]><span lang=EN-US style='mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>1.6<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US>PDQ Query:</span></span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>[outbound]</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'> </span>MSH|^~\&amp;|EHR_MISYS|MISYS|OTHER_KIOSK|HIMSSSANDIEGO|20060818172116-0400||QBP^Q22|PDQ_0|P|2.5</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QPD|QRY_PDQ_1001^Query By
+Name^IHEDEMO|QRY_PDQ_0|@PID.5.1^DEPINTO~@PID.5.2^JOE</span></p>
+
+<p class=MsoNormal><span lang=EN-US>RCP|I</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>[inbound] </span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSH|^~\&amp;|OTHER_KIOSK|HIMSSSANDIEGO|EHR_MISYS|MISYS|20060818161720-0500||RSP^K22|115593584042237ibmod|P|2.5|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSA|AA|PDQ_0|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QAK|QRY_PDQ_0|OK|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QPD|QRY_PDQ_1001^Query By
+Name^IHEDEMO|QRY_PDQ_0|@PID.5.1^DEPINTO~@PID.5.2^JOE</span></p>
+
+<p class=MsoNormal><span lang=EN-US>PID|||12345678^^^HIMSS2005&amp;1.3.6.1.4.1.21367.2005.1.1&amp;ISO||DePinto^Joe^V^Jr|Wang|19580325|M|||||^PRN^PH^^^716^3856235|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QRI|189.0</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<h2><a name="_Toc212101682"></a><a name="_Toc212038110"><span style='mso-bookmark:
+_Toc212101682'><![if !supportLists]><span lang=EN-US style='mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>1.7<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US>PDQ Continuation:</span></span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>[outbound]</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>MSH|^~\&amp;|EHR_MISYS|MISYS|OTHER_KIOSK|HIMSSSANDIEGO|20060821160049-0400||QBP^Q22|PDQ_4|P|2.5||1940933422:1156190185984</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QPD|QRY_PDQ_1001^Query By
+Name^IHEDEMO|QRY_PDQ_0|@PID.5.2^JO*</span></p>
+
+<p class=MsoNormal><span lang=EN-US>RCP|I|2^RD</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>[inbound]
+MSH|^~\&amp;|OTHER_KIOSK|HIMSSSANDIEGO|EHR_MISYS|MISYS|20060821145650-0500||RSP^K22|115619021078186ibmod|P|2.5||1940933422:1156190185984|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSA|AA|PDQ_4|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QAK|QRY_PDQ_0|OK|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QPD|QRY_PDQ_1001^Query By
+Name^IHEDEMO|QRY_PDQ_0|@PID.5.2^JO*</span></p>
+
+<p class=MsoNormal><span lang=EN-US>PID|||JM19400814^^^HIMSS2005&amp;1.3.6.1.4.1.21367.2005.1.1&amp;ISO||Murphy^Joyce^Marie|Haney|19400814|F||WH^<st1:Street
+w:st="on"><st1:address w:st="on"><st1:City w:st="on">White|903 Susan Pl</st1:City></st1:address></st1:Street>^^Lacrosse^WI^54603||^PRN^PH^^^608^7836578|||M^Married||||WI08141940|||LaCrosse|||801419403|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QRI|174.0</span></p>
+
+<p class=MsoNormal><span lang=EN-US>PID|||JC19560912^^^HIMSS2005&amp;1.3.6.1.4.1.21367.2005.1.1&amp;ISO||Candy^John^Tyler|McCartney|19560912|M||WH^<st1:Street
+w:st="on"><st1:address w:st="on"><st1:City w:st="on">White|5968 Kane St</st1:City></st1:address></st1:Street>^^Cotton^MI^48931||^PRN^PH^^^531^6519008|||S^Single|||||||Detroit|||573765234|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QRI|174.0</span></p>
+
+<p class=MsoNormal><span lang=EN-US>DSC|2058980185:1156190210438|I|</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>[outbound] </span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSH|^~\&amp;|EHR_MISYS|MISYS|OTHER_KIOSK|HIMSSSANDIEGO|20060821160333-0400||QBP^Q22|PDQ_5|P|2.5||1940933422:1156190185984</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QPD|QRY_PDQ_1001^Query By
+Name^IHEDEMO|QRY_PDQ_0|@PID.5.2^JO*</span></p>
+
+<p class=MsoNormal><span lang=EN-US>RCP|I|2^RD</span></p>
+
+<p class=MsoNormal><span lang=EN-US>DSC|2058980185:1156190210438|I</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>[inbound] </span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSH|^~\&amp;|OTHER_KIOSK|HIMSSSANDIEGO|EHR_MISYS|MISYS|20060821145936-0500||RSP^K22|115619037614187ibmod|P|2.5||1940933422:1156190185984|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSA|AA|PDQ_5|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QAK|QRY_PDQ_0|OK|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QPD|QRY_PDQ_1001^Query By
+Name^IHEDEMO|QRY_PDQ_0|@PID.5.2^JO*</span></p>
+
+<p class=MsoNormal><span lang=EN-US>PID|||102^^^HIMSS2005&amp;1.3.6.1.4.1.21367.2005.1.1&amp;ISO||Doe^John^<st1:Street
+w:st="on"><st1:address w:st="on"><st1:City w:st="on">M||19760718|M|||Default St</st1:City></st1:address></st1:Street>^^<st1:PlaceName
+w:st="on"><st1:City w:st="on">Default</st1:City></st1:PlaceName> <st1:PlaceType
+w:st="on"><st1:City w:st="on">City</st1:City></st1:PlaceType>^<st1:PlaceName
+w:st="on"><st1:City w:st="on"><st1:place w:st="on"><st1:PlaceName w:st="on">Default</st1:PlaceName>
+   <st1:PlaceType w:st="on"><st1:City w:st="on">State</st1:City></st1:PlaceType></st1:place></st1:City></st1:PlaceName>^12345^USA||^PRN^PH|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QRI|174.0</span></p>
+
+<p class=MsoNormal><span lang=EN-US>PID|||103^^^HIMSS2005&amp;1.3.6.1.4.1.21367.2005.1.1&amp;ISO||adams^john|||M|||Default
+St^^<st1:PlaceName w:st="on"><st1:City w:st="on">Default</st1:City></st1:PlaceName>
+<st1:PlaceType w:st="on"><st1:City w:st="on">City</st1:City></st1:PlaceType>^<st1:PlaceName
+w:st="on"><st1:City w:st="on"><st1:place w:st="on"><st1:PlaceName w:st="on">Default</st1:PlaceName>
+   <st1:PlaceType w:st="on"><st1:City w:st="on">State</st1:City></st1:PlaceType></st1:place></st1:City></st1:PlaceName>^12345^USA||^PRN^PH|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QRI|174.0</span></p>
+
+<p class=MsoNormal><span lang=EN-US>DSC|2058980185:1156190210438|I|</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>[outbound] </span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSH|^~\&amp;|EHR_MISYS|MISYS|OTHER_KIOSK|HIMSSSANDIEGO|20060821160403-0400||QBP^Q22|PDQ_6|P|2.5||1940933422:1156190185984</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QPD|QRY_PDQ_1001^Query By
+Name^IHEDEMO|QRY_PDQ_0|@PID.5.2^JO*</span></p>
+
+<p class=MsoNormal><span lang=EN-US>RCP|I|2^RD</span></p>
+
+<p class=MsoNormal><span lang=EN-US>DSC|2058980185:1156190210438|I</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>[inbound]</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>MSH|^~\&amp;|OTHER_KIOSK|HIMSSSANDIEGO|EHR_MISYS|MISYS|20060821150004-0500||RSP^K22|115619040409488ibmod|P|2.5||1940933422:1156190185984|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSA|AA|PDQ_6|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QAK|QRY_PDQ_0|OK|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QPD|QRY_PDQ_1001^Query By
+Name^IHEDEMO|QRY_PDQ_0|@PID.5.2^JO*</span></p>
+
+<p class=MsoNormal><span lang=EN-US>PID|||JD12294^^^HIMSS2005&amp;1.3.6.1.4.1.21367.2005.1.1&amp;ISO||Doe^<st1:Street
+w:st="on"><st1:address w:st="on"><st1:City w:st="on">John||||||900 Main St</st1:City></st1:address></st1:Street>^^<st1:City
+w:st="on"><st1:place w:st="on">Green Bay</st1:place></st1:City>^WI^23221||^PRN^PH|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QRI|174.0</span></p>
+
+<p class=MsoNormal><span lang=EN-US>PID|||12345678^^^HIMSS2005&amp;1.3.6.1.4.1.21367.2005.1.1&amp;ISO||DePinto^Joe^V^Jr|Wang|19580325|M|||||^PRN^PH^^^716^3856235|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QRI|174.0</span></p>
+
+<p class=MsoNormal><span lang=EN-US>DSC|2058980185:1156190210438|I|</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'> </span>[outbound]
+</span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSH|^~\&amp;|EHR_MISYS|MISYS|OTHER_KIOSK|HIMSSSANDIEGO|20060821160417-0400||QBP^Q22|PDQ_7|P|2.5||1940933422:1156190185984</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QPD|QRY_PDQ_1001^Query By
+Name^IHEDEMO|QRY_PDQ_0|@PID.5.2^JO*</span></p>
+
+<p class=MsoNormal><span lang=EN-US>RCP|I|2^RD</span></p>
+
+<p class=MsoNormal><span lang=EN-US>DSC|2058980185:1156190210438|I</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>[inbound] </span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSH|^~\&amp;|OTHER_KIOSK|HIMSSSANDIEGO|EHR_MISYS|MISYS|20060821150018-0500||RSP^K22|115619041865689ibmod|P|2.5||1940933422:1156190185984|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>MSA|AA|PDQ_7|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QAK|QRY_PDQ_0|OK|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QPD|QRY_PDQ_1001^Query By
+Name^IHEDEMO|QRY_PDQ_0|@PID.5.2^JO*</span></p>
+
+<p class=MsoNormal><span lang=EN-US>PID|||146^^^HIMSS2005&amp;1.3.6.1.4.1.21367.2005.1.1&amp;ISO||Dunbar^<st1:Street
+w:st="on"><st1:address w:st="on"><st1:City w:st="on">John||||||Default St</st1:City></st1:address></st1:Street>^^<st1:PlaceName
+w:st="on"><st1:City w:st="on">Default</st1:City></st1:PlaceName> <st1:PlaceType
+w:st="on"><st1:City w:st="on">City</st1:City></st1:PlaceType>^<st1:PlaceName
+w:st="on"><st1:City w:st="on"><st1:place w:st="on"><st1:PlaceName w:st="on">Default</st1:PlaceName>
+   <st1:PlaceType w:st="on"><st1:City w:st="on">State</st1:City></st1:PlaceType></st1:place></st1:City></st1:PlaceName>^12345^USA||^PRN^PH|</span></p>
+
+<p class=MsoNormal><span lang=EN-US>QRI|174.0</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Verdana'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Verdana'><o:p>&nbsp;</o:p></span></p>
+
+<h2><a name="_Toc212101683"></a><a name="_Toc212038111"><span style='mso-bookmark:
+_Toc212101683'><![if !supportLists]><span lang=EN-US style='mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>1.8<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US>XDS Submit a Document:</span></span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>&lt;?xml version=&quot;1.0&quot;
+encoding=&quot;UTF-8&quot;?&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;SOAP-ENV:Envelope
+xmlns:SOAP-ENV=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'> 
+</span>&lt;SOAP-ENV:Header/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'> 
+</span>&lt;SOAP-ENV:Body&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>   
+</span>&lt;rs:SubmitObjectsRequest xmlns:rim=&quot;urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1&quot;
+xmlns:rs=&quot;urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>     
+</span>&lt;rim:LeafRegistryObjectList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span>&lt;rim:ObjectRef
+id=&quot;urn:uuid:a54d6aa5-d40d-43f9-88c5-b4633d873bdd&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span>&lt;rim:ObjectRef id=&quot;urn:uuid:aa543740-bdda-424e-8c96-df4873be8500&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span>&lt;rim:ObjectRef
+id=&quot;urn:uuid:6b5aea1a-874d-4603-a4bc-96a0a7b38446&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span>&lt;rim:ObjectRef
+id=&quot;urn:uuid:554ac39e-e3fe-47fe-b233-965d2a147832&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span>&lt;rim:ObjectRef
+id=&quot;urn:uuid:96fdda7c-d067-4183-912e-bf5ee74998a8&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>  </span><span
+style='mso-spacerun:yes'>      </span>&lt;rim:ObjectRef
+id=&quot;urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span>&lt;rim:ObjectRef
+id=&quot;urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span>&lt;rim:ObjectRef
+id=&quot;urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span>&lt;rim:ObjectRef id=&quot;urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span>&lt;rim:ObjectRef
+id=&quot;urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span>&lt;rim:ObjectRef
+id=&quot;urn:uuid:f0306f51-975f-434e-a61c-c59651d33983&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span>&lt;rim:ObjectRef id=&quot;urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span></span><span lang=DE style='mso-ansi-language:DE'>&lt;rim:ObjectRef
+id=&quot;urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab&quot;/&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=DE style='mso-ansi-language:DE'><span
+style='mso-spacerun:yes'>        </span></span><span lang=EN-US>&lt;rim:ExtrinsicObject
+id=&quot;doc1&quot; mimeType=&quot;text/xml&quot;
+objectType=&quot;urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:LocalizedString value=&quot;Test Doc&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Slot name=&quot;authorInstitution&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:Value&gt;Prespbyterian
+Hosipital&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>      
+</span><span style='mso-spacerun:yes'>   </span>&lt;rim:Slot
+name=&quot;authorPerson&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>             
+</span>&lt;rim:Value&gt;^Chin^Harold&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Slot name=&quot;authorSpecialty&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:Value&gt;General
+Medicine&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Slot name=&quot;creationTime&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>             
+</span>&lt;rim:Value&gt;20060831151742&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Slot name=&quot;languageCode&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>             
+</span>&lt;rim:Value&gt;en-US&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Slot name=&quot;serviceStartTime&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:Value&gt;20010101050000&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Slot name=&quot;serviceStopTime&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>             
+</span>&lt;rim:Value&gt;20060831151742&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Slot name=&quot;sourcePatientId&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>             
+</span>&lt;rim:Value&gt;111111^^^MIEH&amp;amp;&amp;amp;&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Slot name=&quot;sourcePatientInfo&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>    </span><span
+style='mso-spacerun:yes'>        </span>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>             
+</span>&lt;rim:Value&gt;PID-3|111111^^^MIEH&amp;amp;&amp;amp;&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>             
+</span>&lt;rim:Value&gt;PID-5|Brado^Dan^F^Jr^Dr.&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>             
+</span>&lt;rim:Value&gt;PID-8|M&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>             
+</span>&lt;rim:Value&gt;PID-7|19660325&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>     
+</span><span style='mso-spacerun:yes'>        </span>&lt;rim:Value&gt;PID-11|11
+Home Suite^^<st1:City w:st="on"><st1:place w:st="on">Buffalo</st1:place></st1:City>^NY^14236^&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Classification
+classificationScheme=&quot;urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a&quot;
+classifiedObject=&quot;doc1&quot; nodeRepresentation=&quot;Transfer of care
+referral&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:LocalizedString
+value=&quot;Transfer of care referral&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:Slot name=&quot;codingScheme&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                </span>&lt;rim:Value&gt;Connect-a-thon
+classCodes&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Classification&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Classification
+classificationScheme=&quot;urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d&quot;
+classifiedObject=&quot;doc1&quot;
+nodeRepresentation=&quot;IHE/PCC/MS/1.0&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:LocalizedString
+value=&quot;XDS-MS&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:Slot name=&quot;codingScheme&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                </span>&lt;rim:Value&gt;Connect-a-thon
+formatCodes&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Classification&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Classification
+classificationScheme=&quot;urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead&quot;
+classifiedObject=&quot;doc1&quot; nodeRepresentation=&quot;General
+Medicine&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:LocalizedString
+value=&quot;General Medicine&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:Slot name=&quot;codingScheme&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                </span>&lt;rim:Value&gt;Connect-a-thon
+practiceSettingCodes&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Classification&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Classification classificationScheme=&quot;urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1&quot;
+classifiedObject=&quot;doc1&quot; nodeRepresentation=&quot;Outpatient&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:LocalizedString
+value=&quot;Outpatient&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:Slot name=&quot;codingScheme&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                </span>&lt;rim:Value&gt;Connect-a-thon
+healthcareFacilityTypeCodes&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Classification&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Classification
+classificationScheme=&quot;urn:uuid:f0306f51-975f-434e-a61c-c59651d33983&quot;
+classifiedObject=&quot;doc1&quot; nodeRepresentation=&quot;11510-5&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:LocalizedString
+value=&quot;Psychology Subsequent Visit Evaluation Note&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:Slot name=&quot;codingScheme&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>               
+</span>&lt;rim:Value&gt;LOINC&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Classification&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Classification
+classificationScheme=&quot;urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f&quot;
+classifiedObject=&quot;doc1&quot; nodeRepresentation=&quot;N&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:LocalizedString
+value=&quot;<st1:City w:st="on"><st1:place w:st="on">Normal</st1:place></st1:City>&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:Slot name=&quot;codingScheme&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                </span>&lt;rim:Value&gt;Connect-a-thon
+confidentialityCodes&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Classification&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:ExternalIdentifier identificationScheme=&quot;urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427&quot;
+value=&quot;111111^^^HIMSS2005&amp;amp;1.3.6.1.4.1.21367.2005.1.1&amp;amp;ISO&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:LocalizedString
+value=&quot;XDSDocumentEntry.patientId&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>      
+</span><span style='mso-spacerun:yes'>   </span>&lt;/rim:ExternalIdentifier&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:ExternalIdentifier
+identificationScheme=&quot;urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab&quot;
+value=&quot;2.16.840.1.113883.3.65.2^doctestid111&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:LocalizedString
+value=&quot;XDSDocumentEntry.uniqueId&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:ExternalIdentifier&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span>&lt;/rim:ExtrinsicObject&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span>&lt;rim:RegistryPackage id=&quot;SubmissionSet&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:LocalizedString value=&quot;Submission Set&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Description&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:LocalizedString value=&quot;Submit a test doc&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Description&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Slot name=&quot;authorInstitution&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span><span
+style='mso-spacerun:yes'>      </span>&lt;rim:Value&gt;Prespbyterian
+Hosipital&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Slot name=&quot;authorPerson&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>             
+</span>&lt;rim:Value&gt;^Chin^Harold&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>    </span><span
+style='mso-spacerun:yes'>      </span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Slot name=&quot;authorSpecialty&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:Value&gt;General
+Medicine&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Slot name=&quot;submissionTime&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>             
+</span>&lt;rim:Value&gt;20060831151832&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Classification
+classificationScheme=&quot;urn:uuid:aa543740-bdda-424e-8c96-df4873be8500&quot;
+classifiedObject=&quot;SubmissionSet&quot; nodeRepresentation=&quot;Transfer of
+care referral&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:LocalizedString
+value=&quot;Transfer of care referral&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:Slot name=&quot;codingScheme&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                </span>&lt;rim:Value&gt;Connect-a-thon
+contentTypeCodes&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Classification&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:ExternalIdentifier
+identificationScheme=&quot;urn:uuid:6b5aea1a-874d-4603-a4bc-96a0a7b38446&quot;
+value=&quot;111111^^^HIMSS2005&amp;amp;1.3.6.1.4.1.21367.2005.1.1&amp;amp;ISO&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:LocalizedString
+value=&quot;XDSSubmissionSet.patientId&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:ExternalIdentifier&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:ExternalIdentifier
+identificationScheme=&quot;urn:uuid:554ac39e-e3fe-47fe-b233-965d2a147832&quot;
+value=&quot;1.3.6.1.4.1.21367.2006.1.2.122&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>    </span><span
+style='mso-spacerun:yes'>          </span>&lt;rim:LocalizedString
+value=&quot;XDSSubmissionSet.sourceId&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:ExternalIdentifier&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:ExternalIdentifier
+identificationScheme=&quot;urn:uuid:96fdda7c-d067-4183-912e-bf5ee74998a8&quot;
+value=&quot;1.3.6.1.4.1.21367.2006.1.2.122.1157037477939.2&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>              </span>&lt;rim:LocalizedString
+value=&quot;XDSSubmissionSet.uniqueId&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:ExternalIdentifier&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span>&lt;/rim:RegistryPackage&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span>&lt;rim:Classification
+classificationNode=&quot;urn:uuid:a54d6aa5-d40d-43f9-88c5-b4633d873bdd&quot;
+classifiedObject=&quot;SubmissionSet&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span>&lt;rim:Association associationType=&quot;HasMember&quot;
+sourceObject=&quot;SubmissionSet&quot; targetObject=&quot;doc1&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;rim:Slot name=&quot;SubmissionSetStatus&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>             
+</span>&lt;rim:Value&gt;Original&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>           
+</span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>         
+</span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span>&lt;/rim:Association&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>     
+</span>&lt;/rim:LeafRegistryObjectList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>   
+</span>&lt;/rs:SubmitObjectsRequest&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'> 
+</span>&lt;/SOAP-ENV:Body&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;/SOAP-ENV:Envelope&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b><span lang=EN-US>XDS Submission Response:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;?xml version=&quot;1.0&quot;
+encoding=&quot;UTF-8&quot;?&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;soap-env:Envelope
+xmlns:SOAP-SEC=&quot;http://schemas.xmlsoap.org/soap/security/2000-12&quot;
+xmlns:soap-env=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-tab-count:1'>            </span>&lt;soap-env:Header&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-tab-count:1'>            </span>&lt;/soap-env:Header&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-tab-count:1'>            </span>&lt;soap-env:Body
+SOAP-SEC:id=&quot;Body&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rs:RegistryResponse
+xmlns:java=&quot;http://xml.apache.org/xslt/java&quot;
+xmlns:query=&quot;urn:oasis:names:tc:ebxml-regrep:query:xsd:2.1&quot;
+xmlns:query_v3=&quot;urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0&quot;
+xmlns:rim=&quot;urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1&quot;
+xmlns:rim_v3=&quot;urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0&quot;
+xmlns:rs=&quot;urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1&quot;
+xmlns:rs_v3=&quot;urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0&quot;
+status=&quot;Success&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-tab-count:1'>            </span>&lt;/soap-env:Body&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;/soap-env:Envelope&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Verdana'><o:p>&nbsp;</o:p></span></p>
+
+<h2><a name="_Toc212101684"></a><a name="_Toc212038112"><span style='mso-bookmark:
+_Toc212101684'><![if !supportLists]><span lang=EN-US style='mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>1.9<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US>XDS Query (Find Documents):</span></span></a></h2>
+
+<p class=MsoNormal><span lang=EN-US>Message: &lt;?xml version=&quot;1.0&quot;
+encoding=&quot;UTF-8&quot;?&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;SOAP-ENV:Envelope
+xmlns:SOAP-ENV=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'> 
+</span>&lt;SOAP-ENV:Header/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'> 
+</span>&lt;SOAP-ENV:Body&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>   
+</span>&lt;AdhocQueryRequest
+xmlns=&quot;urn:oasis:names:tc:ebxml-regrep:query:xsd:2.1&quot;
+xmlns:q=&quot;urn:oasis:names:tc:ebxml-regrep:query:xsd:2.1&quot;
+xmlns:rim=&quot;urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1&quot;
+xmlns:rs=&quot;urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>     
+</span>&lt;ResponseOption returnComposedObjects=&quot;true&quot;
+returnType=&quot;LeafClass&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>     
+</span>&lt;SQLQuery&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>SELECT eo.id FROM ExtrinsicObject eo,
+ExternalIdentifier ei</span></p>
+
+<p class=MsoNormal><span lang=EN-US>WHERE
+eo.objectType='urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1' AND</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>eo.id = ei.registryobject AND</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>ei.identificationScheme='urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427'
+AND</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>ei.value='111111^^^HIMSS2005&amp;amp;1.3.6.1.4.1.21367.2005.1.1&amp;amp;ISO'
+AND</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'> </span>eo.status = 'Approved'</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;/SQLQuery&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>   
+</span>&lt;/AdhocQueryRequest&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'> 
+</span>&lt;/SOAP-ENV:Body&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;/SOAP-ENV:Envelope&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b><span lang=EN-US>XDS Query Response:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;?xml version=&quot;1.0&quot;
+encoding=&quot;UTF-8&quot;?&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;soap-env:Envelope
+xmlns:SOAP-SEC=&quot;http://schemas.xmlsoap.org/soap/security/2000-12&quot;
+xmlns:soap-env=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;
+soap-env:actor=&quot;some-uri&quot; soap-env:mustUnderstand=&quot;1&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-tab-count:1'>            </span>&lt;soap-env:Header&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-tab-count:1'>            </span>&lt;/soap-env:Header&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-tab-count:1'>            </span>&lt;soap-env:Body
+SOAP-SEC:id=&quot;Body&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rs:RegistryResponse
+xmlns:java=&quot;http://xml.apache.org/xslt/java&quot;
+xmlns:query=&quot;urn:oasis:names:tc:ebxml-regrep:query:xsd:2.1&quot;
+xmlns:query_v3=&quot;urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0&quot;
+xmlns:rim=&quot;urn:oasis:names:tc:ebxml-regrep:rim:xsd:2.1&quot;
+xmlns:rim_v3=&quot;urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0&quot;
+xmlns:rs=&quot;urn:oasis:names:tc:ebxml-regrep:registry:xsd:2.1&quot;
+xmlns:rs_v3=&quot;urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0&quot;
+status=&quot;Success&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;query:AdhocQueryResponse&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;query:SQLQueryResult&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ObjectRef
+id=&quot;urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=DE style='mso-ansi-language:DE'>&lt;rim:ObjectRef
+id=&quot;urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab&quot;/&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ObjectRef
+id=&quot;urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ObjectRef
+id=&quot;urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ObjectRef
+id=&quot;urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ObjectRef
+id=&quot;urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ObjectRef
+id=&quot;urn:uuid:f0306f51-975f-434e-a61c-c59651d33983&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ObjectRef
+id=&quot;urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ExtrinsicObject
+id=&quot;urn:uuid:65a034df-1094-49b6-a675-9b478fc2a4c0&quot;
+isOpaque=&quot;false&quot; mimeType=&quot;text/xml&quot;
+objectType=&quot;urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1&quot;
+status=&quot;Approved&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:LocalizedString
+charset=&quot;UTF-8&quot; value=&quot;Test Doc&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                </span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Description/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Slot
+name=&quot;authorInstitution&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;Prespbyterian
+Hosipital&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                </span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Slot
+name=&quot;authorPerson&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;^Chin^Harold&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                </span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Slot
+name=&quot;authorSpecialty&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;General Medicine&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                </span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Slot
+name=&quot;creationTime&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;20060831151742&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                </span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Slot name=&quot;hash&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;307C049C316CB239BEFDE3B70994CEB8D26DC459&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                </span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Slot
+name=&quot;languageCode&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;en-US&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                </span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Slot
+name=&quot;serviceStartTime&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;20010101050000&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                </span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Slot
+name=&quot;serviceStopTime&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;20060831151742&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                </span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Slot name=&quot;size&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;24812&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                </span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Slot
+name=&quot;sourcePatientId&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;111111^^^MIEH&amp;amp;&amp;amp;&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                </span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Slot
+name=&quot;sourcePatientInfo&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;PID-3|111111^^^MIEH&amp;amp;&amp;amp;&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;PID-5|Brado^Dan^F^Jr^Dr.&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;PID-8|M&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;PID-7|19660325&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;PID-11|11 Home Suite^^<st1:City
+w:st="on"><st1:place w:st="on">Buffalo</st1:place></st1:City>^NY^14236^&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                </span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Slot name=&quot;URI&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;http://ibmod235.dal-ebis.ihost.com:9080/IHIIRepository/rtrv?ct=31-8-2006&amp;amp;id=64CBE3B8&amp;amp;mt=application/xml&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                </span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Classification classificationScheme=&quot;urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a&quot;
+classifiedObject=&quot;urn:uuid:65a034df-1094-49b6-a675-9b478fc2a4c0&quot;
+id=&quot;urn:uuid:1d0f779d-3045-4e17-bf00-de5406c03e10&quot;
+nodeRepresentation=&quot;Transfer of care referral&quot;
+objectType=&quot;Classification&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:LocalizedString
+charset=&quot;UTF-8&quot; value=&quot;Transfer of care referral&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Description/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Slot
+name=&quot;codingScheme&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;Connect-a-thon
+classCodes&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span><span
+style='mso-spacerun:yes'>    </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;/rim:Classification&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Classification
+classificationScheme=&quot;urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d&quot;
+classifiedObject=&quot;urn:uuid:65a034df-1094-49b6-a675-9b478fc2a4c0&quot;
+id=&quot;urn:uuid:46fbeda4-10d7-42b8-b34d-fd173f9d6753&quot;
+nodeRepresentation=&quot;IHE/PCC/MS/1.0&quot;
+objectType=&quot;Classification&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:LocalizedString
+charset=&quot;UTF-8&quot; value=&quot;XDS-MS&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Description/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Slot
+name=&quot;codingScheme&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;Connect-a-thon
+formatCodes&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                        </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;/rim:Classification&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Classification
+classificationScheme=&quot;urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead&quot;
+classifiedObject=&quot;urn:uuid:65a034df-1094-49b6-a675-9b478fc2a4c0&quot;
+id=&quot;urn:uuid:10a42635-da0d-4680-a7e3-9100bf9b9649&quot;
+nodeRepresentation=&quot;General Medicine&quot;
+objectType=&quot;Classification&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:LocalizedString
+charset=&quot;UTF-8&quot; value=&quot;General Medicine&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Description/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Slot
+name=&quot;codingScheme&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;Connect-a-thon
+practiceSettingCodes&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                        </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;/rim:Classification&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Classification classificationScheme=&quot;urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1&quot;
+classifiedObject=&quot;urn:uuid:65a034df-1094-49b6-a675-9b478fc2a4c0&quot;
+id=&quot;urn:uuid:9ea05ddf-9d6a-46dd-b511-cbe938a82b80&quot;
+nodeRepresentation=&quot;Outpatient&quot; objectType=&quot;Classification&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:LocalizedString
+charset=&quot;UTF-8&quot; value=&quot;Outpatient&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Description/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Slot
+name=&quot;codingScheme&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;Connect-a-thon
+healthcareFacilityTypeCodes&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                        </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;/rim:Classification&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Classification
+classificationScheme=&quot;urn:uuid:f0306f51-975f-434e-a61c-c59651d33983&quot;
+classifiedObject=&quot;urn:uuid:65a034df-1094-49b6-a675-9b478fc2a4c0&quot;
+id=&quot;urn:uuid:3422619e-8d02-4195-8dc7-debb3d2d63d8&quot;
+nodeRepresentation=&quot;11510-5&quot;
+objectType=&quot;Classification&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:LocalizedString
+charset=&quot;UTF-8&quot; value=&quot;Psychology Subsequent Visit Evaluation
+Note&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Description/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Slot
+name=&quot;codingScheme&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;LOINC&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                        </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;/rim:Classification&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Classification
+classificationScheme=&quot;urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f&quot;
+classifiedObject=&quot;urn:uuid:65a034df-1094-49b6-a675-9b478fc2a4c0&quot;
+id=&quot;urn:uuid:53b5b74e-3bdd-48f9-ae44-e1f5aab1d928&quot;
+nodeRepresentation=&quot;N&quot; objectType=&quot;Classification&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:LocalizedString
+charset=&quot;UTF-8&quot; value=&quot;<st1:City w:st="on"><st1:place w:st="on">Normal</st1:place></st1:City>&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Description/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Slot
+name=&quot;codingScheme&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Value&gt;Connect-a-thon
+confidentialityCodes&lt;/rim:Value&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                        </span>&lt;/rim:ValueList&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:Slot&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;/rim:Classification&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ExternalIdentifier
+id=&quot;urn:uuid:22305306-2693-4b28-a1d7-e88e8f0cd8b9&quot;
+identificationScheme=&quot;urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427&quot;
+objectType=&quot;ExternalIdentifier&quot;
+registryObject=&quot;urn:uuid:65a034df-1094-49b6-a675-9b478fc2a4c0&quot;
+value=&quot;111111^^^HIMSS2005&amp;amp;1.3.6.1.4.1.21367.2005.1.1&amp;amp;ISO&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:LocalizedString
+charset=&quot;UTF-8&quot; value=&quot;XDSDocumentEntry.patientId&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span>&lt;/rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Description/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                </span>&lt;/rim:ExternalIdentifier&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:ExternalIdentifier
+id=&quot;urn:uuid:0ee0c46c-ebbf-4edf-9f3b-cb08c3444536&quot;
+identificationScheme=&quot;urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab&quot;
+objectType=&quot;ExternalIdentifier&quot;
+registryObject=&quot;urn:uuid:65a034df-1094-49b6-a675-9b478fc2a4c0&quot;
+value=&quot;2.16.840.1.113883.3.65.2^doctestid111&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:Name&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;rim:LocalizedString
+charset=&quot;UTF-8&quot; value=&quot;XDSDocumentEntry.uniqueId&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span
+style='mso-spacerun:yes'>                    </span></span><span lang=FR
+style='mso-ansi-language:FR'>&lt;/rim:Name&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'>&lt;rim:Description/&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>                </span>&lt;/rim:ExternalIdentifier&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'>&lt;/rim:ExtrinsicObject&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;/query:SQLQueryResult&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;/query:AdhocQueryResponse&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;/rs:RegistryResponse&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-tab-count:1'>            </span>&lt;/soap-env:Body&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;/soap-env:Envelope&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Verdana'><o:p>&nbsp;</o:p></span></p>
+
+<h2><a name="_Toc212101685"></a><a name="_Toc212038113"><span style='mso-bookmark:
+_Toc212101685'><![if !supportLists]><span lang=EN-US style='mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>1.10<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US>Audit Trail Log:</span></span></a></h2>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US>Create
+a Patient<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;?xml version=&quot;1.0&quot;
+encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;AuditMessage&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>   
+</span>&lt;EventIdentification EventActionCode=&quot;C&quot;
+EventDateTime=&quot;2006-09-07T14:26:00.011-04:00&quot;
+EventOutcomeIndicator=&quot;0&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span>&lt;EventID codeSystem=&quot;DCM&quot; code=&quot;110110&quot;
+displayName=&quot;Patient Record&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>   
+</span>&lt;/EventIdentification&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>   
+</span>&lt;ActiveParticipant AlternativeUserID=&quot;EMR&quot;
+NetworkAccessPointID=&quot;localhost123&quot;
+NetworkAccessPointTypeCode=&quot;1&quot; UserID=&quot;emr123&quot;
+UserIsRequestor=&quot;true&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span></span><span lang=FR style='mso-ansi-language:FR'>&lt;RoleIDCode
+codeSystem=&quot;DCM&quot; code=&quot;110153&quot;
+displayName=&quot;Source&quot;/&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>    </span>&lt;/ActiveParticipant&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>    </span>&lt;ActiveParticipant AlternativeUserID=&quot;lpfibm1&quot;
+NetworkAccessPointID=&quot;hosp.misyshealthcare.com&quot;
+NetworkAccessPointTypeCode=&quot;3&quot; UserID=&quot;Misys Connect&quot;
+UserIsRequestor=&quot;false&quot;&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>        </span>&lt;RoleIDCode
+codeSystem=&quot;DCM&quot; code=&quot;110150&quot;
+displayName=&quot;Application&quot;/&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>    </span>&lt;/ActiveParticipant&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>    </span></span><span lang=EN-US>&lt;AuditSourceIdentification
+AuditEnterpriseSiteID=&quot;Big Hospital&quot; AuditSourceID=&quot;Sun
+Room&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>    </span></span><span
+lang=FR style='mso-ansi-language:FR'>&lt;ParticipantObjectIdentification
+ParticipantObjectID=&quot;536253&quot; ParticipantObjectTypeCode=&quot;1&quot;
+ParticipantObjectTypeCodeRole=&quot;1&quot;&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>        </span>&lt;ParticipantObjectIDTypeCode code=&quot;2&quot;/&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>       
+</span>&lt;ParticipantObjectName&gt;Tusona^Luis^N^Sr^Dr.&lt;/ParticipantObjectName&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>    </span>&lt;/ParticipantObjectIdentification&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'>&lt;/AuditMessage&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'>&lt;110&gt;Sep 07
+16:14:17 misys1: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;
+standalone=&quot;yes&quot;?&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'>&lt;AuditMessage&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>    </span>&lt;EventIdentification
+EventActionCode=&quot;C&quot;
+EventDateTime=&quot;2006-09-07T16:14:08.741-04:00&quot;
+EventOutcomeIndicator=&quot;0&quot;&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>        </span>&lt;EventID codeSystem=&quot;DCM&quot;
+code=&quot;110110&quot; displayName=&quot;Patient Record&quot;/&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>    </span></span><span lang=EN-US>&lt;/EventIdentification&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>   
+</span>&lt;ActiveParticipant AlternativeUserID=&quot;EMR&quot;
+NetworkAccessPointID=&quot;localhost123&quot;
+NetworkAccessPointTypeCode=&quot;1&quot; UserID=&quot;emr123&quot;
+UserIsRequestor=&quot;true&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span></span><span lang=FR style='mso-ansi-language:FR'>&lt;RoleIDCode
+codeSystem=&quot;DCM&quot; code=&quot;110153&quot;
+displayName=&quot;Source&quot;/&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>    </span>&lt;/ActiveParticipant&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>    </span>&lt;ActiveParticipant AlternativeUserID=&quot;lpfibm1&quot;
+NetworkAccessPointID=&quot;misys1&quot;
+NetworkAccessPointTypeCode=&quot;3&quot; UserID=&quot;EHR_MISYS&quot;
+UserIsRequestor=&quot;false&quot;&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>        </span>&lt;RoleIDCode
+codeSystem=&quot;DCM&quot; code=&quot;110150&quot;
+displayName=&quot;Application&quot;/&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>    </span>&lt;/ActiveParticipant&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>    </span>&lt;AuditSourceIdentification AuditEnterpriseSiteID=&quot;MISYS&quot;
+AuditSourceID=&quot;EHR_MISYS&quot;/&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>    </span>&lt;ParticipantObjectIdentification
+ParticipantObjectID=&quot;536253^^^HIMSS2005&amp;amp;1.3.6.1.4.1.21367.2005.1.1&amp;amp;ISO&quot;
+ParticipantObjectTypeCode=&quot;1&quot; ParticipantObjectTypeCodeRole=&quot;1&quot;&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>        </span>&lt;ParticipantObjectIDTypeCode
+code=&quot;2&quot;/&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>       
+</span>&lt;ParticipantObjectName&gt;Tusona^Luis^N^Sr^Dr.&lt;/ParticipantObjectName&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>    </span>&lt;/ParticipantObjectIdentification&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'>&lt;/AuditMessage&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=FR
+style='mso-ansi-language:FR'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=FR
+style='mso-ansi-language:FR'>Submit a Doc&nbsp;:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;110&gt;Sep 17 21:49:44 misys1: &lt;?xml
+version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&lt;AuditMessage&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>   
+</span>&lt;EventIdentification EventActionCode=&quot;C&quot;
+EventDateTime=&quot;2006-09-17T21:49:43.169&quot;
+EventOutcomeIndicator=&quot;0&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span>&lt;EventID codeSystem=&quot;DCM&quot; code=&quot;110110&quot;
+displayName=&quot;Patient Record&quot;/&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>   
+</span>&lt;/EventIdentification&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>   
+</span>&lt;ActiveParticipant AlternativeUserID=&quot;EMR&quot;
+NetworkAccessPointID=&quot;localhost123&quot; UserID=&quot;emr123&quot;
+UserIsRequestor=&quot;true&quot;&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US><span style='mso-spacerun:yes'>       
+</span></span><span lang=FR style='mso-ansi-language:FR'>&lt;RoleIDCode
+codeSystem=&quot;DCM&quot; code=&quot;110153&quot;
+displayName=&quot;Source&quot;/&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>    </span>&lt;/ActiveParticipant&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>    </span>&lt;ActiveParticipant AlternativeUserID=&quot;xdssibm1&quot;
+NetworkAccessPointID=&quot;misys1&quot; UserID=&quot;EHR_MISYS&quot;
+UserIsRequestor=&quot;false&quot;&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>        </span>&lt;RoleIDCode
+codeSystem=&quot;DCM&quot; code=&quot;110150&quot;
+displayName=&quot;Application&quot;/&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>    </span>&lt;/ActiveParticipant&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>    </span>&lt;AuditSourceIdentification
+AuditEnterpriseSiteID=&quot;MISYS&quot; AuditSourceID=&quot;EHR_MISYS&quot;&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>        </span>&lt;AuditSourceTypeCode
+code=&quot;3&quot;/&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>        </span>&lt;AuditSourceTypeCode
+code=&quot;1&quot;/&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>    </span>&lt;/AuditSourceIdentification&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>    </span>&lt;ParticipantObjectIdentification
+ParticipantObjectID=&quot;536253^^^HIMSS2005&amp;amp;1.3.6.1.4.1.21367.2005.1.1&amp;amp;ISO&quot;
+ParticipantObjectTypeCode=&quot;1&quot;
+ParticipantObjectTypeCodeRole=&quot;1&quot;&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>        </span>&lt;ParticipantObjectIDTypeCode
+code=&quot;2&quot;/&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>       
+</span>&lt;ParticipantObjectName&gt;Tusona^Luis^N^Sr^Dr.&lt;/ParticipantObjectName&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>        </span>&lt;ParticipantObjectDetail
+type=&quot;DocumentId&quot; value=&quot;TWk0eE5pNDROREF1TVM0eE1UTTRPRE11TXk0Mk5TNHlYbVJ2WTJsa01URTFPRFUwTkRBNE9UQTBNdz09&quot;/&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'><span
+style='mso-spacerun:yes'>    </span>&lt;/ParticipantObjectIdentification&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=FR style='mso-ansi-language:FR'>&lt;/AuditMessage&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:Verdana'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

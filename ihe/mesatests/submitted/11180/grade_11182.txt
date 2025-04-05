@@ -1,0 +1,34 @@
+CTX: MESA Version 12.3.0  created 2008.11.25 
+CTX: current date/time 20090107 1746
+CTX: Log level 4
+
+CTX: PMI 11182.1
+CTX: Evaluation using ATNA Log Message-Actor STOP Schematron
+CTX: File C:\projects\mesa2009/logs/syslog/last_log.xml
+CTX: java -cp C:\projects\mesa2009/lib/xalan.jar org.apache.xalan.xslt.Process -IN 11182/11182_schematron.xml -XSL schematron/schematron-basic.xsl -OUT 11182/11182.xsl -PARAM diagnose yes
+CTX: java -cp C:\projects\mesa2009/lib/xalan.jar org.apache.xalan.xslt.Process -IN C:\projects\mesa2009/logs/syslog/last_log.xml -XSL 11182/11182.xsl -OUT 11182/schematron_11182.log
+
+
+Result from schematron validation:
+CTX: 11182: Schematron - ATNA STOP
+CTX: In pattern count(EventIdentification) = 1:
+   CTX: Found ONE EventIdentification in AuditMessage (PASS)
+CTX: In pattern @EventActionCode='E':
+   CTX: Found EventActionCode=E in EventIdentification (PASS)
+CTX: In pattern @EventOutcomeIndicator='0':
+   CTX: Found EventOutcomeIndicator=0 in EventIdentification (PASS)
+CTX: In pattern @EventDateTime:
+   CTX: Found EventDateTime (PASS)
+CTX: In pattern count(EventID) = 1:
+   CTX: Found ONLY ONE EventID (PASS)
+CTX: In pattern EventID[@code='110100']:
+   CTX: Found code=110100 in EventID (PASS)
+CTX: In pattern EventID[@codeSystemName='DCM']:
+   CTX: Found codeSystemName=DCM in EventID (PASS)
+CTX: In pattern EventID[@displayName='Application Activity']:
+   CTX: Found displayName=Application Activity in EventID (PASS)
+CTX: In pattern EventTypeCode[@code = '110121'] and count(EventTypeCode[@code = '110121']) = 1:
+   CTX: Found one EventTypeCode element with code = 110121 (PASS)
+CTX: In pattern current()/@codeSystemName = 'DCM' and current()/@displayName = 'Application Stop':
+   CTX: Found EventTypeCode (110121, DCM, "Application Stop") (PASS)
+

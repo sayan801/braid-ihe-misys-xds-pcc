@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://ccd.doc.connect.misyshealthcare.com" xmlns:ns2="http://demographicdata.base.connect.misyshealthcare.com/xsd" xmlns:ns4="http://clinicaldata.base.connect.misyshealthcare.com/xsd" xmlns:ns3="http://ccd.doc.connect.misyshealthcare.com/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns0="http://ccd.doc.connect.misyshealthcare.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns5="http://base.connect.misyshealthcare.com/xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ccd.doc.connect.misyshealthcare.com" xmlns:ns="http://ccd.doc.connect.misyshealthcare.com">
+            <xs:element name="buildConsentDocument">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="data" nillable="true" type="ns3:ConsentDocumentData"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="buildConsentDocumentResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ns3:CCDDocument"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="buildDischargeSummary">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="data" nillable="true" type="ns3:DischargeSummaryData"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="buildDischargeSummaryResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ns3:CCDDocument"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="buildEDReferral">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="data" nillable="true" type="ns3:EDReferralData"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="buildEDReferralResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ns3:CCDDocument"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="buildReferralSummary">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="data" nillable="true" type="ns3:ReferralSummaryData"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="buildReferralSummaryResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ns3:CCDDocument"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="buildScannedDocument">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="data" nillable="true" type="ns3:ScannedDocumentData"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="buildScannedDocumentResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ns3:CCDDocument"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="submitDocuments">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="submissionSet" nillable="true" type="ns3:SubmissionSet"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="submitDocumentsResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="ns3:Error"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://demographicdata.base.connect.misyshealthcare.com/xsd" xmlns:ax212="http://clinicaldata.base.connect.misyshealthcare.com/xsd" xmlns:ax22="http://demographicdata.base.connect.misyshealthcare.com/xsd" xmlns:ax24="http://base.connect.misyshealthcare.com/xsd">
+            <xs:import namespace="http://base.connect.misyshealthcare.com/xsd"/>
+            <xs:import namespace="http://clinicaldata.base.connect.misyshealthcare.com/xsd"/>
+            <xs:complexType name="Address">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="addCity" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="addCountry" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="addLine1" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="addLine2" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="addState" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="addType" nillable="true" type="ns5:AddressType"/>
+                    <xs:element minOccurs="0" name="addZip" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="empty" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="PhoneNumber">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="areaCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="countryCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="empty" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="extension" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="note" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="number" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="type" nillable="true" type="ns5:PhoneType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Insurance">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="address" nillable="true" type="ax22:Address"/>
+                    <xs:element minOccurs="0" name="effectiveDates" nillable="true" type="ns4:EffectiveDates"/>
+                    <xs:element minOccurs="0" name="groupNumber" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="plan" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="subscriberDateOfBirth" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="subscriberMemberId" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="subscriberNameAddess" nillable="true" type="ax22:SubscriberNameAddress"/>
+                    <xs:element minOccurs="0" name="subscriberRelationToPatient" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="type" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="SubscriberNameAddress">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="address" nillable="true" type="ax22:Address"/>
+                    <xs:element minOccurs="0" name="nameFirst" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="nameLast" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="nameMiddle" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="nameSuffix" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="nameTitle" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ccd.doc.connect.misyshealthcare.com/xsd" xmlns:ax21="http://ccd.doc.connect.misyshealthcare.com/xsd" xmlns:ax211="http://clinicaldata.base.connect.misyshealthcare.com/xsd" xmlns:ax25="http://demographicdata.base.connect.misyshealthcare.com/xsd" xmlns:ax26="http://base.connect.misyshealthcare.com/xsd">
+            <xs:import namespace="http://demographicdata.base.connect.misyshealthcare.com/xsd"/>
+            <xs:import namespace="http://base.connect.misyshealthcare.com/xsd"/>
+            <xs:import namespace="http://clinicaldata.base.connect.misyshealthcare.com/xsd"/>
+            <xs:complexType name="CCDData">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="metadata" nillable="true" type="ax21:MetaData"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="MetaData">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="authors" nillable="true" type="ax21:Author"/>
+                    <xs:element minOccurs="0" name="classCode" nillable="true" type="ns5:XdsClassCode"/>
+                    <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="confidentialityCodes" nillable="true" type="ns5:ConfidentialityCode"/>
+                    <xs:element minOccurs="0" name="creationTime" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="custodian" nillable="true" type="ax21:Organization"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="dataEnterers" nillable="true" type="ax21:DataEnterer"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="encounters" nillable="true" type="ax21:Encounter"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="eventCodes" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="facilityTypeCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="formatCode" nillable="true" type="ns5:XdsFormatCode"/>
+                    <xs:element minOccurs="0" name="globalPatientId" nillable="true" type="ax21:Id"/>
+                    <xs:element minOccurs="0" name="homeSystemId" nillable="true" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="intendedRecepients" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="languageCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="legalAutheticator" nillable="true" type="ax21:Participant"/>
+                    <xs:element minOccurs="0" name="mimeType" nillable="true" type="ns5:MimeTypes"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="patientContacts" nillable="true" type="ax21:PatientContact"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="performers" nillable="true" type="ax21:Performer"/>
+                    <xs:element minOccurs="0" name="practiceSettingCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="serviceStartTime" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="serviceStopTime" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="sourcePatientId" nillable="true" type="ax21:Id"/>
+                    <xs:element minOccurs="0" name="sourcePatientInfo" nillable="true" type="ax21:SourcePatientInfo"/>
+                    <xs:element minOccurs="0" name="title" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="typeCode" nillable="true" type="ns5:XdsTypeCode"/>
+                    <xs:element minOccurs="0" name="uniqueDocumentId" nillable="true" type="ax21:Id"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Author">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="authorDevice" nillable="true" type="ax21:AuthorDevice"/>
+                    <xs:element minOccurs="0" name="authorPerson" nillable="true" type="ax21:Participant"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="authorRoles" nillable="true" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="authorSpecialities" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="organization" nillable="true" type="ax21:Organization"/>
+                    <xs:element minOccurs="0" name="startParticipationTime" nillable="true" type="xs:dateTime"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="AuthorDevice">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="manufacturerModelName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="softwareName" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Participant">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="address" nillable="true" type="ax25:Address"/>
+                    <xs:element minOccurs="0" name="id" nillable="true" type="ax21:Id"/>
+                    <xs:element minOccurs="0" name="personName" nillable="true" type="ax21:PersonName"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="phoneNumbers" nillable="true" type="ax25:PhoneNumber"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Id">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="extension" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="root" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="PersonName">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="formattedName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="middleName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="prefix" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="suffix" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Organization">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="address" nillable="true" type="ax25:Address"/>
+                    <xs:element minOccurs="0" name="id" nillable="true" type="ax21:Id"/>
+                    <xs:element minOccurs="0" name="organizationName" nillable="true" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="phoneNumbers" nillable="true" type="ax25:PhoneNumber"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="DataEnterer">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="assignedEntityId" nillable="true" type="ax21:Id"/>
+                    <xs:element minOccurs="0" name="personName" nillable="true" type="ax21:PersonName"/>
+                    <xs:element minOccurs="0" name="time" nillable="true" type="xs:dateTime"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Encounter">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="dischargeDispositionCode" nillable="true" type="ns5:DischargeDispositionCode"/>
+                    <xs:element minOccurs="0" name="encounterId" nillable="true" type="ax21:Id"/>
+                    <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:dateTime"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="PatientContact">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="effectiveTime" nillable="true" type="ax21:EffectiveTime"/>
+                    <xs:element minOccurs="0" name="participant" nillable="true" type="ax21:Participant"/>
+                    <xs:element minOccurs="0" name="patientContactType" nillable="true" type="ns5:PatientContactType"/>
+                    <xs:element minOccurs="0" name="personalRelationshipRoleType" nillable="true" type="ax21:CodeSystem"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="EffectiveTime">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="end" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="start" nillable="true" type="xs:dateTime"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="CodeSystem">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="code" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="codeSystem" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="codeSystemName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="displayName" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Performer">
+                <xs:complexContent>
+                    <xs:extension base="ax21:Participant">
+                        <xs:sequence>
+                            <xs:element minOccurs="0" name="code" nillable="true" type="ax21:CodeSystem"/>
+                            <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:dateTime"/>
+                            <xs:element minOccurs="0" name="functionCode" nillable="true" type="ax21:CodeSystem"/>
+                            <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:dateTime"/>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="SourcePatientInfo">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="address" nillable="true" type="ax25:Address"/>
+                    <xs:element minOccurs="0" name="birthdate" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="gender" nillable="true" type="ns5:SexType"/>
+                    <xs:element minOccurs="0" name="organization" nillable="true" type="ax21:Organization"/>
+                    <xs:element minOccurs="0" name="personName" nillable="true" type="ax21:PersonName"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="phoneNumber" nillable="true" type="ax25:PhoneNumber"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ScannedDocumentData">
+                <xs:complexContent>
+                    <xs:extension base="ax21:CCDData">
+                        <xs:sequence>
+                            <xs:element minOccurs="0" name="mediaType" nillable="true" type="ax21:MediaType"/>
+                            <xs:element minOccurs="0" name="fileContent" nillable="true" type="xs:base64Binary"/>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:simpleType name="MediaType">
+            	<xs:restriction base="xs:string">
+            		<xs:enumeration value="PDF"/>
+            		<xs:enumeration value="TEXT"/>
+            	</xs:restriction>
+            </xs:simpleType>
+            <xs:complexType name="ConsentDocumentData">
+                <xs:complexContent>
+                    <xs:extension base="ax21:ScannedDocumentData">
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="consentPolicies" nillable="true" type="ns5:ConfidentialityCode"/>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="CCDDocument">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="errors" nillable="true" type="ax21:Error"/>
+                    <xs:element minOccurs="0" name="metadata" nillable="true" type="ax21:MetaData"/>
+                    <xs:element minOccurs="0" name="content" nillable="true" type="xs:base64Binary"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Error">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="message" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="severityType" nillable="true" type="ax21:SeverityType"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:simpleType name="SeverityType">
+            	<xs:restriction base="xs:string">
+            		<xs:enumeration value="ERROR"/>
+            		<xs:enumeration value="WARNING"/>
+            	</xs:restriction>
+            </xs:simpleType>
+            <xs:complexType name="XDSMSData">
+                <xs:complexContent>
+                    <xs:extension base="ax21:CCDData">
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="activeProblems" nillable="true" type="ax211:SimpleProblem"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="advanceDirectives" nillable="true" type="ax211:AdvanceDirective"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="allergies" nillable="true" type="ax211:Allergy"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="historyOfPresentIllness" nillable="true" type="xs:string"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="insurances" nillable="true" type="ax25:Insurance"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="measurements" nillable="true" type="ax211:Measurements"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="medications" nillable="true" type="ax211:Medication"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="physicalExams" nillable="true" type="xs:string"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="planOfCares" nillable="true" type="xs:string"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="procedures" nillable="true" type="ax211:Procedure"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="resolvedProblems" nillable="true" type="ax211:SimpleProblem"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="reviewOfSystems" nillable="true" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="DischargeSummaryData">
+                <xs:complexContent>
+                    <xs:extension base="ax21:XDSMSData">
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="administeredMedications" nillable="true" type="ax211:Medication"/>
+                            <xs:element minOccurs="0" name="admissionDate" nillable="true" type="xs:dateTime"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="admissionMedications" nillable="true" type="ax211:Medication"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="admittingDiagnosis" nillable="true" type="ax211:SimpleProblem"/>
+                            <xs:element minOccurs="0" name="dischargeDate" nillable="true" type="xs:dateTime"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="dischargeDiagnosis" nillable="true" type="ax211:SimpleProblem"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="dischargeDiets" nillable="true" type="xs:string"/>
+                            <xs:element minOccurs="0" name="hospitalCourse" nillable="true" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="ReferralSummaryData">
+                <xs:complexContent>
+                    <xs:extension base="ax21:XDSMSData">
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="familyHistories" nillable="true" type="xs:string"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="immunizations" nillable="true" type="ax211:Immunization"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="labResults" nillable="true" type="ax211:LabResult"/>
+                            <xs:element minOccurs="0" name="referralReason" nillable="true" type="xs:string"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="socialHistories" nillable="true" type="xs:string"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="surgicalHistories" nillable="true" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="EDReferralData">
+                <xs:complexContent>
+                    <xs:extension base="ax21:ReferralSummaryData">
+                        <xs:sequence>
+                            <xs:element minOccurs="0" name="proposedDisposition" nillable="true" type="ax21:ProposedDisposition"/>
+                            <xs:element minOccurs="0" name="transportMode" nillable="true" type="ax21:TransportMode"/>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="ProposedDisposition">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="dischargeDispositionCode" nillable="true" type="ns5:DischargeDispositionCode"/>
+                    <xs:element minOccurs="0" name="effectiveTime" nillable="true" type="ax21:EffectiveTime"/>
+                    <xs:element minOccurs="0" name="encounterDisposition" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TransportMode">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="estimatedTimeOfArrival" nillable="true" type="ax21:EstimatedTime"/>
+                    <xs:element minOccurs="0" name="transportModeCode" nillable="true" type="ns5:TransportModeCode"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="EstimatedTime">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="standardDeviation" type="xs:int"/>
+                    <xs:element minOccurs="0" name="time" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="unit" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="SubmissionSet">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="documents" nillable="true" type="ax21:CCDDocument"/>
+                    <xs:element minOccurs="0" name="submissionSetMetaData" nillable="true" type="ax21:SubmissionSetMetaData"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="SubmissionSetMetaData">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="comments" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="contentCode" nillable="true" type="ns5:XdsContentCode"/>
+                    <xs:element minOccurs="0" name="title" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://clinicaldata.base.connect.misyshealthcare.com/xsd" xmlns:ax210="http://base.connect.misyshealthcare.com/xsd" xmlns:ax29="http://clinicaldata.base.connect.misyshealthcare.com/xsd">
+            <xs:import namespace="http://base.connect.misyshealthcare.com/xsd"/>
+            <xs:complexType name="SimpleProblem">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="code" nillable="true" type="ns4:Code"/>
+                    <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="endDate" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="source" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="status" nillable="true" type="ns5:ClinicalStatusCode"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Code">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="system" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="displayName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="value" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="version" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="AdvanceDirective">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="code" nillable="true" type="ns4:Code"/>
+                    <xs:element minOccurs="0" name="comments" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="description" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="effectiveDate" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="source" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="status" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Allergy">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="agent" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="code" nillable="true" type="ns4:Code"/>
+                    <xs:element minOccurs="0" name="reaction" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="reportDate" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="source" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="EffectiveDates">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="end" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="start" nillable="true" type="xs:dateTime"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Measurements">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="code" nillable="true" type="ns4:Code"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="codes" nillable="true" type="ns4:Code"/>
+                    <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="description" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="entryDateTime" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="location" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="position" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="source" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="unitOfMeasure" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="value" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Medication">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="code" nillable="true" type="ns4:Code"/>
+                    <xs:element minOccurs="0" name="date" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="dose" nillable="true" type="ns4:DoseQuantity"/>
+                    <xs:element minOccurs="0" name="duration" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="frequency" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="lastAdministrationDate" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="problemCode" nillable="true" type="ns4:Code"/>
+                    <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="refills" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="routeCode" nillable="true" type="ns4:Code"/>
+                    <xs:element minOccurs="0" name="sig" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="source" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="status" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="DoseQuantity">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="high" nillable="true" type="ns4:Quantity"/>
+                    <xs:element minOccurs="0" name="low" nillable="true" type="ns4:Quantity"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Quantity">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="unit" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="value" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Procedure">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="code" nillable="true" type="ns4:Code"/>
+                    <xs:element minOccurs="0" name="date" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="source" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="statusCode" nillable="true" type="ns5:StatusCode"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Immunization">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="administeredBy" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="code" nillable="true" type="ns4:Code"/>
+                    <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="dateTime" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="dose" nillable="true" type="ns4:DoseQuantity"/>
+                    <xs:element minOccurs="0" name="immunizationType" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="reference" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="routeCode" nillable="true" type="ns4:Code"/>
+                    <xs:element minOccurs="0" name="source" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="LabResult">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="battery" nillable="true" type="ns4:Battery"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="test" nillable="true" type="ns4:Test"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TestBase">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="category" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="code" nillable="true" type="ns4:Code"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="codes" nillable="true" type="ns4:Code"/>
+                    <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="order" nillable="true" type="ns4:Order"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Order">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="orderid" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="provider" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="source" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="status" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Battery">
+                <xs:complexContent>
+                    <xs:extension base="ns4:TestBase">
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="test" nillable="true" type="ns4:Test"/>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="Test">
+                <xs:complexContent>
+                    <xs:extension base="ns4:TestBase">
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="result" nillable="true" type="ns4:Result"/>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="Result">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="attachments" nillable="true" type="ns4:Attachment"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="codes" nillable="true" type="ns4:Code"/>
+                    <xs:element minOccurs="0" name="comments" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="date" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="interpretation" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="provider" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="range" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="status" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="type" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="uom" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="value" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Attachment">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="attachmentName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="attachmentType" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="attachmentUid" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="attachmentUrl" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="attachmentVendorType" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://base.connect.misyshealthcare.com/xsd" xmlns:ax23="http://base.connect.misyshealthcare.com/xsd">
+            <xs:simpleType name="AddressType">
+            	<xs:restriction base="xs:string">
+            		<xs:enumeration value="HOME"/>
+            		<xs:enumeration value="OTHER"/>
+            		<xs:enumeration value="UNKNOWN"/>
+            		<xs:enumeration value="WORK"/>
+            	</xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="PhoneType">
+            	<xs:restriction base="xs:string">
+            		<xs:enumeration value="CELL"/>
+            		<xs:enumeration value="EMERGENCY"/>
+            		<xs:enumeration value="FAX"/>
+            		<xs:enumeration value="HOME"/>
+            		<xs:enumeration value="SERVICE"/>
+            		<xs:enumeration value="UNKNOWN"/>
+            		<xs:enumeration value="WORK"/>
+            	</xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="XdsClassCode">
+            	<xs:restriction base="xs:string">
+            		<xs:enumeration value="Admission_Evaluation"/>
+            		<xs:enumeration value="Admission_History_and_Physical"/>
+            		<xs:enumeration value="Autopsy"/>
+            		<xs:enumeration value="Case_Conference"/>
+            		<xs:enumeration value="Communication"/>
+            		<xs:enumeration value="Comprehensive_History_and_Physical"/>
+            		<xs:enumeration value="Conference"/>
+            		<xs:enumeration value="Confirmatory_Consultation"/>
+            		<xs:enumeration value="Consult"/>
+            		<xs:enumeration value="Counseling"/>
+            		<xs:enumeration value="Discharge_Summarization"/>
+            		<xs:enumeration value="Education"/>
+            		<xs:enumeration value="Evaluation_and_Management"/>
+            		<xs:enumeration value="Group_Counseling"/>
+            		<xs:enumeration value="History_and_Physical"/>
+            		<xs:enumeration value="Initial_Evaluation"/>
+            		<xs:enumeration value="Interventional_Procedure"/>
+            		<xs:enumeration value="Operative"/>
+            		<xs:enumeration value="Pathology_Procedure"/>
+            		<xs:enumeration value="Preoperative_Evaluation_and_Management"/>
+            		<xs:enumeration value="Subsequent_Evaluation"/>
+            		<xs:enumeration value="Summarization_of_Episode"/>
+            		<xs:enumeration value="Summary_of_Death"/>
+            		<xs:enumeration value="Supervisory_Direction"/>
+            		<xs:enumeration value="Targeted_History_and_Physical"/>
+            		<xs:enumeration value="Telephone_Encounter"/>
+            		<xs:enumeration value="Transfer_Summarization"/>
+            		<xs:enumeration value="Transfer_of_care_Referral"/>
+            		<xs:enumeration value="UNKNOWN"/>
+            	</xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="ConfidentialityCode">
+            	<xs:restriction base="xs:string">
+            		<xs:enumeration value="Low"/>
+            		<xs:enumeration value="Normal"/>
+            		<xs:enumeration value="Restricted"/>
+            		<xs:enumeration value="OptOut"/>
+            	</xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="DischargeDispositionCode">
+            	<xs:restriction base="xs:string">
+            		<xs:enumeration value="ADMITTED_TO_HOSPITAL_FLOOR_BED"/>
+            		<xs:enumeration value="ADMITTED_TO_INTENSIVE_CARE_UNIT"/>
+            		<xs:enumeration value="ADMITTED_TO_INTERMEDIATE_CARE"/>
+            		<xs:enumeration value="ADMITTED_TO_OPERATING_ROOM"/>
+            		<xs:enumeration value="DIED"/>
+            		<xs:enumeration value="DISCHARGE_TO_ANOTHER_SHORT_TERM_HOSPITAL"/>
+            		<xs:enumeration value="DISCHARGE_TO_ANOTHER_TYPE_OF_INSTITUTION"/>
+            		<xs:enumeration value="DISCHARGE_TO_HOME_OR_SELFCARE"/>
+            		<xs:enumeration value="DISCHARGE_TO_HOME_WITH_HOME_CARE_PROVIDER"/>
+            		<xs:enumeration value="DISCHARGE_TO_HOME_WITH_IV_DRUG_THERAPY"/>
+            		<xs:enumeration value="DISCHARGE_TO_INTERMEDIATE_CARE_FACILITY"/>
+            		<xs:enumeration value="DISCHARGE_TO_SKILLED_NURSING_FACILITY"/>
+            		<xs:enumeration value="LEFT_AFTER_RECEIVING_MEDICAL_ADVICE_AGAINST_LEAVING"/>
+            		<xs:enumeration value="LEFT_WITHOUT_RECEIVING_MEDICAL_ADVICE_AGAINST_LEAVING"/>
+            		<xs:enumeration value="OTHER"/>
+            		<xs:enumeration value="PLACED_IN_DESIGNATED_OBSERVATION_UNIT"/>
+            		<xs:enumeration value="UNKNOWN"/>
+            	</xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="XdsFormatCode">
+            	<xs:restriction base="xs:string">
+            		<xs:enumeration value="BPPC"/>
+            		<xs:enumeration value="EDR"/>
+            		<xs:enumeration value="HL7_LAB_25"/>
+            		<xs:enumeration value="IHE_CCR_09"/>
+            		<xs:enumeration value="IHE_CDAR2_10"/>
+            		<xs:enumeration value="IHE_CDA_10"/>
+            		<xs:enumeration value="IHE_PDF_10"/>
+            		<xs:enumeration value="IHE_SCAN_PDF_1X"/>
+            		<xs:enumeration value="IHE_SCAN_TEXT_1X"/>
+            		<xs:enumeration value="PPHP"/>
+            		<xs:enumeration value="UNKNOWN"/>
+            		<xs:enumeration value="XDS_MS"/>
+            		<xs:enumeration value="XPHR_Extract"/>
+            		<xs:enumeration value="XPHR_Update"/>
+            	</xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="MimeTypes">
+            	<xs:restriction base="xs:string">
+            		<xs:enumeration value="CDAR2"/>
+            		<xs:enumeration value="HTML"/>
+            		<xs:enumeration value="PDF"/>
+            		<xs:enumeration value="PLAIN"/>
+            		<xs:enumeration value="XML"/>
+            		<xs:enumeration value="XML2"/>
+            	</xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="PatientContactType">
+            	<xs:restriction base="xs:string">
+            		<xs:enumeration value="AGENT_PATIENT"/>
+            		<xs:enumeration value="CARE_GIVERS"/>
+            		<xs:enumeration value="EMERGENCY_CONTACTS"/>
+            		<xs:enumeration value="GUARDIAN"/>
+            		<xs:enumeration value="NEXT_OF_KIN"/>
+            		<xs:enumeration value="OTHER"/>
+            	</xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="SexType">
+            	<xs:restriction base="xs:string">
+            		<xs:enumeration value="FEMALE"/>
+            		<xs:enumeration value="MALE"/>
+            		<xs:enumeration value="OTHER"/>
+            		<xs:enumeration value="UNKNOWN"/>
+            	</xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="XdsTypeCode">
+            	<xs:restriction base="xs:string">
+            		<xs:enumeration value="Autopsy_Note"/>
+            		<xs:enumeration value="Conference_Evaluation_Note"/>
+            		<xs:enumeration value="Consultation_Note"/>
+            		<xs:enumeration value="Discharge_Note"/>
+            		<xs:enumeration value="Discharge_Summarization_Note"/>
+            		<xs:enumeration value="Evaluation_And_Management_Note"/>
+            		<xs:enumeration value="History_And_Physical_Note"/>
+            		<xs:enumeration value="Initial_Evaluation_Note"/>
+            		<xs:enumeration value="Interventional_Procedure_Note"/>
+            		<xs:enumeration value="Procedure_Note"/>
+            		<xs:enumeration value="Subsequent_Visit_Evaluation_Note"/>
+            		<xs:enumeration value="Summarization_of_Episode_Note"/>
+            		<xs:enumeration value="Surgical_Operation_Note"/>
+            		<xs:enumeration value="Targeted_History_And_Physical_Note"/>
+            		<xs:enumeration value="Transfer_Summarization_Note"/>
+            		<xs:enumeration value="Transfer_of_Care_Referral_Note"/>
+            		<xs:enumeration value="UNKNOWN"/>
+            	</xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="ClinicalStatusCode">
+            	<xs:restriction base="xs:string">
+            		<xs:enumeration value="ACTIVE"/>
+            		<xs:enumeration value="CHRONIC"/>
+            		<xs:enumeration value="INACTIVE"/>
+            		<xs:enumeration value="INTERMITTENT"/>
+            		<xs:enumeration value="RECURRENT"/>
+            		<xs:enumeration value="RESOLVED"/>
+            		<xs:enumeration value="RULED_OUT"/>
+            		<xs:enumeration value="RULE_OUT"/>
+            		<xs:enumeration value="UNKNOWN"/>
+           		</xs:restriction>
+       		</xs:simpleType>
+       		<xs:simpleType name="StatusCode">
+            	<xs:restriction base="xs:string">
+            		<xs:enumeration value="ABORTED"/>
+            		<xs:enumeration value="ACTIVE"/>
+            		<xs:enumeration value="CANCELLED"/>
+            		<xs:enumeration value="COMPLETED"/>
+            	</xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="TransportModeCode">
+            	<xs:restriction base="xs:string">
+            		<xs:enumeration value="FIXED_WING_AIR_AMBULANCE"/>
+            		<xs:enumeration value="GROUND_AMBULANCE"/>
+            		<xs:enumeration value="HELICOPTER_AMBULANCE"/>
+            		<xs:enumeration value="OTHER"/>
+            		<xs:enumeration value="OTHER_AMBULANCE"/>
+            		<xs:enumeration value="OTHER_WALKIN"/>
+            		<xs:enumeration value="UNKNOWN"/>
+            		<xs:enumeration value="WALKIN_FOLLOWING_NONAMBULANCE"/>
+            		<xs:enumeration value="WALKIN_FOLLOWING_TRANSPORT_VIA_PRIVATE_TRANSPORTATION"/>
+            		<xs:enumeration value="WALKIN_FOLLOWING_TRANSPORT_VIA_PUBLIC_TRANSPORTATION"/>
+            	</xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="XdsContentCode">
+            	<xs:restriction base="xs:string">
+            		<xs:enumeration value="Admission_Evaluation"/>
+            		<xs:enumeration value="Admission_History_and_Physical"/>
+            		<xs:enumeration value="Autopsy"/>
+            		<xs:enumeration value="Case_Conference"/>
+            		<xs:enumeration value="Communication"/>
+            		<xs:enumeration value="Comprehensive_History_and_Physical"/>
+            		<xs:enumeration value="Conference"/>
+            		<xs:enumeration value="Confirmatory_Consultation"/>
+            		<xs:enumeration value="Consult"/>
+            		<xs:enumeration value="Counseling"/>
+            		<xs:enumeration value="Discharge_Summarization"/>
+            		<xs:enumeration value="Education"/>
+            		<xs:enumeration value="Evaluation_and_Management"/>
+            		<xs:enumeration value="Group_Counseling"/>
+            		<xs:enumeration value="History_and_Physical"/>
+            		<xs:enumeration value="Initial_Evaluation"/>
+            		<xs:enumeration value="Interventional_Procedure"/>
+            		<xs:enumeration value="Operative"/>
+            		<xs:enumeration value="Pathology_Procedure"/>
+            		<xs:enumeration value="Preoperative_Evaluation_and_Management"/>
+            		<xs:enumeration value="Subsequent_Evaluation"/>
+            		<xs:enumeration value="Summarization_of_Episode"/>
+            		<xs:enumeration value="Summary_of_Death"/>
+            		<xs:enumeration value="Supervisory_Direction"/>
+            		<xs:enumeration value="Targeted_History_and_Physical"/>
+            		<xs:enumeration value="Telephone_Encounter"/>
+            		<xs:enumeration value="Transfer_Summarization"/>
+            		<xs:enumeration value="Transfer_of_care_Referral"/>
+            		<xs:enumeration value="UNKNOWN"/>
+           		</xs:restriction>
+           	</xs:simpleType>
+        </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="buildEDReferralResponse">
+    <wsdl:part name="parameters" element="ns0:buildEDReferralResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitDocumentsRequest">
+    <wsdl:part name="parameters" element="ns0:submitDocuments">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buildDischargeSummaryResponse">
+    <wsdl:part name="parameters" element="ns0:buildDischargeSummaryResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buildEDReferralRequest">
+    <wsdl:part name="parameters" element="ns0:buildEDReferral">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitDocumentsResponse">
+    <wsdl:part name="parameters" element="ns0:submitDocumentsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buildConsentDocumentResponse">
+    <wsdl:part name="parameters" element="ns0:buildConsentDocumentResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buildConsentDocumentRequest">
+    <wsdl:part name="parameters" element="ns0:buildConsentDocument">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buildScannedDocumentResponse">
+    <wsdl:part name="parameters" element="ns0:buildScannedDocumentResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buildScannedDocumentRequest">
+    <wsdl:part name="parameters" element="ns0:buildScannedDocument">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buildReferralSummaryRequest">
+    <wsdl:part name="parameters" element="ns0:buildReferralSummary">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buildReferralSummaryResponse">
+    <wsdl:part name="parameters" element="ns0:buildReferralSummaryResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buildDischargeSummaryRequest">
+    <wsdl:part name="parameters" element="ns0:buildDischargeSummary">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="IheServicePortType">
+    <wsdl:operation name="buildConsentDocument">
+      <wsdl:input message="ns0:buildConsentDocumentRequest" wsaw:Action="urn:buildConsentDocument">
+    </wsdl:input>
+      <wsdl:output message="ns0:buildConsentDocumentResponse" wsaw:Action="urn:buildConsentDocumentResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buildScannedDocument">
+      <wsdl:input message="ns0:buildScannedDocumentRequest" wsaw:Action="urn:buildScannedDocument">
+    </wsdl:input>
+      <wsdl:output message="ns0:buildScannedDocumentResponse" wsaw:Action="urn:buildScannedDocumentResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitDocuments">
+      <wsdl:input message="ns0:submitDocumentsRequest" wsaw:Action="urn:submitDocuments">
+    </wsdl:input>
+      <wsdl:output message="ns0:submitDocumentsResponse" wsaw:Action="urn:submitDocumentsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buildEDReferral">
+      <wsdl:input message="ns0:buildEDReferralRequest" wsaw:Action="urn:buildEDReferral">
+    </wsdl:input>
+      <wsdl:output message="ns0:buildEDReferralResponse" wsaw:Action="urn:buildEDReferralResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buildReferralSummary">
+      <wsdl:input message="ns0:buildReferralSummaryRequest" wsaw:Action="urn:buildReferralSummary">
+    </wsdl:input>
+      <wsdl:output message="ns0:buildReferralSummaryResponse" wsaw:Action="urn:buildReferralSummaryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buildDischargeSummary">
+      <wsdl:input message="ns0:buildDischargeSummaryRequest" wsaw:Action="urn:buildDischargeSummary">
+    </wsdl:input>
+      <wsdl:output message="ns0:buildDischargeSummaryResponse" wsaw:Action="urn:buildDischargeSummaryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IheServiceSOAP11Binding" type="ns0:IheServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="buildConsentDocument">
+      <soap:operation soapAction="urn:buildConsentDocument" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buildScannedDocument">
+      <soap:operation soapAction="urn:buildScannedDocument" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitDocuments">
+      <soap:operation soapAction="urn:submitDocuments" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buildEDReferral">
+      <soap:operation soapAction="urn:buildEDReferral" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buildReferralSummary">
+      <soap:operation soapAction="urn:buildReferralSummary" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buildDischargeSummary">
+      <soap:operation soapAction="urn:buildDischargeSummary" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IheServiceSOAP12Binding" type="ns0:IheServicePortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="buildConsentDocument">
+      <soap12:operation soapAction="urn:buildConsentDocument" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buildScannedDocument">
+      <soap12:operation soapAction="urn:buildScannedDocument" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitDocuments">
+      <soap12:operation soapAction="urn:submitDocuments" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buildEDReferral">
+      <soap12:operation soapAction="urn:buildEDReferral" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buildReferralSummary">
+      <soap12:operation soapAction="urn:buildReferralSummary" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buildDischargeSummary">
+      <soap12:operation soapAction="urn:buildDischargeSummary" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IheServiceHttpBinding" type="ns0:IheServicePortType">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="buildConsentDocument">
+      <http:operation location="IheService/buildConsentDocument"/>
+      <wsdl:input>
+        <mime:content part="buildConsentDocument" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="buildConsentDocument" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buildScannedDocument">
+      <http:operation location="IheService/buildScannedDocument"/>
+      <wsdl:input>
+        <mime:content part="buildScannedDocument" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="buildScannedDocument" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitDocuments">
+      <http:operation location="IheService/submitDocuments"/>
+      <wsdl:input>
+        <mime:content part="submitDocuments" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="submitDocuments" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buildEDReferral">
+      <http:operation location="IheService/buildEDReferral"/>
+      <wsdl:input>
+        <mime:content part="buildEDReferral" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="buildEDReferral" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buildReferralSummary">
+      <http:operation location="IheService/buildReferralSummary"/>
+      <wsdl:input>
+        <mime:content part="buildReferralSummary" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="buildReferralSummary" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buildDischargeSummary">
+      <http:operation location="IheService/buildDischargeSummary"/>
+      <wsdl:input>
+        <mime:content part="buildDischargeSummary" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="buildDischargeSummary" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IheService">
+    <wsdl:port name="IheServiceSOAP12port_http" binding="ns0:IheServiceSOAP12Binding">
+      <soap12:address location="http://localhost:8080/Connect/services/IheService"/>
+    </wsdl:port>
+    <wsdl:port name="IheServiceSOAP11port_http" binding="ns0:IheServiceSOAP11Binding">
+      <soap:address location="http://localhost:8080/Connect/services/IheService"/>
+    </wsdl:port>
+    <wsdl:port name="IheServiceHttpport" binding="ns0:IheServiceHttpBinding">
+      <http:address location="http://localhost:8080/Connect/services/IheService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

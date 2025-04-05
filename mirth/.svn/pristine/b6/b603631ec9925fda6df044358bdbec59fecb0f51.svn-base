@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<!-- IBM Secure Actors -->
+	<!-- To enable/disable these actors, comment/uncomment the corresponding actorfile in IheActors.xml -->
+
+    <!-- Local Patient Feed Consumer Actor -->
+    <actor name="lpfsecureibm" type="PatientIdentitySource">
+        <description>Local Patient Feed IBM</description>
+        <connection consumer="ibm-local-feed-secure" />
+    </actor>
+
+    <!-- Global Patient Feed Consumer Actor -->
+    <actor name="gpfsecureibm" type="PatientIdentitySource">
+        <description>Global Patient Feed IBM</description>
+        <connection consumer="ibm-global-feed-secure" />
+    </actor>
+
+    <!-- Global Registry Patient Feed Consumer Actor -->
+    <actor name="gprfibm" type="PatientIdentitySource">
+        <description>Global Patient Registry Feed IBM</description>
+        <connection consumer="ibm-global-registry-feed-secure" />
+    </actor>
+
+    <!-- PIX Manager Actor -->
+    <actor name="pixquerysecureibm" type="PixConsumer">
+        <description>Patient ID Query IBM</description>
+        <connection consumer="ibm-pix-manager-secure" />
+    </actor>
+    <!-- Global PIX Query Actor -->
+    <!--actor name="pixgquerysecureibm" type="PixConsumer">
+        <description>Patient ID Global Query IBM</description>
+        <connection consumer="ibm-global-pix-manager-secure" />
+    </actor-->
+
+
+    <!-- PDQ Server Actor -->
+    <actor name="pdqsecureibm" type="PdqConsumer">
+        <description>Patient PDQ Secure Query IBM</description>
+        <connection consumer="ibm-pdq-server-secure" />
+    </actor>
+
+    <!-- XDS Repository Submit Actor -->
+    <actor name="xdssecureibm" type="XdsDocumentSource">
+        <description>XDS IBM Secure Repository</description>
+        <connection consumer="ibm-xds-submit-secure" />
+    </actor>
+
+    <!-- XDS Registry Query Actor -->
+    <actor name="xdssqibm" type="XdsDocumentConsumer">
+        <description>XDS IBM Secure Registry (Query)</description>
+        <connection source="ibm-xds-query-secure" />
+    </actor>
+
+    <!-- Audit Repository Actor -->
+	<!--actor name="auditibm" type="SecureNode">
+		<description>IBM AUDIT TRAILS</description>
+        <audittrail consumer="ibm-arr-bsd" />
+        <audittrail consumer="log4j_audittrail" />
+	</actor-->
+
+    <!--actor name="localaudit" type="SecureNode">
+		<description>LOCAL AUDIT</description>
+		<audittrail consumer="log4j_audittrail" />
+	</actor-->
+ </Configuration>

@@ -1,0 +1,10 @@
+CTX: MESA Version 11.10.0  created 2007.12.10 
+CTX: Secure Node test 11104
+CTX: Test type: IETF
+CTX: File name: C:\projects\mesa2008\logs\syslog\last_log.xml
+
+Evaluating C:\projects\mesa2008\logs\syslog\last_log.xml
+C:\projects\mesa2008/bin/mesa_xml_eval  -l 5  -s C:\projects\mesa2008/runtime/IHE-ATNA-syslog-audit-message.xsd  C:\projects\mesa2008\logs\syslog\last_log.xml 
+element count: 11
+
+Total Differences: 0 

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The PDQ Server Actor Connections -->
+<!-- For Connectathon 2006 -->
+
+<Configuration>
+	
+	<standardconnection name="init-pdq-server">
+		<hostname>67.155.0.245</hostname>
+		<port>3600</port>
+
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>PDQ_SERVER</NamespaceId>
+		</Identifier>
+
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>PDQ_FACILITY</NamespaceId>
+		</Identifier>
+
+		<Identifier name="MisysAssigningAuthority">
+			<NamespaceId>LocalAuthority</NamespaceId>
+			<UniversalId>1.3.6.1.4.1.21367.2007.1.2.127</UniversalId>
+			<UniversalIdType>ISO</UniversalIdType>
+		</Identifier>
+	
+		<Identifier name="SendingApplication">
+			<NamespaceId>EHR_MISYS</NamespaceId>
+		</Identifier>
+
+		<Identifier name="SendingFacility">
+			<NamespaceId>MISYS</NamespaceId>
+		</Identifier>
+	
+ 		<!-- Boiler plate -->
+		<PropertySet name="PdqQueryName">
+			<Entry name="identifier" value="QRY_PDQ_1001"/>
+			<Entry name="text" value="Query By Name"/>
+			<Entry name="codingSystem" value="IHEDEMO"/>
+        	<!--<Entry name="codingSystem" value="HIMSS2005&amp;1.3.6.1.4.1.21367.2005.1.1&amp;ISO"/>-->
+		</PropertySet>
+	
+		<PropertySet name="QueryFields">
+			<Entry name="PID.3.1" value="true"/>
+		</PropertySet>
+	
+		<PropertySet name="QueryProperties">
+			<Entry name="Uppercase" value="true"/>
+			<Entry name="WildcardAfter" value="*"/>
+		</PropertySet>
+	
+		<!-- Turn off Misys wildcard defaulting for these values -->
+		<PropertySet name="QueryFieldMisysNames">
+			<Entry name="PID.5.1" value=""/>
+			<Entry name="PID.5.2" value=""/>
+			<Entry name="PID.5.3" value=""/>
+		</PropertySet>
+	</standardconnection>
+	
+	<standardconnection name="init-patient-feed">
+		<hostname>67.155.0.245</hostname>
+		<port>2200</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>REMOTE_APPLICATION</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>REMOTE_FACILITY</NamespaceId>
+		</Identifier>
+
+		<Identifier name="LocalAssigningAuthority">
+			<NamespaceId>MIE1</NamespaceId>
+    	    <UniversalId>1.3.6.1.4.1.21367.2008.1.2.323</UniversalId>
+			<UniversalIdType>ISO</UniversalIdType>
+    	</Identifier>
+    		
+		<!-- Use the local Authority to sign our IDs for these feeds -->
+		<Identifier name="MisysAssigningAuthority">
+			<NamespaceId>LocalAuthority</NamespaceId>
+			<UniversalId>1.3.6.1.4.1.21367.2007.1.2.127</UniversalId>
+			<UniversalIdType>ISO</UniversalIdType>
+		</Identifier>
+	
+		<Identifier name="SendingApplication">
+			<NamespaceId>LOCAL_APPLICATION</NamespaceId>
+		</Identifier>
+
+		<Identifier name="SendingFacility">
+			<NamespaceId>LOCAL_FACILITY</NamespaceId>
+		</Identifier>
+	
+		<!-- Boiler Plate -->
+		<EnumMap class="IPatientConsumer$CreationReason">
+			<Entry enum="OUTPATIENT_REGISTER" code="O"/>
+			<Entry enum="INPATIENT_ADMIT" code="I"/>
+			<Entry enum="INPATIENT_PREADMIT" code="P"/>
+		</EnumMap>
+	
+		<!-- Property name="DefaultRace" value="WH" -->
+	
+		<PropertySet name="DateTimeFormats">
+			<Entry name="VisitStartTime" value="yyyyMMddHHmm"/>
+			<Entry name="EventTimeFormat" value="yyyyMMddHHmmss"/>
+		</PropertySet>
+
+	</standardconnection>
+
+</Configuration>

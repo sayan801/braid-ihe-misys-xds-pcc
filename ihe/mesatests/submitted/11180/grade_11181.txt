@@ -1,0 +1,32 @@
+CTX: MESA Version 12.3.0  created 2008.11.25 
+CTX: current date/time 20090107 1743
+CTX: Log level 4
+
+CTX: PMI 11181.1
+CTX: Evaluation using ATNA Log Message-Actor START Schematron
+CTX: File C:\projects\mesa2009/logs/syslog/last_log.xml
+CTX: java -cp C:\projects\mesa2009/lib/xalan.jar org.apache.xalan.xslt.Process -IN 11181/11181_schematron.xml -XSL schematron/schematron-basic.xsl -OUT 11181/11181.xsl -PARAM diagnose yes
+CTX: java -cp C:\projects\mesa2009/lib/xalan.jar org.apache.xalan.xslt.Process -IN C:\projects\mesa2009/logs/syslog/last_log.xml -XSL 11181/11181.xsl -OUT 11181/schematron_11181.log
+
+
+Result from schematron validation:
+CTX: 11181: Schematron - ATNA Start
+CTX: In pattern @EventActionCode='E':
+   CTE: Found EventActionCode=E in EventIdentification (PASS)
+CTX: In pattern @EventOutcomeIndicator='0':
+   CTX: Found EventOutcomeIndicator=0 in EventIdentification (PASS)
+CTX: In pattern @EventDateTime:
+   CTX: Found EventDateTime (PASS)
+CTX: In pattern count(EventID) = 1:
+   CTX: Found ONLY ONE EventID (PASS)
+CTX: In pattern EventID[@code='110100']:
+   CTX: Found code=110100 in EventID (PASS)
+CTX: In pattern EventID[@codeSystemName='DCM']:
+   CTX: Found codeSystemName=DCM in EventID (PASS)
+CTX: In pattern EventID[@displayName='Application Activity']:
+   CTX: Found displayName=Application Activity in EventID (PASS)
+CTX: In pattern EventTypeCode[@code='110120']:
+   CTX: Found code=110120 in EventTypeCode (PASS)
+CTX: In pattern EventTypeCode[@displayName='Application Start']:
+   CTX: Found displayName=Application Start in EventTypeCode (PASS)
+

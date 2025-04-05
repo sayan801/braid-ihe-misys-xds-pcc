@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ClinicalDocument xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd" xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <realmCode code="US"/>
+  <typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+  <templateId extension="IMPL_CDAR2_LEVEL1" root="2.16.840.1.113883.10"/>
+  <templateId extension="IMPL_CDAR2_LEVEL2" root="2.16.840.1.113883.10"/>
+  <templateId root="1.3.6.1.4.1.19376.1.5.3.1.1.1"/>
+  <templateId root="2.16.840.1.113883.10.20.3"/>
+  <id root="2.16.840.1.113883.3.65.2.1231968860573.1"/>
+  <code code="34133-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="SUMMARIZATION OF EPISODE NOTE"/>
+  <title>My Test Referral Summary Document</title>
+  <effectiveTime value="20090114163420-0500"/>
+  <confidentialityCode code="1.3.6.1.4.1.21367.2006.7.109" codeSystem="2.16.840.1.113883.5.25" codeSystemName="Confidentiality" displayName="restricted"/>
+  <languageCode code="en-US"/>
+  <setId root="2.16.840.1.113883.3.65.2" extension="1231968860573.3"/>
+  <versionNumber value="1"/>
+  <recordTarget>
+    <patientRole>
+      <id extension="33334455" root="2.16.840.1.113883.3.65.2.1"/>
+      <addr>
+        <streetAddressLine>700 Euclid Ave</streetAddressLine>
+        <city>St. Louis</city>
+        <state>MO</state>
+        <postalCode>63110</postalCode>
+        <country>USA</country>
+      </addr>
+      <telecom use="WP" value="tel:+1(716)-358-7421"/>
+      <patient>
+        <name>
+          <given>Allscripts</given>
+          <family>EHR_ALLSCRIPTS_CONNECT</family>
+          <prefix>Mr.</prefix>
+          <suffix>II</suffix>
+        </name>
+        <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="AdministrativeGender" displayName="Male"/>
+        <birthTime value="20090114"/>
+        <maritalStatusCode code="M" codeSystem="2.16.840.1.113883.5.2" codeSystemName="MaritalStatus" displayName="Married"/>
+      </patient>
+      <providerOrganization>
+        <id extension="1231968859276.5" root="2.16.840.1.113883.3.65.2"/>
+        <name nullFlavor="UNK"/>
+        <telecom nullFlavor="UNK"/>
+        <addr nullFlavor="UNK"/>
+      </providerOrganization>
+    </patientRole>
+  </recordTarget>
+  <author>
+    <time value="20090114163420-0500"/>
+    <assignedAuthor>
+      <id/>
+      <addr nullFlavor="UNK"/>
+      <telecom nullFlavor="UNK"/>
+      <assignedAuthoringDevice>
+        <code code="WST" codeSystem="1.2.840.10008.2.16.4" displayName="Workstation"/>
+        <manufacturerModelName>HP All-in-one 603</manufacturerModelName>
+        <softwareName>HP Scan Software</softwareName>
+      </assignedAuthoringDevice>
+      <representedOrganization>
+        <id extension="12345" root="2.8.233.3"/>
+        <name>Great NC RHIO</name>
+        <telecom use="WP" value="tel:+1(716)-358-7421"/>
+        <addr>
+          <streetAddressLine>700 Euclid Ave</streetAddressLine>
+          <city>St. Louis</city>
+          <state>MO</state>
+          <postalCode>63110</postalCode>
+          <country>USA</country>
+        </addr>
+      </representedOrganization>
+    </assignedAuthor>
+  </author>
+  <author>
+    <time value="20090114163420-0500"/>
+    <assignedAuthor>
+      <id extension="1231968857744.5" root="2.16.840.1.113883.3.65.2"/>
+      <addr>
+        <streetAddressLine>8529 Six Forks Road</streetAddressLine>
+        <city>Raleigh</city>
+        <state>NC</state>
+        <postalCode>27615</postalCode>
+        <country>USA</country>
+      </addr>
+      <telecom use="WP" value="tel:(800)-8775678"/>
+      <assignedAuthoringDevice>
+        <manufacturerModelName/>
+        <softwareName>Misys Connect 2.0</softwareName>
+      </assignedAuthoringDevice>
+    </assignedAuthor>
+  </author>
+  <dataEnterer>
+    <time value="20090114163417-0500"/>
+    <assignedEntity>
+      <id extension="1231968859713.4" root="2.16.840.1.113883.3.65.2"/>
+      <addr nullFlavor="UNK"/>
+      <telecom nullFlavor="UNK"/>
+      <assignedPerson>
+        <name>
+          <given>Susan</given>
+          <given>F</given>
+          <family>Smith</family>
+          <prefix/>
+          <suffix/>
+        </name>
+      </assignedPerson>
+    </assignedEntity>
+  </dataEnterer>
+  <custodian>
+    <assignedCustodian>
+      <representedCustodianOrganization>
+        <id extension="12345" root="2.8.233.3"/>
+        <name>Great NC RHIO</name>
+        <telecom use="WP" value="tel:+1(716)-358-7421"/>
+        <addr>
+          <streetAddressLine>700 Euclid Ave</streetAddressLine>
+          <city>St. Louis</city>
+          <state>MO</state>
+          <postalCode>63110</postalCode>
+          <country>USA</country>
+        </addr>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <legalAuthenticator>
+    <time value="20090114163420-0500"/>
+    <signatureCode code="S"/>
+    <assignedEntity>
+      <id extension="12345" root="2.3.515.3"/>
+      <addr>
+        <streetAddressLine>700 Euclid Ave</streetAddressLine>
+        <city>St. Louis</city>
+        <state>MO</state>
+        <postalCode>63110</postalCode>
+        <country>USA</country>
+      </addr>
+      <telecom use="WP" value="tel:+1(716)-358-7421"/>
+      <assignedPerson>
+        <name>
+          <given>John</given>
+          <given>M</given>
+          <family>DePinto</family>
+          <prefix>Mr.</prefix>
+          <suffix>II</suffix>
+        </name>
+      </assignedPerson>
+    </assignedEntity>
+  </legalAuthenticator>
+  <participant typeCode="IND">
+    <templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.4"/>
+    <time value="20090114"/>
+    <associatedEntity classCode="ECON">
+      <id extension="12345" root="2.3.515.3"/>
+      <code nullFlavor="UNK"/>
+      <addr>
+        <streetAddressLine>700 Euclid Ave</streetAddressLine>
+        <city>St. Louis</city>
+        <state>MO</state>
+        <postalCode>63110</postalCode>
+        <country>USA</country>
+      </addr>
+      <telecom use="WP" value="tel:+1(716)-358-7421"/>
+      <associatedPerson>
+        <name>
+          <given>John</given>
+          <given>M</given>
+          <family>DePinto</family>
+          <prefix>Mr.</prefix>
+          <suffix>II</suffix>
+        </name>
+      </associatedPerson>
+    </associatedEntity>
+  </participant>
+  <documentationOf>
+    <serviceEvent classCode="PCPR">
+      <id root="2.16.840.1.113883.3.65.2.1231968860619.11"/>
+      <effectiveTime>
+        <low value="20090114163417-0500"/>
+        <high value="20090114163417-0500"/>
+      </effectiveTime>
+      <performer typeCode="PRF">
+        <templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.3"/>
+        <functionCode code="PCP" codeSystem="2.16.840.1.113883.5.88" codeSystemName="ParticipatingFunction" displayName="primary care physician"/>
+        <time>
+          <low value="20090114163417-0500"/>
+        </time>
+        <assignedEntity>
+          <id extension="1231968860619.4" root="2.16.840.1.113883.3.65.2"/>
+          <code code="59058001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="General Physician"/>
+          <addr>
+            <streetAddressLine>700 Euclid Ave</streetAddressLine>
+            <city>St. Louis</city>
+            <state>MO</state>
+            <postalCode>63110</postalCode>
+            <country>USA</country>
+          </addr>
+          <telecom use="WP" value="tel:+1(716)-358-7421"/>
+          <assignedPerson>
+            <name>
+              <given>Joe</given>
+              <given/>
+              <family>Atkinson</family>
+              <prefix/>
+              <suffix/>
+            </name>
+          </assignedPerson>
+        </assignedEntity>
+      </performer>
+    </serviceEvent>
+  </documentationOf>
+  <componentOf>
+    <encompassingEncounter>
+      <id extension="1231968860291.6" root="2.16.840.1.113883.3.65.2"/>
+      <effectiveTime>
+        <low value="20090223051839-0500"/>
+      </effectiveTime>
+    </encompassingEncounter>
+  </componentOf>
+  <component>
+    <nonXMLBody>
+      <text mediaType="text/plain" representation="B64">ICAgICAgICAgUmVmZXJyYWwgU3VtbWFyeQ0KDQpBdXRob3I6ICBKb2huIERlUGludG8gLCBJSSBD
+cmVhdGlvbiANCkRhdGU6IEphbnVhcnkgMTMsIDIwMDkgDQpQYXRpZW50OiBBbGxzY3JpcHRzIEVI
+Ul9BTExTQ1JJUFRTX0NPTk5FQ1QgLCBJSQ0KQWRkcmVzczogNzAwIEV1Y2xpZCBBdmUsIFN0LiBM
+b3VpcywgTU8gNjMxMTANClBob25lOiAgICsxKDcxNiktMzU4LTc0MjENClByb3ZpZGVyOiBKb2Ug
+QXRraW5zb24gLCANCiAgICAgICAgICA3MDAgRXVjbGlkIEF2ZSwgU3QuIExvdWlzLCBNTyA2MzEx
+MA0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0NCg0KUmVhc29uIGZvciBSZWZlcnJhbA0KUGF0aWVu
+dCBmZWxsIHdoaWxlIHNrYXRpbmcgYW5kIGNvbXBsYWlucyBvZiBhIHNvcmUgd3Jpc3QuIA0KDQpI
+aXN0b3J5IG9mIFByZXNlbnQgSWxsbmVzcw0KUGF0aWVudCBmZWxsIHdoaWxlIHNrYXRpbmcuIFN1
+c3BlY3QgZnJhY3R1cmVkIHJhZGl1cy4gDQoNClByb2JsZW1zDQoxLiBTdHJlc3MgZnJhY3R1cmUs
+IHJpZ2h0IGZvb3QgMDgvMDEvMjAwNiBhY3RpdmUgIA0KMi4gRWFyIGluZmVjdGlvbiAxMC8wMS8y
+MDA2IGFjdGl2ZSAgDQoNCk1lZGljYXRpb25zDQoxLiBBdWdtZW50aW4gMTI1LTMxLjI1IE1HIENI
+RVcgMyBvbmNlIGEgd2VlayAwMS8xNC8yMDA4ICANCjIuIEFsYnV0ZXJvbCBTdWxmYXRlIDEwOCBN
+Q0cvQUNUIEFFUlMgMiBQdWZmcyBxNmhycyBwcm4gMDEvMTQvMjAwOCAgDQoNCkFsbGVyZ2llcyBh
+bmQgQWR2ZXJzZSBSZWFjdGlvbnMNCjEuIHBlbmljaWxsaW4gcG9zaXRpdmUgMDEvMTMvMjAwOSAN
+Cg0KSGlzdG9yeSBvZiBQcm9jZWR1cmVzDQoxLlJpZ2h0IGtuZWUgYXJ0aHJvc2NvcHkgYnkgUmln
+aHQga25lZSBhcnRocm9zY29weSBpbiBTdCBMdWtlcyBIb3NwaXRhbCBvbiA0LzMvMTk5NS4gDQoy
+LkxlZnQga25lZSBhcnRocm9zY29weSBieSBSaWdodCBrbmVlIGFydGhyb3Njb3B5IGluIFdlc3Qg
+Q291bnR5IE9ydGhvcGVkaWMgQ2VudGVyIG9uIDUvMTUvMTk5Ny4gDQoNCkhpc3Rvcnkgb2YgSW1t
+dW5pemF0aW9ucw0KMS5JbmZsdWVuemEgMTEvMTAvMjAwNyANCjIuVGV0YW51cyAwOC8xMC8yMDA1
+IA0KMy5EVGFQIChEaXBodGhlcmlhLCBUZXRhbnVzICYgQWNlbGx1bGFyIFBlcnR1c3NpcyBWYWNj
+aW5lKSAwMS8xNS8xOTgwIA0KDQpGYW1pbHkgSGlzdG9yeQ0KMS5HRU5FUkFMIEZBTUlMWSBJTExO
+RVNTOiBQT1NJVElWRSBISVNUT1JZIE9GIEFMQ09IT0xJU00uIA0KMi5GQVRIRVI6IFRoZSBmYXRo
+ZXIncyBoZWFsdGggc3RhdHVzIGlzIHVua25vd24uIA0KDQpTb2NpYWwgSGlzdG9yeQ0KMS5NQVJJ
+VEFMIFNUQVRVUzogRW5nYWdlZCwgbGl2aW5nIHdpdGggc2lnbmlmaWNhbnQgb3RoZXIuIA0KDQpS
+ZXZpZXcgb2YgU3lzdGVtcw0KMS5SRVZJRVcgT0YgU1lTVEVNUzogUGF0aWVudCBkZW5pZXMgYWxs
+IHN5bXB0b21zIGluIGFsbCBzeXN0ZW1zIGV4Y2VwdCBhcyBub3RlZC4gDQoNClZpdGFsIFNpZ25z
+DQoxLkRlc2NyaXB0aW9uIFZhbHVlIFBvc2l0aW9uIExvY2F0aW9uIEVudHJ5IERhdGUgY29tbWVu
+dCANCjIuVGVtcGVyYXR1cmUgOTdGIEhlYWQgSG9tZSAwMS8xMy8yMDA5IGZldmVyIA0KDQpQaHlz
+aWNhbCBFeGFtcw0KMS5HRU5FUkFMIEFQUEVBUkFOQ0U6IFdlbGwgZGV2ZWxvcGVkLCB3ZWxsIG5v
+dXJpc2hlZCBpbmRpdmlkdWFsIGluIG5vIGFjdXRlIGRpc3RyZXNzLiANCg0KU3R1ZGllcyBTdW1t
+YXJ5L0xhYiBSZXN1bHRzDQoxLlRvdGFsIGhpcCByZXBsYWNlbWVudCwgbGVmdCAwMS8xMy8yMDA5
+IA0KDQpUZXN0OiAxIFN0YXR1cyBWYWx1ZSBPYnNlcnZhdGlvbiBEYXRlIEludGVycHJldGF0aW9u
+IA0KMS5BQ0VUWUxDSE9MSU5FIFJFQ0VQVE9SIEJMT0NLSU5HIEFOVElCT0RZIFByZWxpbWluYXJ5
+IDEwMCBMIDAxLzI4LzIwMDkgTm9ybWFsIA0KDQpBZHZhbmNlIERpcmVjdGl2ZXMNCjEuRG8gbm90
+IHJlc3VzY2l0YXRlIE5vIGNvbW1lbnQgMDEvMTMvMjAwOSANCg==</text>
+    </nonXMLBody>
+  </component>
+</ClinicalDocument>

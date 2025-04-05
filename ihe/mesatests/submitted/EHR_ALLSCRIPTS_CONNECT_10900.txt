@@ -1,0 +1,33 @@
+Operation System used is Windows XP.
+
+OS call to get the proper time: 
+In our Java application, we use the System.currentTimeMillis() Java method, or the "new GregorianCalendar()" Java constructor to retrieve the current Client time. 
+
+An open NTP software is installed on our OS to synchronize the OS to a NTP server; the NTP server we use is an NIST server(host name=time-a.nist.gov ip=129.6.15.28). In our J2EE application, we use the above method or constructor to retrieve the synchronized time. 
+
+The syncronized time is mainly used in the following 3 scenarios:
+1. Application system logging message (log4j logging is used)
+ Format:
+2008-12-03 15:21:48 [main] INFO com.misyshealthcare.connect.config.ConfigManager - Add Property.
+2008-12-03 15:21:49 [main] INFO com.misyshealthcare.connect.pull.ClinialManager - Request Clinical Object.
+...
+
+2. Clinical time related contents
+Examples:
+a). Document creation time, which is used in creating a CDA document. 
+	For example <effectiveTime value="20081015224411-0500"/>
+b). Problem Date, which is the time that a Patient's observed problem is recorded.
+c). Message Date, which is the time that a Message such as HL7v2.x is created.
+        For exmaple, MSH|^~\&|EHR_MISYS|MISYS|CLINREG|WESTCLIN|20081230130023-0500||RSP^K23|PIXPDQ_1230660022015|P|2.5
+        
+    
+3. Audit Trail logging message
+Example:
+<AuditMessage> 
+    <EventIdentification EventActionCode="C" EventDateTime="2008-12-03T11:37:43.671-06:00" EventOutcomeIndicator="0"> 
+    <EventID codeSystem="DCM" code="110104" displayName="DICOM Instances Transfered"/> 
+    </EventIdentification> 
+    ......
+</AuditMessage>
+ 
+ 

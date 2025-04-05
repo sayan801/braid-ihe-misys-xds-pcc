@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The PDQ Server Actor Connections -->
+<!-- For Connectathon 2006 -->
+
+<Configuration>
+	
+	<standardconnection name="infinitt-pdq-server">
+		<hostname>10.242.0.99</hostname>
+		<port>5001</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>OF_INFINITT</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>INFINITT</NamespaceId>
+		</Identifier>
+		<includefile name="PdqMisys.xml" />
+	</standardconnection>
+	
+	<standardconnection name="ibm1-pdq-server">
+		<hostname>10.242.0.24</hostname>
+		<port>3600</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>IBMNameSpace</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>IBMReceivingFac</NamespaceId>
+		</Identifier>
+		<includefile name="PdqMisys.xml" />
+	</standardconnection>
+
+    <standardconnection name="local-pdq-server">
+        <hostname>localhost</hostname>
+        <port>5555</port>
+        <Identifier name="ReceivingApplication">
+            <NamespaceId>IBMNameSpace</NamespaceId>
+        </Identifier>
+        <Identifier name="ReceivingFacility">
+            <NamespaceId>IBMReceivingFac</NamespaceId>
+        </Identifier>
+        <includefile name="PdqMisys.xml" />
+    </standardconnection>
+
+
+    <secureconnection name="ibm1-pdq-server-secure">
+		<hostname>10.242.0.24</hostname>
+		<port>3700</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>OTHER_KIOSK</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>HIMSSSANDIEGO</NamespaceId>
+		</Identifier>
+		<includefile name="PdqMisys.xml" />
+        <KEYSTORE>certs/EHR_MISYS_KEY.key</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>certs/EHR_MISYS_TRUST.key</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>
+
+
+    <secureconnection name="ibm4-pdq-server-secure">
+		<hostname>10.242.0.172</hostname>
+		<port>3700</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>OTHER_KIOSK</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>HIMSSSANDIEGO</NamespaceId>
+		</Identifier>
+		<includefile name="PdqMisys.xml" />
+	</secureconnection>
+
+	<standardconnection name="initiate-pdq-server">
+		<hostname>initiate11</hostname>
+		<port>3601</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>PAT_IDENTITY_X_REF_MGR_INITIATE1</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>INITIATE1</NamespaceId>
+		</Identifier>
+		<includefile name="PdqMisys.xml" />
+        <Identifier name="QueryAssigningAuthority">
+            <NamespaceId>HIMSS2005</NamespaceId>
+        </Identifier>
+    </standardconnection>
+	
+</Configuration>

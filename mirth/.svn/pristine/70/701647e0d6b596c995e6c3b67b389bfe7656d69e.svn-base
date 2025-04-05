@@ -1,0 +1,24 @@
+CTX: MESA Version 12.3.0  created 2008.11.25 
+CTX: current date/time 20090114 1740
+CTX: Log level 4
+
+CTX: PCC 40102.0
+CTX: Evaluation using PCC Schematron
+
+CTX: PCC 40102.1
+CTX: Evaluation using XPHR Schematron
+CTX: java -cp C:\projects\mesa2009/lib/xalan.jar org.apache.xalan.xslt.Process -IN 40102/40102_schematron.xml -XSL schematron/schematron-basic.xsl -OUT 40102/40102.xsl -PARAM diagnose yes
+CTX: java -cp C:\projects\mesa2009/lib/xalan.jar org.apache.xalan.xslt.Process -IN c:\temp\pcctest\EHR_ALLSCRIPTS_CONNECT_40152.xml -XSL 40102/40102.xsl -OUT 40102/schematron_40102.log
+
+
+Result from schematron validation:
+CTX: 40102: PCC Schematron - BPPC
+CTX: In pattern cda:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.1.1']:
+   CTX: Found cda:templateID root =1.3.6.1.4.1.19376.1.5.3.1.1.1 in cda:ClinicalDocument (Medical Document Template) (PASS)
+CTX: In pattern cda:templateId[@root='1.3.6.1.4.1.19376.1.5.3.1.1.7']:
+   CTX: Found cda:templateId root=1.3.6.1.4.1.19376.1.5.3.1.1.7 in cda:ClinicalDocument (Basic Patient Privacy Consent Module) (PASS)
+CTX: In pattern count(cda:authorization[@typeCode='AUTH']) > 0:
+   CTX: Found at lease one authorization element. (Basic Patient Privacy Consent Module) (PASS)
+CTX: In pattern count(cda:documentationOf) = 1:
+   CTX: Found a documentationOf element in the consent. (Basic Patient Privacy Consent Module) (PASS)
+

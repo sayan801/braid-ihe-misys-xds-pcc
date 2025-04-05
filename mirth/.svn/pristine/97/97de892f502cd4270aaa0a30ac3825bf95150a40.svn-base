@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The Audit Record Repository Actor Connections -->
+<!-- For IBM ATNA -->
+<!-- Config information available at: -->
+<!-- 	http://lswin10.dfw.ibm.com:9081/IBMIHII/serverInfoIHE_ConnectathonHIMSS2007.htm -->
+<Configuration>
+	<standardconnection name="local_audit">
+		<hostname>localhost</hostname>
+		<port>1234</port>
+		<Property name="TYPE" value="LOG4J LOGGER | BSD SYSLOG | SECURE SYSLOG" />
+		<PropertySet name="localhost">
+			<entry name="MACHINENAME" value="misys" />
+			<entry name="HOSTNAME" value="misys1" />
+			<entry name="IP" value="10.242.0.51" />
+			<entry name="SITE" value="MISYS" />
+			<entry name="SOURCE" value="EHR_MISYS" />
+			<entry name="APPNAME" value="MisysConnect" />
+			<!-- entry value="AENAME=ER_MISYS" name="AENAME"/ -->
+		</PropertySet>
+		<IDENTIFIER name="AssigningAuthority">
+        	<NamespaceId>LocalAuthority</NamespaceId>
+        	<UniversalId>1.3.6.1.4.1.21367.2007.1.2.127</UniversalId>
+        	<UniversalIdType>ISO</UniversalIdType>
+		</IDENTIFIER>
+		<!-- Boiler Plate -->
+		<propertyset name="ParticipantObject">
+			<entry name="PatientNameEncoding" value="HL7" />
+			<entry name="PatientIdEncoding" value="HL7" />
+			<entry name="DocumentIdType" value="DocumentId" />
+		</propertyset>
+	</standardconnection>
+	
+	<standardconnection name="ibm_remote_audit">
+		<hostname>lswin10.dfw.ibm.com</hostname>
+		<port>514</port>
+		<Property name="TYPE" value="BSD SYSLOG" />
+		<PropertySet name="localhost">
+			<entry name="MACHINENAME" value="misys" />
+			<entry name="HOSTNAME" value="misys1" />
+			<entry name="IP" value="10.242.0.51" />
+			<entry name="SITE" value="MISYS" />
+			<entry name="SOURCE" value="HIMSS_DEMO_OPENMRS_PHYS_OFFICE" />
+			<entry name="APPNAME" value="OpenMRS" />
+		</PropertySet>
+		<IDENTIFIER name="AssigningAuthority">
+        	<NamespaceId>LocalAuthority</NamespaceId>
+        	<UniversalId>1.3.6.1.4.1.21367.2007.1.2.127</UniversalId>
+        	<UniversalIdType>ISO</UniversalIdType>		
+        </IDENTIFIER>
+		<!-- Boiler Plate -->
+		<propertyset name="ParticipantObject">
+			<entry name="PatientNameEncoding" value="HL7" />
+			<entry name="PatientIdEncoding" value="HL7" />
+			<entry name="DocumentIdType" value="DocumentId" />
+		</propertyset>
+	</standardconnection>
+	
+</Configuration>

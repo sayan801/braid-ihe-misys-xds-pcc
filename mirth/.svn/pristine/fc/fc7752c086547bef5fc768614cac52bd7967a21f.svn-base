@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The PDQ Server Actor Connections -->
+<!-- For IHE Actor  Test -->
+<Configuration>
+
+    <standardconnection name="ibm-pdq-server">
+        <!--The host name of the PDQ Supplier Sever-->
+        <hostname>lsaix26.dfw.ibm.com</hostname>
+        <!--The port for PDQ Query transaction-->
+        <port>3600</port>
+        <!--The ReceivingApplication defines the ID in (MSH-5) for PDQ Query -->
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>XDSDEMO_ADT</NamespaceId>
+		</Identifier>
+        <!--The ReceivingFacility defines the ID in (MSH-6) for PDQ Query -->
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>XDSDEMO</NamespaceId>
+		</Identifier>
+        <includefile name="PdqMisys.xml" />
+    </standardconnection>
+
+    <secureconnection name="ibm-pdq-server-secure">
+        <hostname>lsaix26.dfw.ibm.com</hostname>
+        <port>3700</port>
+		<Identifier name="ReceivingApplication">
+            <NamespaceId>XDSDEMO_ADT</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+            <NamespaceId>XDSDEMO</NamespaceId>
+		</Identifier>
+		<includefile name="PdqMisys.xml" />
+        <KEYSTORE>certs/EHR_MISYS_KEY.key</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>certs/EHR_MISYS_TRUST.key</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>
+
+    <standardconnection name="initiate-pdq-server">
+        <hostname>67.155.0.245</hostname>
+		<port>3601</port>
+        <Identifier name="ReceivingApplication">
+            <NamespaceId>EHR_ECLIPSYS</NamespaceId>
+        </Identifier>
+        <Identifier name="ReceivingFacility">
+            <NamespaceId>CROSSENTERPRISE</NamespaceId>
+        </Identifier>
+
+        <!--includefile name="PdqMisys.xml" /-->
+        <Identifier name="MisysAssigningAuthority">
+            <NamespaceId>MIEH</NamespaceId>
+        </Identifier>
+
+        <Identifier name="SendingApplication">
+            <NamespaceId>EHR_MISYS</NamespaceId>
+        </Identifier>
+
+        <Identifier name="SendingFacility">
+            <NamespaceId>MIEH</NamespaceId>
+        </Identifier>
+
+        <PropertySet name="PdqQueryName">
+            <Entry name="identifier" value="QRY_PDQ_1001"/>
+            <Entry name="text" value="Query By Name"/>
+            <Entry name="codingSystem" value="IHEDEMO"/>
+            <!--<Entry name="codingSystem" value="HIMSS2005&amp;1.3.6.1.4.1.21367.2005.1.1&amp;ISO"/>-->
+        </PropertySet>
+
+        <!--Specifies how many patients to fetch each time -->
+        <Property name="MaximumChunkSize" value="-1"/>
+
+        <PropertySet name="QueryFields">
+            <Entry name="PID.3.1" value="true"/>
+        </PropertySet>
+
+        <PropertySet name="QueryProperties">
+            <Entry name="Uppercase" value="true"/>
+            <!--Initiate does not support wildcard search because of its probabilitic algorithm -->
+            <Entry name="WildcardAfter" value=""/>
+        </PropertySet>
+
+        <!-- Turn off Misys wildcard defaulting for these values -->
+        <PropertySet name="QueryFieldMisysNames">
+            <Entry name="PID.5.1" value=""/>
+            <Entry name="PID.5.2" value=""/>
+            <Entry name="PID.5.3" value=""/>
+        </PropertySet>
+    </standardconnection>
+
+</Configuration>

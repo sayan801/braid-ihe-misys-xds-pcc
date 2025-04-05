@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>	
+	<!-- Global XDR configuration parameters -->
+	<Property name="OfflineFromAddress" value="misys@misys1"/>
+	<Property name="OfflineFromName" value="Misys Healthcare"/>
+	
+	<PropertySet name="senderKeystore">
+		<entry name="FILE" value="../../Mesa/testkit/certs/cert_misys_firefox_medium_1024.p12" />
+		<entry name="PASSWORD" value="changeit" />
+		<entry name="ALIAS" value="Thawte Freemail Member's Thawte Consulting (Pty) Ltd. ID" />
+	</PropertySet>
+	
+	<PropertySet name="SMTP"> 
+		<entry name="HOSTNAME" value="localhost" />
+		<entry name="USERNAME" value="josh" />
+		<entry name="PASSWORD" value="josh" />
+	</PropertySet>
+
+	<PropertySet name="POP3"> 
+		<entry name="HOSTNAME" value="localhost" />
+		<entry name="USERNAME" value="josh" />
+		<entry name="PASSWORD" value="josh" />
+	</PropertySet>
+
+	<PropertySet name="IntendedRecipients1">
+		<entry name="Name" value="List A" />
+		<entry name="Recipient1" value="Home Office^R^126|^Smith^Joe^^^Dr^MD" />
+		<entry name="Recipient2" value="|^McCool^Bob^^^Dr^MD" />
+		<entry name="Recipient3" value="Home Office" />
+	</PropertySet>
+	
+	<PropertySet name="IntendedRecipients2">
+		<entry name="Name" value="List B" />
+		<entry name="Recipient1" value="Away Office^F^34|^Jane^Sara^^^Dr^MD" />
+		<entry name="Recipient2" value="|^Farwell^Gerald^^^Dr^MD" />
+		<entry name="Recipient3" value="Far Office" />
+	</PropertySet>
+</Configuration>

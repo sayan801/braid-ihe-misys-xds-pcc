@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AuditMessage>
+    <EventIdentification EventActionCode="E" EventDateTime="2007-12-17T17:00:19.591-05:00" EventOutcomeIndicator="0">
+        <EventID codeSystemName="DCM" code="110100" displayName="Application Activity"/>
+        <EventTypeCode codeSystemName="DCM" code="110120" displayName="Application Start"/>
+    </EventIdentification>
+    <ActiveParticipant AlternativeUserID="SecureNode" NetworkAccessPointID="misys1" UserID="Misys Connect" UserIsRequestor="false">
+        <RoleIDCode codeSystemName="DCM" code="110150" displayName="Application"/>
+    </ActiveParticipant>
+    <AuditSourceIdentification AuditEnterpriseSiteID="Big Hospital" AuditSourceID="Sun Room">
+        <AuditSourceTypeCode code="3"/>
+    </AuditSourceIdentification>
+</AuditMessage>
+

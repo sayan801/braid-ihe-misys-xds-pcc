@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The Patient Feed with Local ID Actor Connections -->
+<!-- For Connectathon 2008 maybe... I think that these are just the pix managers with the local misys codes -->
+
+<Configuration>
+	<standardconnection name="mesa-local-feed">
+		<hostname>localhost</hostname>
+		<port>3600</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>MESA_SOFTWARE</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>MESA</NamespaceId>
+		</Identifier>
+		<includefile name="LocalMisys.xml" />
+		<Identifier name="TestA">
+			<NamespaceId>HIMSS2005</NamespaceId>
+			<UniversalId></UniversalId>
+			<UniversalIdType></UniversalIdType>
+		</Identifier>
+		<Identifier name="TestB">
+			<NamespaceId>HIMSS2005</NamespaceId>
+			<UniversalId>1.3.6.1.4.1.21367.2005.1.1</UniversalId>
+			<UniversalIdType>ISO</UniversalIdType>
+		</Identifier>
+		<Identifier name="TestC">
+			<NamespaceId></NamespaceId>
+			<UniversalId>1.3.6.1.4.1.21367.2005.1.1</UniversalId>
+			<UniversalIdType>ISO</UniversalIdType>
+		</Identifier>
+	</standardconnection>
+
+	<standardconnection name="icw-local-feed">
+		<hostname>icw1</hostname>
+		<port>3600</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>ICW_MPI</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>ICW</NamespaceId>
+		</Identifier>
+		<includefile name="LocalMisys.xml" />
+	</standardconnection>
+
+	<standardconnection name="careev-local-feed">
+		<hostname>careev1</hostname>
+		<port>3600</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>OTHER_CAREEV</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>CAREEV</NamespaceId>
+		</Identifier>
+		<includefile name="LocalMisys.xml" />
+	</standardconnection>
+ 	<secureconnection name="careev-local-feed-secure">
+		<hostname>careev1</hostname>
+		<port>3610</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>OTHER_CAREEV_TLS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>CAREEV</NamespaceId>
+		</Identifier>
+		<includefile name="LocalMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>
+
+	<standardconnection name="spirit-local-feed">
+		<hostname>tiani-spirit1c</hostname>
+		<port>2399</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>EHR_TIANI-SPIRIT</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>TIANI-SPIRIT</NamespaceId>
+		</Identifier>
+		<includefile name="LocalMisys.xml" />
+	</standardconnection>
+ 	<secureconnection name="spirit-local-feed-secure">
+		<hostname>tiani-spirit1c</hostname>
+		<port>2499</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>EHR_TIANI-SPIRIT_TLS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>TIANI-SPIRIT</NamespaceId>
+		</Identifier>
+		<includefile name="LocalMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>
+
+	<standardconnection name="accenx-local-feed">
+		<hostname>accenx1</hostname>
+		<port>3600</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>OTHER_ACCENX</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>ACCENX</NamespaceId>
+		</Identifier>
+		<includefile name="LocalMisys.xml" />
+	</standardconnection>
+ 	<secureconnection name="accenx-local-feed-secure">
+		<hostname>accenx1</hostname>
+		<port>3610</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>OTHER_ACCENX_TLS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>ACCENX</NamespaceId>
+		</Identifier>
+		<includefile name="LocalMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>
+
+	<standardconnection name="ndorange-local-feed">
+		<hostname>196.12.36.117</hostname>
+		<port>3601</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>cOS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>NET_ORANGE</NamespaceId>
+		</Identifier>
+		<includefile name="LocalMisys.xml" />
+	</standardconnection>
+	
+	<standardconnection name="alert-local-feed">
+		<hostname>alert7</hostname>
+		<port>3600</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>PAT_IDENTITY_X_REF_MGR_ALERT</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>ALERT</NamespaceId>
+		</Identifier>
+		<includefile name="LocalMisys.xml" />
+	</standardconnection>	
+  
+	<standardconnection name="ge-local-feed">
+		<hostname>gehealthcare19</hostname>
+		<port>3600</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>XDS_REP_GE</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>GEHEALTHCARE</NamespaceId>
+		</Identifier>
+		<includefile name="LocalMisys.xml" />
+	</standardconnection>
+ 	<secureconnection name="ge-local-feed-secure">
+		<hostname>gehealthcare19</hostname>
+		<port>3610</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>XDS_REP_GE_TLS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>GEHEALTHCARE</NamespaceId>
+		</Identifier>
+		<includefile name="LocalMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>
+	
+	<standardconnection name="emds-local-feed">
+		<hostname>emds1</hostname>
+		<port>3600</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>EHR_EMDS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>EMDS</NamespaceId>
+		</Identifier>
+		<includefile name="LocalMisys.xml" />
+	</standardconnection>
+ 	<secureconnection name="emds-local-feed-secure">
+		<hostname>emds1</hostname>
+		<port>3610</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>EHR_EMDS_TLS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>EMDS</NamespaceId>
+		</Identifier>
+		<includefile name="LocalMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>	
+	
+	<standardconnection name="axolotl-local-feed">
+		<hostname>12.96.235.234</hostname>
+		<port>4201</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>PAT_IDENTITY_X_REF_MGR_AXOLOTL</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>AXOLOTL</NamespaceId>
+		</Identifier>
+		<includefile name="LocalMisys.xml" />
+	</standardconnection>
+ 	<secureconnection name="axolotl-local-feed-secure">
+		<hostname>ihe.axolotl.com</hostname>
+		<port>4200</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>PAT_IDENTITY_X_REF_MGR_AXOLOTL_TLS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>AXOLOTL</NamespaceId>
+		</Identifier>
+		<includefile name="LocalMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>	
+	
+	<standardconnection name="initiate-local-feed">
+		<hostname>initiate1</hostname>
+		<port>2200</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>PAT_IDENTITY_X_REF_MGR_INITIATE</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>INITIATE</NamespaceId>
+		</Identifier>
+		<includefile name="LocalMisys.xml" />
+	</standardconnection>	
+ 	<secureconnection name="initiate-local-feed-secure">
+		<hostname>initiate1</hostname>
+		<port>2230</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>PAT_IDENTITY_X_REF_MGR_INITIATE</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>INITIATE</NamespaceId>
+		</Identifier>
+		<includefile name="LocalMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>	
+	
+	<standardconnection name="swpartners-local-feed">
+		<hostname>ctn2008.swpartners.com</hostname>
+		<port>2200</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>WS_SWPARTNERS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>SWPARTNERS</NamespaceId>
+		</Identifier>
+		<includefile name="LocalMisys.xml" />
+	</standardconnection>
+ 	<secureconnection name="swpartners-local-feed-secure">
+		<hostname>ctn2008.swpartners.com</hostname>
+		<port>3610</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>WS_SWPARTNERS_TLS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>SWPARTNERS</NamespaceId>
+		</Identifier>
+		<includefile name="LocalMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>	
+</Configuration>

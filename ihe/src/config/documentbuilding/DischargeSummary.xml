@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration>
+
+    <!--The default Configuration for building a Discharge Summary -->
+    <StandardConnection name="DischargeSummary">
+        <!--The required admission date -->
+        <Object name="AdmissionDate" enabled="true">
+            <Field name="admissionDate" type="Date" value="10/16/2006" format="MM/dd/yyyy" />
+        </Object>
+        
+        <!--The required discharge date -->
+        <Object name="DischargeDate" enabled="true">
+            <Field name="dischargeDate" type="Date" value="10/27/2006" format="MM/dd/yyyy" />
+        </Object>
+
+        <ObjectList name="ActiveProblem" enabled="true">
+            <Object>
+                <Field name="name" type="String" value="80% blockage of the left anterior descending coronary artery, treated with CABG."/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="^^^^" />
+                <Field name="startDate" type="Date" value="" format="" />
+                <Field name="endDate" type="Date" value="" format="" />
+                <Field name="status" type="String" value="active" />
+                <Field name="source" type="String" value=""/>
+            </Object>
+            <Object>
+                <Field name="name" type="String" value="Stress fracture, right foot"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="472.0^^2.16.840.1.113883.6.2^ICD9^" />
+                <Field name="startDate" type="Date" value="08/01/2006" format="MM/dd/yyyy" />
+                <Field name="endDate" type="Date" value="" format="" />
+                <Field name="status" type="String" value="healed" />
+                <Field name="source" type="String" value=""/>
+            </Object>
+        </ObjectList>
+        <ObjectList name="ResolvedProblem" enabled="true">
+        </ObjectList>
+        <ObjectList name="AdmissionDiagnosis" enabled="true">
+            <Object>
+                <Field name="name" type="String" value="Stress test was inconclusive; cardiac cath test indicated 80% blockage of LAD. Admission with recommendation for surgery."/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="^^^^" />
+                <Field name="startDate" type="Date" value="" format="MM/dd/yyyy" />
+                <Field name="endDate" type="Date" value="" format="" />
+                <Field name="status" type="String" value="" />
+                <Field name="source" type="String" value=""/>
+            </Object>
+        </ObjectList>
+        <ObjectList name="DischargeDiagnosis" enabled="true">
+            <Object>
+                <Field name="name" type="String" value="80% blockage of the left anterior descending coronary artery, treated with CABG. Patient should monitor area of incision and inform physician immediately if any signs of infection appear."/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="^^^^" />
+                <Field name="startDate" type="Date" value="" format="MM/dd/yyyy" />
+                <Field name="endDate" type="Date" value="" format="MM/dd/yyyy" />
+                <Field name="status" type="String" value="" />
+                <Field name="source" type="String" value=""/>
+            </Object>
+        </ObjectList>
+
+        <ObjectList name="DischargeMedication" enabled="true">
+            <Object>
+                <Field name="productName" type="String" value="Warfarain (5 mg tab)"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="55007^^2.16.840.1.113883.6.69^NDC^" />
+                <Field name="sig" type="String" value="One week post surgery, begin treatment with Warfarin. 1 time per day / oral."/>
+                <Field name="orderDate" type="Date" value="10/27/2006" format="MM/dd/yyyy" />
+                <Field name="duration" type="String" value=""/>
+            </Object>
+        </ObjectList>
+
+        <ObjectList name="Allergy" enabled="true">
+            <Object>
+                <Field name="agent" type="String" value="Iodinated contrast"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="^^^^" />
+                <Field name="reaction" type="String" value="laryngeal oedema"/>
+                <Field name="reportDate" type="Date" value="" format="" />
+                <Field name="comment" type="String" value="Reaction occurs within 10 minutes" />
+            </Object>
+        </ObjectList>
+
+        <Object name="ProposedDisposition" enabled="true">
+            <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version
+             See http://www.cdc.gov/ncipc/pub-res/pdf/deeds.pdf Page 190 for a list of codes-->
+            <Field name="dispositionCode" type="Code" value="10^Discharge to home or self care^2.16.840.1.113883.6.102.4.2^DEEDS8.02^" />
+            <Field name="encounterDisposition" type="String" value="Patient should continue with bed rest for 1 day following discharge.
+On second day, patient should slowly resume normal activities." />
+            <Field name="lowEffectiveTime" type="Date" value="2006-10-27T12:10:00-0500" format="yyyy-MM-dd'T'HH:mm:ssZ" />
+            <Field name="highEffectiveTime" type="Date" value="" format="yyyy-MM-dd'T'HH:mm:ssZ" />
+        </Object>
+
+        <!--Specify Hospital Course-->
+        <Object name="HospitalCourse" enabled="true">
+            <Field name="hospitalCourse" type="String" value="Patient was evaluated in for chest pain.
+A standard stress test was administered; results were inconclusive.
+A Cardiac Catheterization procedure was performed, indicating 80% blockage of the LAD.
+Dr. Darrow peformed a successful CABG.
+Patient was returned to ICU for three days of observation and was then discharged."/>
+        </Object>
+
+    </StandardConnection>
+</Configuration>

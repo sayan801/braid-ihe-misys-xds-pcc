@@ -1,0 +1,27 @@
+CTX: MESA Version 11.10.0  created 2007.12.10 
+CTX: current date/time 20071228 1438
+CTX: Log level 4
+
+CTX: Care Record Summary 40003.1
+CTX: Evaluation using CRS Schematron
+CTX: C:\jdk1.6.0_02/bin/java -cp C:\projects\mesa2008/lib/xalan.jar org.apache.xalan.xslt.Process -IN 40003/40003_schematron.xml -XSL schematron/schematron-basic.xsl -OUT 40003/40003.xsl -PARAM diagnose yes
+CTX: C:\jdk1.6.0_02/bin/java -cp C:\projects\mesa2008/lib/xalan.jar org.apache.xalan.xslt.Process -IN c:\temp\pcctest\40003CCDReferralSummary.xml -XSL 40003/40003.xsl -OUT 40003/schematron_40003.log
+
+
+Result from schematron validation:
+CTX: 40003: Patient Demographics (Schematron)
+CTX: In pattern cda:recordTarget[cda:patientRole[cda:patient[cda:name[cda:given = 'Frederick']]]]:
+   CTX: recordTarget/patientRole/patient/name/given is Frederick (PASS)
+CTX: In pattern cda:recordTarget[cda:patientRole[cda:patient[cda:name[cda:family = 'Randolph']]]]:
+   CTX: recordTarget/patientRole/patient/name/family is Randolph (PASS)
+CTX: In pattern cda:recordTarget[cda:patientRole[cda:patient[cda:birthTime[@value = '19590203']]]]:
+   CTX: recordTarget/patientRole/patient/birthTime@value is 19590203 (PASS)
+CTX: In pattern cda:recordTarget[cda:patientRole[cda:patient[cda:administrativeGenderCode[@codeSystem = '2.16.840.1.113883.5.1']]]]:
+   CTX: recordTarget/patientRole/patient/administrativeGenderCode@codeSystem is 2.16.840.1.113883.5.1 (PASS)
+CTX: In pattern cda:recordTarget[cda:patientRole[cda:patient[cda:administrativeGenderCode[@code = 'M']]]]:
+   CTX: recordTarget/patientRole/patient/administrativeGenderCode@code is M (PASS)
+CTX: In pattern cda:recordTarget[cda:patientRole[cda:id[@extension = '40003']]]:
+   CTX: recordTarget/patientRole/id/@exttension is 40003 (PASS)
+CTX: In pattern cda:recordTarget[cda:patientRole[cda:id[@root = '1.3.6.1.4.1.21367.2005.1.1']]]:
+   CTX: recordTarget/patientRole/id/@root is 1.3.6.1.4.1.21367.2005.1.1 (PASS)
+

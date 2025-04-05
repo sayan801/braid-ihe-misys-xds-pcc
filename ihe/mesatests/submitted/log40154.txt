@@ -1,0 +1,15 @@
+ADT_GE_CPN                  Sample Missing 
+CIS_CPSI                    Sample Missing
+CIS_GE_CENTRICTY_ENTERPRISE Sample Missing
+CONTENT_CREATOR_EMDS        Sample Missing
+EHR_ALLSCRIPTS_ENTERPRISE   Sample Missing
+EHR_ALLSCRIPTS_PROFESSIONAL Sample Missing
+EHR_BLUEWARE                Tested, no issue
+EHR_EPIC                    Tested, no issue
+EHR_GE_CENTRICITY_EMR       Sample Missing
+EHR_GREENWAY                Sample Missing
+EHR_MCKESSON                Sample Missing
+EHR_MIE                     Sample Missing
+EHR_NEXTGEN                 Sample Missing
+EHR_SAGE                    Sample Missing
+EHR_SPIRIT                  Tested, no issue 

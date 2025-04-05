@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The XDS Repository Actor for Documentr Retrieving Connections -->
+<!-- For Connectathon 2008  COMPLETE -->
+
+<Configuration>
+	<standardconnection name="nist-xdsb-retrieve">
+		<hostname>ihexds.nist.gov</hostname>
+		<port>9080</port>
+        <urlPath>/tf5/services/xdsrepositoryb</urlPath>
+	</standardconnection>
+    <secureconnection name="nist-xdsb-retrieve-secure">
+		<hostname>ihexds.nist.gov</hostname>
+        <port>9085</port>
+        <urlPath>/tf5/services/xdsrepositoryb</urlPath>
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>		
+	
+	<standardconnection name="hxti-xdsb-retrieve">
+		<hostname>hxti2</hostname>
+		<port>8000</port>
+        <urlPath>/retrieveDocument</urlPath>
+	</standardconnection>	
+    <secureconnection name="hxti-xdsb-retrieve-secure">
+        <hostname>hxti2</hostname>
+        <port>8010</port>
+        <urlPath>/retrieveDocument</urlPath>
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>		
+		
+	<standardconnection name="ibm-xdsb-retrieve">
+		<hostname>ibm7</hostname>
+		<port>9080</port>
+		<urlPath>/IBMXDSRepository/XDSb/SOAP12/Repository</urlPath>
+	</standardconnection>
+    <secureconnection name="ibm-xdsb-retrieve-secure">
+        <hostname>ibm7</hostname>
+        <port>9443</port>
+		<urlPath>/IBMXDSRepository/XDSb/SOAP12/Repository</urlPath>
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>		
+	
+	<standardconnection name="spirit-xdsb-retrieve">
+		<hostname>tiani-spirit1</hostname>
+		<port>8080</port>
+        <urlPath>/XDS/repository</urlPath>
+	</standardconnection>
+    <secureconnection name="spirit-xdsb-retrieve-secure">
+        <hostname>tiani-spirit1</hostname>
+        <port>8443</port>
+        <urlPath>/XDS/repository</urlPath>
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>		
+
+	<!-- standardconnection name="spirit-initgate-retrieve">
+		<hostname>tiani-spirit1a</hostname>
+		<port>8080</port>
+		<urlPath>/XCA/initiating</urlPath>
+	</standardconnection-->			
+
+   	<standardconnection name="intersystems-xdsb-retrieve">
+		<hostname>intersystems1</hostname>
+		<port>80</port>
+        <urlPath></urlPath>
+	</standardconnection>	
+
+   	<standardconnection name="msft-xdsb-retrieve">
+		<hostname>msft-ihe1</hostname>
+		<port>8080</port>
+        <urlPath>/XdsService/XdsRepository</urlPath>
+	</standardconnection>
+    <secureconnection name="msft-xdsb-retrieve-secure">
+        <hostname>msft-ihe1.ihe.net</hostname>
+        <port>8081</port>
+        <urlPath>/XdsService/XdsRepository</urlPath>
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>		
+ 
+</Configuration>

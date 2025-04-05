@@ -1,0 +1,577 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type='text/xsl' href='IMPL_CDAR2.xsl'?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <realmCode code="US"/>
+  <typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+  <templateId extension="IMPL_CDAR2_LEVEL1-2REF_US_I2_2005SEP" root="2.16.840.1.113883.10"/>
+  <templateId extension="XDS-MS-2005" root="1.3.6.1.4.1.19376.1.5.3.1"/>
+  <id extension="1144438602397.1" root="2.16.840.1.113883.3.65"/>
+  <code code="34133-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="SUMMARIZATION OF EPISODE NOTE"/>
+  <title>CDA Sample3: Referral Summary for Marvin Jones</title>
+  <effectiveTime value="20060407153653-0400"/>
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" codeSystemName="Confidentiality" displayName="Normal"/>
+  <languageCode code="en-US"/>
+  <setId root="2.16.840.1.113883.3.65" extension="1144438602398.3"/>
+  <versionNumber value="1"/>
+  <recordTarget>
+    <patientRole>
+      <id extension="D178EADB-1E25-A40B-D77D-F1A37F2764EC" root="2.16.840.1.113883.3.65"/>
+      <addr>
+        <streetAddressLine>691 Walnut Avenue</streetAddressLine>
+        <city>Orange City</city>
+        <state>FL</state>
+        <postalCode>32763</postalCode>
+        <country>USA</country>
+      </addr>
+      <telecom use="HP" value="tel:(904)7741612"/>
+      <patient>
+        <name>
+          <given>Jowes123</given>
+          <family>Jone</family>
+          <prefix/>
+          <suffix>III</suffix>
+        </name>
+        <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="AdministrativeGender" displayName="Male"/>
+        <birthTime value="19620815"/>
+      </patient>
+    </patientRole>
+  </recordTarget>
+  <author>
+    <time value="20060407153653-0400"/>
+    <assignedAuthor>
+      <id extension="1144438602395.4" root="2.16.840.1.113883.3.28.1"/>
+      <code code="SELF" codeSystem="2.16.840.1.113883.5.111" codeSystemName="PersonalRelationshipRoleType" displayName="Self"/>
+      <addr>
+        <streetAddressLine>1653 Main St</streetAddressLine>
+        <city>Buffalo</city>
+        <state>NY</state>
+        <postalCode>14209</postalCode>
+        <country>USA</country>
+      </addr>
+      <telecom use="WP" value="tel:(716)328-4632"/>
+      <assignedPerson>
+        <name>
+          <given>Joe</given>
+          <family>Depinto</family>
+          <prefix/>
+          <suffix>Jr.</suffix>
+        </name>
+      </assignedPerson>
+    </assignedAuthor>
+  </author>
+  <author>
+    <time value="20060407153653-0400"/>
+    <assignedAuthor>
+      <id extension="1144438602396.5" root="2.16.840.1.113883.3.65"/>
+      <addr>
+        <streetAddressLine>8529 Six Forks Road</streetAddressLine>
+        <city>Raleigh</city>
+        <state>NC</state>
+        <postalCode>27615</postalCode>
+        <country>USA</country>
+      </addr>
+      <telecom use="WP" value="tel:(919)329-1585"/>
+      <assignedAuthoringDevice>
+        <softwareName>Misys Connect 2.0</softwareName>
+      </assignedAuthoringDevice>
+    </assignedAuthor>
+  </author>
+  <custodian>
+    <assignedCustodian>
+      <representedCustodianOrganization>
+        <id extension="1144438602396.5" root="2.16.840.1.113883.3.65"/>
+        <name>Misys Connect</name>
+        <telecom use="WP" value="tel:(919)329-1585"/>
+        <addr>
+          <streetAddressLine>8529 Six Forks Road</streetAddressLine>
+          <city>Raleigh</city>
+          <state>NC</state>
+          <postalCode>27615</postalCode>
+          <country>USA</country>
+        </addr>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <participant typeCode="HLD">
+    <time/>
+    <associatedEntity classCode="POLHOLD">
+      <id extension="1144438602399.5" root="2.16.840.1.113883.3.65"/>
+      <code code="SELF" codeSystem="2.16.840.1.113883.5.111" codeSystemName="PersonalRelationshipRoleType" displayName="Self"/>
+      <addr>
+        <streetAddressLine/>
+        <city>ORANGE CITY</city>
+        <state>FL</state>
+        <postalCode/>
+        <country/>
+      </addr>
+      <telecom use="WP" nullFlavor="UNK"/>
+      <associatedPerson>
+        <name>
+          <given>JONES</given>
+          <family>MARVIN</family>
+          <prefix/>
+          <suffix>E</suffix>
+        </name>
+      </associatedPerson>
+      <scopingOrganization>
+        <name>HUMANA</name>
+        <telecom use="WP" nullFlavor="UNK"/>
+        <addr>
+          <streetAddressLine>1060 MAITLAND CENTER STE 300</streetAddressLine>
+          <city>MAITLAND</city>
+          <state>FL</state>
+          <postalCode>32751</postalCode>
+          <country/>
+        </addr>
+      </scopingOrganization>
+    </associatedEntity>
+  </participant>
+  <documentationOf>
+    <serviceEvent classCode="PCPR">
+      <effectiveTime>
+        <low value="20060112000000-0500"/>
+        <high value="20060407153654-0400"/>
+      </effectiveTime>
+      <performer typeCode="PRF">
+        <functionCode code="PCP" codeSystem="2.16.840.1.113883.5.88" codeSystemName="ParticipationFunction"/>
+        <assignedEntity>
+          <id extension="JWC" root="2.16.840.1.113883.3.65"/>
+          <code code="59058001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="General Physician"/>
+          <addr nullFlavor="UNK"/>
+          <telecom nullFlavor="UNK"/>
+          <assignedPerson>
+            <name>
+              <given>JOHN</given>
+              <family>CARTER</family>
+              <prefix/>
+              <suffix/>
+            </name>
+          </assignedPerson>
+        </assignedEntity>
+      </performer>
+    </serviceEvent>
+  </documentationOf>
+  <componentOf>
+    <encompassingEncounter>
+      <id extension="190" root="2.16.840.1.113883.3.65"/>
+      <effectiveTime>
+        <low value="20060112000000-0500"/>
+      </effectiveTime>
+    </encompassingEncounter>
+  </componentOf>
+  <component>
+    <structuredBody>
+      <templateId extension="IMPL_CDAR2_LEVEL1-2REF_US_I2_2005SEP" root="2.16.840.1.113883.10"/>
+      <templateId extension="XDS-MS-2005" root="1.3.6.1.4.1.19376.1.5.3.1"/>
+      <component>
+        <section>
+          <code code="X-RFVCC" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Reason for Visit"/>
+          <title>Reason for Visit/Chief Complaint</title>
+          <text>Sore Throat</text>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code code="X-RFR" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Reason for Referral"/>
+          <title>Reason for Referral</title>
+          <text>Continue Care for Marvin Jones</text>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code code="10164-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Present Illness"/>
+          <title>History of Present Illness</title>
+          <text></text>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem List"/>
+          <title>Conditions</title>
+          <text>
+            <table border="1">
+              <thead>
+                <tr>
+                  <th>Problem</th>
+                  <th>Problem Date</th>
+                  <th>Problem Status</th>
+                  <th>Problem Comment</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td ID="Problem-0">CHRONIC PHARYNGITIS AND NASOPHARYNGITIS</td>
+                  <td ID="ProblemDate-0">07/19/2005 -</td>
+                  <td ID="ProblemStatus-0"/>
+                  <td ID="ProblemComment-0">EMR-MISYSCONNECT</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <observation classCode="COND" moodCode="EVN">
+              <templateId extension="condition" root="1.3.6.1.4.1.19376.1.5.3.1"/>
+              <id extension="1144438602400.7" root="2.16.840.1.113883.3.65"/>
+              <code code="29308-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Diagnosis"/>
+              <statusCode code=""/>
+              <effectiveTime>
+                <low value="20050719000000-0400"/>
+              </effectiveTime>
+              <value xsi:type="CD" code="472.0" codeSystem="2.16.840.1.113883.6.2" codeSystemName="ICD9">
+                <originalText>
+                  <reference value="#Problem-0"/>
+                </originalText>
+              </value>
+              <entryRelationship typeCode="SUBJ" inversionInd="true">
+                <observation classCode="OBS" moodCode="EVN">
+                  <code code="COMMENT" codeSystem="1.3.6.1.4.1.19376.1.5.3.2" codeSystemName="IHEActCode" displayName="Comment"/>
+                  <text mediaType="text/xml">
+                    <reference value="#ProblemComment-0"/>
+                  </text>
+                  <statusCode code="completed"/>
+                </observation>
+              </entryRelationship>
+            </observation>
+          </entry>
+<entry>
+<act classCode='ACT' moodCode='EVN'>
+<id root='' extension=''/>
+<code code='' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC' displayName=''/>
+<reference typeCode='REFR'>
+<externalDocument classCode='DOC' moodCode='EVN'>
+<id extension='' root=''/>
+<code>
+<originalText><reference value='#Problem-0'/></originalText>
+</code>
+</externalDocument>
+</reference>
+</act>
+</entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code code="10155-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Allergies"/>
+          <title>Allergies and Adverse Reactions</title>
+          <text>
+            <table border="1">
+              <thead>
+                <tr>
+                  <th>Allergen</th>
+                  <th>Reaction</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td ID="Allergen-0">ANIMAL HAIR</td>
+                  <td ID="Reaction-0">Hives;Headache;Asthma;</td>
+                  <td ID="Date-0">07/11/2005</td>
+                </tr>
+                <tr>
+                  <td ID="Allergen-1">LIDOCAINE HCL (CARDIAC)</td>
+                  <td ID="Reaction-1">Itching;Hives;Nausea;</td>
+                  <td ID="Date-1">07/11/2005</td>
+                </tr>
+                <tr>
+                  <td ID="Allergen-2">PEANUT OIL</td>
+                  <td ID="Reaction-2"/>
+                  <td ID="Date-2">11/21/2005</td>
+                </tr>
+                <tr>
+                  <td ID="Allergen-3">SULFA DRUGS</td>
+                  <td ID="Reaction-3"/>
+                  <td ID="Date-3">12/08/2004</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <observation classCode="COND" moodCode="EVN">
+              <templateId extension="allergy" root="1.3.6.1.4.1.19376.1.5.3.1"/>
+              <id extension="1144438602401.7" root="2.16.840.1.113883.3.65"/>
+              <code code="8658-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Allergies"/>
+              <statusCode code="active"/>
+              <effectiveTime>
+                <low value="20050711000000-0400"/>
+              </effectiveTime>
+              <value xsi:type="CD">
+                <originalText>
+                  <reference value="#Allergen-0"/>
+                </originalText>
+              </value>
+              <entryRelationship typeCode="SPRT">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId extension="reaction" root="1.3.6.1.4.1.19376.1.5.3.1"/>
+                  <code code="RXNASSESS"/>
+                  <statusCode code="completed"/>
+                  <entryRelationship typeCode="REFR">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <id extension="1144438602402.7" root="2.16.840.1.113883.3.65"/>
+                      <code code="DX"/>
+                      <statusCode code="completed"/>
+                      <value xsi:type="CD">
+                        <originalText>
+                          <reference value="#Reaction-0"/>
+                        </originalText>
+                      </value>
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="COND" moodCode="EVN">
+              <templateId extension="allergy" root="1.3.6.1.4.1.19376.1.5.3.1"/>
+              <id extension="1144438602403.7" root="2.16.840.1.113883.3.65"/>
+              <code code="8658-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Allergies"/>
+              <statusCode code="active"/>
+              <effectiveTime>
+                <low value="20050711000000-0400"/>
+              </effectiveTime>
+              <value xsi:type="CD">
+                <originalText>
+                  <reference value="#Allergen-1"/>
+                </originalText>
+              </value>
+              <entryRelationship typeCode="SPRT">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId extension="reaction" root="1.3.6.1.4.1.19376.1.5.3.1"/>
+                  <code code="RXNASSESS"/>
+                  <statusCode code="completed"/>
+                  <entryRelationship typeCode="REFR">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <id extension="1144438602404.7" root="2.16.840.1.113883.3.65"/>
+                      <code code="DX"/>
+                      <statusCode code="completed"/>
+                      <value xsi:type="CD">
+                        <originalText>
+                          <reference value="#Reaction-1"/>
+                        </originalText>
+                      </value>
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="COND" moodCode="EVN">
+              <templateId extension="allergy" root="1.3.6.1.4.1.19376.1.5.3.1"/>
+              <id extension="1144438602405.7" root="2.16.840.1.113883.3.65"/>
+              <code code="8658-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Allergies"/>
+              <statusCode code="active"/>
+              <effectiveTime>
+                <low value="20051121000000-0500"/>
+              </effectiveTime>
+              <value xsi:type="CD">
+                <originalText>
+                  <reference value="#Allergen-2"/>
+                </originalText>
+              </value>
+              <entryRelationship typeCode="SPRT">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId extension="reaction" root="1.3.6.1.4.1.19376.1.5.3.1"/>
+                  <code code="RXNASSESS"/>
+                  <statusCode code="completed"/>
+                  <entryRelationship typeCode="REFR">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <id extension="1144438602406.7" root="2.16.840.1.113883.3.65"/>
+                      <code code="DX"/>
+                      <statusCode code="completed"/>
+                      <value xsi:type="CD">
+                        <originalText>
+                          <reference value="#Reaction-2"/>
+                        </originalText>
+                      </value>
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="COND" moodCode="EVN">
+              <templateId extension="allergy" root="1.3.6.1.4.1.19376.1.5.3.1"/>
+              <id extension="1144438602407.7" root="2.16.840.1.113883.3.65"/>
+              <code code="8658-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Allergies"/>
+              <statusCode code="active"/>
+              <effectiveTime>
+                <low value="20041208000000-0500"/>
+              </effectiveTime>
+              <value xsi:type="CD">
+                <originalText>
+                  <reference value="#Allergen-3"/>
+                </originalText>
+              </value>
+              <entryRelationship typeCode="SPRT">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId extension="reaction" root="1.3.6.1.4.1.19376.1.5.3.1"/>
+                  <code code="RXNASSESS"/>
+                  <statusCode code="completed"/>
+                  <entryRelationship typeCode="REFR">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <id extension="1144438602408.7" root="2.16.840.1.113883.3.65"/>
+                      <code code="DX"/>
+                      <statusCode code="completed"/>
+                      <value xsi:type="CD">
+                        <originalText>
+                          <reference value="#Reaction-3"/>
+                        </originalText>
+                      </value>
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Medications"/>
+          <title>Medications</title>
+          <text>
+            <table border="1">
+              <thead>
+                <tr>
+                  <th>Medication</th>
+                  <th>Sig</th>
+                  <th>OrderDate</th>
+                  <th>Duration</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ID="order-0">
+                  <td ID="Medication-0">ASPIRIN BUFFERED ORAL TABLET 325 MG</td>
+                  <td ID="Sig-0">1/2 Q.A.M.</td>
+                  <td ID="OrderDate-0">07/11/2005</td>
+                  <td ID="Duration-0">0</td>
+                </tr>
+                <tr ID="order-1">
+                  <td ID="Medication-1">ALLERX-D ORAL TABLET SR 12 HR 120-2.5 MG</td>
+                  <td ID="Sig-1">1 Q12H</td>
+                  <td ID="OrderDate-1">07/19/2005</td>
+                  <td ID="Duration-1">0</td>
+                </tr>
+                <tr ID="order-2">
+                  <td ID="Medication-2">HYDROCORTISONE SOD SUCCINATE INJECTION SOLUTION WHEN RECONSTITUTED 1000 MG</td>
+                  <td ID="Sig-2">Patient to receive injection on an as needed bases, which will be provided by the RN on duty at time of request</td>
+                  <td ID="OrderDate-2">08/08/2005</td>
+                  <td ID="Duration-2">0</td>
+                </tr>
+                <tr ID="order-3">
+                  <td ID="Medication-3">NITRO-TIME ORAL CAPSULE CONTROLLED RELEASE 2.5 MG</td>
+                  <td ID="Sig-3">1/2 Q.H. P.R.N.</td>
+                  <td ID="OrderDate-3">07/11/2005</td>
+                  <td ID="Duration-3">0</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="RQO">
+              <templateId extension="medication" root="1.3.6.1.4.1.19376.1.5.3.1"/>
+              <id extension="1144438602409.8" root="2.16.840.1.113883.3.65"/>
+              <text mediaType="text/xml">
+                <reference value="#order-0"/>
+              </text>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20050711000000-0400"/>
+              </effectiveTime>
+              <consumable typeCode="CSM">
+                <manufacturedProduct classCode="MANU">
+                  <manufacturedLabeledDrug>
+                    <code code="55007" codeSystem="NDC">
+                      <originalText>
+                        <reference value="#Medication-0"/>
+                      </originalText>
+                    </code>
+                    <name>ASPIRIN BUFFERED ORAL TABLET 325 MG</name>
+                  </manufacturedLabeledDrug>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="RQO">
+              <templateId extension="medication" root="1.3.6.1.4.1.19376.1.5.3.1"/>
+              <id extension="1144438602410.8" root="2.16.840.1.113883.3.65"/>
+              <text mediaType="text/xml">
+                <reference value="#order-1"/>
+              </text>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20050719000000-0400"/>
+              </effectiveTime>
+              <consumable typeCode="CSM">
+                <manufacturedProduct classCode="MANU">
+                  <manufacturedLabeledDrug>
+                    <code code="85252" codeSystem="NDC">
+                      <originalText>
+                        <reference value="#Medication-1"/>
+                      </originalText>
+                    </code>
+                    <name>ALLERX-D ORAL TABLET SR 12 HR 120-2.5 MG</name>
+                  </manufacturedLabeledDrug>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="RQO">
+              <templateId extension="medication" root="1.3.6.1.4.1.19376.1.5.3.1"/>
+              <id extension="1144438602411.8" root="2.16.840.1.113883.3.65"/>
+              <text mediaType="text/xml">
+                <reference value="#order-2"/>
+              </text>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20050808000000-0400"/>
+              </effectiveTime>
+              <consumable typeCode="CSM">
+                <manufacturedProduct classCode="MANU">
+                  <manufacturedLabeledDrug>
+                    <code code="70007" codeSystem="NDC">
+                      <originalText>
+                        <reference value="#Medication-2"/>
+                      </originalText>
+                    </code>
+                    <name>HYDROCORTISONE SOD SUCCINATE INJECTION SOLUTION WHEN RECONSTITUTED 1000 MG</name>
+                  </manufacturedLabeledDrug>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="RQO">
+              <templateId extension="medication" root="1.3.6.1.4.1.19376.1.5.3.1"/>
+              <id extension="1144438602412.8" root="2.16.840.1.113883.3.65"/>
+              <text mediaType="text/xml">
+                <reference value="#order-3"/>
+              </text>
+              <statusCode code="completed"/>
+              <effectiveTime xsi:type="IVL_TS">
+                <low value="20050711000000-0400"/>
+              </effectiveTime>
+              <consumable typeCode="CSM">
+                <manufacturedProduct classCode="MANU">
+                  <manufacturedLabeledDrug>
+                    <code code="90515" codeSystem="NDC">
+                      <originalText>
+                        <reference value="#Medication-3"/>
+                      </originalText>
+                    </code>
+                    <name>NITRO-TIME ORAL CAPSULE CONTROLLED RELEASE 2.5 MG</name>
+                  </manufacturedLabeledDrug>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>

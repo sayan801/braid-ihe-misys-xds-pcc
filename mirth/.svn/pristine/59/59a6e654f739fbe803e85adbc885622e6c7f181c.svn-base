@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<!-- IBM Non-Secure Actors -->
+    <!-- To enable/disable these actors, comment/uncomment the corresponding actorfile in IheActors.xml -->
+
+    <!--The actor tag
+     Attributes:
+        name - the unique name of this actor
+        type - the type of this actor. The type has to be one of the following entries
+                PatientIdentitySource - for PIX Feed transaction,
+                PixConsumer - for PIX Query transaction,
+                PdqConsumer - for PDQ Query transaction,
+                XdsDocumentSource - for XDS Register and Submit transaction,
+                XdsDocumentConsumer - for XDS Query transaction,
+                SecureNode - for Audit Trail.
+     Elements:
+        description - the description of this actor
+        connection - the connection configuration for this actor
+              Attribute: consumer - the consumer name of either standardconnection or secureconnection;
+                                     it must be defined in one of the connectionfile.
+              Attribute: source - the source name of either standardconnection or secureconnection;
+                                   it must be defined in one of the connectionfile.
+        audittrail - the audit trail repository configuration. 
+    -->
+
+    <!-- The Local Feed means that the patient identity information is sent from the PIX Source
+        (in our case, it's Misys Connect) to the PIX Manager. -->
+    <!-- Local Patient Feed Actor -->
+    <actor name="lpfibm" type="PatientIdentitySource">
+        <description>Local Patient Feed IBM</description>
+        <connection consumer="ibm-local-feed" />
+    </actor>
+
+    <!-- In each Affinity Domain, each patient is assigned a global identity, and this identity
+         is managed by a global identity domain.
+         The Global Feed means that the global patient identity of the same patient is sent from
+         the global identity domain to the PIX Manager. Since we don't have a global identity domain
+         in this test environment, we act as a dummy global identity domain. In the realworld,
+         this actor is not needed.-->
+    <!-- Global Patient Feed Actor -->
+    <actor name="gpfibm" type="PatientIdentitySource">
+        <description>Global Patient Feed IBM</description>
+        <connection consumer="ibm-global-feed" />
+    </actor>
+
+    <!-- In each Affinity Domain, there is a document registry, and it may or maynot be the
+         same server as the PIX Manager. The document registry uses the global patient identity
+         to store patient information. So this Global Registry Feed means that the global
+         patient identity is sent from the global patient identity domain to the Registry.
+         Since we don't have a global identity domain in the test environment, we act as a dummy
+         global identity domain. In the realworld, this acor is not needed.-->
+    <!-- Global Registry Patient Feed Actor -->
+    <actor name="gprfibm" type="PatientIdentitySource">
+        <description>Global Patient Registry Feed IBM</description>
+        <connection consumer="ibm-global-registry-feed" />
+    </actor>
+
+    <!-- PIX Manager Actor, used by PIX Query -->
+    <actor name="pixqueryibm" type="PixConsumer">
+        <description>Patient ID Query IBM</description>
+        <connection consumer="ibm-pix-manager" />
+    </actor>
+
+    <!-- This actor is not needed. It is presented here for testing purpose; it tests the
+         scenario of finding a local patient id from a given global patient id.-->
+    <!-- Global PIX Query Actor -->
+    <!--actor name="pixgqueryibm" type="PixConsumer">
+        <description>Patient ID Global Query IBM</description>
+        <connection consumer="ibm-global-pix-manager" />
+    </actor-->
+
+    <!--This actor is used for the PDQ Query transaction. The connection consumer describes
+        the PDQ Server (i.e., the destination that a PDQ Query is sent to). -->
+    <!-- PDQ Server Actor -->
+    <actor name="pdqibm" type="PdqConsumer">
+        <description>Patient PDQ Query IBM</description>
+        <connection consumer="ibm-pdq-server" />
+    </actor>
+
+    <!--This actor is used for the XDS Provide and Register Document Set transtion.
+        The connection consumer describes the XDS Document Repository (i.e., the
+        target that a document set is submitted to).-->
+    <!-- XDS Repository Submit Actor -->
+    <actor name="xdsibm" type="XdsDocumentSource">
+        <description>XDS IBM Repository</description>
+        <connection consumer="ibm-xds-submit" />
+    </actor>
+
+    <!-- This actor is used for the XDS Query transaction. The connection source
+         describes the XDS Document Registry (i.e., the source that XDS documents are from). -->
+    <!-- XDS Registry Query Actor -->
+    <actor name="xdsqibm" type="XdsDocumentConsumer">
+        <description>XDS IBM Registry (Query)</description>
+        <connection source="ibm-xds-query" />
+    </actor>
+
+    <!-- This actor is used for Audit Trail transaction. The audittrail consumer
+         describes the Audit Respository Server that audit logs are sent to. -->
+    <!-- Audit Repository Actor -->
+	<actor name="auditibm" type="SecureNode">
+		<description>IBM AUDIT TRAILS</description>
+        <audittrail consumer="ibm-arr-bsd" />
+        <audittrail consumer="log4j_audittrail" />
+	</actor>
+
+    <!--actor name="localaudit" type="SecureNode">
+		<description>LOCAL AUDIT</description>
+		<audittrail consumer="log4j_audittrail" />
+	</actor-->
+ </Configuration>

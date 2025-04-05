@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration>
+	<!-- Use the Global Authority to sign our IDs for these feeds -->
+    <Identifier name="LocalAssigningAuthority">
+        <!--There are two ways to specify an ID: One way is to use NamespaceId; the other
+            is to use the combination of UniversalId and UniversalIdType. If both approches
+            are used, they must be consistent and refer to the same entity.-->
+		<NamespaceId>IHENA</NamespaceId>
+		<UniversalId>1.3.6.1.4.1.21367.2005.3.7</UniversalId>
+		<UniversalIdType>ISO</UniversalIdType>
+	</Identifier>
+    <Identifier name="SendingApplication">
+        <NamespaceId>XDSDEMO_ADT</NamespaceId>
+    </Identifier>
+
+    <Identifier name="SendingFacility">
+        <NamespaceId>XDSDEMO</NamespaceId>
+    </Identifier>
+	
+	<EnumMap class="IPatientConsumer$CreationReason">
+		<Entry enum="OUTPATIENT_REGISTER" code="O"/>
+		<Entry enum="INPATIENT_ADMIT" code="I"/>
+		<Entry enum="INPATIENT_PREADMIT" code="P"/>
+	</EnumMap>
+	
+	<PropertySet name="DateTimeFormats">
+		<Entry name="VisitStartTime" value="yyyyMMddHHmm"/>
+		<Entry name="EventTimeFormat" value="yyyyMMddHHmmss"/>
+	</PropertySet>
+
+    <!-- Property name="DefaultRace" value="WH" -->
+</Configuration>

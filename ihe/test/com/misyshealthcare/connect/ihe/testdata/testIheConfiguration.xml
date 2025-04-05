@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	
+	<ConnectionFile file="testConfig.xml"/>
+	
+	<Actor name="MisysConnectSecureNode" type="SecureNode">
+		<Description>Test Audit Repository</Description>
+		<AuditTrail consumer="AuditTrail"/>
+	</Actor>
+	
+	<Actor name="PDQ-1" type="PdqConsumer">
+		<Description>Test PDQ Server</Description>
+		<Connection source="Standard"/>
+		<AuditTrail consumer="AuditTrail"/>
+	</Actor>
+	
+	<Actor name="PatientFeed-1" type="PatientIdentitySource">
+		<Connection consumer="Standard"/>
+	</Actor>
+	
+	<Actor name="PIX-1" type="PixConsumer">
+		<Connection source="Standard"/>
+	</Actor>
+	
+	<Actor name="XDS-1" type="XdsDocumentConsumer">
+		<Connection source="Standard"/>
+	</Actor>
+	
+	<Actor name="XDS-2" type="XdsDocumentSource">
+		<Connection source="Standard"/>
+	</Actor>
+	
+	<Actor name="XDS-3" type="XdsDocumentSource">
+		<Connection source="Standard" consumer="Standard"/>
+	</Actor>
+	
+	<Actor name="XDS-4" type="XdsDocumentSource">
+		<Connection source="Standard"/>
+		<Connection consumer="Standard"/>
+	</Actor>
+	
+</Configuration>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The XDR Actor Connections -->
+<!-- For Connectathon 2007 - COMPLETE -->
+
+<Configuration>
+		<standardconnection name="test-xdr-connection">
+			<hostname>localhost</hostname>
+			<port>25</port>
+			<!-- Cert may be null, then message is unencrypted. -->
+			<Property name="recipientCert" value="../../Mesa/testkit/certs/traum_misys_outlook_export.cer" />
+			<Property name="OfflineToAddress" value="josh@localhost"/>
+			<Property name="OfflineToName" value="Misys To"/>
+			<includefile name="XdrSettings.xml" />
+			<includefile name="XdsCodes.xml" />
+			<includefile name="XdsMisys.xml" />
+			<!-- Property name="DoNotSubmit" value="true"/ -->
+		</standardconnection>
+		
+		<standardconnection name="ge-xdr-connection">
+			<hostname>localhost</hostname>
+			<port>25</port>
+			<Property name="recipientCert" value="../../Mesa/testkit/certs/traum_misys_outlook_export.cer" />
+			<Property name="OfflineToAddress" value="ge@gehealthcare2"/>
+			<Property name="OfflineToName" value="GE HEALTHCARE"/>
+			<includefile name="XdrSettings.xml" />
+			<includefile name="XdsCodes.xml" />
+			<includefile name="XdsMisys.xml" />
+		</standardconnection>
+		
+		<standardconnection name="allscripts-xdr-connection">
+			<hostname>localhost</hostname>
+			<port>25</port>
+			<Property name="recipientCert" value="../../Mesa/testkit/certs/traum_misys_outlook_export.cer" />
+			<Property name="OfflineToAddress" value="doctargetAHS@gmail.com"/>
+			<Property name="OfflineToName" value="All Scripts HS"/>
+			<includefile name="XdrSettings.xml" />
+			<includefile name="XdsCodes.xml" />
+			<includefile name="XdsMisys.xml" />
+		</standardconnection>
+
+		<standardconnection name="capmed-xdr-connection">
+			<hostname>localhost</hostname>
+			<port>25</port>
+			<Property name="recipientCert" value="../../Mesa/testkit/certs/traum_misys_outlook_export.cer" />
+			<Property name="OfflineToAddress" value="capmed@capmed1"/>
+			<Property name="OfflineToName" value="Capmed"/>
+			<includefile name="XdrSettings.xml" />
+			<includefile name="XdsCodes.xml" />
+			<includefile name="XdsMisys.xml" />
+		</standardconnection>
+</Configuration>

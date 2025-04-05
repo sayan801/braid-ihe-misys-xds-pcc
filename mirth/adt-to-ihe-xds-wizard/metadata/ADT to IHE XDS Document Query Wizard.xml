@@ -1,0 +1,16 @@
+<pluginMetaData>
+  <name>ADT to IHE XDS Document Query Wizard</name>
+  <author>WebReach, Inc.</author>
+  <pluginVersion>@mirthversion</pluginVersion>
+  <mirthVersion>1.7.0</mirthVersion>
+  <updateUrl><![CDATA[http://extensions.mirthproject.org/updates/?mirthversion=${mirthVersion}&version=${version}&name=${name}&serverid=${serverid}]]></updateUrl>
+  <url>http://extensions.mirthproject.org</url>
+  <description>This wizard takes an ADT message and performs an IHE XDS document query.</description>
+  <enabled>true</enabled>
+  <extensionPoint>
+  	<name>ADT to IHE XDS Document Query Wizard</name>
+    <type>CLIENT_CHANNEL_WIZARD</type>
+    <className>com.webreach.mirth.plugins.xdsquerywizard.ADTToIHEXDSWizardPlugin</className>
+    <mode>CLIENT</mode>
+  </extensionPoint>
+</pluginMetaData>

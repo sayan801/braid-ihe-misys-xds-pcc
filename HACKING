@@ -1,0 +1,158 @@
+INTRODUCTION
+------------
+The initial release of the Connect application is the IHE library.  This
+library allows applications to communicate with existing IHE infrastructure
+components (PIX Manager, XDS Repository, XDS Registry, etc).  The intent of
+this document is to explain how to use and develop this library.
+
+LAYOUT OF THE PACKAGE
+---------------------
+The IHE library is made up of three packages which build into 4 distinct jars.
+	- Infra
+	This package is made up of utility classes.  Some of these classes may
+	get replaced over time with existing open source utility classes.  This
+	package is built into two separate libraries infra-init and infra-util.
+	- ConnectionLib
+	This package contains classes that are healthcare related, but not
+	specific to the IHE infrastructure.
+	- IheConnectionLib
+	This package contains the classes that implement the IHE profiles.
+
+There is also a directory named repo, which houses 3rd party jars required by
+the infra package, and it is where all of the jars are put by default.
+
+Note:  The ConnectionLib and IheConnectionLib packages each have a lib 
+       directory which contains their dependencies.  To use the IHE library,
+       you must include the 3rd party jars from the repo and from the 
+       IheConnectionLib and ConnectionLib lib directories.
+
+Not all of the unit tests currently work.  It is our plan to focus on fixing the
+unit tests as quickly as possible.
+
+BUILDING THE PACKAGE
+--------------------
+There is not currently a unified build system.  Instead, you must build each
+library individually, and you must do so in the correct order.  All three
+packages use similar build scripts, so once you learn to build one library,
+you will know how to build all of them.
+
+    The Basics
+    ----------
+    The build systems are composed of an ant script and a properties file.  The
+    ant scripts are not named build.xml, so you must specify the build file
+    on the ant command line.  The properties files specify where to find 
+    dependencies, where to build the code to, and where to put the resulting
+    jar file.
+
+To build the packages, you must execute Ant in this order, because of the
+dependencies between the packages:
+
+    1)  in infra:
+        ant -f infraBuild.xml initJar
+        ant -f infraBuild.xml utilJar
+    2)  in ConnectionLib:
+        ant -f baseBuild.xml
+    3)  in IheConnectionLib:
+        ant -f ihebuild.xml
+
+USING THE LIBRARY
+-----------------
+This is not intended to be comprehensive documentation for the IHE library.
+This is just a simple primer to let new developers get started with the 
+library.
+
+If you write an application utilizing this IHE library, you need to
+understand the Object Identifier (OID) concept.
+When interacting with an IHE community, you would be assigned an
+assigning authority OID by that community (called "affinity domain").
+Every document that is created also needs to have a document OID to
+identify its origin.
+
+For testing purposes, we have provided a configuration file that points to
+IBM's IHE infrastructure servers.  (Not provided until after Connectathon,
+because the servers aren't running until then).
+See http://www-03.ibm.com/industries/healthcare/doc/content/bin/ibm_ihe_integration_statement.pdf
+
+You need to follow these steps:
+
+1) Obtain a document OID from HL7.org: http://www.hl7.org/oid/Submitter.cfm
+2) Change the hard-coded OID in mesatests.xds.TestKit.configActor(...)
+   to your document OID. (Even if you're not using TestKit, you'll need
+   call ConfigurationLoader.loadConfiguration(...) similarly.)
+3) Contact IBM to register your OID and namespace Id as an assigning authority.
+   Be sure to mention that this is for testing only.
+   Laurie Williams: lauriew@us.ibm.com
+4) Enter your OID into the configuration files as described below.
+
+
+    Configuration
+    -------------
+    Configuration is done through a series of XML files.  The first file 
+    provides a list of configuration files to load and parse.  An example of
+    this file is iheActors.xml.  
+
+    Within the iheActors file, there are connectionfile and actorfile blocks.
+    Each of these blocks specifies another file which is loaded in for later
+    use.
+        ActorFile - These files create named configurations.  The 
+        configurations are maps between keys and connection names (see 
+        ConnectionFile).  Each actor also includes a type that indicates
+        the uses this actor can be used for.
+
+        ConnectorFile - These files create named connections to servers.
+        Each Connection also references an IncludeFile, which is loaded by
+        the configuration system.  This IncludeFile defines properties about
+        the entity who is using the application.  This will include a
+        UniversalId provided by the entity that runs the IHE infrastructure.
+
+Change the XML elements in the configuration file for each actor:
+	<Identifier name="LocalAssigningAuthority">
+		<NamespaceId>"what you told IBM"</NamespaceId>
+		<UniversalId>"Your HL7 OID"</UniversalId>
+		<UniversalIdType>ISO</UniversalIdType>
+	</Identifier>
+Change the XML elements in the configuration file for the PIX feed and
+PIX consumer actors:
+	<Identifier name="SendingApplication">
+		<NamespaceId>"whatever you want"</NamespaceId>
+	</Identifier>
+	<Identifier name="SendingFacility">
+		<NamespaceId>"whatever you want2"</NamespaceId>
+	</Identifier>
+Change the XML elements in the configuration file for the XDS source to:
+	<stringMap name="sourceId">
+		<entry string="Your system name" code="Your OID"/>
+	</stringMap>
+
+    When you submit a document, it should have the key (e.g., "Your system name")
+    in the value: "CCDDocument myDoc.getMetadata().setHomeSystemId(<here>)" to
+    indicate that the document originated with the facility.
+
+
+    There is currently no system for editing these configuration files, but
+    one will be released soon.
+
+    There is a sample configuration for the public non-SSL IBM infrastructure.
+    Unfortunately, this infrastructure isn't always available, which limits
+    people's ability to test the library.  When the infrastructure is running,
+    to use the library, you must edit the local.xml file to specify your
+    UniversalId (obtained from IBM or the IHE organization).
+
+    The base IheActors.xml file is specified as an argument to 
+    ConfigurationLoader.loadConfiguration method.  Please review the javadoc
+    for information on how this works.
+
+    Brokers
+    -------
+    Using the library should be done through the DocumentBroker or
+    PatientBroker classes.  These classes abstract out the work required
+    to communicate with the IHE infrastructure.  This includes everything
+    required for compliance with the IHE profiles, such as auditing and 
+    logging.
+
+    IheService
+    ----------
+    IheService sits on top of the DocumentBroker class to make discrete actions 
+    easier to perform.  This can include operations like submitting documents,
+    creating referral documents, etc.  Using the methods in this class is
+    easier than using the methods in DocumentBroker directly. 

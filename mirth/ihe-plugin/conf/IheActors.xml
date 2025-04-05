@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	
+	<!-- TimeServer: mieweb1 - 10.242.0.47 -->
+	
+	<connectionfile file="XdsConnections.xml" />
+	<connectionfile file="PdqServerConnections.xml" />
+	<connectionfile file="PixManagerConnections.xml" />
+	<connectionfile file="AuditRepositoryConnections.xml" />
+	
+	<!-- **************************************************** -->
+	<!-- XDS Registry Query Actors COMPLETE -->
+
+	<actor name="xdqibm" type="XdsDocumentConsumer">
+		<description>XDS_REGISTRY (We are the consumer)</description>
+		<connection source="ibm-xds-query" />
+		<!-- <connection source="agfa-xds-query" />	 -->	
+	</actor>	
+
+	<!-- **************************************************** -->
+	<!-- XDS Repository Submit Actors COMPLETE --> 
+	<actor name="xdsibm" type="XdsDocumentSource">
+		<description>XDS_SUBMIT (We are the source)</description>
+		<connection consumer="ibm-xds-submit" />
+		<!-- <connection consumer="agfa-xds-submit" /> -->		
+	</actor>	
+
+	<!-- **************************************************** -->
+	<!-- PDQ Server Actors COMPLETE -->
+	
+	<actor name="pdq_query" type="PdqConsumer">
+		<description>PDQ_SERVER (We are the consumer)</description>
+		<connection source="init-pdq-server" />
+	</actor>
+
+	<actor name="pdq_submit" type="PatientIdentitySource">
+		<description>PDQ_FEED (We are the source)</description>
+		<connection consumer="init-patient-feed" />
+	</actor>
+
+	<!-- **************************************************** -->
+	<!-- PIX Manager Actors COMPLETE -->
+	
+	<actor name="pix" type="PixConsumer">
+		<description>PIX_MANAGER</description>
+		<connection consumer="init-pix-manager" />
+	</actor>
+ 
+	<!-- **************************************************** -->
+	<!-- Audit Repository Actors COMPLETE -->
+	
+	<actor name="audit" type="SecureNode">
+		<description>ALL AUDIT TRAILS</description>
+		<audittrail consumer="local_audit" />
+		<audittrail consumer="ibm_remote_audit" />
+	</actor>
+	
+</Configuration>

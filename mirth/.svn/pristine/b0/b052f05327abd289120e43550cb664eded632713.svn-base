@@ -1,0 +1,24 @@
+
+C:\projects\mesa2009\mesa_tests\rad\actors\secure_node\scripts>set CIPHER=NULL-S
+HA
+
+C:\projects\mesa2009\mesa_tests\rad\actors\secure_node\scripts>C:\projects\mesa2
+009\bin\tls_server -e -c NULL-SHA -d -l 1 C:\projects\mesa2009\runtime\certifica
+tes\randoms.dat C:\projects\mesa2009\runtime\certificates\expired.key C:\project
+s\mesa2009\runtime\certificates\expired.cert C:\projects\mesa2009\runtime\certif
+icates\test_list.cert 4102
+tls_server logging messages at level 1 to C:\projects\mesa2009/logs/tls_server.l
+og
+About to get new bio_err
+Got the bio
+ACCEPT
+verify return:1
+CIPHER is NULL-SHA
+input fd = 1824
+Ready to read on socket
+11 <Hello world>
+Ready to read on socket
+2 <
+>
+Ready to read on socket
+DONE

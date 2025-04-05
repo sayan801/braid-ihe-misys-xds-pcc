@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The Patient Feed with Global ID Actor Connections -->
+<!-- For Connectathon 2007 maybe... I think that these are just the pix managers with the global misys codes -->
+
+<Configuration>
+	<standardconnection name="accenx-global-feed">
+		<hostname>64.78.149.228</hostname>
+		<port>7777</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>ACCENX</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>ACCENX</NamespaceId>
+		</Identifier>
+		<includefile name="GlobalMisys.xml" />
+	</standardconnection>
+	
+	<standardconnection name="hxti-global-feed">
+		<hostname>hxti2</hostname>
+		<port>3600</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>XDS_REG_HXTI</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>HXTI</NamespaceId>
+		</Identifier>
+		<includefile name="GlobalMisys.xml" />
+	</standardconnection>
+
+	<secureconnection name="hxti-global-feed-secure">
+		<hostname>hxti2</hostname>
+		<port>3610</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>XDS_REG_HXTI</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>HXTI</NamespaceId>
+		</Identifier>
+		<includefile name="GlobalMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_07_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_07_TRUST.key</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>
+
+	<standardconnection name="spirit-global-feed">
+		<hostname>spirit1</hostname>
+		<port>2400</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>EHR_SPIRIT</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>SPIRIT</NamespaceId>
+		</Identifier>
+		<includefile name="GlobalMisys.xml" />
+	</standardconnection>
+
+    <secureconnection name="spirit-global-feed-secure">
+        <hostname>spirit1</hostname>
+        <port>2410</port>
+        <Identifier name="ReceivingApplication">
+            <NamespaceId>EHR_SPIRIT</NamespaceId>
+        </Identifier>
+        <Identifier name="ReceivingFacility">
+            <NamespaceId>SPIRIT</NamespaceId>
+        </Identifier>
+        <includefile name="GlobalMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_07_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_07_TRUST.key</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+    </secureconnection>
+
+	<standardconnection name="axolotl-global-feed">
+		<hostname>axolotl1</hostname>
+		<port>3600</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>PAT_IDENTITY_X_REF_MGR_AXOLOTL</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>AXOLOTL</NamespaceId>
+		</Identifier>
+		<includefile name="GlobalMisys.xml" />
+	</standardconnection>
+
+    <secureconnection name="axolotl-global-feed-secure">
+        <hostname>axolotl1</hostname>
+        <port>3610</port>
+        <Identifier name="ReceivingApplication">
+            <NamespaceId>PAT_IDENTITY_X_REF_MGR_AXOLOTL</NamespaceId>
+        </Identifier>
+        <Identifier name="ReceivingFacility">
+            <NamespaceId>AXOLOTL</NamespaceId>
+        </Identifier>
+        <includefile name="GlobalMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_07_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_07_TRUST.key</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+    </secureconnection>
+
+	<standardconnection name="ibm-global-feed">
+		<hostname>ibm5</hostname>
+		<port>3777</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>PAT_IDENTITY_X_REF_MGR_IBM</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>IBM</NamespaceId>
+		</Identifier>
+		<includefile name="GlobalMisys.xml" />
+	</standardconnection>
+
+    <secureconnection name="ibm-global-feed-secure">
+		<hostname>ibm5</hostname>
+		<port>3700</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>PAT_IDENTITY_X_REF_MGR_IBM</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>IBM</NamespaceId>
+		</Identifier>
+		<includefile name="GlobalMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_07_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_07_TRUST.key</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>
+
+	<standardconnection name="initiate-global-feed">
+		<hostname>67.155.0.245</hostname>
+		<port>2200</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>PAT_IDENTITY_X_REF_MGR_INITIATESYSTEMS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>INITIATESYSTEMS</NamespaceId>
+		</Identifier>
+		<includefile name="GlobalMisys.xml" />
+	</standardconnection>	
+
+	<secureconnection name="initiate-global-feed-secure">
+		<hostname>initiatesystems1</hostname>
+		<port>3610</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>PAT_IDENTITY_X_REF_MGR_INITIATESYSTEMS</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>INITIATESYSTEMS</NamespaceId>
+		</Identifier>
+		<includefile name="GlobalMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_07_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_07_TRUST.key</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>
+
+	<standardconnection name="quadramed-global-feed">
+		<hostname>quadramed1</hostname>
+		<port>3600</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>PAT_IDENTITY_X_REF_MGR_QUADRAMED</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>QUADRAMED</NamespaceId>
+		</Identifier>
+		<includefile name="GlobalMisys.xml" />
+	</standardconnection>
+
+	<secureconnection name="quadramed-global-feed-secure">
+		<hostname>quadramed1</hostname>
+		<port>3610</port>
+		<Identifier name="ReceivingApplication">
+			<NamespaceId>PAT_IDENTITY_X_REF_MGR_QUADRAMED</NamespaceId>
+		</Identifier>
+		<Identifier name="ReceivingFacility">
+			<NamespaceId>QUADRAMED</NamespaceId>
+		</Identifier>
+		<includefile name="GlobalMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_07_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_07_TRUST.key</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>
+
+</Configuration>

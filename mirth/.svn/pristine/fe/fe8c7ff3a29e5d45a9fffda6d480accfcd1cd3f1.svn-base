@@ -1,0 +1,35 @@
+<MESA_Result>
+ <Log>4</Log>
+ <Test>40101</Test>
+ <Actor>CONTENT_CREATOR</Actor>
+ <Version>11.10.0</Version>
+ <Date>20071228</Date>
+ <Host>9H13B71</Host>
+ <ErrorCount>2</ErrorCount>
+ <Result>Fail</Result>
+ <Details> <![CDATA[
+CTX: Test:    40101
+CTX: Actor:   CONTENT_CREATOR
+CTX: Version: 11.10.0
+CTX: Date:    20071228
+
+CTX: PCC 40101.0
+CTX: Evaluation using PCC Schematron
+
+CTX: PCC 40101.1
+CTX: Evaluation using PCC Schematron
+CTX: C:\jdk1.6.0_02/bin/java -cp C:\projects\mesa2008/lib/xalan.jar org.apache.xalan.xslt.Process -IN schematron/pcctf-mesa.sch -XSL schematron/schematron-basic.xsl -OUT 40101/40101.xsl -PARAM diagnose yes
+CTX: C:\jdk1.6.0_02/bin/java -cp C:\projects\mesa2008/lib/xalan.jar org.apache.xalan.xslt.Process -IN c:\temp\pcctest\CCDEDReferralData.xml -XSL 40101/40101.xsl -OUT 40101/schematron_40101.log
+
+
+Result from schematron validation:
+Schematron schema for validating conformance to IMPL_CDAR2_LEVEL1-2REF_US_I3_2006JAN
+CTX: In pattern .//cda:templateId[@root = "1.3.6.1.4.1.19376.1.5.3.1.4.16"]:
+   Error: A(n) Coded Results must contain Procedure Entry. See http://wiki.ihe.net/index.php?title=1.3.6.1.4.1.19376.1.5.3.1.3.28
+CTX: In pattern .//cda:templateId[@root = "1.3.6.1.4.1.19376.1.5.3.1.4.4"]:
+   Warning: A(n) Coded Results should contain References Entry. See http://wiki.ihe.net/index.php?title=1.3.6.1.4.1.19376.1.5.3.1.3.28
+CTX: In pattern templateId[@root="1.3.6.1.4.1.19376.1.5.3.1.3.34"]:
+   Error: The parent template identifier for Coded Advance Directives is not present.
+
+ ]]> </Details>
+</MESA_Result>

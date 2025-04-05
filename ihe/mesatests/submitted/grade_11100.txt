@@ -1,0 +1,30 @@
+Allscripts
+EHR_ALLSCRIPTS_CONNECT 
+Line 3 and following: List of all Integration Profile/Actor combinations for this system. 
+ATNA/SA
+BPPC/CONTENT_CONSUMER
+BPPC/CONTENT_CREATOR
+BPPC/DOC_CONSUMER
+BPPC/DOC_SOURCE
+CT/TIME_CLIENT
+EDR/CONTENT_CONSUMER
+EDR/CONENT_CREATOR
+PIX/PAT_IDENTITY_CONSUMER
+PIX/PAT_IDENTITY_SRC
+XDS.a/DOC_CONSUMER
+XDS.a/DOC_SOURCE
+XDS.b/DOC_CONSUMER
+XDS.b/DOC_SOURCE
+XDS-MS/CONTENT_CONSUMER
+XDS-MS/CONTENT_CREATOR
+XDS-SD/CONTENT_CONSUMER
+XDS-SD/CONTENT_CREATOR
+
+Following lines: List all audit events for which your system produces an audit message. Refer to ITI TF-2:3.20.6 and Rad TF-3:5.1.1. 
+Actor-tart-stop
+Node-Authentication-Failure
+Patient-record-event
+PHI-export
+PHI-import
+Query Information
+User Authentication

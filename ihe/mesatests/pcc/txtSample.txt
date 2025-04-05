@@ -1,0 +1,62 @@
+         Referral Summary
+
+Author:  John DePinto , II Creation 
+Date: January 13, 2009 
+Patient: Allscripts EHR_ALLSCRIPTS_CONNECT , II
+Address: 700 Euclid Ave, St. Louis, MO 63110
+Phone:   +1(716)-358-7421
+Provider: Joe Atkinson , 
+          700 Euclid Ave, St. Louis, MO 63110
+--------------------------------------------------------------------------------
+
+Reason for Referral
+Patient fell while skating and complains of a sore wrist. 
+
+History of Present Illness
+Patient fell while skating. Suspect fractured radius. 
+
+Problems
+1. Stress fracture, right foot 08/01/2006 active  
+2. Ear infection 10/01/2006 active  
+
+Medications
+1. Augmentin 125-31.25 MG CHEW 3 once a week 01/14/2008  
+2. Albuterol Sulfate 108 MCG/ACT AERS 2 Puffs q6hrs prn 01/14/2008  
+
+Allergies and Adverse Reactions
+1. penicillin positive 01/13/2009 
+
+History of Procedures
+1.Right knee arthroscopy by Right knee arthroscopy in St Lukes Hospital on 4/3/1995. 
+2.Left knee arthroscopy by Right knee arthroscopy in West County Orthopedic Center on 5/15/1997. 
+
+History of Immunizations
+1.Influenza 11/10/2007 
+2.Tetanus 08/10/2005 
+3.DTaP (Diphtheria, Tetanus & Acellular Pertussis Vaccine) 01/15/1980 
+
+Family History
+1.GENERAL FAMILY ILLNESS: POSITIVE HISTORY OF ALCOHOLISM. 
+2.FATHER: The father's health status is unknown. 
+
+Social History
+1.MARITAL STATUS: Engaged, living with significant other. 
+
+Review of Systems
+1.REVIEW OF SYSTEMS: Patient denies all symptoms in all systems except as noted. 
+
+Vital Signs
+1.Description Value Position Location Entry Date comment 
+2.Temperature 97F Head Home 01/13/2009 fever 
+
+Physical Exams
+1.GENERAL APPEARANCE: Well developed, well nourished individual in no acute distress. 
+
+Studies Summary/Lab Results
+1.Total hip replacement, left 01/13/2009 
+
+Test: 1 Status Value Observation Date Interpretation 
+1.ACETYLCHOLINE RECEPTOR BLOCKING ANTIBODY Preliminary 100 L 01/28/2009 Normal 
+
+Advance Directives
+1.Do not resuscitate No comment 01/13/2009 

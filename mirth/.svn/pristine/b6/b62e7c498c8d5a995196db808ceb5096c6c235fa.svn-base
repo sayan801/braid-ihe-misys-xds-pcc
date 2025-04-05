@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The XDS Registry Query Actor Connections -->
+<!-- For IHE Actor Test -->
+
+<Configuration>
+    <standardconnection name="ibm-xds-query">
+        <!--The host name of the XDS Registry Server-->
+        <hostname>xds-ibm.lgs.com</hostname>
+        <!--The port for XDS Query transaction-->
+        <port>9081</port>
+        <!--The URL of XDS Registry-->
+        <urlPath>/IBMXDSRegistry/XDSa/Registry</urlPath>
+        <!--XdsCodes.xml defines the code set used by Connectathon and the NIST IHEOS-->
+        <includefile name="XdsCodes.xml" />
+        <!--XdsMisys.xml contains reusable Misys Configuration for XDS-->
+        <includefile name="XdsMisys.xml" />
+    </standardconnection>
+
+    <secureconnection name="ibm-xds-query-secure">
+        <hostname>xds-ibm.lgs.com</hostname>
+        <port>9044</port>
+        <urlPath>/IBMXDSRegistry/XDSa/Registry</urlPath>
+        <includefile name="XdsCodes.xml" />
+        <includefile name="XdsMisys.xml" />
+        <!-- Trust and Keystore -->
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+    </secureconnection>
+
+</Configuration>

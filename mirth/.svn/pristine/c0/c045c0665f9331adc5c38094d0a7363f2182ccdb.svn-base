@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+
+<style >
+a:link {text-decoration: none; color: blue}
+a:visited {text-decoration: none; color: darkcoral}
+a:hover {color: orchid}
+body,p,b,i,em,dt,dd,dl,sl,caption,th,td,tr,u,blink,select,option,form,div,li,a { font-family: Arial, sans-serif; font-size: 12px; }
+</style>
+
+</HEAD>
+<BODY >
+<table class="left-nav" border="0" cellpadding="0" cellspacing="0" frame="void" bgcolor="#DCDCDC"  >
+       <tr style="height: 25px" bgcolor="#696969" >
+           <td align="center" style="height: 25px; width: 150px;" >
+             <strong><FONT COLOR="#FFFFFF"> Braid </FONT></strong>
+           </td>
+       </tr>
+	   <tr  style="height: 30px" onmouseover="">
+           <td align="left" style=" width: 200px;" >
+               &nbsp; &nbsp; &nbsp; 
+               <a href="rightframe.html" target="rightpage"> Home </a> 
+           </td>
+       </tr >
+      
+       <tr  style="height: 30px" onmouseover="">
+           <td align="left" style=" width: 200px;" >
+               &nbsp; &nbsp; &nbsp; 
+               <a href="overview.html" target="rightpage"> Overview </a> 
+           </td>
+       </tr >
+
+       <tr style="height: 30px">
+           <td align="left" style=" width: 200px;">
+               &nbsp; &nbsp; &nbsp; 
+               <a href="document.html" target="rightpage"> Documents </a> 
+           </td>
+       </tr>
+       
+       <tr  style="height: 30px">
+            <td align="left" style=" width: 200px;">
+               &nbsp; &nbsp; &nbsp; 
+               <a href="https://sourceforge.net/project/memberlist.php?group_id=218533" target="_blank"> Members </a> 
+            </td>
+       </tr>
+       <tr style="height: 30px">
+            <td align="left" style="width: 200px">
+               &nbsp; &nbsp; &nbsp;  
+               <!--a href="faqs.html" target="rightpage"--> FAQs </a> 
+            </td>
+       </tr>
+       <tr style="height: 30px">
+            <td align="left" style="width: 200px;" >
+               &nbsp; &nbsp; &nbsp; 
+               <a href="https://sourceforge.net/forum/forum.php?forum_id=787295" target="_blank"> Forums</a>
+            </td>
+            
+         </tr>
+       <tr style="height: 30px">
+            <td align="left" style="width: 200px;" >
+               &nbsp; &nbsp; &nbsp; 
+               <a href="http://www.misyshealthcare.com/NR/rdonlyres/1C421D72-5194-4122-9542-F0C3FA175DA5/0/MisysConnectIHE.pdf
+" target="_blank"> IHE Integration Statement</a>
+            </td>
+            
+         </tr>
+</table>
+</BODY>
+</HTML>

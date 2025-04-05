@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	
+	<!-- Global XDS configuration parameters -->
+	<!--AssigningAuthority (Identifier) required:
+         Specifies the Assigning Authority used by this registry/repository. It is used to
+         encode the appropriate Patient ID for a document submission. -->
+    <Identifier name="AssigningAuthority">
+         <NamespaceId></NamespaceId>
+         <UniversalId>1.3.6.1.4.1.21367.2005.3.7</UniversalId>
+         <UniversalIdType>ISO</UniversalIdType>
+     </Identifier>
+
+	<!-- Local specific XDS configuration parameters -->
+    <!-- LocalAssigningAuthority (Identifier) required:
+         Specifies the Local Assigning Authority used by this actor. It is used to
+         encode the local unique ID for a patient in the submission set.-->
+	<Identifier name="LocalAssigningAuthority">
+		<NamespaceId>MIE1</NamespaceId>
+        <UniversalId>1.3.6.1.4.1.21367.2008.1.2.323</UniversalId>
+		<UniversalIdType>ISO</UniversalIdType>
+    </Identifier>
+
+    <!--XdsClassCode (EnumMap) required for XDS Source, optional for XDS Consumer:
+          This EnumMap describes the mapping from internal Misys Connect XdsClassCode enum codes
+          to class code values appropriate for this registry/repository. For XDS Consumer,
+          if an enum map entry is not supplied, its document class codes will be
+          'UNKNOWN'. (It is not a good idea to leave some entries unspecified) -->
+    <enumMap class="XdsClassCode">
+        <entry enum="Communication" code="Communication"/>
+        <entry enum="Evaluation_and_Management" code="Evaluation and management"/>
+        <entry enum="Conference" code="Conference"/>
+        <entry enum="Consult" code="Consult"/>
+        <entry enum="Counseling" code="Counseling"/>
+        <entry enum="Education" code="Education"/>
+        <entry enum="History_and_Physical" code="History and Physical"/>
+        <entry enum="Admission_History_and_Physical" code="Admission history and physical"/>
+        <entry enum="Comprehensive_History_and_Physical" code="Comprehensive history and physical"/>
+        <entry enum="Targeted_History_and_Physical" code="Targeted history and physical"/>
+        <entry enum="Initial_Evaluation" code="Initial evaluation"/>
+        <entry enum="Admission_Evaluation" code="Admission evaluation"/>
+        <entry enum="Preoperative_Evaluation_and_Management" code="Pre-operative evaluation and management"/>
+        <entry enum="Subsequent_Evaluation" code="Subsequent evaluation"/>
+        <entry enum="Summarization_of_Episode" code="Summarization of episode"/>
+        <entry enum="Transfer_Summarization" code="Transfer summarization"/>
+        <entry enum="Discharge_Summarization" code="Discharge summarization"/>
+        <entry enum="Transfer_of_care_Referral" code="Transfer of care referral"/>
+        <entry enum="Supervisory_Direction" code="Supervisory direction"/>
+        <entry enum="Telephone_Encounter" code="Telephone encounter"/>
+        <entry enum="Interventional_Procedure" code="Interventional Procedure"/>
+        <entry enum="Operative" code="Operative"/>
+        <entry enum="Pathology_Procedure" code="Pathology Procedure"/>
+        <entry enum="Autopsy" code="Autopsy"/>
+    </enumMap>
+
+    <!--XdsFormatCode (EnumMap) required for XDS Source, optional for XDS Consumer:
+         This EnumMap describes the mapping from internal Misys Connect XdsFormatCode enum codes
+         to format code values appropriate for this registry/repository. For XDS Consumer,
+         if an enum map entry is not supplied, its document format codes will be
+         'UNKNOWN'. (It is not a good idea to leave some entries unspecified) -->
+    <enumMap class="XdsFormatCode">
+		<entry enum="IHE_CDA_10" code="CDA/IHE 1.0"/>
+		<entry enum="IHE_CDAR2_10" code="CDAR2/IHE 1.0"/>
+		<entry enum="IHE_CCR_09" code="CCR/IHE 0.9"/>
+        <entry enum="HL7_LAB_25" code="HL7/Lab 2.5"/>
+        <entry enum="IHE_PDF_10" code="PDF/IHE 1.x"/>
+        <entry enum="XDS_MS" code="1.3.6.1.4.1.19376.1.5.3.1.1.2"/>
+        <entry enum="PPHP" code="1.3.6.1.4.1.19376.1.5.3.1.1.9"/>
+        <entry enum="EDR" code="1.3.6.1.4.1.19376.1.5.3.1.1.10"/>
+        <entry enum="XPHR_Extract" code="1.3.6.1.4.1.19376.1.5.3.1.1.5"/>
+        <entry enum="XPHR_Update" code="1.3.6.1.4.1.19376.1.5.3.1.1.6"/>
+        <entry enum="BPPC" code="1.3.6.1.4.1.19376.1.5.3.1.1.7"/>
+        <entry enum="IHE_SCAN_TEXT_1X" code="ScanTEXT/IHE 1.x"/>
+        <entry enum="IHE_SCAN_PDF_1X" code="ScanPDF/IHE 1.x"/>
+    </enumMap>
+
+    <!--XdsTypeCode (EnumMap) required for XDS Source, optional for XDS Consumer:
+        This EnumMap describes the mapping from internal Misys Connect XdsTypeCode enum codes
+        to type code values appropriate for this registry/repository. For XDS Consumer,
+         if an enum map entry is not supplied, its document type codes will be
+         'UNKNOWN'. (It is not a good idea to leave some entries unspecified) -->
+    <enumMap class="XdsTypeCode">
+        <entry enum="Interventional_Procedure_Note" code="34121-4"/>
+        <entry enum="Autopsy_Note" code="18743-5"/>
+        <entry enum="Conference_Evaluation_Note" code="34098-4"/>
+        <entry enum="Consultation_Note" code="11488-4"/>
+        <entry enum="Discharge_Note" code="28574-2"/>
+        <entry enum="Discharge_Summarization_Note" code="18842-5"/>
+        <entry enum="Evaluation_And_Management_Note" code="34109-9"/>
+        <entry enum="History_And_Physical_Note" code="34117-2"/>
+        <entry enum="Initial_Evaluation_Note" code="28636-9"/>
+        <entry enum="Procedure_Note" code="28570-0"/>
+        <entry enum="Subsequent_Visit_Evaluation_Note" code="11506-3"/>
+        <entry enum="Summarization_of_Episode_Note" code="34133-9"/>
+        <entry enum="Surgical_Operation_Note" code="11504-8"/>
+        <entry enum="Targeted_History_And_Physical_Note" code="34138-8"/>
+        <entry enum="Transfer_of_Care_Referral_Note" code="34140-4"/>
+        <entry enum="Transfer_Summarization_Note" code="18761-7"/>
+    </enumMap>
+
+    <!--XdsContentCode (EnumMap) required for XDS Source:
+         This EnumMap describes the mapping from internal Misys Connect XdsContentCode enum codes
+         to type code values appropriate for this registry/repository. -->
+    <enumMap class="XdsContentCode">
+        <entry enum="Communication" code="Communication"/>
+        <entry enum="Evaluation_and_Management" code="Evaluation and management"/>
+        <entry enum="Conference" code="Conference"/>
+        <entry enum="Consult" code="Consult"/>
+        <entry enum="Counseling" code="Counseling"/>
+        <entry enum="Education" code="Education"/>
+        <entry enum="History_and_Physical" code="History and Physical"/>
+        <entry enum="Admission_History_and_Physical" code="Admission history and physical"/>
+        <entry enum="Comprehensive_History_and_Physical" code="Comprehensive history and physical"/>
+        <entry enum="Targeted_History_and_Physical" code="Targeted history and physical"/>
+        <entry enum="Initial_Evaluation" code="Initial evaluation"/>
+        <entry enum="Admission_Evaluation" code="Admission evaluation"/>
+        <entry enum="Preoperative_Evaluation_and_Management" code="Pre-operative evaluation and management"/>
+        <entry enum="Subsequent_Evaluation" code="Subsequent evaluation"/>
+        <entry enum="Summarization_of_Episode" code="Summarization of episode"/>
+        <entry enum="Transfer_Summarization" code="Transfer summarization"/>
+        <entry enum="Discharge_Summarization" code="Discharge summarization"/>
+        <entry enum="Transfer_of_care_Referral" code="Transfer of care referral"/>
+        <entry enum="Supervisory_Direction" code="Supervisory direction"/>
+        <entry enum="Telephone_Encounter" code="Telephone encounter"/>
+        <entry enum="Interventional_Procedure" code="Interventional Procedure"/>
+        <entry enum="Operative" code="Operative"/>
+        <entry enum="Pathology_Procedure" code="Pathology Procedure"/>
+        <entry enum="Autopsy" code="Autopsy"/>
+	</enumMap>
+
+    <!--facilityCode (StringMap) optional:
+         This StringMap describes a mapping from internal Misys Connect facility code values
+         to healthcare facility code values appropriate for this registry/repository. If this string
+         map is not supplied, healthcare facility codes will be taken untranslated. -->
+    <stringMap name="facilityCode">
+        <entry string="Outpatient" code="Outpatient"/>
+        <entry string="EMR" code="Outpatient"/>
+		<entry string="CPR" code="Hospital Setting"/>
+    </stringMap>
+
+    <!--practiceCode (StringMap) optional:
+         This StringMap describes a mapping from internal Misys Connect practice code values
+         to practice setting code values appropriate for this registry/repository. If this map is not
+         supplied, values will be taken untranslated.-->
+    <!-- stringMap name="practiceCode" -->
+
+	<!--sourceId {StringMap} required for XDS Source:
+         This StringMap describes a mapping from internal Misys Connect document source code values
+         to source code code values appropriate for this registry/repository.  -->
+	<stringMap name="sourceId">
+        <entry string="EMR-MISYSCONNECT" code="1.3.6.1.4.1.21367.2007.1.2.127" />
+        <entry string="XDSDEMO" code="1.3.6.1.4.1.21367.2007.1.2.127" />
+    </stringMap>
+
+    <!--confidentialityCode (StringMap) required for XDS Source, optional for XDS Consumer:
+         This StringMap describes a mapping from internal Misys Connect confidentiality code values
+         to confidentiality code values appropriate for this registry/repository. For XDS Consumer,
+         If this string map is not supplied, confidentiality codes will be taken directly from the document
+         metadata and translated to a boolean value.  Ie. only if the raw value is "true" will the
+         patient be marked as confidential.-->
+    <enumMap class="ConfidentialityCode">
+        <entry enum="VeryRestricted" code="1.3.6.1.4.1.21367.2006.7.106"/>
+        <entry enum="Normal" code="1.3.6.1.4.1.21367.2006.7.107"/>
+        <entry enum="Low" code="1.3.6.1.4.1.21367.2006.7.108"/>
+        <entry enum="Restricted" code="1.3.6.1.4.1.21367.2006.7.109"/>
+    </enumMap>
+
+    <!--stringMap name="eventCode">
+        <entry string="1.3.6.1.4.1.21367.2006.7.106" code="1.3.6.1.4.1.21367.2006.7.106"/>
+        <entry string="1.3.6.1.4.1.21367.2006.7.107" code="1.3.6.1.4.1.21367.2006.7.107"/>
+        <entry string="1.3.6.1.4.1.21367.2006.7.108" code="1.3.6.1.4.1.21367.2006.7.108"/>
+        <entry string="1.3.6.1.4.1.21367.2006.7.109" code="1.3.6.1.4.1.21367.2006.7.109"/>
+    </stringMap-->
+
+</Configuration>

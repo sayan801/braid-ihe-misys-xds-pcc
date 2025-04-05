@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+    <!--The configuration of CDA document -->
+    <StandardConnection name="CDA">
+        <!--The codeSystemName and  HL7 codeSystem mapping. See codeSystems.xls or HL7 OID Registration for reference -->
+        <!--Most of the list can be found in the PCC TF profile, section Namespaces for vocabularies used -->
+        <StringMap name="CodeSystems">
+            <Entry string="IHE PCC Template Identifiers" code="1.3.6.1.4.1.19376.1.5.3.1"/>
+            <Entry string="IHEActCode"                   code="1.3.6.1.4.1.19376.1.5.3.2"/>
+            <Entry string="AdministrativeGender"         code="2.16.840.1.113883.5.1"/>
+            <Entry string="PersonalRelationshipRoleType" code="2.16.840.1.113883.5.111"/>
+            <Entry string="RouteOfAdministration"        code="2.16.840.1.113883.5.112"/>  <!--See the HL7 RouteOfAdministration Vocabulary -->
+            <Entry string="SeverityObservation"          code="2.16.840.1.113883.5.1063"/> <!--See the HL7 SeverityObservation Vocabulary -->
+            <Entry string="PolicyHolderRole"             code="2.16.840.1.113883.5.1095"/>
+            <Entry string="LOINC"                        code="2.16.840.1.113883.6.1"/>
+            <Entry string="ICD9"                         code="2.16.840.1.113883.6.2"/>
+            <Entry string="ICD-9"                        code="2.16.840.1.113883.6.2"/>
+            <Entry string="ICD-9 CM"                      code="2.16.840.1.113883.6.2"/>
+            <Entry string="CPT 4"                        code="2.16.840.1.113883.6.12"/> <!--Current Procedure Terminology 4 (CPT-4) codes. -->
+            <Entry string="C4"                           code="2.16.840.1.113883.6.12"/> <!--Current Procedure Terminology 4 (CPT-4) codes. -->
+            <Entry string="CPT"                          code="2.16.840.1.113883.6.12"/> <!--Current Procedure Terminology 4 (CPT-4) codes. -->
+            <Entry string="MEDCIN"                       code="2.16.840.1.113883.6.26"/> <!--A classification system from MEDICOMP Systems -->
+            <Entry string="CVX"                          code="2.16.840.1.113883.6.59"/> <!-- CVX vaccine code -->
+            <Entry string="MVX"                          code="2.16.840.1.113883.6.60"/> <!-- CVX vaccine code -->
+            <Entry string="FDDC"                         code="2.16.840.1.113883.6.63"/> <!--First DataBank Drug Codes -->
+            <Entry string="NDC"                          code="2.16.840.1.113883.6.69"/>           
+            <Entry string="RxNorm"                       code="2.16.840.1.113883.6.88"/>
+            <Entry string="SNOMED CT"                    code="2.16.840.1.113883.6.96"/>
+            <Entry string="SNOMED"                       code="2.16.840.1.113883.6.96"/>
+            <Entry string="SNOMED-CT"                    code="2.16.840.1.113883.6.96"/> <!--SNOMED COntrolled Terminology -->
+            <Entry string="ICD-9CM (diagnosis codes)"    code="2.16.840.1.113883.6.103"/>  <!--International Classification of Diseases, Clinical Modifiers, Version 9 -->
+            <Entry string="ICD-9CM (procedure codes)"    code="2.16.840.1.113883.6.104"/>  <!--International Classification of Diseases, Clinical Modifiers, Version 9 -->
+        </StringMap>
+
+        <!--Specify the software which is used as an author of each CDA document created by Misys Connect -->
+        <Object name="AuthorDevice" enabled="true">
+            <Field name="softwareName" type="String" value="Misys Connect 2.0"/>
+            <Field name="addressLine1" type="String" value="8529 Six Forks Road"/>
+            <Field name="addressCity" type="String" value="Raleigh"/>
+            <Field name="addressState" type="String" value="NC"/>
+            <Field name="addressCountry" type="String" value="USA"/>
+            <Field name="addressZip" type="String" value="27615"/>
+            <Field name="telephone" type="String" value="(800)-8775678"/>
+        </Object>
+
+        <!--Specify the Custodian of each CDA document created by Misys Connect -->
+        <Object name="Custodian" enabled="true">
+            <Field name="name" type="String" value="Gateway Hospital"/>
+            <Field name="addressLine1" type="String" value="600 Euclid Ave"/>
+            <Field name="addressCity" type="String" value="St. Louis"/>
+            <Field name="addressState" type="String" value="MO"/>
+            <Field name="addressCountry" type="String" value="USA"/>
+            <Field name="addressZip" type="String" value="63110"/>
+            <Field name="telephone" type="String" value=""/>
+        </Object>
+
+    </StandardConnection>
+    
+   <!--The Configuration for building a Referral Summary -->
+    <StandardConnection name="ReferralSummary">
+        <!--Specify Referral Reason -->
+        <Object name="ReferralReason" enabled="true">
+            <Field name="referralReason" type="String" value="Patient is otherwise healthy and is exhibiting chest pain."/>
+        </Object>
+        <!--Specify History of Present Illness -->
+        <Object name="HistoryOfPresentIllness" enabled="true">
+            <Field name="historyOfPresentIllness" type="String" value="Patient has no history of cardiac illnes."/>
+        </Object>
+
+        <ObjectList name="ActiveProblem" enabled="true">
+            <Object>
+                <Field name="name" type="String" value="Stress fracture, right foot"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="472.0^^2.16.840.1.113883.6.2^ICD9^" />
+                <Field name="startDate" type="Date" value="08/01/2006" format="MM/dd/yyyy" />
+                <Field name="endDate" type="Date" value="" format="" />
+                <Field name="status" type="String" value="healed" />
+                <Field name="source" type="String" value=""/>
+            </Object>
+            <Object>
+                <Field name="name" type="String" value="Ear infection"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="^^^^" />
+                <Field name="startDate" type="Date" value="10/01/2006" format="MM/dd/yyyy" />
+                <Field name="endDate" type="Date" value="" format="" />
+                <Field name="status" type="String" value="active" />
+                <Field name="source" type="String" value=""/>
+            </Object>
+        </ObjectList>
+
+        <ObjectList name="Medication" enabled="true">
+            <Object>
+                <Field name="productName" type="String" value="Amoxicillin (250 mg tabs)"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="^^^^" />
+                <Field name="sig" type="String" value="3 times per day  oral"/>
+                <Field name="orderDate" type="Date" value="10/01/2006" format="MM/dd/yyyy" />
+                <Field name="duration" type="String" value="10 days"/>
+            </Object>
+        </ObjectList>
+
+        <ObjectList name="Allergy" enabled="true">
+            <Object>
+                <Field name="agent" type="String" value="Iodinated contrast"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="^^^^" />
+                <Field name="reaction" type="String" value="laryngeal oedema"/>
+                <Field name="reportDate" type="Date" value="" format="" />
+                <Field name="comment" type="String" value="Reaction occurs within 10 minutes" />
+            </Object>
+        </ObjectList>
+
+    </StandardConnection>    
+    
+   <!--The default Configuration for building a Discharge Summary -->
+    <StandardConnection name="DischargeSummary">
+        <!--The required admission date -->
+        <Object name="AdmissionDate" enabled="true">
+            <Field name="admissionDate" type="Date" value="10/16/2006" format="MM/dd/yyyy" />
+        </Object>
+        
+        <!--The required discharge date -->
+        <Object name="DischargeDate" enabled="true">
+            <Field name="dischargeDate" type="Date" value="10/27/2006" format="MM/dd/yyyy" />
+        </Object>
+
+        <ObjectList name="ActiveProblem" enabled="true">
+            <Object>
+                <Field name="name" type="String" value="80% blockage of the left anterior descending coronary artery, treated with CABG."/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version -->
+                <Field name="code" type="Code" value="^^^^" />
+                <Field name="startDate" type="Date" value="" format="" />
+                <Field name="endDate" type="Date" value="" format="" />
+                <Field name="status" type="String" value="active" />
+                <Field name="source" type="String" value=""/>
+            </Object>
+            <Object>
+                <Field name="name" type="String" value="Stress fracture, right foot"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version -->
+                <Field name="code" type="Code" value="472.0^^2.16.840.1.113883.6.2^ICD9^" />
+                <Field name="startDate" type="Date" value="08/01/2006" format="MM/dd/yyyy" />
+                <Field name="endDate" type="Date" value="" format="" />
+                <Field name="status" type="String" value="healed" />
+                <Field name="source" type="String" value=""/>
+            </Object>
+        </ObjectList>
+        <ObjectList name="ResolvedProblem" enabled="true">
+        </ObjectList>
+        <ObjectList name="AdmissionDiagnosis" enabled="true">
+            <Object>
+                <Field name="name" type="String" value="Stress test was inconclusive; cardiac cath test indicated 80% blockage of LAD. Admission with recommendation for surgery."/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="^^^^" />
+                <Field name="startDate" type="Date" value="" format="MM/dd/yyyy" />
+                <Field name="endDate" type="Date" value="" format="" />
+                <Field name="status" type="String" value="" />
+                <Field name="source" type="String" value=""/>
+            </Object>
+        </ObjectList>
+        <ObjectList name="DischargeDiagnosis" enabled="true">
+            <Object>
+                <Field name="name" type="String" value="80% blockage of the left anterior descending coronary artery, treated with CABG. Patient should monitor area of incision and inform physician immediately if any signs of infection appear."/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="^^^^" />
+                <Field name="startDate" type="Date" value="" format="MM/dd/yyyy" />
+                <Field name="endDate" type="Date" value="" format="MM/dd/yyyy" />
+                <Field name="status" type="String" value="" />
+                <Field name="source" type="String" value=""/>
+            </Object>
+        </ObjectList>
+
+        <ObjectList name="DischargeMedication" enabled="true">
+            <Object>
+                <Field name="productName" type="String" value="Warfarain (5 mg tab)"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="55007^^2.16.840.1.113883.6.69^NDC^" />
+                <Field name="sig" type="String" value="One week post surgery, begin treatment with Warfarin. 1 time per day / oral."/>
+                <Field name="orderDate" type="Date" value="10/27/2006" format="MM/dd/yyyy" />
+                <Field name="duration" type="String" value=""/>
+            </Object>
+        </ObjectList>
+
+        <ObjectList name="Allergy" enabled="true">
+            <Object>
+                <Field name="agent" type="String" value="Iodinated contrast"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="^^^^" />
+                <Field name="reaction" type="String" value="laryngeal oedema"/>
+                <Field name="reportDate" type="Date" value="" format="" />
+                <Field name="comment" type="String" value="Reaction occurs within 10 minutes" />
+            </Object>
+        </ObjectList>
+
+        <Object name="ProposedDisposition" enabled="true">
+            <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version
+             See http://www.cdc.gov/ncipc/pub-res/pdf/deeds.pdf Page 190 for a list of codes -->
+            <Field name="dispositionCode" type="Code" value="10^Discharge to home or self care^2.16.840.1.113883.6.102.4.2^DEEDS8.02^" />
+            <Field name="encounterDisposition" type="String" value="Patient should continue with bed rest for 1 day following discharge.
+On second day, patient should slowly resume normal activities." />
+            <Field name="lowEffectiveTime" type="Date" value="2006-10-27T12:10:00-0500" format="yyyy-MM-dd'T'HH:mm:ssZ" />
+            <Field name="highEffectiveTime" type="Date" value="" format="yyyy-MM-dd'T'HH:mm:ssZ" />
+        </Object>
+
+        <!--Specify Hospital Course -->
+        <Object name="HospitalCourse" enabled="true">
+            <Field name="hospitalCourse" type="String" value="Patient was evaluated in for chest pain.
+A standard stress test was administered; results were inconclusive.
+A Cardiac Catheterization procedure was performed, indicating 80% blockage of the LAD.
+Dr. Darrow peformed a successful CABG.
+Patient was returned to ICU for three days of observation and was then discharged."/>
+        </Object>
+
+    </StandardConnection>    
+    
+    <!--The default Configuration for building an EDR -->
+    <StandardConnection name="EDReferral">
+        <!--Specify Referral Reason -->
+        <Object name="ReferralReason" enabled="true">
+            <Field name="referralReason" type="String" value="Patient is otherwise healthy and is exhibiting chest pain."/>
+        </Object>
+        <!--Specify History of Present Illness -->
+        <Object name="HistoryOfPresentIllness" enabled="true">
+            <Field name="historyOfPresentIllness" type="String" value="Patient has no history of cardiac illnes."/>
+        </Object>
+
+        <ObjectList name="ActiveProblem" enabled="true">
+            <Object>
+                <Field name="name" type="String" value="Stress fracture, right foot"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="472.0^^2.16.840.1.113883.6.2^ICD9^" />
+                <Field name="startDate" type="Date" value="08/01/2006" format="MM/dd/yyyy" />
+                <Field name="endDate" type="Date" value="" format="" />
+                <Field name="status" type="String" value="healed" />
+                <Field name="source" type="String" value=""/>
+            </Object>
+            <Object>
+                <Field name="name" type="String" value="Ear infection"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="^^^^" />
+                <Field name="startDate" type="Date" value="10/01/2006" format="MM/dd/yyyy" />
+                <Field name="endDate" type="Date" value="" format="" />
+                <Field name="status" type="String" value="active" />
+                <Field name="source" type="String" value=""/>
+            </Object>
+        </ObjectList>
+
+        <ObjectList name="Medication" enabled="true">
+            <Object>
+                <Field name="productName" type="String" value="Amoxicillin (250 mg tabs)"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="^^^^" />
+                <Field name="sig" type="String" value="3 times per day  oral"/>
+                <Field name="orderDate" type="Date" value="10/01/2006" format="MM/dd/yyyy" />
+                <Field name="duration" type="String" value="10 days"/>
+            </Object>
+        </ObjectList>
+
+        <ObjectList name="Allergy" enabled="true">
+            <Object>
+                <Field name="agent" type="String" value="Iodinated contrast"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="^^^^" />
+                <Field name="reaction" type="String" value="laryngeal oedema"/>
+                <Field name="reportDate" type="Date" value="" format="" />
+                <Field name="comment" type="String" value="Reaction occurs within 10 minutes" />
+            </Object>
+        </ObjectList>
+
+        <ObjectList name="AdvanceDirective" enabled="true">
+            <Object>
+                <Field name="directive" type="String" value="Resuscitation status"/>
+                <Field name="description" type="String" value="Do not resuscitate"/>
+                <Field name="documentURL" type="String" value="AdvanceDirective.b50b7910-7ffb-4f4c-bbe4-177ed68cbbf3.pdf" />
+                <Field name="mimeType" type="String" value="application/pdf" />
+            </Object>
+        </ObjectList>
+
+        <Object name="ProposedDisposition" enabled="true">
+            <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version
+             See http://www.cdc.gov/ncipc/pub-res/pdf/deeds.pdf Page 190 for a list of codes -->
+            <Field name="dispositionCode" type="Code" value="130^Admitted to intensive care unit^2.16.840.1.113883.6.102.4.2^DEEDS8.02^" />
+            <Field name="encounterDisposition" type="String" value="Admitted to intensive care unit" />
+            <Field name="lowEffectiveTime" type="Date" value="2006-07-29T12:10:00-0500" format="yyyy-MM-dd'T'HH:mm:ssZ" />
+            <Field name="highEffectiveTime" type="Date" value="" format="yyyy-MM-dd'T'HH:mm:ssZ" />
+        </Object>
+
+        <Object name="TransportMode" enabled="true">
+            <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version
+             See http://www.cdc.gov/ncipc/pub-res/pdf/deeds.pdf Page 84 for a list of codes -->
+            <Field name="code" type="Code" value="10^Ground ambulance^2.16.840.1.113883.6.102.4.2^DEEDS4.02^" />
+            <Field name="estimatedTimeOfArrival" type="Date" value="2006-07-29T12:10:00-0500" format="yyyy-MM-dd'T'HH:mm:ssZ" />
+            <Field name="standardDeviation" type="Measure" value="0" format="minute" />
+        </Object>
+    </StandardConnection>
+        
+    <!--The configuration of Scanned Document -->
+    <StandardConnection name="ScannedDocument">
+        <!--Specify the software which is used as an author of each Scanned document -->
+        <Object name="AuthorDevice" enabled="true">
+            <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+            <Field name="code" type="Code" value="CAPTURE^Image Capture^1.2.840.10008.2.16.4^DICOM^" />
+            <Field name="manufacturerModelName" type="String" value="Misys Scanner" />
+            <Field name="softwareName" type="String" value="Misys Scan Software v1.0"/>
+            <Field name="organizationId" type="String" value="2.16.840.1.113883.3.65.2"/>
+            <Field name="organizationName" type="String" value="Misys"/>
+            <Field name="organizationAddressLine1" type="String" value="8529 Six Forks Road"/>
+            <Field name="organizationAddressCity" type="String" value="Raleigh"/>
+            <Field name="organizationAddressState" type="String" value="NC"/>
+            <Field name="organizationAddressCountry" type="String" value="USA"/>
+            <Field name="organizationAddressZip" type="String" value="27615"/>
+            <Field name="organizationTelephone" type="String" value=""/>
+        </Object>
+
+        <!--Specify the Custodian of each Scanned Document -->
+        <Object name="Custodian" enabled="true">
+            <Field name="name" type="String" value="Misys Connect"/>
+            <Field name="addressLine1" type="String" value="8529 Six Forks Road"/>
+            <Field name="addressCity" type="String" value="Raleigh"/>
+            <Field name="addressState" type="String" value="NC"/>
+            <Field name="addressCountry" type="String" value="USA"/>
+            <Field name="addressZip" type="String" value="27615"/>
+            <Field name="telephone" type="String" value=""/>
+        </Object>
+
+        <Object name="DataEnterer" enabled="true">
+            <Field name="time" type="Date" value="2006-12-06T12:10:00-0500" format="yyyy-MM-dd'T'HH:mm:ssZ" />
+            <Field name="firstName" type="String" value="Amy"/>
+            <Field name="middleName" type="String" value="N"/>
+            <Field name="lastName" type="String" value="Smith"/>
+            <Field name="namePrefix" type="String" value=""/>
+            <Field name="nameSuffix" type="String" value=""/>
+        </Object>
+    </StandardConnection>    
+    
+    <!--The configuration of Cosent Document -->
+    <StandardConnection name="ConsentDocument">
+
+        <enumMap class="ConfidentialityCode">
+            <!--Code Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+            <entry enum="VeryRestricted" code="1.3.6.1.4.1.21367.2006.7.106^No Sharing^Connect-a-thon^Connect-a-thon confidentialityCodes^"/>
+            <entry enum="Normal" code="1.3.6.1.4.1.21367.2006.7.107^Normal Sharing^Connect-a-thon^Connect-a-thon confidentialityCodes^"/>
+            <entry enum="Low" code="1.3.6.1.4.1.21367.2006.7.108^Normal Sharing Plus Research Use^Connect-a-thon^Connect-a-thon confidentialityCodes^"/>
+            <entry enum="Restricted" code="1.3.6.1.4.1.21367.2006.7.109^Restricted VIP Sharing^Connect-a-thon^Connect-a-thon confidentialityCodes^"/>
+        </enumMap>
+        <!--Specify the software which is used as an author of each Consent Document -->
+        <Object name="AuthorDevice" enabled="true">
+            <!-- Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+            <Field name="code" type="Code" value="CAPTURE^Image Capture^1.2.840.10008.2.16.4^DICOM^" />
+            <Field name="manufacturerModelName" type="String" value="Misys Scanner" />
+            <Field name="softwareName" type="String" value="Misys Scan Software v1.0"/>
+            <Field name="organizationId" type="String" value="2.16.840.1.113883.3.65.2"/>
+            <Field name="organizationName" type="String" value="Misys"/>
+            <Field name="organizationAddressLine1" type="String" value="8529 Six Forks Road"/>
+            <Field name="organizationAddressCity" type="String" value="Raleigh"/>
+            <Field name="organizationAddressState" type="String" value="NC"/>
+            <Field name="organizationAddressCountry" type="String" value="USA"/>
+            <Field name="organizationAddressZip" type="String" value="27615"/>
+            <Field name="organizationTelephone" type="String" value=""/>
+        </Object>
+
+        <!--Specify the Custodian of each Consent Document -->
+        <Object name="Custodian" enabled="true">
+            <Field name="name" type="String" value="Misys Connect"/>
+            <Field name="addressLine1" type="String" value="8529 Six Forks Road"/>
+            <Field name="addressCity" type="String" value="Raleigh"/>
+            <Field name="addressState" type="String" value="NC"/>
+            <Field name="addressCountry" type="String" value="USA"/>
+            <Field name="addressZip" type="String" value="27615"/>
+            <Field name="telephone" type="String" value=""/>
+        </Object>
+
+        <Object name="DataEnterer" enabled="true">
+            <Field name="time" type="Date" value="2006-12-06T12:10:00-0500" format="yyyy-MM-dd'T'HH:mm:ssZ" />
+            <Field name="firstName" type="String" value="Amy"/>
+            <Field name="middleName" type="String" value="N"/>
+            <Field name="lastName" type="String" value="Smith"/>
+            <Field name="namePrefix" type="String" value=""/>
+            <Field name="nameSuffix" type="String" value=""/>
+        </Object>
+    </StandardConnection>    
+</Configuration>

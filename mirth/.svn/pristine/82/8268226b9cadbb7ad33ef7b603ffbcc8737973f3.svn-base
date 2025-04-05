@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+    <!--The configuration of Cosent Document-->
+    <StandardConnection name="ConsentDocument">
+
+        <enumMap class="ConfidentialityCode">
+            <!--Code Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+            <entry enum="VeryRestricted" code="1.3.6.1.4.1.21367.2006.7.106^No Sharing^Connect-a-thon^Connect-a-thon confidentialityCodes^"/>
+            <entry enum="Normal" code="1.3.6.1.4.1.21367.2006.7.107^Normal Sharing^Connect-a-thon^Connect-a-thon confidentialityCodes^"/>
+            <entry enum="Low" code="1.3.6.1.4.1.21367.2006.7.108^Normal Sharing Plus Research Use^Connect-a-thon^Connect-a-thon confidentialityCodes^"/>
+            <entry enum="Restricted" code="1.3.6.1.4.1.21367.2006.7.109^Restricted VIP Sharing^Connect-a-thon^Connect-a-thon confidentialityCodes^"/>
+        </enumMap>
+        <!--Specify the software which is used as an author of each Consent Document-->
+        <Object name="AuthorDevice" enabled="true">
+            <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+            <Field name="code" type="Code" value="CAPTURE^Image Capture^1.2.840.10008.2.16.4^DICOM^" />
+            <Field name="manufacturerModelName" type="String" value="Misys Scanner" />
+            <Field name="softwareName" type="String" value="Misys Scan Software v1.0"/>
+            <Field name="organizationId" type="String" value="2.16.840.1.113883.3.65.2"/>
+            <Field name="organizationName" type="String" value="Misys"/>
+            <Field name="organizationAddressLine1" type="String" value="8529 Six Forks Road"/>
+            <Field name="organizationAddressCity" type="String" value="Raleigh"/>
+            <Field name="organizationAddressState" type="String" value="NC"/>
+            <Field name="organizationAddressCountry" type="String" value="USA"/>
+            <Field name="organizationAddressZip" type="String" value="27615"/>
+            <Field name="organizationTelephone" type="String" value=""/>
+        </Object>
+
+        <!--Specify the Custodian of each Consent Document-->
+        <Object name="Custodian" enabled="true">
+            <Field name="name" type="String" value="Misys Connect"/>
+            <Field name="addressLine1" type="String" value="8529 Six Forks Road"/>
+            <Field name="addressCity" type="String" value="Raleigh"/>
+            <Field name="addressState" type="String" value="NC"/>
+            <Field name="addressCountry" type="String" value="USA"/>
+            <Field name="addressZip" type="String" value="27615"/>
+            <Field name="telephone" type="String" value=""/>
+        </Object>
+
+        <Object name="DataEnterer" enabled="true">
+            <Field name="time" type="Date" value="2006-12-06T12:10:00-0500" format="yyyy-MM-dd'T'HH:mm:ssZ" />
+            <Field name="firstName" type="String" value="Amy"/>
+            <Field name="middleName" type="String" value="N"/>
+            <Field name="lastName" type="String" value="Smith"/>
+            <Field name="namePrefix" type="String" value=""/>
+            <Field name="nameSuffix" type="String" value=""/>
+        </Object>
+    </StandardConnection>
+</Configuration>

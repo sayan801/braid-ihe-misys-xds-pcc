@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file contains the mapping information between Misys Connect and a Participating System. -->
+<!--WARNING: The file should not be modified by Misys Connect clients.-->
+<Configuration>
+    <!--Contains common configuration for all CDA documents -->
+    <INCLUDEFILE name="CDA.xml" />
+    <!--Contains configuration for Referral Summary -->
+    <INCLUDEFILE name="ReferralSummary.xml" />
+    <!--Contains configuration for Referral Summary -->
+    <INCLUDEFILE name="DischargeSummary.xml" />
+    <!--Contains configuration for ED Referral -->
+    <INCLUDEFILE name="EDReferral.xml" />
+    <!--Contains configuration for Scanned Document -->
+    <INCLUDEFILE name="ScannedDocument.xml" />
+    <!--Contains configuration for Consent Document -->
+    <INCLUDEFILE name="ConsentDocument.xml" />
+
+
+</Configuration>

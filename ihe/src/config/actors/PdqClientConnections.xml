@@ -1,0 +1,68 @@
+
+<!-- The PDQ Server Actor Connections -->
+
+<Configuration>
+    <standardconnection name="misys-connect-pd-supplier">
+        <!--The host name of the PDQ Server-->
+        <hostname>localhost</hostname>
+        <!--The port for PDQ Query transaction-->
+        <port>3700</port>
+        <Identifier name="ReceivingApplication">
+            <NamespaceId>EHR_MISYS</NamespaceId>
+        </Identifier>
+        <Identifier name="ReceivingFacility">
+            <NamespaceId>MISYS</NamespaceId>
+        </Identifier>
+
+        <!-- PdqDataSourceClass - required:
+          The java class that provides the patient data source for this Patient Demographics Supplier -->
+        <Property name="PdqDataSourceClass" value="com.misyshealthcare.connect.hiber.mpi.ConnectPVRegistry" />
+        
+        <!--To configure each PDQ client, always use name prefix "Domain_" -->
+        <Identifier name="Domain_CPR">
+            <NamespaceId>CPR</NamespaceId>
+            <UniversalId></UniversalId>
+            <UniversalIdType></UniversalIdType>
+        </Identifier>
+
+        <Identifier name="Domain_EMR">
+            <NamespaceId>EMR-MISYSCONNECT</NamespaceId>
+            <UniversalId></UniversalId>
+            <UniversalIdType></UniversalIdType>
+        </Identifier>
+
+        <Identifier name="Domain_HOMECARE">
+            <NamespaceId>HomeCare</NamespaceId>
+            <UniversalId></UniversalId>
+            <UniversalIdType></UniversalIdType>
+        </Identifier>
+
+        <!--QueryProperties - (PropertySet) optional:
+             This set of properties specifies global characteristics of the PDQ
+             server over this connection.  The allowed parts are:
+                 WildcardAfter - (String) optional: Specifies the wildcard value this connection
+             expects at the end of a value.  If this value is not supplied, it defaults to *.
+                 WildcardBefore - (String) optional: Specifies the wildcard value this connection
+             expects at the end of a value.   If this value is not supplied, it defaults to *.
+                 ContinuationPointerTimeout - (Long) optional: Specifies the timeout in milliseconds
+             of a continuation pointer.  Defaults to 600000 milliseconds(10 minutes).
+              -->
+        <PropertySet name="QueryProperties">
+            <Entry name="WildcardBefore" value="*"/>
+            <Entry name="WildcardAfter" value="*"/>
+            <Entry name="ContinuationPointerTimeout" value="600000"/>
+        </PropertySet>
+
+        <!--DateTimeFormat -(PropertySet) optional:
+             BirthdateFormat - (String) optional: Specifies the format of birthdate this connection
+         expects for a birthdate field.   If this value is not supplied, it defaults to "yyyyMMdd".
+        -->
+        <PropertySet name="DateTimeFormat">
+            <Entry name="Birthdate" value="yyyyMMdd"/>
+        </PropertySet>
+
+
+    </standardconnection>
+
+
+</Configuration>

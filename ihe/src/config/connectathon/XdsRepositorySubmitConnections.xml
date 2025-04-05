@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The XDS Repository Actor for Document Submission Connections -->
+<!-- For Connectathon 2008  COMPLETE -->
+<Configuration>
+    <!-- XDS.a Submission Connnection -->	
+   	<standardconnection name="nist-xds-submit">
+		<hostname>ihexds.nist.gov</hostname>
+		<port>9080</port>
+        <urlPath>/tf5/services/xdsrepositorya</urlPath>
+
+        <property name="TestPatientId" value="9206d2eb3caa48b^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>	
+    <secureconnection name="nist-xds-submit-secure">
+		<hostname>ihexds.nist.gov</hostname>
+        <port>9085</port>
+        <urlPath>/tf5/services/xdsrepositorya</urlPath>
+        <property name="TestPatientId" value="44bceb0a13c2486^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+		<!-- Trust and Keystore -->
+        <KEYSTORE>/certs/EHR_ALLSCRIPTS_CONNECT_09_KEY.jks</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_ALLSCRIPTS_CONNECT_09_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>
+	
+   	<standardconnection name="spirit-xds-submit">
+		<hostname>tiani-spirit1</hostname>
+		<port>8080</port>
+        <urlPath>/XDS/repository</urlPath>
+        <!-- property name="TestPatientId" value="7f6c3557474f4ba^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/--> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>	
+    <secureconnection name="spirit-xds-submit-secure">
+        <hostname>tiani-spirit1</hostname>
+        <port>8443</port>
+        <urlPath>/XDS/repository</urlPath>
+        <property name="TestPatientId" value="NA5080^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>
+	
+   	<standardconnection name="carestream-xds-submit">
+		<hostname>carestream6</hostname>
+		<port>9003</port>
+        <urlPath>/xds_httpd/xds</urlPath>
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>	
+    <secureconnection name="carestream-xds-submit-secure">
+        <hostname>carestream6</hostname>
+        <port>9003</port>
+        <urlPath>/xds_httpd/xds</urlPath>
+        <property name="TestPatientId" value="101^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/>         
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>				
+		
+	<standardconnection name="ibm-xds-submit">
+		<hostname>lswin10.dfw.ibm.com</hostname>
+		<port>9081</port>
+		<urlPath>/IBMXDSRepository/XDSa/ProvideAndRegister</urlPath>
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>
+    <secureconnection name="ibm-xds-submit-secure">
+		<hostname>lswin10.dfw.ibm.com</hostname>
+        <port>9444</port>
+		<urlPath>/IBMXDSRepository/XDSa/ProvideAndRegister</urlPath>
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>	
+	
+   	<standardconnection name="carestream4-xds-submit">
+		<hostname>carestream4</hostname>
+		<port>80</port>
+		<urlPath>/um/webapp_services/xds-rep-store</urlPath>
+        <!--property name="TestPatientId" value="101^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/-->         
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>
+    <secureconnection name="carestream4-xds-submit-secure">
+        <hostname>carestream4</hostname>
+        <port>443</port>
+		<urlPath>/um/webapp_services/xds-rep-store</urlPath>
+        <property name="TestPatientId" value="NA5080^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>
+ 
+   	<standardconnection name="sectra-xds-submit">
+		<hostname>sectra1</hostname>
+		<port>8080</port>
+		<urlPath>/xds/services/provide</urlPath>
+        <!-- property name="TestPatientId" value="NA5108^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/-->         
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>
+    <secureconnection name="sectra-xds-submit-secure">
+        <hostname>sectra1</hostname>
+        <port>8443</port>
+		<urlPath>/xds/services/provide</urlPath>
+        <!-- property name="TestPatientId" value="7f6c3557474f4ba^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/--> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>
+	
+   	<standardconnection name="agfa-xds-submit">
+		<hostname>97.66.135.198</hostname>
+		<port>8080</port>
+		<urlPath>/dcm4chee-xds/XDSRepository</urlPath>
+        <property name="TestPatientId" value="01022003^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>
+    <secureconnection name="agfa-xds-submit-secure">
+		<hostname>97.66.135.198</hostname>
+        <port>8443</port>
+		<urlPath>/dcm4chee-xds/XDSRepository</urlPath>
+        <property name="TestPatientId" value="01022003^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>
+		
+   	<standardconnection name="fujifilm-xds-submit">
+		<hostname>fujifilm4</hostname>
+		<port>80</port>
+		<urlPath>/repository/</urlPath>
+        <property name="TestPatientId" value="NA5080^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>
+    <secureconnection name="fujifilm-xds-submit-secure">
+        <hostname>fujifilm4.ihe.net</hostname>
+        <port>443</port>
+		<urlPath>/repository/</urlPath>
+        <property name="TestPatientId" value="NA5080^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>	
+	
+   	<standardconnection name="ge-xds-submit">
+		<hostname>208.51.30.248</hostname>
+		<port>8180</port>
+		<urlPath>/regrepunsecure/registry/soap</urlPath>
+        <property name="TestPatientId" value="01022003^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>
+    <secureconnection name="ge-xds-submit-secure">
+		<hostname>208.51.30.248</hostname>
+        <port>8543</port>
+		<urlPath>/regrepunsecure/registry/soap</urlPath>
+        <property name="TestPatientId" value="01022003^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>	
+		
+   	<standardconnection name="oracle-xds-submit">
+		<hostname>oraclecorp1</hostname>
+		<port>80</port>
+		<urlPath>/XDSa/repository/iti15</urlPath>
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>
+    <secureconnection name="oracle-xds-submit-secure">
+        <hostname>oraclecorp1</hostname>
+        <port>443</port>
+		<urlPath>/XDSa/repository/iti15</urlPath>
+        <property name="TestPatientId" value="NA5092^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/>         
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>	
+		
+  	<standardconnection name="dejarnette-xdsb-submit">
+		<hostname>dejarnette1</hostname>
+		<port>1044</port>
+        <urlPath></urlPath>
+        <property name="TestPatientId" value="NA5092^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>	
+    <secureconnection name="dejarnette-xdsb-submit-secure">
+        <hostname>dejarnette1</hostname>
+        <port>1044</port>
+        <urlPath></urlPath>
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>			
+<!-- ***************************************************************** -->	
+<!--The following connections are for XDS.b Submission  -->
+	<standardconnection name="openxds-xdsb-submit">
+		<hostname>localhost</hostname>
+		<port>8020</port>
+        <urlPath>/axis2/services/xdsrepositoryb</urlPath>
+        <property name="XDS.b" value="true"/>        
+        <property name="TestPatientId" value="ad479512dd91412^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>	
+	<standardconnection name="nist-xdsb-submit">
+		<hostname>ihexds.nist.gov</hostname>
+		<port>9080</port>
+        <urlPath>/tf5/services/xdsrepositoryb</urlPath>
+        <property name="XDS.b" value="true"/>        
+        <property name="TestPatientId" value="ad479512dd91412^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>	
+    <secureconnection name="nist-xdsb-submit-secure">
+		<hostname>ihexds.nist.gov</hostname>
+        <port>9085</port>
+        <urlPath>/tf5/services/xdsrepositoryb</urlPath>
+        <property name="XDS.b" value="true"/>
+        <property name="TestPatientId" value="ad479512dd91412^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+		<!-- Trust and Keystore -->
+        <KEYSTORE>/certs/EHR_ALLSCRIPTS_CONNECT_09_KEY.jks</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_ALLSCRIPTS_CONNECT_09_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>	
+
+	<standardconnection name="hxti-xdsb-submit">
+		<hostname>hxti2</hostname>
+		<port>8000</port>
+        <urlPath>/provideAndRegister</urlPath>
+        <property name="XDS.b" value="true"/>        
+        <property name="TestPatientId" value="101^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>	
+    <secureconnection name="hxti-xdsb-submit-secure">
+        <hostname>hxti2</hostname>
+        <port>8010</port>
+        <urlPath>/provideAndRegister</urlPath>
+        <property name="XDS.b" value="true"/>
+        <property name="TestPatientId" value="NA5080^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+		<!-- Trust and Keystore -->
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>	
+	
+	<standardconnection name="infinitt-xdsb-submit">
+		<hostname>infinitt1</hostname>
+		<port>80</port>
+        <urlPath>/repository/xdsrepository.svc</urlPath>
+        <property name="XDS.b" value="true"/>        
+        <!-- property name="TestPatientId" value="7f6c3557474f4ba^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/--> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>	
+    <secureconnection name="infinitt-xdsb-submit-secure">
+        <hostname>infinitt1</hostname>
+        <port>443</port>
+        <urlPath>/repository/xdsrepository.svc</urlPath>
+        <property name="XDS.b" value="true"/>
+        <!-- property name="TestPatientId" value="5fb25da1ee414c9^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/--> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>	
+		
+	<standardconnection name="ibm-xdsb-submit">
+		<hostname>ibm7</hostname>
+		<port>9080</port>
+		<urlPath>/IBMXDSRepository/XDSb/SOAP12/Repository</urlPath>
+        <property name="XDS.b" value="true"/>
+        <property name="TestPatientId" value="NA5080^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>
+    <secureconnection name="ibm-xdsb-submit-secure">
+        <hostname>ibm7</hostname>
+        <port>9443</port>
+		<urlPath>/IBMXDSRepository/XDSb/SOAP12/Repository</urlPath>
+        <property name="XDS.b" value="true"/>
+        <property name="TestPatientId" value="NA5080^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>		
+
+   	<standardconnection name="spirit-xdsb-submit">
+		<hostname>tiani-spirit1</hostname>
+		<port>8080</port>
+        <urlPath>/XDS/repository</urlPath>
+        <property name="XDS.b" value="true"/>
+        <!-- property name="TestPatientId" value="7f6c3557474f4ba^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/--> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>	
+    <secureconnection name="spirit-xdsb-submit-secure">
+        <hostname>tiani-spirit1</hostname>
+        <port>8443</port>
+        <urlPath>/XDS/repository</urlPath>
+        <property name="XDS.b" value="true"/>
+        <property name="TestPatientId" value="NA5080WRONG^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>
+
+   	<standardconnection name="intersystems-xdsb-submit">
+		<hostname>intersystems1</hostname>
+		<port>80</port>
+        <urlPath></urlPath>
+        <property name="XDS.b" value="true"/>
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>	
+
+   	<standardconnection name="msft-xdsb-submit">
+		<hostname>localhost</hostname>
+		<port>7080</port>
+        <urlPath>/XdsService/XdsRepository</urlPath>
+        <property name="TestPatientId" value="NA5080^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <property name="XDS.b" value="true"/>
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+	</standardconnection>	
+    <secureconnection name="msft-xdsb-submit-secure">
+        <hostname>msft-ihe1.ihe.net</hostname>
+        <port>8081</port>
+        <urlPath>/XdsService/XdsRepository</urlPath>
+        <property name="TestPatientId" value="NA5072^^^&amp;1.3.6.1.4.1.21367.2005.3.7&amp;ISO"/> 
+        <property name="XDS.b" value="true"/>
+        <includefile name="XdsCodes.xml" />
+		<includefile name="XdsMisys.xml" />
+        <KEYSTORE>/certs/EHR_MISYS_08_KEY.p12</KEYSTORE>
+        <KEYPASS>password</KEYPASS>
+        <TRUSTSTORE>/certs/EHR_MISYS_08_TRUST.jks</TRUSTSTORE>
+        <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>
+	
+ 
+	
+</Configuration>

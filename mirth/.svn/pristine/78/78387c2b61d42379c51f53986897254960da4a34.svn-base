@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AuditMessage>
+    <EventIdentification EventActionCode="E" EventDateTime="2008-12-30T18:03:55.122-05:00" EventOutcomeIndicator="0">
+        <EventID codeSystemName="DCM" code="110100" displayName="Application Activity"/>
+        <EventTypeCode codeSystemName="DCM" code="110120" displayName="Application Start"/>
+    </EventIdentification>
+    <ActiveParticipant AlternativeUserID="SecureNode" NetworkAccessPointID="10.242.0.51" NetworkAccessPointTypeCode="2" UserID="OPENPIXPDQ@allscripts4" UserIsRequestor="false">
+        <RoleIDCode codeSystemName="DCM" code="110150" displayName="Application"/>
+    </ActiveParticipant>
+    <AuditSourceIdentification AuditEnterpriseSiteID="ALLSCRIPTS" AuditSourceID="ALLSCRIPTS">
+        <AuditSourceTypeCode code="3"/>
+    </AuditSourceIdentification>
+</AuditMessage>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The Audit Record Repository Actor Connections -->
+<!-- For Connectathon 2007 COMPLETE waah, no reliable this year.... :(  -->
+
+<Configuration>
+	<standardconnection name="log4j_audittrail">
+		<hostname>pc.josh.misys</hostname>
+		<port>1234</port>
+		<Property name="TYPE" value="LOG4J LOGGER" />
+		<PropertySet name="localhost">
+			<entry name="MACHINENAME" value="allscripts" />
+			<entry name="HOSTNAME" value="allscripts1" />
+			<entry name="IP" value="10.242.0.51" />
+			<entry name="SITE" value="ALLSCRIPTS" />
+			<entry name="SOURCE" value="ALLSCRIPTS" />
+			<entry name="APPNAME" value="AllscriptsConnect" />
+			<!--entry value="AENAME=ER_MISYS" name="AENAME"/-->
+		</PropertySet>
+		<propertyset name="ParticipantObject">
+			<entry name="PatientNameEncoding" value="HL7" />
+			<entry name="PatientIdEncoding" value="HL7" />
+			<entry name="DocumentIdType" value="DocumentId" />
+		</propertyset>
+		<IDENTIFIER name="AssigningAuthority">
+			<NamespaceId>Test</NamespaceId>
+			<UniversalId>1.2.3.4.5</UniversalId>
+			<UniversalIdType>ISO</UniversalIdType>
+		</IDENTIFIER>
+	</standardconnection>
+	
+	<standardconnection name="mesa_arr_bsd">
+		<hostname>localhost</hostname>
+		<port>4000</port>
+		<Property name="TYPE" value="BSD SYSLOG" />
+		<PropertySet name="localhost">
+			<entry name="MACHINENAME" value="allscripts" />
+			<entry name="HOSTNAME" value="allscripts1" />
+			<entry name="IP" value="10.242.0.51" />
+			<entry name="SITE" value="ALLSCRIPTS" />
+			<entry name="SOURCE" value="ALLSCRIPTS" />
+			<entry name="APPNAME" value="AllscriptsConnect" />
+			<!--entry value="AENAME=ER_MISYS" name="AENAME"/-->
+		</PropertySet>
+		<propertyset name="ParticipantObject">
+			<entry name="PatientNameEncoding" value="HL7" />
+			<entry name="PatientIdEncoding" value="HL7" />
+			<entry name="DocumentIdType" value="DocumentId" />
+		</propertyset>
+	</standardconnection>
+
+	<standardconnection name="nist-arr-bsd">
+		<hostname>nist1</hostname>
+		<!-- port>8087</port-->
+		<port>10100</port>
+		<Property name="TYPE" value="BSD SYSLOG" />
+		<PropertySet name="localhost">
+			<entry name="MACHINENAME" value="misys" />
+			<entry name="HOSTNAME" value="misys1" />
+			<entry name="IP" value="10.242.0.51" />
+			<entry name="SITE" value="MISYS" />
+			<entry name="SOURCE" value="EHR_MISYS" />
+			<entry name="APPNAME" value="MisysConnect" />
+		</PropertySet>
+		<propertyset name="ParticipantObject">
+			<entry name="PatientNameEncoding" value="HL7" />
+			<entry name="PatientIdEncoding" value="HL7" />
+			<entry name="DocumentIdType" value="DocumentId" />
+		</propertyset>
+	</standardconnection>
+
+	<standardconnection name="intersystems-arr-bsd">
+		<hostname>intersystems1</hostname>
+		<port>10000</port>
+		<Property name="TYPE" value="BSD SYSLOG" />
+		<PropertySet name="localhost">
+			<entry name="MACHINENAME" value="misys" />
+			<entry name="HOSTNAME" value="misys1" />
+			<entry name="IP" value="10.242.0.51" />
+			<entry name="SITE" value="MISYS" />
+			<entry name="SOURCE" value="EHR_MISYS" />
+			<entry name="APPNAME" value="MisysConnect" />
+		</PropertySet>
+		<propertyset name="ParticipantObject">
+			<entry name="PatientNameEncoding" value="HL7" />
+			<entry name="PatientIdEncoding" value="HL7" />
+			<entry name="DocumentIdType" value="DocumentId" />
+		</propertyset>
+	</standardconnection>	
+	
+	<standardconnection name="spirit-arr-bsd">
+		<hostname>tiani-spirit1c</hostname>
+		<port>4000</port>
+		<Property name="TYPE" value="BSD SYSLOG" />
+		<PropertySet name="localhost">
+			<entry name="MACHINENAME" value="misys" />
+			<entry name="HOSTNAME" value="misys1" />
+			<entry name="IP" value="10.242.0.51" />
+			<entry name="SITE" value="MISYS" />
+			<entry name="SOURCE" value="EHR_MISYS" />
+			<entry name="APPNAME" value="MisysConnect" />
+		</PropertySet>
+		<propertyset name="ParticipantObject">
+			<entry name="PatientNameEncoding" value="HL7" />
+			<entry name="PatientIdEncoding" value="HL7" />
+			<entry name="DocumentIdType" value="DocumentId" />
+		</propertyset>
+	</standardconnection>
+	
+	<standardconnection name="agfa-arr-bsd">
+		<hostname>agfa2</hostname>
+		<port>4000</port>
+		<Property name="TYPE" value="BSD SYSLOG" />
+		<PropertySet name="localhost">
+			<entry name="MACHINENAME" value="misys" />
+			<entry name="HOSTNAME" value="misys1" />
+			<entry name="IP" value="10.242.0.51" />
+			<entry name="SITE" value="MISYS" />
+			<entry name="SOURCE" value="EHR_MISYS" />
+			<entry name="APPNAME" value="MisysConnect" />
+		</PropertySet>
+		<propertyset name="ParticipantObject">
+			<entry name="PatientNameEncoding" value="HL7" />
+			<entry name="PatientIdEncoding" value="HL7" />
+			<entry name="DocumentIdType" value="DocumentId" />
+		</propertyset>
+	</standardconnection>
+	
+	<standardconnection name="mednet-arr-bsd">
+		<hostname>mednet1</hostname>
+		<port>514</port>
+		<Property name="TYPE" value="BSD SYSLOG" />
+		<PropertySet name="localhost">
+			<entry name="MACHINENAME" value="misys" />
+			<entry name="HOSTNAME" value="misys1" />
+			<entry name="IP" value="10.242.0.51" />
+			<entry name="SITE" value="MISYS" />
+			<entry name="SOURCE" value="EHR_MISYS" />
+			<entry name="APPNAME" value="MisysConnect" />
+		</PropertySet>
+		<propertyset name="ParticipantObject">
+			<entry name="PatientNameEncoding" value="HL7" />
+			<entry name="PatientIdEncoding" value="HL7" />
+			<entry name="DocumentIdType" value="DocumentId" />
+		</propertyset>
+	</standardconnection>
+		
+	<standardconnection name="ibm-arr-bsd">
+		<hostname>ibm1</hostname>
+		<port>515</port>
+		<Property name="TYPE" value="BSD SYSLOG" />
+		<PropertySet name="localhost">
+			<entry name="MACHINENAME" value="misys" />
+			<entry name="HOSTNAME" value="misys1" />
+			<entry name="IP" value="10.242.0.51" />
+			<entry name="SITE" value="MISYS" />
+			<entry name="SOURCE" value="EHR_MISYS" />
+			<entry name="APPNAME" value="MisysConnect" />
+		</PropertySet>
+		<propertyset name="ParticipantObject">
+			<entry name="PatientNameEncoding" value="HL7" />
+			<entry name="PatientIdEncoding" value="HL7" />
+			<entry name="DocumentIdType" value="DocumentId" />
+		</propertyset>
+	</standardconnection>
+			
+
+    <secureconnection name="MISYS-SECURE-1">
+		<hostname>localhost</hostname>
+		<port>4100</port>
+		<Property name="NAME" value="mesa-test" />
+		<Property name="URLPATH" value="./index" />
+		<PropertySet name="localhost">
+			<entry name="MACHINENAME" value="MISYS" />
+			<entry name="HOSTNAME" value="hosp.misyshealthcare.com" />
+			<entry name="IP" value="10.0.1.4" />
+			<entry name="SITE" value="MISYS" />
+			<entry name="SOURCE" value="EHR_MISYS" />
+			<entry name="APPNAME" value="EHR_MISYS" />
+		</PropertySet>
+		<propertyset name="ParticipantObject">
+			<entry name="PatientNameEncoding" value="HL7" />
+			<entry name="PatientIdEncoding" value="HL7" />
+			<entry name="DocumentIdType" value="DocumentId" />
+		</propertyset>
+ 		<!-- Trust and Keystore -->
+	    <KEYSTORE>certs/mesa_keystore1_2009.p12</KEYSTORE>
+	    <KEYPASS>password</KEYPASS>
+	    <TRUSTSTORE>certs/mesa_truststore_2009.jks</TRUSTSTORE>
+	    <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>
+	
+    <secureconnection name="MISYS-SECURE-2">
+		<hostname>localhost</hostname>
+		<port>4101</port>
+		<Property name="NAME" value="mesa-test" />
+		<Property name="URLPATH" value="./index" />
+		<PropertySet name="localhost">
+			<entry name="MACHINENAME" value="MISYS" />
+			<entry name="HOSTNAME" value="hosp.misyshealthcare.com" />
+			<entry name="IP" value="10.0.1.4" />
+			<entry name="SITE" value="MISYS" />
+			<entry name="SOURCE" value="EHR_MISYS" />
+			<entry name="APPNAME" value="EHR_MISYS" />
+		</PropertySet>
+		<propertyset name="ParticipantObject">
+			<entry name="PatientNameEncoding" value="HL7" />
+			<entry name="PatientIdEncoding" value="HL7" />
+			<entry name="DocumentIdType" value="DocumentId" />
+		</propertyset>
+ 		<!-- Trust and Keystore -->
+	    <KEYSTORE>certs/mesa_keystore1_2009.p12</KEYSTORE>
+	    <KEYPASS>password</KEYPASS>
+	    <TRUSTSTORE>certs/mesa_truststore_2009.jks</TRUSTSTORE>
+	    <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>    
+	
+    <secureconnection name="MISYS-SECURE-3">
+		<hostname>localhost</hostname>
+		<port>4102</port>
+		<Property name="NAME" value="mesa-test" />
+		<Property name="URLPATH" value="./index" />
+		<PropertySet name="localhost">
+			<entry name="MACHINENAME" value="MISYS" />
+			<entry name="HOSTNAME" value="hosp.misyshealthcare.com" />
+			<entry name="IP" value="10.0.1.4" />
+			<entry name="SITE" value="MISYS" />
+			<entry name="SOURCE" value="EHR_MISYS" />
+			<entry name="APPNAME" value="EHR_MISYS" />
+		</PropertySet>
+		<propertyset name="ParticipantObject">
+			<entry name="PatientNameEncoding" value="HL7" />
+			<entry name="PatientIdEncoding" value="HL7" />
+			<entry name="DocumentIdType" value="DocumentId" />
+		</propertyset>
+ 		<!-- Trust and Keystore -->
+	    <KEYSTORE>certs/mesa_keystore1_2009.p12</KEYSTORE>
+	    <KEYPASS>password</KEYPASS>
+	    <TRUSTSTORE>certs/mesa_truststore_2009.jks</TRUSTSTORE>
+	    <TRUSTPASS>password</TRUSTPASS>
+	</secureconnection>
+	
+</Configuration>

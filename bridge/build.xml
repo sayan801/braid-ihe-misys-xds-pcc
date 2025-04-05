@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="${componentname}" default="bridgeJar" basedir=".">
+
+	<!-- Load infrastructure build's property file -->
+	<property file="build.properties" />
+
+	
+	<!-- Creates temporary directory -->
+	<target name="outputClassDir">
+		<echo message="temp Dir: ${tempDir}" />
+		<mkdir dir="${tempDir}" />
+	</target>
+
+	<!-- Set classpath prior to compiling code -->
+	<target name="setClasspath">
+		<property environment="env" />
+		<path id="build.classpath">
+			<fileset dir="${jarDir}/lib">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${jarDir}">
+				<include name="${basejarname}" />
+				<include name="${ihejarname}" />
+			</fileset>						
+		</path>
+		<property name="classpath" refid="build.classpath" />
+		<echo message="classpath setting done: ${classpath}" />
+	</target>
+
+	<!-- Compile infrastructure source code -->
+	<target name="compile" depends="outputClassDir,setClasspath">
+		<!-- Another possible flag: debuglevel="lines,vars"  -->
+		<javac failonerror="true" target="1.5" debug="true" srcdir="${srcDir}" destdir="${tempDir}" classpath="${classpath}" />
+	</target>
+
+	<!--Create the jar. Depends on the following properties:
+	   srcDir - the location of java files to compile
+	   tempDir - the location of the class files
+	   distDirUtil - the location to put the util jar
+	   utilJarName - the name to embed in the jar file name
+	   to_exclude - the file types to be excluded from the jar (e.g., "*.java")
+     -->
+	<target name="bridgeJar" description="generate Util jar file">
+		<!-- Copy source code into temporary directory -->
+		<copy todir="${tempDir}">
+			<fileset dir="${srcJavaDirUtil1}"/>
+		</copy>
+
+		<!-- Compile source code -->
+		<antcall target="compile">
+			<param name="srcDir" value="${tempDir}" />
+		</antcall>
+
+		<!-- Create destination directory for jar file -->
+		<mkdir dir="${distDirUtil}" />
+		<jar jarfile="${distDirUtil}/${utilJarName}" basedir="${tempDir}" excludes="${to_exclude}"/>
+		<echo message="Jar Created [${distDirUtil}/${utilJarName}]"/>
+		
+		<antcall target="clean"/>
+	</target>
+	
+	<target name="clean" description="clean up" >
+	  <!--  Delete the ${tempDir} directory trees --> 
+	    <delete dir="${tempDir}"/>
+	  </target>
+	
+</project>

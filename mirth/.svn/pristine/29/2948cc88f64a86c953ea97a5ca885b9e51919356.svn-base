@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration>
+
+    <!--The default Configuration for building an EDR -->
+    <StandardConnection name="EDReferral">
+             <!--Specify Referral Reason-->
+        <Object name="ReferralReason" enabled="true">
+            <Field name="referralReason" type="String" value="Patient is otherwise healthy and is exhibiting chest pain."/>
+        </Object>
+        <!--Specify History of Present Illness-->
+        <Object name="HistoryOfPresentIllness" enabled="true">
+            <Field name="historyOfPresentIllness" type="String" value="Patient has no history of cardiac illnes."/>
+        </Object>
+
+        <ObjectList name="ActiveProblem" enabled="true">
+            <Object>
+                <Field name="name" type="String" value="Stress fracture, right foot"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="472.0^^2.16.840.1.113883.6.2^ICD9^" />
+                <Field name="startDate" type="Date" value="08/01/2006" format="MM/dd/yyyy" />
+                <Field name="endDate" type="Date" value="" format="" />
+                <Field name="status" type="String" value="healed" />
+                <Field name="source" type="String" value=""/>
+            </Object>
+            <Object>
+                <Field name="name" type="String" value="Ear infection"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="^^^^" />
+                <Field name="startDate" type="Date" value="10/01/2006" format="MM/dd/yyyy" />
+                <Field name="endDate" type="Date" value="" format="" />
+                <Field name="status" type="String" value="active" />
+                <Field name="source" type="String" value=""/>
+            </Object>
+        </ObjectList>
+
+        <ObjectList name="Medication" enabled="true">
+            <Object>
+                <Field name="productName" type="String" value="Amoxicillin (250 mg tabs)"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="^^^^" />
+                <Field name="sig" type="String" value="3 times per day  oral"/>
+                <Field name="orderDate" type="Date" value="10/01/2006" format="MM/dd/yyyy" />
+                <Field name="duration" type="String" value="10 days"/>
+            </Object>
+        </ObjectList>
+
+        <ObjectList name="Allergy" enabled="true">
+            <Object>
+                <Field name="agent" type="String" value="Iodinated contrast"/>
+                <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version   -->
+                <Field name="code" type="Code" value="^^^^" />
+                <Field name="reaction" type="String" value="laryngeal oedema"/>
+                <Field name="reportDate" type="Date" value="" format="" />
+                <Field name="comment" type="String" value="Reaction occurs within 10 minutes" />
+            </Object>
+        </ObjectList>
+
+        <ObjectList name="AdvanceDirective" enabled="true">
+            <Object>
+                <Field name="directive" type="String" value="Resuscitation status"/>
+                <Field name="description" type="String" value="Do not resuscitate"/>
+                <Field name="documentURL" type="String" value="AdvanceDirective.b50b7910-7ffb-4f4c-bbe4-177ed68cbbf3.pdf" />
+                <Field name="mimeType" type="String" value="application/pdf" />
+            </Object>
+        </ObjectList>
+
+        <Object name="ProposedDisposition" enabled="true">
+            <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version
+             See http://www.cdc.gov/ncipc/pub-res/pdf/deeds.pdf Page 190 for a list of codes-->
+            <Field name="dispositionCode" type="Code" value="130^Admitted to intensive care unit^2.16.840.1.113883.6.102.4.2^DEEDS8.02^" />
+            <Field name="encounterDisposition" type="String" value="Admitted to intensive care unit" />
+            <Field name="lowEffectiveTime" type="Date" value="2006-07-29T12:10:00-0500" format="yyyy-MM-dd'T'HH:mm:ssZ" />
+            <Field name="highEffectiveTime" type="Date" value="" format="yyyy-MM-dd'T'HH:mm:ssZ" />
+        </Object>
+
+        <Object name="TransportMode" enabled="true">
+            <!--Value systax: Code^CodeDisplayName^CodeSystem^CodeSystemName^Version
+             See http://www.cdc.gov/ncipc/pub-res/pdf/deeds.pdf Page 84 for a list of codes-->
+            <Field name="code" type="Code" value="10^Ground ambulance^2.16.840.1.113883.6.102.4.2^DEEDS4.02^" />
+            <Field name="estimatedTimeOfArrival" type="Date" value="2006-07-29T12:10:00-0500" format="yyyy-MM-dd'T'HH:mm:ssZ" />
+            <Field name="standardDeviation" type="Measure" value="0" format="minute" />
+        </Object>
+    </StandardConnection>
+</Configuration>

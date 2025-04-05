@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+<style >
+a:link {text-decoration: none; color: blue}
+a:visited {text-decoration: none; color: darkcoral}
+a:hover {color: orchid}
+body,p,b,i,em,dt,dd,dl,sl,caption,th,td,tr,u,blink,select,option,form,div,li,a { font-family: Arial, sans-serif; font-size: 12px; }
+</style>
+
+</HEAD>
+<BODY>
+<h3><a  class="overview">Overview </a></h3>
+<p>The healthcare industry needed the standards to improve the way computer systems share the healthcare information. <a href="http://ihe.net" target="_blank">IHE</a> took the initiative to create a framework by which the vital health information can be made available to healthcare professionals . The messaging standards are defined to pass healthcare related information between application systems and settings across multiple healthcare enterprises. 
+The IHE community has worked on various profiles like PIX (Transactions-PatientIdentityFeed, PIX Query, PIX Update), PDQ(Transactions-Patient demographics Query and Patient demographics and Visit Query), XDS etc which are referenced in numerous projects around the world. 
+<a href="http://www.ihe.net/profiles/" target="_blank">Click here to read a list of all IHE profiles.</a>
+</p>
+
+<p>
+<i>Understanding the flow</i>- Typically a patient goes through a series of encounters in different care settings like ambulatory care to Acute care, then to other specialized care (includes diagnostic services) and finally to long term care. . Manual finding of the records of patients from other care settings becomes tedious. So each care setting submits the patient information to the PIX manager and the document reference to documents registry. The PIX manager provides a PIX id and the document registry provides an index for the published information.  
+The PIX manager uses the information to cross reference various patients’ ids from different domains and informs the PIX consumer of the changes in the cross referenced identifiers for a given patient. The PIX consumer can present an id to the PIX manager . The PIX manager in turn returns the corresponding ids for the same patient in different domains.  
+</p>
+
+<p>On the document side, the published clinical data is organized into clinical documents using some standard document types like <a href="http://www.hl7.org/library/standards_non1.htm" target="_blank">HL7-CDA</a>, <a href="http://medical.nema.org/" target="_blank">DICOM </a>, PDF, etc. The document context is processed by source and consumer IT systems. Queries based on meaningful attributes ensure deterministic document search. 
+The care settings maintain their documents in their own <a href="http://wiki.ihe.net/index.php?title=Document_Repository" target="_blank">document repository </a>. The other care settings which may need can retrieve the selected documents.  
+The patientID and the document index obtained from the registry is used to locate the specific documents from the XDS repository. For this purpose the patient and the document both are checked to be authorized. This care delivery is supported by the Care Record systems.<a href="http://wiki.ihe.net/index.php?title=Functional_Status_Assessments_Profile" target="_blank">CCD Profile of IHE</a> 
+</p> 
+
+<p>IHE also introduced the <a href="http://wiki.ihe.net/index.php?title=Cross-enterprise_Document_Reliable_Interchange" target="_blank">XDR and XDM </a> profiles for completing additional Connectathon tasks.  
+ 
+The IHE audit repositories contain the audit messages. The audit messages of user login, logout and failed login attempt are sent to the Audit record Repository. The user information is retrieved from the log context. 
+ 
+The BRAID project offers Client library for a portion of IHE transactions. It focuses on PIX manager, XDS Repository, XDS Registry and audit repository transactions. 
+</p>
+
+</BODY>
+</HTML>
+

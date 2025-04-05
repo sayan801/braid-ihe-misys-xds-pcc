@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>$patient.NameString</title>
+</head>
+<body>
+<h1>Records for $patient.NameString</h1>
+<p>
+#if( $patient.AdministrativeSex.Value )Gender: $patient.AdministrativeSex.Value<br/>#end
+#if( $dob )Date of Birth: $dob<br/>#end
+</p>
+<p><b>Source - </b>Test Hospital, $date</p>
+<p>Contact and technical information can be found <a href="README.TXT">here</a></p>
+This disk contains $docs.size() document#if( $docs.size() > 1 )s#end:<br/>
+#foreach( $oneDoc in $docs )
+<a href="$oneDoc">Click to view Document $velocityCount</a><br/>
+#end
+
+</body>
+</html>
